@@ -1,0 +1,617 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# 🌿 LIÇÃO 000 — O INÍCIO DE TUDO (V5 Premium)
+# ══════════════════════════════════════════════════════════════════════════════
+# Lição de Introdução ao Reino Contado
+# Versão: 5.0 (Convertido de MD para YAML com melhorias)
+
+licao:
+  metadados:
+    id: MV-S-000
+    titulo: "O Início de Tudo"
+    fase: Sementes
+    trimestre: 0
+    tipo: "Introdução ao Reino"
+    guardiao_lider: Melquior
+    guardiao_secundario: null
+    guardioes_apresentados: [Melquior, Noé, Celeste, Bernardo, Íris]
+    tgtb_ref: "N/A (Introdução Proprietária)"
+    status: canonico
+    versao: "5.0"
+    
+  ideia_viva:
+    frase: "Os Números são Pensamentos do Rei — cada um, uma palavra sagrada."
+    conceito_matematico: "Introdução ao conceito de número como criação ordenada"
+    intencao_cm: |
+      Esta lição não ensina "conteúdo matemático" — ensina PERTENCIMENTO.
+      A criança entra no Reino e conhece os Guardiões que a acompanharão.
+      O "trabalho mental" acontece quando ela se sente HERDEIRA de algo maior.
+      Charlotte Mason: "O princípio da sabedoria é chamar as coisas pelo nome."
+    
+  atmosfera:
+    clima: ensolarado
+    clima_descricao: |
+      O sol da manhã atravessa as folhas do Jardim, tingindo tudo com um 
+      dourado morno. O ar cheira a terra molhada de orvalho e a musgo fresco 
+      — aquele cheiro de quando a chuva acabou de passar.
+    local: jardim_da_criacao
+    local_descricao: |
+      No centro do jardim, quatro plantinhas crescem em vasos de barro antigo.
+      Elas brilham suavemente, como se guardassem um segredo. Uma brisa suave
+      vem das montanhas além do Reino, trazendo o som de água correndo.
+    virtude: pertencimento
+    artefato: "Passaporte do Reino (Caderno) + Sementes Reais"
+    
+  linkage:
+    elo_anterior:
+      licao_id: null
+      gancho: "Esta é a primeira lição. O portal se abre pela primeira vez."
+    proximo_passo:
+      licao_id: "MV-S-001"
+      gancho: |
+        Na próxima jornada, Celeste vai mostrar os primeiros tesouros:
+        Um, Dois e Três. São promessas de vida! A criança guardará uma
+        semente hoje para usar na próxima lição.
+      
+  preparacao:
+    tempo_licao: "15-20 min"
+    tempo_preparo: "≤ 5 min"
+    materiais:
+      - item: "Passaporte do Reino (Caderno ou folha)"
+        quantidade: 1
+        alternativa: "Qualquer caderno novo ou folha bonita"
+        essencial: true
+      - item: "Sementes Reais (feijões ou pedrinhas)"
+        quantidade: 3
+        alternativa: "Botões, contas, brinquedos pequenos"
+        essencial: true
+      - item: "Tapete de Musgo (toalha ou tapete verde)"
+        quantidade: 1
+        alternativa: "Qualquer toalha ou cobertor especial"
+        essencial: true
+      - item: "Vela e fósforos (ou lanterna suave)"
+        quantidade: 1
+        alternativa: "Abajur, luz de janela, lamparina"
+        essencial: true
+      - item: "Cards dos Guardiões (se disponível)"
+        quantidade: 5
+        alternativa: "Desenhos impressos ou descrições verbais"
+        essencial: false
+        
+  para_o_portador:
+    dica_de_coracao: |
+      Você não precisa ser um ator de teatro nem um professor perfeito.
+      O "Reino" acontece no brilho dos olhos do seu filho, não na sua
+      performance. Se você errar ou gaguejar, ria junto.
+      A graça vale mais que a técnica.
+    
+    protocolo_impecabilidade: |
+      Este roteiro foi desenhado para ser lido com ALMA., não corra.
+      Respeite as pausas. Você é o Portador da Tocha, não um leitor
+      de notícias. A "Ideia Viva" não é um dado, é um ENCONTRO.
+      
+    audio_script: |
+      [Para o Pai ouvir/ler antes de chamar o filho:]
+      "Sossegue o coração. Hoje, você é o embaixador do Rei.
+      A Ideia Viva é o CHAMADO. Lembre-se: o brilho no seu olho
+      vale mais que a explicação perfeita."
+    
+    o_que_seu_filho_vai_descobrir: |
+      Que ele é um HERDEIRO de um Reino onde os números são
+      Pensamentos do Rei. E que cinco Guardiões estarão ao seu
+      lado em toda a jornada: Melquior, Noé, Celeste, Bernardo e Íris.
+      
+    nota_de_graca: |
+      Se seu filho hoje não "alcançou" o clima de reverência ou se
+      distraiu com a vela, NÃO HOUVE PERDA. No método CM, a "Educação
+      é uma Vida" e a vida não cresce sob pressão. O valor desta lição
+      não está no comportamento perfeito, mas na semente de uma nova
+      Atmosfera que você plantou.
+       
+  ritual_abertura:
+    instrucao_ambiente: |
+      Sentem-se juntos no Tapete de Musgo — a toalha ou tapete verde
+      que marca o espaço sagrado do Reino. Deixe as sementes ao lado.
+      O ambiente deve estar preparado ANTES de chamar a criança.
+      
+    transicao_para_o_reino: |
+      Acenda a vela, ligue a luz especial ou abra a cortina para um
+      raio de sol. A LUZ deve ser o foco. A liturgia da ordem começa
+      aqui: se você precisar levantar para buscar algo, o fio da
+      atenção se rompe.
+      
+    fala_portador:
+      tom: segredo
+      script: |
+        [Tom de segredo — voz baixa e grave]
+        
+        "Eu sou o Portador da Tocha... E hoje, trago esta luz para você,
+        minha pequena semente, meu Filho Herdeiro."
+        
+        "Respire devagar... Deixe as pálpebras pesarem... Pode fechar os olhos."
+        
+        [Pausa de 3 segundos — deixe o silêncio pesar]
+        
+        "Imagine um grande teatro silencioso. Leve e calmo."
+        "Quando o holofote acende, o mundo lá fora silencia."
+        "Só existe o aqui e o agora."
+        "Nossa vela é esse holofote. O Reino Contado vai começar."
+        
+        "Quando abrir os olhos... você já estará no Tapete de Musgo
+        do Reino, no Jardim da Criação."
+        
+        "Pode abrir."
+         
+    card_guardiao: "[CARD: MELQUIOR]"
+    
+  jornada:
+    abertura_sensorial: |
+      ☀️ O sol da manhã atravessa as folhas do Jardim, tingindo tudo
+      com um dourado morno. O ar cheira a terra molhada de orvalho
+      e a musgo fresco — aquele cheiro de quando a chuva acabou de passar.
+      
+      Você sente uma brisa suave no rosto. Ela vem de longe, das montanhas
+      além do Reino. E traz consigo o som de água correndo, lá embaixo,
+      num riacho que você ainda não vê.
+      
+      No centro do jardim, quatro plantinhas crescem em vasos de barro
+      antigo. Elas brilham suavemente, como se guardassem um segredo.
+      E lá, sentado entre as plantas, aquecendo-se no primeiro raio
+      de sol, está um leão de juba dourada.
+       
+    narrativa_principal:
+      cena_1_melquior:
+        local: "Jardim da Criação"
+        descricao: |
+          [Tom de voz profundo e acolhedor, como quem conta um segredo precioso]
+          
+          Melquior:
+          "Sente o calor no seu rosto? É o mesmo sol que aqueceu
+          o primeiro dia do Reino."
+          
+          "Deixa eu te contar como este lugar nasceu..."
+          
+          "O Rei criou o Reino contando. Número por número.
+          Como quem canta uma canção antiga, enquanto o mundo
+          ainda estava silencioso."
+          
+          "Os Números não foram inventados... eles são PENSAMENTOS DO REI.
+          Cada um, uma palavra sagrada."
+          
+          "'Um', disse o Rei, e surgiu a primeira luz —
+          como essa que toca seu rosto agora."
+          
+          "'Dois', disse o Rei, e a luz ganhou uma companheira —
+          a sombra suave que descansa debaixo das árvores."
+          
+          "'Três', disse o Rei, e nasceu a família e a forma —
+          como as três sementes que você segura na mão."
+          
+          [Pausa. Respire com a criança.]
+          
+          "E quando o Reino estava pronto, o Rei plantou sementes
+          — no coração de cada criança que viria caminhar por aqui."
+          
+          "Então Ele chamou Guardiões sábios para cuidar delas.
+          Quer conhecê-los?"
+        card_guardiao: "[CARD: MELQUIOR]"
+        
+      cena_2_noe:
+        local: "Árvore Antiga (sombra fresca)"
+        transicao: |
+          Vocês caminham por uma trilha coberta de musgo úmido.
+          O ar esfria um pouco quando vocês entram na sombra de uma
+          árvore enorme, tão antiga que parece tocar o céu.
+          Lá em cima, nos galhos mais altos, uma coruja espera.
+          Seus olhos são como duas luas amarelas.
+        descricao: |
+          Melquior:
+          "Este é Noé. Você ouve o silêncio? Noé vive nele.
+          Ele nunca tem pressa."
+          
+          "Noé rega a semente da PACIÊNCIA."
+          
+          "Se você quiser correr demais, Noé sussurra:
+          'Respire. O número não vai fugir. Ele espera por você.'"
+        card_guardiao: "[CARD: NOÉ]"
+        virtude: Paciência
+        
+      cena_3_celeste:
+        local: "Clareira das Perguntas (sol quente)"
+        transicao: |
+          Mais adiante, a trilha se abre numa clareira banhada de sol.
+          O ar aqui é quente e cheira a flores silvestres.
+          Uma raposa cor de fogo fareja o ar, com o focinho erguido,
+          captando segredos que o vento traz.
+        descricao: |
+          Melquior:
+          "Esta é Celeste. Sente o cheiro de aventura? É ela."
+          
+          "Celeste rega a semente da CURIOSIDADE."
+          
+          "Ela vive perguntando 'E se...?'. Ela ensina a olhar o mundo
+          com olhos de detetive, buscando as pistas que o Rei escondeu."
+        card_guardiao: "[CARD: CELESTE]"
+        virtude: Curiosidade
+        
+      cena_4_bernardo:
+        local: "Caverna da Forja (calor do fogo)"
+        transicao: |
+          A trilha desce agora, para uma caverna fresca. O ar muda:
+          cheira a pedra, a terra e a madeira de cedro. Lá dentro,
+          iluminado por uma fogueira baixa, um urso forte está sentado,
+          polindo uma ferramenta de bronze.
+        descricao: |
+          Melquior:
+          "Este é Bernardo. Sente o calor da forja? Ele trabalha aqui
+          todos os dias."
+          
+          "Bernardo rega a semente da PERSISTÊNCIA."
+          
+          "Quando você errar, ele diz: 'Mais uma vez. Comigo.'
+          E vocês tentam juntos, sem vergonha."
+        card_guardiao: "[CARD: BERNARDO]"
+        virtude: Persistência
+        
+      cena_5_iris:
+        local: "De volta ao Jardim"
+        transicao: |
+          De volta ao jardim, um pardal de peito cor de mel desce veloz
+          e pousa no ombro de Melquior. Ela usa um minúsculo colar de
+          contas de vidro, que brilham como gotas de orvalho.
+        descricao: |
+          Melquior:
+          "Esta é Íris, a Pardal. Olhe bem para o colar dela.
+          Cada conta é uma maravilha que ela encontrou."
+          
+          "Íris rega a semente da ATENÇÃO."
+          
+          "Ela vê a beleza num grão de areia e a cor no detalhe.
+          Ela traz você de volta quando o pensamento quer voar para longe."
+        card_guardiao: "[CARD: ÍRIS]"
+        virtude: Atenção
+         
+    concreto:
+      descricao: |
+        Melquior:
+        "Herdeiro, agora que você conhece seus amigos, o Rei quer
+        lhe dar um presente."
+        
+        [Entregue o Passaporte do Reino para a criança]
+        
+        "Este é seu Passaporte do Reino. Cada vez que você voltar
+        ao Reino Contado, ele guardará suas descobertas."
+      card_objeto: "[CARD: PASSAPORTE]"
+      instrucoes_portador:
+        - passo: 1
+          acao: "Entregue o Passaporte (Caderno)"
+          fala_sugerida: "'O Rei preparou este presente para você.'"
+        - passo: 2
+          acao: "Peça para ela apontar para cada Guardião"
+          fala_sugerida: "'Toque no Noé. Toque na Celeste.' (conexão visual-tátil)"
+        - passo: 3
+          acao: "Deixe a criança segurar 3 sementes durante a narrativa"
+          fala_sugerida: "'São sementes do Jardim do Rei.'"
+      tempo_minimo: "40% da lição"
+      nota_cm: |
+        Hoje não ensinamos "conteúdo", ensinamos PERTENCIMENTO.
+        No método Singapura, o aprendizado começa no emocional.
+        A amígdala relaxa e o córtex pré-frontal se abre quando
+        a criança se sente "Herdeiro" em um mundo ordenado.
+      
+      adaptacao_bernardo: |
+        💡 **Para crianças com realidades diferentes:**
+        - Se a criança não consegue apontar, use o olhar: "Olhe para Noé."
+        - Se não consegue segurar sementes, coloque-as na frente dela.
+        - Se tem dificuldade visual, descreva com mais detalhes sensoriais
+          (sons, texturas, cheiros).
+        - "Bernardo nos ensina que caminhos diferentes também chegam lá."
+         
+    pictorico:
+      vetado: false
+      motivo: |
+        Exceção para L000: O Passaporte inclui um momento pictórico controlado.
+        A criança desenha a si mesma "chegando no Jardim".
+      atividade: |
+        Peça para ela desenhar a si mesma na primeira página do Passaporte,
+        "chegando no Jardim". Diga: "Desenhe você entrando no Reino."
+      nota_cm: |
+        Não corrija o desenho. É a visão dela do Reino. É SAGRADO.
+        O símbolo aqui é ela mesma se representando como Herdeira.
+      
+      adaptacao_bernardo: |
+        💡 **Para crianças com realidades diferentes:**
+        - Se não consegue desenhar, VOCÊ desenhe enquanto ela olha.
+        - Se tem dificuldade motora, segure a mão dela gentilmente para
+          fazer o primeiro traço juntos.
+        - Se prefere não desenhar, cole uma foto dela ou um adesivo.
+        - O importante é que ELA esteja representada no Passaporte.
+       
+    abstrato:
+      descricao: |
+        Escreva a DATA de hoje e o NOME dela na capa do Passaporte.
+        Diga: "Este é o dia em que tudo começou."
+      instrucoes_portador:
+        - acao: "Escreva a data"
+          fala_sugerida: "'Hoje é [DATA]. O dia em que o Reino se abriu para você.'"
+        - acao: "Escreva o nome da criança"
+          fala_sugerida: "'[NOME], Herdeiro(a) do Reino Contado.'"
+      nota_cm: |
+        O nome escrito é o símbolo abstrato. A criança reconhece seu
+        próprio nome como marca de pertencimento. Isso ancora a
+        experiência na realidade.
+       
+    extensao:
+      titulo: "O Passo dos Guardiões (Via do Corpo)"
+      descricao: |
+        Só continue se os olhos da criança pedirem "MAIS!".
+        Se ela parecer satisfeita, pule para a narração.
+      sugestoes:
+        - titulo: "Como a Raposa anda?"
+          acao: "Andem na ponta dos pés, rápidos"
+        - titulo: "Como o Urso anda?"
+          acao: "Andem pesados, devagar"
+        - titulo: "Como o Passarinho voa?"
+          acao: "Corram com braços abertos"
+        - titulo: "Como a Coruja observa?"
+          acao: "Fiquem estátuas, girando só a cabeça"
+      
+      adaptacao_bernardo: |
+        💡 **Para crianças com realidades diferentes:**
+        - Movimentos podem ser adaptados: se não pode andar, imite
+          com as mãos ou com expressões faciais.
+        - "Como a Raposa olha?" (vire a cabeça rápido)
+        - "Como o Urso respira?" (respire fundo e devagar)
+        - O MOVIMENTO é a ideia — o TIPO de movimento pode variar.
+       
+  narracao:
+    instrucao_portador: |
+      Guarde as ferramentas. Foco no olhar e na vela acesa.
+      Respire. O silêncio é parte do trabalho mental.
+    pergunta_principal: |
+      Melquior pergunta:
+      "Antes de partirmos... o que seu coração guardou deste jardim hoje?
+      O que você diria ao Rei sobre o que descobriu?"
+      
+      [Pausa — respeite solenemente o tempo da criança]
+    perguntas_do_coracao:
+      - "Se você fosse plantar uma semente hoje, qual seria? Paciência ou Curiosidade?"
+      - "Qual dos Guardiões você acha que seria o melhor amigo para brincar?"
+    nota_cm: |
+      Narração é o método de Charlotte Mason para fixação.
+      A criança processa internamente e depois externaliza.
+      NUNCA interrompa. Espere. Conte até 10 internamente se precisar.
+      Se ela não quiser falar, diga: "Tudo bem. Seu coração guardou,
+      e um dia as palavras vão sair."
+       
+  ritual_fechamento:
+    fala_guardiao:
+      tom: nobre
+      script: |
+        Melquior:
+        [Gesto de despedida nobre]
+        
+        "Sua jornada hoje foi luz. Guarde o NOME DE HERDEIRO em sua mochila."
+        
+        "Na próxima jornada, Celeste vai te mostrar os primeiros tesouros:
+        Um, Dois e Três. São promessas de vida!"
+        
+    fio_de_ouro: |
+      A criança guarda UMA das sementes hoje.
+      Ela será usada na próxima lição (L001 — A Trindade na Palma).
+      Diga: "Esta semente é sua. Cuide dela até a próxima jornada."
+      
+    transicao_de_volta:
+      instrucao: |
+        Apaguem a vela juntos. A jornada termina no silêncio.
+        Aumentem a luz da sala de volta ao normal.
+      fala_portador: |
+        "O Reino adormece, mas as Sementes — Paciência, Atenção,
+        Curiosidade, Persistência — continuam ecoando em seu coração."
+        
+        "Até a próxima jornada."
+         
+  catedra_dos_pais:
+    metodo_cpa: |
+      **Concreto (40%):** Sementes na mão, Passaporte físico, 
+      toque nos Cards dos Guardiões. A criança manipulou objetos reais.
+      
+      **Pictórico (20%):** Exceção para L000 — desenho de si mesma
+      chegando no Jardim. É a única lição Sementes com pictórico,
+      porque é uma introdução especial.
+      
+      **Abstrato (20%):** Nome e data escritos no Passaporte.
+      A criança reconhece símbolos que representam ELA MESMA.
+      
+    principio_cm: |
+      > "O princípio da sabedoria é chamar as coisas pelo nome."
+      > — Charlotte Mason
+      
+      Ao nomear os Guardiões, demos à criança ferramentas morais
+      (virtudes) encarnadas. O Hábito da Atenção começa aqui:
+      olhar para Melquior e ouvir o silêncio.
+      
+    reflexao_espiritual: |
+      "No princípio, Deus criou..." contando. Um, dois, três.
+      Quando seu filho ouviu que "os números são Pensamentos do Rei",
+      ele recebeu uma herança: a matemática não é técnica — é poesia.
+      Os Guardiões são virtudes que caminharão com ele em cada lição.
+      
+    nota_de_graca: |
+      Portador da Tocha, se seu filho hoje não "chegou lá",
+      ele chegará amanhã. Foque no MÉTODO DO AMOR e a mente
+      dele florescerá no tempo de Deus.
+       
+  sugestoes:
+    - guardiao: Noé
+      emoji: "🦉"
+      dica: |
+        "Se a criança estiver agitada, não comece a lição. Sente-se em
+        silêncio por 30 segundos primeiro. Deixe o corpo dela desacelerar
+        antes de acender a vela. A pressa é inimiga da maravilha."
+      sugestao: |
+        Use um sino tibetano ou triângulo para marcar o início.
+        O som cria uma "porta sonora" para o Reino.
+        
+    - guardiao: Celeste
+      emoji: "🦊"
+      dica: |
+        "A criança aprende mais com mistério do que com explicação.
+        Não diga tudo — deixe perguntas no ar."
+      sugestao: |
+        Esconda os Cards debaixo de um pano e revele um por um.
+        "Quem será que está escondido aqui?"
+        
+    - guardiao: Bernardo
+      emoji: "🐻"
+      dica: |
+        "Se a criança não quiser participar hoje, não force.
+        A semente foi plantada pelo simples fato de ela estar ali.
+        Volte amanhã."
+      sugestao: |
+        Se o desenho "saiu errado", diga: "O Bernardo me disse que os
+        melhores construtores erram primeiro. Seu desenho é perfeito
+        porque é seu."
+        
+    - guardiao: Íris
+      emoji: "🐦"
+      dica: |
+        "A beleza não grita. Ela espera ser vista.
+        Ensine a criança a olhar devagar."
+      sugestao: |
+        Antes de começar, olhem juntos pela janela por 10 segundos.
+        Pergunte: "O que você vê que eu não vi?"
+        
+    - guardiao: Melquior
+      emoji: "🦁"
+      dica: |
+        "Você não precisa entender tudo para ensinar.
+        Seu papel é abrir a porta, não carregar a criança."
+      sugestao: |
+        Use sua voz como instrumento: grave e lenta para Melquior,
+        rápida para Celeste, pausada para Noé.
+       
+  diario_portador:
+    descricao: |
+      Este espaço é para VOCÊ, Portador.
+      Anote após aplicar a lição.
+    campos:
+      - pergunta: "Como meu filho reagiu hoje?"
+        espaco: "_________________________________________________"
+      - pergunta: "Qual Guardião chamou mais atenção?"
+        espaco: "_________________________________________________"
+      - pergunta: "O que posso ajustar na próxima?"
+        espaco: "_________________________________________________"
+      - pergunta: "Algo surpreendente?"
+        espaco: "_________________________________________________"
+        
+  auditoria_qa:
+    verificacao_cm:
+      - check: "Criança tratada como pessoa?"
+        status: true
+      - check: "Ideia Viva presente e encantadora?"
+        status: true
+      - check: "Narração incluída?"
+        status: true
+      - check: "Lição ≤ 20 min?"
+        status: true
+      - check: "Hábito da Atenção estimulado?"
+        status: true
+    verificacao_cpa:
+      - check: "Concreto presente?"
+        status: true
+      - check: "Pictórico (exceção justificada)?"
+        status: true
+      - check: "Abstrato mínimo?"
+        status: true
+    verificacao_narrativa:
+      - check: "5 Guardiões apresentados com virtudes?"
+        status: true
+      - check: "Origem do Reino narrada?"
+        status: true
+      - check: "Tom Lewis (não infantilizado)?"
+        status: true
+      - check: "Consistência Tolkien (mundo faz sentido)?"
+        status: true
+      - check: "Estética Potter (sensorial rica)?"
+        status: true
+    verificacao_inclusao:
+      - check: "Adaptação Bernardo presente?"
+        status: true
+      - check: "Instruções acessíveis?"
+        status: true
+    verificacao_template:
+      - check: "Todas seções obrigatórias?"
+        status: true
+      - check: "Linkage para L001?"
+        status: true
+      - check: "Atmosfera única e sensorial?"
+        status: true
+
+# ══════════════════════════════════════════════════════════════════════════════
+# LORE APRENDIDO DESTA LIÇÃO
+# ══════════════════════════════════════════════════════════════════════════════
+
+lore_extraido:
+  origem_reino: |
+    "O Rei criou o Reino contando. Número por número.
+    Como quem canta uma canção antiga.
+    Os Números são Pensamentos do Rei — cada um, uma palavra sagrada."
+    
+  criacao_numerica:
+    um: "Surgiu a primeira luz"
+    dois: "A luz ganhou companheira — a sombra"
+    tres: "Nasceu a família e a forma"
+    
+  guardioes:
+    melquior:
+      titulo: "O Leão Sábio"
+      virtude: "Sabedoria"
+      frase_canonica: "Sente o calor no seu rosto? É o mesmo sol que aqueceu o primeiro dia do Reino."
+      local: "Jardim da Criação"
+      
+    noe:
+      titulo: "A Coruja Paciente"
+      virtude: "Paciência"
+      frase_canonica: "Respire. O número não vai fugir. Ele espera por você."
+      local: "Árvore Antiga"
+      
+    celeste:
+      titulo: "A Raposa Curiosa"
+      virtude: "Curiosidade"
+      frase_canonica: "Sente o cheiro de aventura?"
+      local: "Clareira das Perguntas"
+      
+    bernardo:
+      titulo: "O Urso Persistente"
+      virtude: "Persistência"
+      frase_canonica: "Mais uma vez. Comigo."
+      local: "Caverna da Forja"
+      
+    iris:
+      titulo: "A Pardal Atenta"
+      virtude: "Atenção"
+      frase_canonica: "A beleza não grita. Ela espera ser vista."
+      local: "Jardim (no ombro de Melquior)"
+      
+  locais_canonicos:
+    - nome: "Jardim da Criação"
+      descricao: "Centro do Reino, plantas em vasos antigos, sol dourado"
+      clima: "Quente, cheiro de terra molhada e musgo"
+      
+    - nome: "Árvore Antiga"
+      descricao: "Sombra fresca, árvore toca o céu"
+      clima: "Fresco, silencioso"
+      
+    - nome: "Clareira das Perguntas"
+      descricao: "Banhada de sol, flores silvestres"
+      clima: "Quente, cheiro de aventura"
+      
+    - nome: "Caverna da Forja"
+      descricao: "Cheiro de pedra, terra, cedro, fogueira baixa"
+      clima: "Calor da forja"
+      
+  artefatos:
+    passaporte: "Caderno que guarda as descobertas do Herdeiro"
+    sementes: "Feijões/pedrinhas que representam os Pensamentos do Rei"
+    tapete_musgo: "Espaço sagrado que marca a entrada no Reino"
+    vela: "Holofote que abre o portal para o Reino"

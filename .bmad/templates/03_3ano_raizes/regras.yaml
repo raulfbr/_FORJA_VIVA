@@ -1,0 +1,66 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# REGRAS DO 3º ANO — RAÍZES III
+# ══════════════════════════════════════════════════════════════════════════════
+# STATUS: EM_CONSTRUCAO
+# Última revisão: 13/01/2026
+
+status: EM_CONSTRUCAO
+ciclo: raizes
+ano: 3
+serie: "3º Ano"
+idade_alvo: "8-9 anos"
+
+proposito_narrativo:
+  frase: "Exploro a Vastidão do Reino."
+  elaboracao: |
+    A criança expande horizontes. Números maiores, operações combinadas,
+    geometria do espaço. O mundo cresce e ela cresce com ele.
+    O tom é de EXPLORAÇÃO CORAJOSA — ela vai além do familiar.
+
+referencias_lore:
+  indice: "LORE/index.yaml"
+  proposito:
+    arquivo: "LORE/north_star.yaml#propositos_por_ano.3_raizes"
+    frase: "Exploro a Vastidão do Reino."
+  viajante:
+    arquivo: "LORE/viajante.yaml#construtor"
+    titulo: "Construtor da Vila"
+  tom_guardioes:
+    arquivo: "LORE/evolucao_guardioes.yaml#raizes"
+    tom_geral: "Mentoria encorajadora"
+  artefatos:
+    aplicavel: true
+    principal: "LORE/artefatos.yaml#diario_do_reino"
+  curriculo_mestre: "curriculo/_SISTEMA/CURRICULOS_MESTRE/003_3ANO_RAIZES-3_CURRICULO_MESTRE.md"
+
+cpa:
+  concreto: { minimo: 35, maximo: 45 }
+  pictorico: { minimo: 30, maximo: 40 }
+  abstrato: { minimo: 20, maximo: 30 }
+
+tempo:
+  licao: { minimo: 20, maximo: 30, ideal: 25, unidade: minutos }
+  preparo: { maximo: 10, unidade: minutos }
+
+scaffolding:
+  tipo: "Pista sutil"
+  exemplos:
+    - "Lembra o que Celeste disse sobre padrões maiores?"
+    - "O que acontece quando você multiplica por 10?"
+
+tom:
+  principal: "Exploração corajosa"
+  palavra_chave: "Expandir"
+
+densidade_sensorial:
+  elementos_por_paragrafo: 3
+
+guardioes:
+  principal: Celeste
+  frequentes: [Celeste, Bernardo, Noé]
+
+selos:
+  tempo_preparo: "≤ 10 min"
+  materiais: "Casa + alguns comprados"
+  mobile_friendly: true
+  adaptacao_bernardo: true

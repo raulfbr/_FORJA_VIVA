@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }} | Reino Contado</title>
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="hero" style="padding-bottom: 4rem;">
+        <div class="container">
+            <nav class="nav-bar" style="border: none; margin: 0; color: white;">
+                <a href="../index.html" class="btn-back" style="color: var(--color-gold);">← Voltar ao Reino</a>
+                <span style="opacity: 0.8">{{ fase }}</span>
+            </nav>
+            <h1>{{ titulo }}</h1>
+            <p>{{ meta }}</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="lesson-content">
+            <div class="meta-header"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
+
+                <!-- Card do Guardião -->
+                <div
+                    style="background: var(--color-cream); padding: 1rem; border-radius: 8px; display: flex; align-items: center; border: 1px solid #eee;">
+                    <img src="{{ guardia_img }}" alt="{{ guardia }}"
+                        style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--color-gold); margin-right: 1rem; object-fit: cover;">
+                    <div>
+                        <span
+                            style="display: block; font-size: 0.75rem; text-transform: uppercase; color: #888;">Guardião</span>
+                        <strong style="color: var(--color-green);">{{ guardia }}</strong>
+                    </div>
+                </div>
+
+                <!-- Card do Local -->
+                <div
+                    style="background: var(--color-cream); padding: 1rem; border-radius: 8px; display: flex; align-items: center; border: 1px solid #eee;">
+                    <img src="{{ local_img }}" alt="{{ local }}"
+                        style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--color-green-light); margin-right: 1rem; object-fit: cover;">
+                    <div>
+                        <span
+                            style="display: block; font-size: 0.75rem; text-transform: uppercase; color: #888;">Local</span>
+                        <strong style="color: var(--color-green);">{{ local }}</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-bottom: 2rem; color: #666; font-size: 0.9rem;">
+                <span>⏱️ Duração Sugerida: <strong>{{ tempo }}</strong></span>
+            </div>
+            <!-- TGTB Badge -->
+            <div style="text-align: center; margin-bottom: 2rem; font-size: 0.8rem; color: #aaa; font-style: italic;">
+                <span>📚 Referência Original: {{ tgtb }}</span>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 2rem;">
+
+            {{ conteudo }}
+
+            <!-- Navigation Footer -->
+            <div class="lesson-nav-footer">
+                {{ nav_prev }}
+                {{ nav_next }}
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>Matemática Viva • Versão {{ versao }} • <span style="color: var(--color-green);">Selo Família
+                Rodrigues</span></p>
+    </footer>
+
+</body>
+
+</html>

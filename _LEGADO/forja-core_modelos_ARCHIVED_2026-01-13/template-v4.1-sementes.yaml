@@ -1,0 +1,419 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# 📜 TEMPLATE V5 — LIÇÃO SEMENTES (YAML Puro)
+# ══════════════════════════════════════════════════════════════════════════════
+# 
+# Formato: YAML com narrativa inline (strings multiline)
+# Conversão: YAML → HTML (Web) + YAML → PDF (Print)
+# Referências: LORE/climas.yaml, LORE/locais.yaml, LORE/guardioes.yaml
+#
+# ══════════════════════════════════════════════════════════════════════════════
+
+id: template-v5-sementes
+versao: "4.1"
+tipo: template
+fase: Sementes
+status: canonico
+created: 2026-01-12
+updated: 2026-01-12
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 🏆 POR QUE ESTE TEMPLATE É PREMIUM?
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# Este template foi desenhado para integrar TODAS as riquezas do projeto:
+#
+# 📚 FONTES CONSULTADAS PELOS AGENTES:
+#   - Sofia (CM): 20 Princípios de Charlotte Mason → Ideia Viva, Narração, Atenção
+#   - Euclides (CPA): Método Singapura → Concreto antes de Abstrato
+#   - Artesão: C.S. Lewis → Tom nobre, mistério > explicação
+#   - Artesão: Tolkien → Consistência do Reino, sem contradições
+#   - Artesão: Beatrix Potter → Cores naturais, realismo caprichoso
+#   - Veritas: Auditoria Quíntupla → Qualidade verificável
+#
+# 🌍 LORE (Consulte antes de escrever):
+#   - LORE/climas.yaml → Atmosferas, tom do guardião, elementos sensoriais
+#   - LORE/locais.yaml → Cenários do Reino, descrições completas
+#   - LORE/guardioes.yaml → Frases canônicas, personalidades
+#   - LORE/glossario.yaml → Termos corretos
+#
+# 🎯 DIFERENCIAL:
+#   - Cada lição é ÚNICA (clima + local + virtude + artefato)
+#   - Narrativa flexível dentro de estrutura fixa
+#   - Pai sabe exatamente o que fazer + por quê
+#   - Auditoria embutida para qualidade
+#
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════════
+# ESTRUTURA DA LIÇÃO (Copie e preencha)
+# ══════════════════════════════════════════════════════════════════════════════
+
+licao:
+  # ────────────────────────────────────────────────────────────────────────────
+  # METADADOS (Obrigatórios)
+  # ────────────────────────────────────────────────────────────────────────────
+  metadados:
+    id: MV-S-XXX
+    titulo: "[Título Poético da Lição]"
+    fase: Sementes
+    trimestre: 1
+    guardiao_lider: "[Nome do Guardião]"  # Ver LORE/guardioes.yaml
+    guardiao_secundario: null  # Opcional
+    tgtb_ref: "000-LXX"
+    status: rascunho  # rascunho | em_revisao | canonico
+    
+  # ────────────────────────────────────────────────────────────────────────────
+  # IDEIA VIVA (O coração da lição)
+  # ────────────────────────────────────────────────────────────────────────────
+  ideia_viva:
+    frase: "[Uma frase que captura a essência - o 'segredo' da lição]"
+    conceito_matematico: "[O que a criança vai descobrir]"
+    intencao_cm: |
+      [Por que esta ideia é 'viva' segundo Charlotte Mason:
+       - Como encanta sem explicar demais
+       - Qual trabalho mental a criança fará]
+    
+  # ────────────────────────────────────────────────────────────────────────────
+  # ATMOSFERA (Cria unicidade - Consulte LORE/climas.yaml e LORE/locais.yaml)
+  # ────────────────────────────────────────────────────────────────────────────
+  atmosfera:
+    clima: "[ensolarado | nublado | ventoso | chuvoso | outonal | primaveril | crepusculo | estrelado]"
+    clima_descricao: |
+      [Descrição sensorial do clima baseada em LORE/climas.yaml.
+       Inclua: luz, temperatura, energia]
+    local: "[jardim_central | arvore_do_silencio | clareira_das_perguntas | caverna_do_recomeco | ninho_mirante]"
+    local_descricao: |
+      [Descrição do local baseada em LORE/locais.yaml.
+       Inclua: luz, cheiro, som, textura]
+    virtude: "[curiosidade | persistencia | atencao | paciencia | sabedoria | coragem | gratidao]"
+    artefato: "[Objeto concreto especial desta lição - algo que a criança tocará]"
+    
+  # ────────────────────────────────────────────────────────────────────────────
+  # LINKAGE (Conexão narrativa entre lições)
+  # ────────────────────────────────────────────────────────────────────────────
+  linkage:
+    elo_anterior:
+      licao_id: "MV-S-XXX"
+      gancho: "[O que aconteceu na lição anterior que conecta a esta]"
+    proximo_passo:
+      licao_id: "MV-S-XXX"
+      gancho: "[Antecipação do que virá - deixa gosto de 'quero mais']"
+      
+  # ────────────────────────────────────────────────────────────────────────────
+  # TEMPO E MATERIAIS
+  # ────────────────────────────────────────────────────────────────────────────
+  preparacao:
+    tempo_licao: "15-20 min"
+    tempo_preparo: "≤ 5 min"
+    materiais:
+      - item: "[Material 1]"
+        quantidade: 1
+        alternativa: "[Se não tiver...]"
+        essencial: true
+      - item: "[Material 2]"
+        quantidade: 1
+        alternativa: "[Se não tiver...]"
+        essencial: true
+      - item: "[Material opcional - enriquece mas não é necessário]"
+        quantidade: 1
+        alternativa: null
+        essencial: false
+        
+  # ────────────────────────────────────────────────────────────────────────────
+  # PARA O PORTADOR (Dica antes de começar)
+  # ────────────────────────────────────────────────────────────────────────────
+  para_o_portador:
+    dica_de_coracao: |
+      [2-3 frases que acalmam o pai e preparam o coração.
+       Varia por lição - cada uma é única.
+       Exemplo: "Hoje você vai apresentar o número três.
+       Mas não como um símbolo morto. Você vai apresentá-lo
+       como três promessas vivas. Respire. Você está pronto."]
+    o_que_seu_filho_vai_descobrir: |
+      [1-2 frases simples sobre o objetivo da lição]
+    nota_de_graca: |
+      [Lembrete de que o pai não precisa ser perfeito.
+       Se errar, ria junto. A magia está no encontro.]
+       
+  # ════════════════════════════════════════════════════════════════════════════
+  # A JORNADA (Narrativa da lição)
+  # ════════════════════════════════════════════════════════════════════════════
+  
+  # ────────────────────────────────────────────────────────────────────────────
+  # RITUAL DE ABERTURA
+  # ────────────────────────────────────────────────────────────────────────────
+  ritual_abertura:
+    instrucao_ambiente: |
+      [Instrução para criar o ambiente sagrado:
+       - Sentem-se no Tapete do Reino (toalha/cobertor especial)
+       - Diminuam as luzes da sala
+       - Momento de silêncio]
+    transicao_para_o_reino: |
+      [O ritual usa LUZ:
+       - Pai fecha os olhos da criança suavemente
+       - Acende uma luz especial (abajur, lanterna, vela LED)
+       - Ou: Abre o Livro Dourado (quando existir)
+       - Criança abre os olhos e "entra" no Reino Contado]
+    
+    fala_portador:
+      tom: "[segredo | animado | solene | misterioso]"
+      script: |
+        "[Script que o Portador fala para iniciar a jornada.
+         Flexível por lição. Exemplo:
+         'Feche os olhos... Sente esse cheiro? É o Reino...
+         Quando abrir os olhos, estaremos lá.']"
+         
+    card_guardiao: "[CARD: NOME_GUARDIAO]"
+    fala_guardiao:
+      tom: "[Ver tom em LORE/guardioes.yaml]"
+      script: |
+        "[Primeira fala do guardião. Inclua a frase canônica.
+         Consulte LORE/guardioes.yaml para personalidade.]"
+         
+  # ────────────────────────────────────────────────────────────────────────────
+  # A JORNADA — NARRATIVA SENSORIAL
+  # ────────────────────────────────────────────────────────────────────────────
+  jornada:
+    abertura_sensorial: |
+      [Descrição imersiva do cenário. O Artesão pinta:
+       - O que a criança VÊ (cores, luz, formas)
+       - O que OUVE (sons do ambiente)
+       - O que CHEIRA (aromas naturais)
+       - O que SENTE (textura, temperatura)
+       
+       Consulte LORE/locais.yaml para atmosfera.
+       Use o clima definido em atmosfera.clima.]
+       
+    # ──────────────────────────────────────────────────────────────────────────
+    # CPA - CONCRETO (Obrigatório - 60% do tempo)
+    # ──────────────────────────────────────────────────────────────────────────
+    concreto:
+      descricao: |
+        [Narrativa do guardião introduzindo a atividade concreta.
+         A criança TOCA, MOVE, MANIPULA objetos reais.]
+      card_objeto: "[CARD: NOME_OBJETO]"
+      instrucoes_portador:
+        - passo: 1
+          acao: "[Instrução clara para o portador]"
+          fala_sugerida: "[O que o portador pode dizer]"
+        - passo: 2
+          acao: "[Próxima instrução]"
+          fala_sugerida: "[Frase sugerida]"
+        - passo: 3
+          acao: "[Repetição/variação]"
+          fala_sugerida: "[Frase sugerida]"
+      tempo_minimo: "60% da lição"
+      nota_cm: |
+        "A criança aprende pelo corpo antes da mente.
+         Concreto significa: mãos trabalhando, olhos vendo o real."
+         
+    # ──────────────────────────────────────────────────────────────────────────
+    # CPA - PICTÓRICO (Vetado para Sementes, exceto L000)
+    # ──────────────────────────────────────────────────────────────────────────
+    pictorico:
+      vetado: true
+      motivo: |
+        "Em Sementes, a criança ainda não está pronta para representações.
+         Charlotte Mason: 'Things before Signs' — Coisas antes de signos.
+         Sofia veta esta fase para crianças de 4-6 anos."
+      excecao: "L000 (introdução) ou aprovação explícita de Sofia"
+      
+    # ──────────────────────────────────────────────────────────────────────────
+    # CPA - ABSTRATO (Mínimo - apenas reconhecimento)
+    # ──────────────────────────────────────────────────────────────────────────
+    abstrato:
+      descricao: |
+        [Introdução sutil do símbolo. A criança RECONHECE, não opera.
+         Exemplo: "Olha, isso é o número 3. Parece uma orelha de coelho!"]
+      card_simbolo: "[CARD: NOME_SIMBOLO]"  # Opcional
+      instrucoes_portador:
+        - acao: "[Desenhar símbolo no ar com o dedo]"
+          fala_sugerida: "[Comparação com algo conhecido]"
+      nota_cm: |
+        "Abstrato em Sementes = reconhecimento visual apenas.
+         Nunca operação ou cálculo. O símbolo é 'apresentado como amigo',
+         não como ferramenta."
+         
+    # ──────────────────────────────────────────────────────────────────────────
+    # EXTENSÃO OPCIONAL (Se Quiser Voar)
+    # ──────────────────────────────────────────────────────────────────────────
+    extensao:
+      titulo: "[Nome criativo da extensão]"
+      descricao: |
+        [Atividade extra para crianças que pedem 'mais!'.
+         Só prossiga se os olhos do Herdeiro brilharem.]
+      sugestoes:
+        - "[Ideia de extensão 1]"
+        - "[Ideia de extensão 2]"
+      
+  # ────────────────────────────────────────────────────────────────────────────
+  # NARRAÇÃO (A criança conta - CM obrigatório)
+  # ────────────────────────────────────────────────────────────────────────────
+  narracao:
+    instrucao_portador: |
+      "[Guarde os materiais. Olhe nos olhos da criança.
+       Dê tempo. O silêncio é parte do trabalho mental.]"
+    pergunta_principal: |
+      "[Pergunta aberta para a criança recontar.
+       Flexível por lição. Exemplo: 'Me conte: o que você descobriu hoje?']"
+    perguntas_do_coracao:
+      - "[Pergunta alternativa 1 - se a criança travar]"
+      - "[Pergunta alternativa 2 - aprofundamento]"
+      - "[Pergunta alternativa 3 - conexão pessoal]"
+    nota_cm: |
+      "Narração é o método de Charlotte Mason para fixação.
+       A criança processa internamente e depois externaliza.
+       NUNCA interrompa. Espere. O silêncio é sagrado."
+       
+  # ────────────────────────────────────────────────────────────────────────────
+  # RITUAL DE FECHAMENTO
+  # ────────────────────────────────────────────────────────────────────────────
+  ritual_fechamento:
+    fala_guardiao:
+      tom: "[grato | acolhedor | misterioso | esperançoso]"
+      script: |
+        "[Despedida do guardião. Inclui:
+         - Reconhecimento do esforço da criança
+         - Gancho para próxima lição
+         - Bênção de fechamento]"
+    fio_de_ouro: |
+      "[Conexão explícita com próxima lição.
+       Exemplo: 'Guarde uma semente. Amanhã Bernardo vai precisar de ajuda...']"
+    transicao_de_volta:
+      instrucao: |
+        "[Ritual de saída do Reino:
+         - Apagam a luz especial juntos
+         - Ou: Fecham o Livro Dourado
+         - Momento de silêncio]"
+      fala_portador: |
+        "[Frase de encerramento. Flexível por lição.
+         Exemplo: 'O Reino adormece, mas as sementes
+         continuam crescendo em seu coração.']"
+         
+  # ════════════════════════════════════════════════════════════════════════════
+  # PÓS-JORNADA (Para o Portador - leia depois)
+  # ════════════════════════════════════════════════════════════════════════════
+  
+  # ────────────────────────────────────────────────────────────────────────────
+  # CÁTEDRA DOS PAIS (Por que isso importa)
+  # ────────────────────────────────────────────────────────────────────────────
+  catedra_dos_pais:
+    metodo_cpa: |
+      "[Explicação de como o método Singapura foi aplicado nesta lição.
+       - O que foi Concreto
+       - Por que Pictórico foi vetado (se aplicável)
+       - Como o Abstrato foi mínimo]"
+    principio_cm: |
+      "[Qual princípio de Charlotte Mason guiou esta lição.
+       Inclua uma citação.]"
+    reflexao_espiritual: |
+      "[Conexão da matemática com verdade maior.
+       Opcional mas premium.]"
+    nota_de_graca: |
+      "[Mensagem de encorajamento para o pai.
+       Se não funcionou, não houve perda - a semente foi plantada.]"
+       
+  # ────────────────────────────────────────────────────────────────────────────
+  # SUGESTÕES DOS GUARDIÕES
+  # ────────────────────────────────────────────────────────────────────────────
+  sugestoes:
+    - guardiao: "[Nome do guardião líder]"
+      emoji: "[Emoji do guardião]"
+      dica: |
+        "[Dica prática do guardião para esta lição]"
+      sugestao: "[Como aplicar na prática]"
+    - guardiao: "[Guardião secundário]"
+      emoji: "[Emoji]"
+      dica: |
+        "[Dica complementar]"
+      sugestao: "[Aplicação]"
+    - guardiao: "Melquior"
+      emoji: "🦁"
+      dica: |
+        "[Sabedoria geral para o Portador]"
+      sugestao: "[Aplicação]"
+      
+  # ────────────────────────────────────────────────────────────────────────────
+  # DIÁRIO DO PORTADOR (Anotações do pai)
+  # ────────────────────────────────────────────────────────────────────────────
+  diario_portador:
+    descricao: |
+      "Este espaço é para VOCÊ, Portador.
+       Anote suas observações após aplicar a lição."
+    campos:
+      - pergunta: "Como meu filho reagiu hoje?"
+        espaco: "[                                                    ]"
+      - pergunta: "O que funcionou bem?"
+        espaco: "[                                                    ]"
+      - pergunta: "O que posso ajustar na próxima vez?"
+        espaco: "[                                                    ]"
+      - pergunta: "Algo surpreendente que ele disse/fez?"
+        espaco: "[                                                    ]"
+      - pergunta: "Nota para mim mesmo:"
+        espaco: "[                                                    ]"
+        
+  # ────────────────────────────────────────────────────────────────────────────
+  # AUDITORIA INTERNA (Para IA/QA - não aparece no output final)
+  # ────────────────────────────────────────────────────────────────────────────
+  auditoria_qa:
+    verificacao_cm:
+      - check: "Criança tratada como pessoa?"
+        status: null
+      - check: "Ideia Viva presente e encantadora?"
+        status: null
+      - check: "Narração incluída?"
+        status: null
+      - check: "Lição ≤ 20 min?"
+        status: null
+    verificacao_cpa:
+      - check: "Concreto ≥ 60%?"
+        status: null
+      - check: "Pictórico vetado?"
+        status: null
+      - check: "Abstrato mínimo?"
+        status: null
+    verificacao_narrativa:
+      - check: "Frase canônica do guardião?"
+        status: null
+      - check: "Tom Lewis (dignidade)?"
+        status: null
+      - check: "Consistência Tolkien?"
+        status: null
+      - check: "Cores Potter (naturais)?"
+        status: null
+    verificacao_template:
+      - check: "Todas seções obrigatórias?"
+        status: null
+      - check: "Linkage anterior/próximo?"
+        status: null
+      - check: "Atmosfera única?"
+        status: null
+
+# ══════════════════════════════════════════════════════════════════════════════
+# REFERÊNCIAS
+# ══════════════════════════════════════════════════════════════════════════════
+
+referencias:
+  lore:
+    - arquivo: "LORE/climas.yaml"
+      uso: "Atmosferas, elementos sensoriais, tom do guardião"
+    - arquivo: "LORE/locais.yaml"
+      uso: "Cenários do Reino, descrições imersivas"
+    - arquivo: "LORE/guardioes.yaml"
+      uso: "Frases canônicas, personalidades, emojis"
+    - arquivo: "LORE/glossario.yaml"
+      uso: "Termos corretos do projeto"
+  agentes:
+    - arquivo: ".bmad/agents/sofia.md"
+      uso: "Regras CM, vetos"
+    - arquivo: ".bmad/agents/euclides.md"
+      uso: "Método CPA"
+    - arquivo: ".bmad/agents/artesao.md"
+      uso: "Lewis, Tolkien, Potter"
+    - arquivo: ".bmad/agents/veritas.md"
+      uso: "QA Quíntupla"
+  decisoes:
+    - arquivo: "Texto.md"
+      uso: "Decisões canonizadas"
+    - arquivo: "DEFINITION_OF_DONE.md"
+      uso: "Critérios de qualidade"

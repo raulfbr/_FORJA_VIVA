@@ -1,0 +1,182 @@
+# ════════════════════════════════════════════════════════════════════════════════
+# ÍNDICE DO LORE — Arquivo Mestre de Navegação
+# ════════════════════════════════════════════════════════════════════════════════
+# 
+# PROPÓSITO:
+#   Mapa de navegação ÚNICO para todo o LORE.
+#   Responde: "Onde está o quê? Qual arquivo consultar?"
+# 
+# ALINHAMENTO NORTH STAR:
+#   - Princípio 1: "Qualidade" → Organização clara serve qualidade
+#   - BMAD: "Federated Knowledge" → Índice coordena sem duplicar
+#   - Eric Evans: "Aggregate Root" → Ponto de entrada único
+# 
+# USADO POR:
+#   - Todos os workflows
+#   - Artesão ao criar lições
+#   - QA na verificação
+#   - Novos colaboradores para entender estrutura
+# 
+# Última Atualização: 13/01/2026
+# ════════════════════════════════════════════════════════════════════════════════
+
+tipo: indice_lore
+versao: "1.0"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# ESTRUTURA DO LORE — Camadas
+# ════════════════════════════════════════════════════════════════════════════════
+
+estrutura:
+  descricao: "LORE organizado em 3 camadas: Índice, Core, Extensões"
+  
+  camada_indice:
+    arquivo: index.yaml
+    proposito: "Este arquivo — navegação única"
+    
+  camada_core:
+    descricao: "Arquivos essenciais para TODA lição"
+    arquivos:
+      - arquivo: north_star.yaml
+        proposito: "Propósito, princípios, propósitos por ano"
+        
+      - arquivo: guardioes.yaml
+        proposito: "5 Guardiões — dados canônicos fixos"
+        
+      - arquivo: locais.yaml
+        proposito: "5 Locais — atmosferas sensoriais"
+        
+      - arquivo: climas.yaml
+        proposito: "8 Climas + 4 Desafios atmosféricos"
+        
+      - arquivo: padroes_narrativos.yaml
+        proposito: "Regras de narração imersiva"
+        
+  camada_extensoes:
+    descricao: "Arquivos usados conforme necessidade"
+    arquivos:
+      - arquivo: evolucao_guardioes.yaml
+        proposito: "Como Guardiões comunicam por ciclo"
+        
+      - arquivo: artefatos.yaml
+        proposito: "6 objetos simbólicos da jornada"
+        
+      - arquivo: viajante.yaml
+        proposito: "Títulos do Viajante por ciclo"
+        
+      - arquivo: glossario.yaml
+        proposito: "Termos Sistema vs Reino"
+        
+      - arquivo: ontologia.yaml
+        proposito: "Atores (Maestro, Portador, Viajante)"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# NAVEGAÇÃO POR TAREFA
+# ════════════════════════════════════════════════════════════════════════════════
+
+navegacao:
+  
+  criar_licao:
+    descricao: "Ao criar uma nova lição, consulte:"
+    sempre:
+      - guardioes.yaml
+      - locais.yaml
+      - padroes_narrativos.yaml
+    conforme_ciclo:
+      sementes:
+        - evolucao_guardioes.yaml#sementes
+        - viajante.yaml#herdeiro
+      raizes:
+        - evolucao_guardioes.yaml#raizes
+        - artefatos.yaml#diario_do_reino
+        - viajante.yaml#construtor
+      logica:
+        - evolucao_guardioes.yaml#logica
+        - artefatos.yaml#bussola_celeste
+        - viajante.yaml#explorador
+        - climas.yaml#desafios_atmosfericos
+      legado:
+        - evolucao_guardioes.yaml#legado
+        - artefatos.yaml#tocha_melquior
+        - viajante.yaml#portador_da_tocha
+        
+  revisar_licao:
+    descricao: "Ao revisar qualidade:"
+    sempre:
+      - north_star.yaml#propositos_por_ano
+      - glossario.yaml#termos_proibidos
+      - padroes_narrativos.yaml#checklist_qa
+      
+  entender_sistema:
+    descricao: "Para novos colaboradores:"
+    ordem:
+      - 1: "index.yaml (este arquivo)"
+      - 2: "north_star.yaml (propósito)"
+      - 3: "ontologia.yaml (quem é quem)"
+      - 4: "guardioes.yaml + locais.yaml (mundo narrativo)"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# MAPA DE CONEXÕES
+# ════════════════════════════════════════════════════════════════════════════════
+
+conexoes:
+  descricao: "Como os arquivos se relacionam"
+  
+  mapa: |
+    ┌─────────────────────────────────────────────────────────────────┐
+    │                         index.yaml                              │
+    │                      (PONTO DE ENTRADA)                         │
+    └───────────────────────────┬─────────────────────────────────────┘
+                                │
+            ┌───────────────────┼───────────────────┐
+            │                   │                   │
+            ▼                   ▼                   ▼
+    ┌───────────────┐   ┌───────────────┐   ┌───────────────┐
+    │  north_star   │   │  guardioes    │   │    locais     │
+    │  (princípios) │   │  (5 person.)  │   │  (5 lugares)  │
+    └───────────────┘   └───────┬───────┘   └───────────────┘
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │  evolucao_guardioes   │
+                    │  (como falam/ciclo)   │
+                    └───────────────────────┘
+                    
+    Extensões:
+    ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+    │  artefatos  │  │  viajante   │  │   climas    │
+    │  (objetos)  │  │  (títulos)  │  │  (atmosfera)│
+    └─────────────┘  └─────────────┘  └─────────────┘
+
+# ════════════════════════════════════════════════════════════════════════════════
+# REGRAS DO LORE
+# ════════════════════════════════════════════════════════════════════════════════
+
+regras:
+  ssot:
+    nome: "Single Source of Truth"
+    descricao: "Cada dado existe em UM arquivo apenas"
+    exemplo: "Dados do Melquior → guardioes.yaml, não duplicar"
+    
+  referencia:
+    nome: "Link, don't duplicate"
+    descricao: "Sempre referenciar, nunca copiar"
+    exemplo: "Template diz 'ver guardioes.yaml', não repete dados"
+    
+  evolucao:
+    nome: "Extensão, não modificação"
+    descricao: "Dados fixos em Core, evolução em Extensões"
+    exemplo: "Melquior fixo em guardioes.yaml, tom por ciclo em evolucao_guardioes.yaml"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# CHANGELOG
+# ════════════════════════════════════════════════════════════════════════════════
+
+changelog:
+  - data: "2026-01-13"
+    versao: "1.0"
+    autor: Maestro
+    mudancas:
+      - "Criação do arquivo índice"
+      - "Definição das 3 camadas"
+      - "Mapa de navegação por tarefa"

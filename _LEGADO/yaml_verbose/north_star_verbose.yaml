@@ -1,0 +1,747 @@
+# ════════════════════════════════════════════════════════════════════════════════
+# NORTH STAR — Matemática Viva
+# ════════════════════════════════════════════════════════════════════════════════
+# O documento que guia TODAS as decisões do projeto.
+# Última Atualização: 12/01/2026
+
+# ════════════════════════════════════════════════════════════════════════════════
+# PROPÓSITO CENTRAL
+# ════════════════════════════════════════════════════════════════════════════════
+
+proposito:
+  frase: |
+    "Matemática Viva existe para ajudar famílias a amarem matemática juntas,
+    através de ideias vivas e histórias que transformam."
+  
+  essencia: |
+    Não somos um currículo. Somos um MOVIMENTO de famílias que descobriram
+    que matemática pode ser viva, bela e conectada à realidade.
+
+# ════════════════════════════════════════════════════════════════════════════════
+# MISSÃO
+# ════════════════════════════════════════════════════════════════════════════════
+
+missao:
+  one_liner: "Infraestrutura Educacional K-12 — Aberta no Saber, Premium na Experiência."
+  
+  componentes:
+    infraestrutura_educacional:
+      significado: Não é só um currículo; é um sistema completo
+      inclui:
+        - Lições estruturadas
+        - Guardiões narrativos
+        - Cards físicos
+        - Pipeline de produção
+        
+    k12:
+      significado: Cobertura de 0 a 18 anos
+      conexao: |
+        A jornada é UMA SÓ. O que a criança aprende nas Sementes
+        ela reconhece nas Raízes, aprofunda na Lógica, e domina no Legado.
+        Tudo é conectado. Tudo evolui junto.
+      ciclos:
+        - nome: Sementes
+          faixa: "0-6 anos"
+        - nome: Raízes
+          faixa: "7-10 anos"
+        - nome: Lógica
+          faixa: "11-14 anos"
+        - nome: Legado
+          faixa: "15-18 anos"
+          
+    aberta_no_saber:
+      significado: Conteúdo CC BY 4.0 (código aberto)
+      licenca: "CC BY 4.0"
+      o_que_e_aberto:
+        - Conteúdo das lições
+        - Narrativas
+        - Metodologia
+        
+    premium_na_experiencia:
+      significado: Valor comercial está na curadoria, não exclusividade
+      valor_comercial:
+        - Curadoria de QUALIDADE impecável
+        - Comunidade de famílias conectadas
+        - Conveniência (5 min preparo)
+        - Cards físicos
+
+# ════════════════════════════════════════════════════════════════════════════════
+# PRINCÍPIOS FUNDAMENTAIS
+# ════════════════════════════════════════════════════════════════════════════════
+# Estes princípios guiam TUDO. Não são regras — são o DNA do projeto.
+
+principios_fundamentais:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # 1. QUALIDADE ACIMA DE TUDO
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: 1
+    nome: "Qualidade Não é Negociável"
+    descricao: |
+      O difícil não é fazer. O difícil é distinguir o BOM do ÓTIMO.
+      Buscamos o IMPECÁVEL — sempre. Produto Premium exige honra ao prazo
+      e respeito absoluto à qualidade.
+    aplicacao:
+      - "3 lições impecáveis > 10 lições boas"
+      - "Experts REAIS deliberam para decisões de alta qualidade"
+      - "Qualidade é percebida pela família no primeiro contato"
+    pergunta: "Isso é BOM ou é ÓTIMO? Podemos melhorar?"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # 2. FAMÍLIA É O CENTRO
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: 2
+    nome: "A Família é o Centro — Não o Currículo"
+    descricao: |
+      O currículo serve à família, não o contrário.
+      Cada família tem sua história, contexto e ritmo.
+      Damos NORTE e SEGURANÇA, mas respeitamos a singularidade.
+    aplicacao:
+      - "Flexibilidade SEM perder o norte da Tríade"
+      - "Linguagem de CONVITE, não imposição"
+      - "Alternativas oferecidas sem julgamento"
+    pergunta: "Isso ajuda a família ou complica a vida dela?"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # 3. POSITIVIDADE SEMPRE
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: 3
+    nome: "Foco no Positivo — Evitar Regras para Pessoas"
+    descricao: |
+      Para a IA: regras claras e vetos precisos.
+      Para famílias: convites, empatia e embasamento.
+      Nunca repreender. Sempre encorajar com fundamento.
+    tom:
+      para_ia: "Vete se violar Princípio X."
+      para_familia: "Experimente assim — e veja o que funciona para vocês."
+    aplicacao:
+      - "Alertar COM GENTILEZA quando algo sair do mínimo"
+      - "Sempre mostrar o PORQUÊ (autoridade da Tríade)"
+      - "Incentivar persistência na jornada"
+    pergunta: "Isso encoraja ou desanima a família?"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # 4. INCLUSÃO COMO HONRA
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: 4
+    nome: "Cada Criança é Pessoa — Inclusão como Honra"
+    descricao: |
+      Charlotte Mason: "Children are born persons."
+      TODA criança tem dignidade, independente de habilidades.
+      Ter um deficiente no grupo não é peso — é HONRA.
+      Bernardo nos ensina que caminhos diferentes também chegam lá.
+    principio_cm: "Princípio 1 — Crianças são pessoas."
+    aplicacao:
+      - "Linguagem neutra em instruções (evitar 'mão direita/esquerda')"
+      - "Notas de adaptação quando relevante"
+      - "Bernardo como Guardião valoroso na narrativa"
+      - "O OBJETIVO importa, não o COMO chegar lá"
+    pergunta: "Uma criança com realidade diferente consegue participar?"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # 5. CONEXÃO 0-18 ANOS
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: 5
+    nome: "Uma Jornada Completa — Não Lições Avulsas"
+    descricao: |
+      A criança aos 14 deve reconhecer: "Ah, isso é a mesma ideia de quando
+      eu era pequeno, mas agora entendo mais profundo!"
+      Conexão. Evolução. Alegria de ver padrões.
+    espiral: |
+      Bruner: "O tema deve voltar mais complexo."
+      CM: "Education is the Science of Relations."
+    aplicacao:
+      - "LORE único que acompanha toda a jornada"
+      - "Guardiões crescem com a criança"
+      - "Base das Sementes prepara para Raízes, que prepara para Lógica..."
+    pergunta: "Isso cria conexão com o que veio antes e o que vem depois?"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # 6. COMUNIDADE TRIBAL
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: 6
+    nome: "Comunidade de Famílias — Identidade Tribal"
+    descricao: |
+      Não é só suporte técnico. É PERTENCER a algo maior.
+      Famílias trocando experiências, ideias, crescimento.
+      Sempre incentivando bom trato entre os pais.
+    godin: "This is for people like us."
+    aplicacao:
+      - "Identidade tribal (sou um pai intencional)"
+      - "Troca de experiências entre famílias"
+      - "Comunidade que encoraja, não julga"
+    pergunta: "Isso fortalece a tribo ou a fragmenta?"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # 7. NARRAÇÃO IMERSIVA
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: 7
+    nome: "Matemática Através de Narrativas Imersivas"
+    descricao: |
+      Nunca ouvimos falar de aprender matemática com narração.
+      Isso é o diferencial. A criança não só calcula — ela VIVE a ideia
+      dentro de uma história. E as outras atividades fluem naturalmente.
+    diferencial: |
+      A Tríade (CM + Singapura + TGTB) é poderosa sozinha.
+      Mas a NARRAÇÃO IMERSIVA é o que ninguém mais faz.
+    aplicacao:
+      - "Toda lição tem uma Ideia Viva apresentada via narrativa"
+      - "Guardiões conduzem a história"
+      - "A matemática emerge da história, não é forçada"
+    pergunta: "A criança está VIVENDO a ideia ou apenas recebendo informação?"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # 8. NORTE MÍNIMO + FLEXIBILIDADE
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: 8
+    nome: "Norte Seguro com Espaço para Adaptação"
+    descricao: |
+      Cada lição tem uma atividade CORE (o mínimo impecável).
+      Mas oferecemos alternativas para flexibilidade.
+      Se a família sair do mínimo, alertamos com gentileza e embasamento.
+    estrutura:
+      core: "A atividade principal — inegociável para o aprendizado"
+      alternativas: "Outras formas de alcançar o mesmo objetivo"
+      alerta: "Gentil, com fundamento da Tríade, incentivando persistência"
+    aplicacao:
+      - "Template padronizado, mas lição única por contexto/ano"
+      - "LORE único de todas as idades"
+      - "Realidade de cada ano respeitada"
+    pergunta: "O pai sabe qual é o 'mínimo' e como adaptar?"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# MÉTRICAS
+# ════════════════════════════════════════════════════════════════════════════════
+
+metricas:
+  escopo:
+    meta: "1200+ ativos modulares"
+    indicador: "Lições produzidas"
+    
+  qualidade:
+    meta: "Compliance CM + CPA"
+    indicador: "Aprovação QA 100%"
+    
+  experiencia:
+    meta: "5 min de preparo"
+    indicador: "Teste do Café aprovado"
+    
+  acesso:
+    meta: "CC BY 4.0"
+    indicador: "Licença aplicada"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# PERGUNTA DE VALIDAÇÃO
+# ════════════════════════════════════════════════════════════════════════════════
+
+validacao:
+  pergunta: "Isso nos aproxima ou afasta do North Star?"
+  
+  aplicar_em:
+    - "Nova feature?"
+    - "Mudança de arquitetura?"
+    - "Novo workflow?"
+    - "Nova decisão de negócio?"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# PILARES PEDAGÓGICOS (A Tríade)
+# ════════════════════════════════════════════════════════════════════════════════
+
+triade:
+  charlotte_mason:
+    sigla: CM
+    foco: Alma
+    principios:
+      - "Crianças são pessoas"
+      - "Educação é uma vida, uma atmosfera, uma disciplina"
+      - "Lições curtas (15-20 min)"
+      - "Narração como método"
+      - "Hábito da Atenção"
+    referencia: ".bmad/experts/pedagogia/charlotte_mason.yaml"
+    
+  singapura_cpa:
+    sigla: CPA
+    foco: Corpo
+    metodo:
+      - concreto: "C - Mãos (manipulativos)"
+      - pictorico: "P - Olhos (representação visual)"
+      - abstrato: "A - Símbolo (notação matemática)"
+    referencia: "GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md"
+    
+  tgtb:
+    sigla: TGTB
+    nome_completo: "The Good and The Beautiful"
+    foco: Estrutura
+    uso: "Scope & Sequence como referência"
+    nota: "Não obrigatório para famílias"
+    referencia: "curriculo/_SISTEMA/CURRICULOS_MESTRE/*.md"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# DIRETRIZES OPERACIONAIS
+# ════════════════════════════════════════════════════════════════════════════════
+# Regras práticas que guiam decisões do dia-a-dia.
+
+diretrizes_operacionais:
+  - id: 1
+    nome: "Zero Tela até 10 anos"
+    descricao: "Material físico para criança, digital para o pai"
+    
+  - id: 2
+    nome: "Não criticar concorrentes"
+    descricao: "Foco no positivo, no que oferecemos"
+    
+  - id: 3
+    nome: "Preço por Família"
+    descricao: "Valoriza famílias com múltiplos filhos"
+    
+  - id: 4
+    nome: "Orientação, não Imposição"
+    descricao: "Oferecer norte seguro com espaço para adaptar"
+    
+  - id: 5
+    nome: "Imago Dei"
+    descricao: "Toda criança é imagem de Deus e merece respeito"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# CONFIGURAÇÃO DE NEGÓCIO
+# ════════════════════════════════════════════════════════════════════════════════
+
+negocio:
+  precos_2026:
+    pioneiros:
+      valor: 1197
+      moeda: BRL
+      acesso: vitalicio
+      beneficios:
+        - Acesso ao currículo completo
+        - Comunidade WhatsApp
+        - Acesso direto ao Maestro
+        - Participação na co-criação
+        
+    mentoria:
+      valor: 4397
+      moeda: BRL
+      vagas: 10
+      beneficios:
+        - Tudo do Pioneiro
+        - 4 encontros ao vivo
+        - Maestro + Marina
+        - Acompanhamento personalizado
+        
+    preco_cheio:
+      valor: 2397
+      moeda: BRL
+      disponivel_apos: "período pioneiro"
+
+  licenciamento:
+    tipo: "CC BY 4.0"
+    o_que_pode: "Copiar, adaptar, comercializar com atribuição"
+    valor_premium: "Curadoria + Comunidade + Conveniência"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# SISTEMA MULTI-AGENTE
+# ════════════════════════════════════════════════════════════════════════════════
+# Especialistas reais que deliberam para decisões de alta qualidade
+
+sistema_agentes:
+  conceito: |
+    O projeto utiliza especialistas simulados baseados em pensadores REAIS
+    para tomada de decisão, criação de lições e revisão de qualidade.
+    Charlotte Mason coordena todas as deliberações.
+  
+  formato: YAML
+  localizacao: ".bmad/experts/"
+  
+  coordenadora:
+    nome: Charlotte Mason
+    funcao: "Coordenadora com poder de VETO final"
+    principio: "Children are born persons"
+  
+  conselhos:
+    pedagogia:
+      - Charlotte Mason
+      - Susan Schaeffer Macaulay
+    matematica:
+      - Jerome Bruner (CPA)
+      - Lev Vygotsky (Scaffolding)
+    narrativa:
+      - C.S. Lewis (Dignidade)
+      - J.R.R. Tolkien (Consistência)
+      - Beatrix Potter (Estética)
+      - Makoto Fujimura (Kintsugi)
+    negocios:
+      - Seth Godin
+      - Alex Hormozi
+      - Peter Thiel
+    ux_familia:
+      - "5 Mães Personas"
+    engenharia:
+      - Clean Code (Qualidade de Código)
+      - QA (Verificação Quíntupla)
+      - BMAD (Orquestração)
+      - Eric Evans (DDD/SSOT)
+  
+  modos:
+    reuniao:
+      descricao: "Deliberação com réplica/tréplica para decisões estratégicas"
+      comando: "/reuniao [tema]"
+      
+    criar_licao:
+      descricao: "Workflow de produção de lição de alta qualidade"
+      comando: "/criar-licao [num] [tema]"
+      
+    revisao:
+      descricao: "QA Quíntupla para garantia de qualidade"
+      comando: "/revisar [licao]"
+  
+  regra_ouro: |
+    Charlotte Mason tem VETO final em qualquer conflito.
+    "Children are born persons" é a lei suprema.
+  
+  extensivel: true
+  nota: "Novos especialistas podem ser adicionados conforme necessário"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# PROPÓSITOS NARRATIVOS POR ANO
+# ════════════════════════════════════════════════════════════════════════════════
+# 
+# Cada ano tem um propósito narrativo único que guia todas as lições.
+# Elaborados por Charlotte Mason para refletir a evolução da criança.
+# Templates referenciam esta seção: "ver north_star.yaml#propositos_por_ano"
+
+propositos_por_ano:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # SEMENTES (K) — 4-6 anos
+  # ─────────────────────────────────────────────────────────────────────────────
+  K_sementes:
+    ciclo: Sementes
+    titulo_viajante: Herdeiro
+    idade: "4-6 anos"
+    frase: "Os números são promessas do Rei."
+    elaboracao: |
+      A criança descobre que cada quantidade guarda um segredo sagrado.
+      O mundo é encantado e cheio de tesouros escondidos.
+      Ela é HERDEIRA de algo maior que não construiu, mas recebeu.
+      O tom é de maravilhamento puro.
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # RAÍZES (1º-5º ano) — 6-10 anos
+  # ─────────────────────────────────────────────────────────────────────────────
+  1_raizes:
+    ciclo: Raízes
+    titulo_viajante: Construtor
+    idade: "6-7 anos"
+    frase: "Sou o Construtor da Vila."
+    elaboracao: |
+      A criança usa as promessas para CONSTRUIR.
+      Cada número agora serve a um propósito: medir, contar, organizar.
+      Ela sai do jardim encantado e entra na oficina de Bernardo.
+      O tom é de AVENTURA CONSTRUTIVA.
+
+  2_raizes:
+    ciclo: Raízes
+    titulo_viajante: Construtor
+    idade: "7-8 anos"
+    frase: "O Mercado me ensina justiça."
+    elaboracao: |
+      A criança troca, compara, equilibra.
+      A matemática se torna moeda de relação com os outros.
+      O zelo e a honestidade entram em cena.
+      O tom é de TROCAS JUSTAS.
+
+  3_raizes:
+    ciclo: Raízes
+    titulo_viajante: Construtor
+    idade: "8-9 anos"
+    frase: "Exploro a Vastidão do Reino."
+    elaboracao: |
+      A criança expande horizontes.
+      Números maiores, operações combinadas, geometria do espaço.
+      O mundo cresce e ela cresce com ele.
+      O tom é de EXPLORAÇÃO CORAJOSA.
+
+  4_raizes:
+    ciclo: Raízes
+    titulo_viajante: Construtor
+    idade: "9-10 anos"
+    frase: "Ordeno o que descobri."
+    elaboracao: |
+      A criança sistematiza. Frações, decimais, proporções.
+      O que era intuição vira estrutura.
+      Ela começa a ver PADRÕES e a organizá-los.
+      O tom é de DOMÍNIO E ORGANIZAÇÃO.
+
+  5_raizes:
+    ciclo: Raízes
+    titulo_viajante: Construtor
+    idade: "10-11 anos"
+    frase: "A linguagem dos padrões se revela."
+    elaboracao: |
+      A criança vê que tudo se conecta.
+      Multiplicação e divisão são danças inversas.
+      Frações, decimais e porcentagens são faces da mesma moeda.
+      Ela está PRONTA para a abstração.
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # LÓGICA (6º-8º ano) — 11-14 anos
+  # ─────────────────────────────────────────────────────────────────────────────
+  6_logica:
+    ciclo: Lógica
+    titulo_viajante: Explorador
+    idade: "11-12 anos"
+    frase: "A matemática é a linguagem do universo."
+    elaboracao: |
+      (Galileu) A criança descobre que os números não são inventados —
+      são DESCOBERTOS. A álgebra é poesia codificada.
+      Ela vê a mão do Criador na ordem matemática.
+      O tom é de REVERÊNCIA INTELECTUAL.
+
+  7_logica:
+    ciclo: Lógica
+    titulo_viajante: Explorador
+    idade: "12-13 anos"
+    frase: "O raciocínio é uma forja."
+    elaboracao: |
+      A criança aprende a PROVAR.
+      Não basta sentir que algo é verdade — ela precisa demonstrar.
+      A lógica formal entra em cena.
+      Bernardo ensina: "Aqui na forja, cada argumento deve ser testado."
+
+  8_logica:
+    ciclo: Lógica
+    titulo_viajante: Explorador
+    idade: "13-14 anos"
+    frase: "O abstrato ilumina o concreto."
+    elaboracao: |
+      A criança usa álgebra para resolver problemas reais.
+      O abstrato não é fuga — é FERRAMENTA de poder sobre o mundo.
+      Ela vê que equações modelam a realidade.
+      O tom é de PODER APLICADO.
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # LEGADO (9º-12º ano) — 14-18 anos
+  # ─────────────────────────────────────────────────────────────────────────────
+  9_legado:
+    ciclo: Legado
+    titulo_viajante: Portador da Tocha
+    idade: "14-15 anos"
+    frase: "O que descobri é usado pelo mundo."
+    elaboracao: |
+      A criança vê matemática em engenharia, economia, ciência.
+      Ela não apenas estuda — ela APLICA.
+      O conhecimento serve a propósitos reais.
+      O tom é de VOCAÇÃO NASCENTE.
+
+  10_legado:
+    ciclo: Legado
+    titulo_viajante: Portador da Tocha
+    idade: "15-16 anos"
+    frase: "Sou aprendiz dos mestres antigos."
+    elaboracao: |
+      A criança estuda a história da matemática.
+      Pitágoras, Euclides, Arquimedes não são nomes — são MENTORES.
+      Ela herda uma tradição de milênios.
+      O tom é de HUMILDADE ERUDITA.
+
+  11_legado:
+    ciclo: Legado
+    titulo_viajante: Portador da Tocha
+    idade: "16-17 anos"
+    frase: "A matemática me prepara para servir."
+    elaboracao: |
+      A criança vê que cálculo, estatística e geometria
+      resolvem problemas REAIS.
+      O conhecimento é para o BEM do próximo.
+      O tom é de SERVIÇO VOCACIONAL.
+
+  12_legado:
+    ciclo: Legado
+    titulo_viajante: Portador da Tocha
+    idade: "17-18 anos"
+    frase: "Sou mordomo do saber."
+    elaboracao: |
+      A criança está pronta para a universidade ou a vida.
+      O que aprendeu não é SEU — é herança para PASSAR ADIANTE.
+      O ciclo se completa. Ela é agora o Portador da Tocha.
+      O tom é de MORDOMIA E LEGADO.
+    ritual_final: |
+      Melquior: "Você entrou Herdeiro. Cresceu Construtor.
+      Brilhou Explorador. Agora sai Portador da Tocha.
+      Vá — e acenda outras vidas."
+
+# ════════════════════════════════════════════════════════════════════════════════
+# FASE BERÇO — Orientação para 0-4 Anos
+# ════════════════════════════════════════════════════════════════════════════════
+# 
+# Charlotte Mason: "For the first six years of life we may do much in the way of
+# developing good habits and arousing worthy interests; but of direct teaching
+# these years have little need..."
+# 
+# Esta fase NÃO tem lições estruturadas. É orientação para pais.
+
+fase_berco:
+  nome: "Fase Berço"
+  idade: "0-4 anos"
+  titulo_viajante: "Broto"
+  
+  principio_cm: |
+    Charlotte Mason enfatizava que antes dos 6 anos, a ênfase deve ser em:
+    1. NATUREZA — Tempo ao ar livre todos os dias
+    2. HÁBITOS — Atenção, obediência, rotinas
+    3. IDEIAS VIVAS — Através de histórias e conversas, não lições
+    
+    "Children should be brought up in the country and should live out of doors."
+    — Home Education, Vol. 1
+  
+  o_que_nao_fazer:
+    - descricao: "NÃO ensinar matemática formal"
+      cm_diz: "Direct teaching has little need in these years."
+      
+    - descricao: "NÃO usar exercícios estruturados"
+      cm_diz: "Knowledge is not the sole aim of education."
+      
+    - descricao: "NÃO apressar desenvolvimento"
+      cm_diz: "The child's development is a natural process."
+  
+  o_que_fazer:
+    
+    natureza:
+      titulo: "Natureza é a Sala de Aula"
+      atividades:
+        - "Passeios diários ao ar livre (mínimo 2 horas)"
+        - "Observar insetos, plantas, nuvens, animais"
+        - "Brincar com terra, água, areia, folhas"
+        - "Plantas no jardim ou vasos para cuidar"
+      proposito: |
+        A natureza ensina padrões, sequências, contagem,
+        sem que a criança perceba que está "aprendendo matemática".
+        3 formigas. 4 pétalas. O sol que some e volta.
+        
+    habitos:
+      titulo: "Hábitos Antes de Lições"
+      atividades:
+        - atenção: "Olhar REALMENTE para as coisas (60 seg sem desviar)"
+        - obediencia: "Responder na primeira vez, com alegria"
+        - rotinas: "Sono, alimentação, higiene regulares"
+        - ordem: "Cada brinquedo tem seu lugar"
+      proposito: |
+        Hábitos formados cedo se tornam segunda natureza.
+        Charlotte Mason: "Habit is ten natures."
+        
+    ideias_vivas:
+      titulo: "Ideias Através de Histórias"
+      atividades:
+        - "Histórias narradas (pais contam, não leem para criança ler)"
+        - "Canções, rimas, parlendas"
+        - "Conversas ricas durante o dia"
+        - "Perguntas sobre o mundo: 'Por que o sol é amarelo?'"
+      proposito: |
+        A mente da criança se alimenta de ideias vivas,
+        não de informações secas. As histórias são o veículo.
+        
+    contagem_natural:
+      titulo: "Matemática que Surge Naturalmente"
+      exemplos:
+        - "Quantos dedos você tem? Vamos contar."
+        - "Três maçãs para você, três para o papai."
+        - "Duas meias para cada pé — quantas meias?"
+        - "Subimos 1, 2, 3, 4, 5 degraus!"
+      aviso: |
+        NUNCA transformar isso em "lição".
+        Se a criança não quiser contar, OK.
+        O objetivo é EXPOSIÇÃO, não instrução.
+  
+  guardioes_nesta_fase:
+    papel: "Personagens de histórias para dormir (opcional)"
+    abordagem: |
+      Os Guardiões podem aparecer como personagens de histórias
+      que os pais contam, MAS sem estrutura de lição.
+      "Era uma vez um leão chamado Melquior que amava contar estrelas..."
+      
+    nao_fazer: |
+      NÃO usar Guardiões para "ensinar" nesta fase.
+      A criança os conhecerá formalmente nas Sementes (K).
+      
+  frases_para_pais:
+    - "Você não está atrasado. Você está protegendo a infância."
+    - "Menos estrutura agora = mais fundação para depois."
+    - "Tempo na natureza é a melhor preparação para matemática."
+    - "Seu filho não precisa de exercícios — precisa de você."
+
+# ════════════════════════════════════════════════════════════════════════════════
+# ONBOARDING — Para Quem Entra no Meio da Jornada
+# ════════════════════════════════════════════════════════════════════════════════
+# 
+# Muitas famílias descobrirão o Matemática Viva quando o filho já tem 7, 10, 14 anos.
+# Eles não perderam nada — chegaram na hora certa.
+
+onboarding:
+
+  principio: |
+    "Você não perdeu nada — chegou na hora certa.
+    O Reino sempre existiu. Você só agora descobriu."
+    
+  cenarios:
+    
+    entrada_raizes:
+      ciclo: Raízes
+      idade: "6-10 anos"
+      abordagem: |
+        1. Fazer L000 adaptada (Introdução ao Reino)
+        2. Apresentar os 5 Guardiões
+        3. Explicar que o Viajante é "Construtor" agora
+        4. Começar do ponto curricular adequado
+      tom: |
+        "Você já sabe muita coisa! Agora vamos dar NOME
+        para o que você já faz. Bem-vindo ao Reino."
+        
+    entrada_logica:
+      ciclo: Lógica
+      idade: "10-14 anos"
+      abordagem: |
+        1. Apresentação do Reino (versão madura)
+        2. Explicar a jornada rapidamente
+        3. Enfatizar que é "Explorador" — busca verdade
+        4. Começar com conteúdo do ano adequado
+      tom: |
+        "Muita gente só descobre o Reino mais tarde.
+        Você está pronto para explorar profundamente."
+        
+    entrada_legado:
+      ciclo: Legado
+      idade: "14-18 anos"
+      abordagem: |
+        1. Apresentação breve (não infantil)
+        2. Foco no propósito: aplicação e serviço
+        3. Guardiões como mentores, não personagens de história
+        4. Conteúdo direto ao ponto
+      tom: |
+        "Você é Portador da Tocha — alguém que vai
+        usar o que aprende para servir outros."
+        
+    irmao_mais_novo:
+      cenario: "Irmão mais novo começa enquanto mais velho já está avançado"
+      abordagem: |
+        O mais novo faz a jornada completa.
+        O mais velho pode ajudar nas lições do mais novo
+        (isso FORTALECE a aprendizagem do mais velho).
+        CM: "The best way to learn is to teach."
+        
+  guia_inicio_rapido:
+    titulo: "Guia de Início Rápido para Novas Famílias"
+    conteudo:
+      - "O que é Matemática Viva (leitura de 5 min)"
+      - "Quem são os 5 Guardiões"
+      - "Como funciona uma lição típica"
+      - "Perguntas frequentes"
+    onde_estara: "Site/app — seção 'Novos Portadores'"
+    
+  licao_boas_vindas:
+    descricao: "Cada ciclo terá uma 'Lição de Boas-Vindas' para quem entra tarde"
+    estrutura:
+      - Apresentação breve do Reino
+      - Conhecer o Guardião principal do ciclo
+      - Primeiro artefato (se aplicável)
+      - Convite para a jornada
+    nota: "A ser desenvolvida quando criarmos lições de cada ciclo"

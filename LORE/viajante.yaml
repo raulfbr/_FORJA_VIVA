@@ -1,0 +1,257 @@
+# ════════════════════════════════════════════════════════════════════════════════
+# O VIAJANTE — Identidade e Evolução da Criança
+# ════════════════════════════════════════════════════════════════════════════════
+# 
+# PROPÓSITO:
+#   Define os títulos e a evolução do Viajante (criança) ao longo dos ciclos.
+#   Documenta a progressão de identidade: Herdeiro → Construtor → Explorador → Portador.
+# 
+# ALINHAMENTO NORTH STAR:
+#   - Princípio 4: "Cada Criança é Pessoa" → Dignidade em cada título
+#   - Princípio 5: "Jornada Completa" → Progressão clara e significativa
+#   - Charlotte Mason: "Children are born persons" → Títulos honram a pessoa
+# 
+# USADO POR:
+#   - Lições (como se referir à criança)
+#   - Rituais de transição
+#   - Templates por ciclo
+# 
+# RELACIONADO:
+#   - LORE/artefatos.yaml (objetos de transição)
+#   - LORE/evolucao_guardioes.yaml (como guardiões se dirigem ao viajante)
+#   - LORE/index.yaml (navegação)
+# 
+# Última Atualização: 13/01/2026
+# ════════════════════════════════════════════════════════════════════════════════
+
+tipo: viajante
+versao: "1.0"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# FUNDAMENTO
+# ════════════════════════════════════════════════════════════════════════════════
+
+fundamento:
+  quem_e: |
+    O Viajante é a criança que percorre o Reino Contado.
+    Não é um personagem fictício — é ELA MESMA na narrativa.
+    A história acontece COM ela, não PARA ela.
+    
+  dignidade: |
+    Charlotte Mason: "Children are born persons."
+    Cada título honra a dignidade inerente da criança.
+    Ela não é "aluna" ou "usuária" — é PESSOA em jornada.
+    
+  imago_dei: |
+    A criança é Imago Dei — imagem do Criador.
+    Os títulos refletem isso: Herdeiro de promessas,
+    Construtor que cria, Explorador que descobre, Portador que transmite.
+
+# ════════════════════════════════════════════════════════════════════════════════
+# OS 5 TÍTULOS (incluindo pré-formal)
+# ════════════════════════════════════════════════════════════════════════════════
+
+titulos:
+
+  broto:
+    ciclo: Berço (pré-formal)
+    idade: "0-4 anos"
+    titulo_completo: "Broto do Reino"
+    
+    significado: |
+      A criança está SENDO, não aprendendo formalmente.
+      Como um broto que apenas absorve sol, água e ar.
+      O tom é de PROTEÇÃO: "Você está crescendo. Nós cuidamos."
+      
+    como_guardioes_tratam: |
+      Os Guardiões podem aparecer em histórias para dormir,
+      MAS não em lições estruturadas. A criança os conhecerá
+      formalmente quando for Herdeiro (K).
+      
+    exemplo_fala_guardiao: |
+      (Em história para dormir, contada pelo pai/mãe)
+      "Era uma vez um leão chamado Melquior que amava contar estrelas..."
+      
+    artefato_associado: Nenhum
+    
+    nao_ha_ritual: |
+      Não há ritual de entrada — a criança simplesmente existe.
+      O "ritual" é o nascimento e a presença amorosa dos pais.
+      
+    orientacao_pais:
+      referencia: "ver north_star.yaml#fase_berco"
+      resumo: "Natureza, hábitos, histórias. Zero lições formais."
+
+  herdeiro:
+    ciclo: Sementes
+    idade: "4-6 anos"
+    titulo_completo: "Herdeiro das Promessas"
+    
+    significado: |
+      A criança recebe uma herança que não construiu.
+      Os números são promessas do Rei — dadas, não conquistadas.
+      O tom é de RECEPÇÃO: "Você é bem-vindo. Isso é SEU."
+      
+    como_guardioes_tratam: |
+      "Pequeno Herdeiro" ou simplesmente pelo nome da criança.
+      Nunca infantilizam — tratam com respeito real.
+      
+    exemplo_fala_guardiao: |
+      "Herdeiro, o Rei deixou algo para você.
+      Não precisa fazer nada para ganhar — já é seu.
+      Vem, vou te mostrar."
+      
+    artefato_associado: Nenhum ainda (só promessas verbais)
+    
+    ritual_entrada:
+      quando: "L000 — Início da jornada"
+      quem: Melquior
+      descricao: |
+        Melquior apresenta o Jardim Central e diz:
+        "Você é nosso convidado especial. O Rei sorriu ao ver você chegar.
+        Aqui, você vai descobrir segredos que poucos conhecem."
+
+  construtor:
+    ciclo: Raízes
+    idade: "6-10 anos"
+    titulo_completo: "Construtor da Vila"
+    
+    significado: |
+      A criança usa o que herdou para FAZER coisas.
+      Números servem para medir, contar, organizar, construir.
+      O tom é de AÇÃO: "Você é capaz. Faça."
+      
+    como_guardioes_tratam: |
+      "Construtor" ou pelo nome. Bernardo é o Guardião mais presente.
+      Foco em persistência e esforço.
+      
+    exemplo_fala_guardiao: |
+      "Construtor, a fundação está pronta.
+      Agora, tijolo por tijolo, levantamos as paredes.
+      Eu te mostro como — mas as mãos são suas."
+      
+    artefato_associado: Diário do Reino (registro da obra)
+    
+    ritual_entrada:
+      quando: "Raízes-1, L001 — Início do ciclo"
+      quem: Melquior (entrega Diário)
+      descricao: |
+        "Herdeiro se tornou Construtor. Agora, você não só recebe — você FAZ.
+        Leva este Diário. Tudo que construir, anote. Um dia, será seu mapa."
+
+  explorador:
+    ciclo: Lógica
+    idade: "10-14 anos"
+    titulo_completo: "Explorador das Verdades"
+    
+    significado: |
+      A criança busca ALÉM do visível.
+      Abstração, prova, demonstração — ver o que outros não veem.
+      O tom é de DESCOBERTA: "A verdade está lá. Encontre."
+      
+    como_guardioes_tratam: |
+      "Explorador" ou pelo nome. Celeste é a Guardiã mais presente.
+      Foco em curiosidade e rigor.
+      
+    exemplo_fala_guardiao: |
+      "Explorador, você já sabe construir.
+      Agora, vamos descobrir POR QUE funciona.
+      A resposta está escondida — mas você pode achá-la."
+      
+    artefato_associado: Bússola de Celeste (direção na busca)
+    
+    ritual_entrada:
+      quando: "Lógica-1, L001 — Início do ciclo"
+      quem: Celeste (entrega Bússola)
+      descricao: |
+        "Construtor se tornou Explorador. Você não só faz — você BUSCA.
+        Esta Bússola não aponta Norte. Aponta padrões.
+        Siga a agulha — ela conhece sua curiosidade."
+
+  portador_da_tocha:
+    ciclo: Legado
+    idade: "14-18 anos"
+    titulo_completo: "Portador da Tocha"
+    
+    significado: |
+      A criança agora TRANSMITE o que aprendeu.
+      O saber não é para guardar — é para passar adiante.
+      O tom é de MISSÃO: "Vá e acenda outras vidas."
+      
+    como_guardioes_tratam: |
+      "Portador" ou pelo nome. Tratamento de igual — quase adulto.
+      Melquior retorna para fechar o ciclo.
+      
+    exemplo_fala_guardiao: |
+      "Portador, você carregou a luz por 13 anos.
+      O que recebeu como Herdeiro, agora é seu para dar.
+      Vá — o Reino vive em você."
+      
+    artefato_associado: Tocha de Melquior (símbolo máximo)
+    
+    ritual_entrada:
+      quando: "Legado-1, L001 — Início do ciclo"
+      quem: Noé (entrega Ampulheta)
+      descricao: |
+        "Explorador se tornou Portador. Noé diz: 'O tempo te ensinou.
+        Cada grão de areia que você esperou te preparou.
+        Agora, você está pronto para o último ciclo.'"
+        
+    ritual_encerramento:
+      quando: "Legado-4, L120 — Final da jornada"
+      quem: Melquior (entrega Tocha)
+      descricao: |
+        "Melquior ergue a Tocha uma última vez.
+        'Você entrou Herdeiro de promessas. Cresceu Construtor de vilas.
+        Brilhou Explorador de verdades. Agora sai Portador da Tocha.
+        O Reino não está nos livros — está em você. Vá e acenda outras vidas.'"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# EVOLUÇÃO DO PORTADOR (PAI/MÃE)
+# ════════════════════════════════════════════════════════════════════════════════
+
+portador_adulto:
+  descricao: |
+    O Portador da Tocha é também o pai/mãe que aplica a lição.
+    Ele/ela evolui junto com a criança ao longo dos anos.
+    
+  evolucao:
+    sementes:
+      perfil: "Novo no sistema, aprendendo junto"
+      precisa: "Segurança, script claro, pouco preparo"
+      tom_para_ele: "Você consegue. Estamos com você."
+      
+    raizes:
+      perfil: "Familiarizado, mais confiante"
+      precisa: "Flexibilidade, opções de adaptação"
+      tom_para_ele: "Você já sabe. Ajustamos juntos."
+      
+    logica:
+      perfil: "Experiente, pode liderar discussões"
+      precisa: "Profundidade, material para além do básico"
+      tom_para_ele: "Você é mentor agora. O script é guia, não prisão."
+      
+    legado:
+      perfil: "Parceiro de jornada, quase co-autor"
+      precisa: "Autonomia, direção geral"
+      tom_para_ele: "O filho ensina o pai também. Vocês caminham juntos."
+
+# ════════════════════════════════════════════════════════════════════════════════
+# USO NA NARRATIVA
+# ════════════════════════════════════════════════════════════════════════════════
+
+uso:
+  como_referir:
+    em_licao: "Usar o título do ciclo ou nome da criança"
+    exemplo_sementes: "Herdeiro, olhe para as quatro plantinhas..."
+    exemplo_legado: "Portador, os antigos matemáticos..."
+    
+  nao_fazer:
+    - "Nunca chamar de 'aluno', 'usuário', 'criança' de forma genérica"
+    - "Nunca infantilizar além da idade"
+    - "Nunca tratar como recipiente vazio"
+    
+  fazer:
+    - "Sempre honrar a dignidade"
+    - "Sempre falar COM, não PARA"
+    - "Sempre usar título que honra a jornada"

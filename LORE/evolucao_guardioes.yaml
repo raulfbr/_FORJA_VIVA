@@ -1,0 +1,256 @@
+# ════════════════════════════════════════════════════════════════════════════════
+# EVOLUÇÃO DOS GUARDIÕES — Como Comunicam por Ciclo
+# ════════════════════════════════════════════════════════════════════════════════
+# 
+# PROPÓSITO:
+#   Define COMO cada Guardião evolui na comunicação ao longo dos ciclos.
+#   Os DADOS fixos (nome, cor, frase canônica) estão em guardioes.yaml.
+#   Este arquivo define a EVOLUÇÃO do tom, exemplos de fala, papel narrativo.
+# 
+# ALINHAMENTO NORTH STAR:
+#   - Princípio 5: "Jornada Completa K-12" → Guardiões amadurecem COM a criança
+#   - Charlotte Mason: "Never within the child's mental range" → Tom evolui
+#   - Tolkien: "Guardiões são eternos, mas revelam mais de si"
+# 
+# USADO POR:
+#   - Artesão ao escrever diálogos
+#   - Templates por ciclo (referência)
+# 
+# RELACIONADO:
+#   - LORE/guardioes.yaml (dados fixos)
+#   - LORE/index.yaml (navegação)
+# 
+# Última Atualização: 13/01/2026
+# ════════════════════════════════════════════════════════════════════════════════
+
+tipo: evolucao_guardioes
+versao: "1.0"
+
+regra_geral: |
+  Os Guardiões NÃO MUDAM em essência — apenas revelam mais de si.
+  O que muda é o TOM, a complexidade do vocabulário, e a profundidade.
+  Melquior aos 5 é o MESMO leão que aos 17, mas sua voz amadurece junto.
+
+# ════════════════════════════════════════════════════════════════════════════════
+# MELQUIOR — O Leão Sábio
+# ════════════════════════════════════════════════════════════════════════════════
+
+melquior:
+  dados_fixos: "ver LORE/guardioes.yaml#melquior"
+  
+  por_ciclo:
+    sementes:
+      idade: "4-6 anos"
+      tom: "Encantamento paternal"
+      vocabulario: "Simples, sensorial, caloroso"
+      papel: "Apresenta o Reino, acolhe o Herdeiro"
+      exemplo_fala: |
+        "Sente o calor no seu rosto? É o mesmo sol que aqueceu
+        o primeiro dia do Reino. Você é nosso convidado especial."
+      frequencia: "Toda lição de introdução"
+      
+    raizes:
+      idade: "6-10 anos"
+      tom: "Mentoria encorajadora"
+      vocabulario: "Claro, encorajador, com desafios acessíveis"
+      papel: "Celebra conquistas, encoraja persistência"
+      exemplo_fala: |
+        "Você já construiu a fundação. Agora, as paredes.
+        Cada tijolo que você coloca fortalece o Reino todo."
+      frequencia: "Transições de fase, celebrações"
+      
+    logica:
+      idade: "10-14 anos"
+      tom: "Desafio respeitoso"
+      vocabulario: "Mais abstrato, referências históricas"
+      papel: "Revela profundidade, conecta com antigos"
+      exemplo_fala: |
+        "Os antigos matemáticos chamavam isso de 'a linguagem do universo'.
+        Você está prestes a ler o que poucos conseguem decifrar."
+      frequencia: "Introdução de conceitos abstratos"
+      
+    legado:
+      idade: "14-18 anos"
+      tom: "Comissionamento solene"
+      vocabulario: "Elevado, filosófico, vocacional"
+      papel: "Entrega a missão, prepara para vida"
+      exemplo_fala: |
+        "Você entrou Herdeiro. Cresceu Construtor. Brilhou Explorador.
+        Agora sai Portador da Tocha. Vá — e acenda outras vidas."
+      frequencia: "Lição 120 de cada ano, especialmente 12º"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# NOÉ — A Coruja Paciente
+# ════════════════════════════════════════════════════════════════════════════════
+
+noe:
+  dados_fixos: "ver LORE/guardioes.yaml#noe"
+  
+  por_ciclo:
+    sementes:
+      tom: "Paciência acolhedora"
+      papel: "Ensina que esperar faz parte"
+      exemplo_fala: |
+        "Shhh... está ouvindo? O tempo não corre — ele caminha contigo.
+        Não precisa pressa. Vamos devagar, juntos."
+      frequencia: "Lições de contagem, sequências"
+      
+    raizes:
+      tom: "Reflexão guiada"
+      papel: "Ensina a pensar antes de agir"
+      exemplo_fala: |
+        "E se você parasse... e olhasse de novo? Às vezes a resposta
+        aparece quando a gente para de procurar."
+      frequencia: "Lições de resolução de problemas"
+      
+    logica:
+      tom: "Questionamento socrático"
+      papel: "Ensina a fundamentar respostas"
+      exemplo_fala: |
+        "Você sabe que é verdade. Mas COMO você sabe?
+        Mostre-me o caminho do seu pensamento."
+      frequencia: "Provas, demonstrações"
+      
+    legado:
+      tom: "Sabedoria contemplativa"
+      papel: "Ensina que saber leva tempo de vida"
+      exemplo_fala: |
+        "Eu vi gerações passarem por esta árvore. Cada uma
+        aprendeu algo que a anterior não sabia. Você carrega tudo isso."
+      frequencia: "Reflexões de final de ciclo"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# CELESTE — A Andorinha Curiosa
+# ════════════════════════════════════════════════════════════════════════════════
+
+celeste:
+  dados_fixos: "ver LORE/guardioes.yaml#celeste"
+  
+  por_ciclo:
+    sementes:
+      tom: "Maravilhamento brincalhão"
+      papel: "Desperta curiosidade pelos padrões"
+      exemplo_fala: |
+        "Olha! Olha! Você viu aquilo? Três maçãs aqui... três pedras ali...
+        É o MESMO número fazendo mágica!"
+      frequencia: "Descoberta de padrões, conexões"
+      
+    raizes:
+      tom: "Exploração animada"
+      papel: "Incentiva buscar conexões"
+      exemplo_fala: |
+        "E se... e se aquele padrão lá se conectar com este aqui?
+        Vamos voar até lá e descobrir!"
+      frequencia: "Geometria, simetria, múltiplos"
+      
+    logica:
+      tom: "Investigação rigorosa"
+      papel: "Transforma curiosidade em método"
+      exemplo_fala: |
+        "Intuição não basta mais. Vamos PROVAR que esse padrão
+        se repete — ou descobrir por que não repete."
+      frequencia: "Generalizações, álgebra"
+      
+    legado:
+      tom: "Descoberta científica"
+      papel: "Conecta matemática com ciência"
+      exemplo_fala: |
+        "Os padrões que você vê aqui são os mesmos que governam
+        as órbitas dos planetas. Galileu chorou quando descobriu isso."
+      frequencia: "Aplicações, modelagem"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# BERNARDO — O Urso Persistente
+# ════════════════════════════════════════════════════════════════════════════════
+
+bernardo:
+  dados_fixos: "ver LORE/guardioes.yaml#bernardo"
+  
+  por_ciclo:
+    sementes:
+      tom: "Encorajamento firme"
+      papel: "Mostra que tentar de novo é bom"
+      exemplo_fala: |
+        "Caiu? Levanta. Errou? Tenta de novo. Olha esta pata minha —
+        manca desde a Grande Nevasca. Mas eu ando. E você também vai."
+      frequencia: "Após erros, lições difíceis"
+      
+    raizes:
+      tom: "Mentoria prática"
+      papel: "Ensina técnicas de persistência"
+      exemplo_fala: |
+        "Sabe o que eu faço quando fica difícil? Divido em partes menores.
+        Uma martelada de cada vez. Agora sua vez: uma conta de cada vez."
+      frequencia: "Operações complexas, problemas multi-etapa"
+      
+    logica:
+      tom: "Desafio honesto"
+      papel: "Prepara para frustração produtiva"
+      exemplo_fala: |
+        "Vai doer. A primeira prova sempre dói. Mas a dor de não
+        tentar é pior. Eu prefiro cicatriz de batalha."
+      frequencia: "Provas, raciocínio formal"
+      
+    legado:
+      tom: "Respeito de igual para igual"
+      papel: "Trata como adulto em formação"
+      exemplo_fala: |
+        "Você não precisa mais de mim para resolver isso.
+        Precisa de você mesmo. Eu só estou aqui para dizer: vá em frente."
+      frequencia: "Autonomia, projetos independentes"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# ÍRIS — A Borboleta Observadora
+# ════════════════════════════════════════════════════════════════════════════════
+
+iris:
+  dados_fixos: "ver LORE/guardioes.yaml#iris"
+  
+  por_ciclo:
+    sementes:
+      tom: "Encantamento delicado"
+      papel: "Ensina a ver beleza nos detalhes"
+      exemplo_fala: |
+        "Veja como essa pétala tem EXATAMENTE cinco pontas...
+        A natureza conta, mesmo quando a gente não percebe."
+      frequencia: "Observação, contagem natural"
+      
+    raizes:
+      tom: "Atenção cuidadosa"
+      papel: "Ensina a verificar trabalho"
+      exemplo_fala: |
+        "Antes de dizer 'terminei'... olha de novo. Devagar.
+        O erro gosta de se esconder no óbvio."
+      frequencia: "Revisão, verificação"
+      
+    logica:
+      tom: "Precisão metódica"
+      papel: "Ensina rigor sem perder beleza"
+      exemplo_fala: |
+        "A beleza da matemática está nos detalhes. Um sinal errado
+        destrói tudo. Mas quando está certo... é poesia visual."
+      frequencia: "Álgebra, geometria analítica"
+      
+    legado:
+      tom: "Estética matemática"
+      papel: "Revela a beleza profunda"
+      exemplo_fala: |
+        "Euclides chamou esta prova de 'a joia da coroa'.
+        Olhe bem — não porque precisa, mas porque é bela."
+      frequencia: "Provas elegantes, estética"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# USO
+# ════════════════════════════════════════════════════════════════════════════════
+
+uso:
+  como_consultar: |
+    1. Identifique o ciclo da lição (sementes/raizes/logica/legado)
+    2. Identifique o Guardião principal
+    3. Use o tom/exemplo deste arquivo para guiar diálogos
+    4. Dados fixos (nome, cor) sempre vêm de guardioes.yaml
+    
+  principio: |
+    Charlotte Mason: "A child is not a container to be filled,
+    but a fire to be kindled." Os Guardiões evoluem PARA
+    acompanhar essa chama crescendo.

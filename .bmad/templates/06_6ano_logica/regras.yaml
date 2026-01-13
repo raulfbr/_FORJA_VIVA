@@ -1,0 +1,71 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# REGRAS DO 6º ANO — LÓGICA I
+# ══════════════════════════════════════════════════════════════════════════════
+# STATUS: EM_CONSTRUCAO
+# Última revisão: 13/01/2026
+
+status: EM_CONSTRUCAO
+ciclo: logica
+ano: 6
+serie: "6º Ano"
+idade_alvo: "11-12 anos"
+
+proposito_narrativo:
+  frase: "A matemática é a linguagem do universo."
+  elaboracao: |
+    (Galileu) A criança descobre que os números não são inventados —
+    são DESCOBERTOS. A álgebra é poesia codificada. Ela vê a mão do
+    Criador na ordem matemática. O tom é de REVERÊNCIA INTELECTUAL.
+
+referencias_lore:
+  indice: "LORE/index.yaml"
+  proposito:
+    arquivo: "LORE/north_star.yaml#propositos_por_ano.6_logica"
+    frase: "A matemática é a linguagem do universo."
+  viajante:
+    arquivo: "LORE/viajante.yaml#explorador"
+    titulo: "Explorador das Verdades"
+  tom_guardioes:
+    arquivo: "LORE/evolucao_guardioes.yaml#logica"
+    tom_geral: "Desafio respeitoso"
+  artefatos:
+    aplicavel: true
+    principal: "LORE/artefatos.yaml#bussola_celeste"
+    nota: "Bússola de Celeste entregue no início deste ciclo"
+  desafios:
+    aplicavel: true
+    arquivo: "LORE/climas.yaml#desafios_atmosfericos"
+    frequentes: ["nevoa_do_vale", "vento_gelado"]
+  curriculo_mestre: "curriculo/_SISTEMA/CURRICULOS_MESTRE/006_6ANO_LOGICA-1_CURRICULO_MESTRE.md"
+
+cpa:
+  concreto: { minimo: 25, maximo: 35 }
+  pictorico: { minimo: 25, maximo: 35 }
+  abstrato: { minimo: 35, maximo: 45 }
+
+tempo:
+  licao: { minimo: 30, maximo: 40, ideal: 35, unidade: minutos }
+  preparo: { maximo: 12, unidade: minutos }
+
+scaffolding:
+  tipo: "Productive struggle"
+  exemplos:
+    - "Descubra. Eu sei que você consegue."
+    - "O que você nota sobre essa expressão?"
+
+tom:
+  principal: "Reverência intelectual"
+  palavra_chave: "Descobrir"
+
+densidade_sensorial:
+  elementos_por_paragrafo: 4
+
+guardioes:
+  principal: Noé
+  frequentes: [Noé, Melquior]
+
+selos:
+  tempo_preparo: "≤ 12 min"
+  materiais: "Comprados OK"
+  mobile_friendly: true
+  adaptacao_bernardo: true

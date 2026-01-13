@@ -1,0 +1,367 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# 🌿 LIÇÃO 001 — A TRINDADE NA PALMA (Exemplo V5)
+# ══════════════════════════════════════════════════════════════════════════════
+
+licao:
+  metadados:
+    id: MV-S-001
+    titulo: "A Trindade na Palma"
+    fase: Sementes
+    trimestre: 1
+    guardiao_lider: Celeste
+    guardiao_secundario: null
+    tgtb_ref: "000-L1 - Numbers 1 to 3"
+    status: canonico
+    
+  ideia_viva:
+    frase: "Três sementes de carvalho — cada uma é uma promessa do Rei."
+    conceito_matematico: "Contagem até 3 e correspondência um-a-um"
+    intencao_cm: |
+      Esta ideia é viva porque transforma números em promessas.
+      A criança não memoriza '3' — ela descobre que três coisas
+      podem representar luz, companhia e família. O trabalho
+      mental acontece quando ela conecta quantidade com significado.
+    
+  atmosfera:
+    clima: ensolarado
+    clima_descricao: |
+      A luz dourada atravessa as folhas, aquecendo tudo com sua
+      promessa de um novo dia. O ar vibra com energia de descoberta.
+    local: clareira_das_perguntas
+    local_descricao: |
+      Uma clareira aberta banhada de sol. O ar é quente e cheira
+      a flores silvestres. Celeste fareja o ar com o focinho
+      erguido, captando segredos que o vento traz.
+    virtude: curiosidade
+    artefato: "Três sementes de carvalho (ou pedrinhas/feijões)"
+    
+  linkage:
+    elo_anterior:
+      licao_id: "MV-S-000"
+      gancho: |
+        Na lição anterior, Melquior apresentou todos os Guardiões
+        e deu ao Herdeiro o Distintivo de Explorador. Hoje ele
+        conhece Celeste de perto pela primeira vez.
+    proximo_passo:
+      licao_id: "MV-S-002"
+      gancho: |
+        Amanhã, Bernardo vai precisar de ajuda para organizar
+        pedras na construção da Fortaleza. A criança guardará
+        uma semente hoje como lembrança.
+      
+  preparacao:
+    tempo_licao: "15-20 min"
+    tempo_preparo: "≤ 5 min"
+    materiais:
+      - item: "Sementes, pedrinhas ou feijões"
+        quantidade: 3
+        alternativa: "Botões, frutas pequenas, brinquedos"
+        essencial: true
+      - item: "Cesto ou tigela"
+        quantidade: 1
+        alternativa: "Qualquer recipiente pequeno"
+        essencial: true
+      - item: "Tapete do Reino"
+        quantidade: 1
+        alternativa: "Toalha ou cobertor especial"
+        essencial: false
+      - item: "Luz especial (abajur ou lanterna)"
+        quantidade: 1
+        alternativa: "Luz baixa da sala"
+        essencial: false
+        
+  para_o_portador:
+    dica_de_coracao: |
+      Hoje você vai apresentar o número três. Mas não como um
+      símbolo morto. Você vai apresentá-lo como três promessas
+      vivas que o Rei deixou escondidas em sementes.
+      
+      Celeste, a Raposa curiosa, será sua guia.
+      Respire fundo. Você está pronto.
+    o_que_seu_filho_vai_descobrir: |
+      Que 'três' não é apenas um número — é a quantidade
+      de promessas do Rei: luz, companhia e família.
+    nota_de_graca: |
+      Se seu filho não contar perfeitamente, não houve perda.
+      A semente foi plantada. Se ele quiser brincar em vez
+      de contar, deixe. A curiosidade é mais valiosa que a resposta.
+       
+  ritual_abertura:
+    instrucao_ambiente: |
+      Sentem-se juntos no Tapete do Reino — a toalha ou
+      cobertor especial que marca o espaço sagrado.
+      Deixe as sementes em um cestinho ao lado.
+    transicao_para_o_reino: |
+      Diminua levemente a luz da sala (se possível).
+      Acenda uma luz especial — pode ser um abajur pequeno,
+      uma lanterna, ou simplesmente a luz de uma janela.
+      
+      A ideia é marcar: "agora estamos entrando no Reino."
+      Se preferir, abram juntos um livro especial (quando
+      o Livro Dourado existir, será este o ritual).
+    
+    fala_portador:
+      tom: segredo
+      script: |
+        "Lembra de Melquior, o Leão sábio que conhecemos?
+        Ele me contou que uma amiga dele quer te conhecer hoje..."
+        
+        [Pausa]
+        
+        "Feche os olhos. Sente um vento rápido passando?
+        Cheira a aventura?"
+        
+        [Pausa]
+        
+        "Pode abrir. Olhe quem chegou!"
+         
+    card_guardiao: "[CARD: CELESTE]"
+    fala_guardiao:
+      tom: curioso
+      script: |
+        "Olá, pequeno Herdeiro!"
+        
+        [Celeste fareja o ar]
+        
+        "Eu sou Celeste, a Raposa. Sente esse cheiro? É aventura!"
+        
+        "Melquior me disse que você está pronto para descobrir
+        segredos. E eu tenho um bem especial para mostrar hoje..."
+        
+        [Ela puxa as três sementes]
+        
+        "Olhe o que eu encontrei na floresta!"
+         
+  jornada:
+    abertura_sensorial: |
+      ☀️ A luz dourada dança entre as folhas da Clareira das Perguntas.
+      O ar é quente e cheira a flores silvestres e grama fresca.
+      Celeste está sentada sobre uma pedra coberta de musgo,
+      com três sementes nas patas. Seus olhos brilham de curiosidade.
+       
+    concreto:
+      descricao: |
+        "Sabe o que são estas?" — pergunta Celeste.
+        "São sementes de carvalho. Cada uma é uma promessa do Rei."
+        
+        [Ela coloca as sementes no chão, uma por uma]
+        
+        "Esta primeira... é a promessa da LUZ.
+        O Rei disse: 'Que haja luz!' E houve."
+        
+        "Esta segunda... é a promessa da COMPANHIA.
+        O Rei não quis ficar sozinho. Criou amigos."
+        
+        "E esta terceira... é a promessa da FAMÍLIA.
+        Três é o número do abraço completo."
+        
+        [Pausa]
+        
+        "Quer segurar as três promessas na sua mão?"
+      card_objeto: "[CARD: SEMENTES]"
+      instrucoes_portador:
+        - passo: 1
+          acao: "Entregue uma semente de cada vez"
+          fala_sugerida: "'Uma.' [coloque na mão] 'Duas.' [coloque] 'Três.' [coloque]"
+        - passo: 2
+          acao: "Pergunte e espere"
+          fala_sugerida: "'Quantas sementes você está segurando?' [Espere. Deixe contar sozinho.]"
+        - passo: 3
+          acao: "Explore com variações"
+          fala_sugerida: "'Coloque no cesto. Uma... duas... três! Quantas ficaram?'"
+        - passo: 4
+          acao: "Repita 2-3x com objetos diferentes se disponível"
+          fala_sugerida: "'Vamos contar de novo com estas pedras?'"
+      tempo_minimo: "60% da lição"
+      nota_cm: |
+        A criança aprende pelo corpo antes da mente.
+        Deixe-a tocar, mover, sentir peso das sementes.
+        NÃO apresse. O tempo no concreto é o mais valioso.
+      
+      adaptacao_bernardo: |
+        💡 **Para crianças com realidades diferentes:**
+        - Se sementes pequenas forem difíceis de manipular, use objetos maiores
+          (bolas de ping-pong, frutas, brinquedos grandes).
+        - Se a criança não consegue segurar, pode apontar enquanto você conta.
+        - O objetivo é CONTAR ATÉ TRÊS — o caminho para chegar lá pode variar.
+        - "Bernardo nos ensina que caminhos diferentes também chegam lá."
+         
+    pictorico:
+      vetado: true
+      motivo: |
+        Em Sementes (4-6 anos), representações pictóricas são vetadas.
+        Charlotte Mason: 'Things before Signs' — Coisas antes de signos.
+        A criança ainda não está pronta para desenhar números.
+      excecao: null
+      
+    abstrato:
+      descricao: |
+        "Sabe como escrevemos 'três' no Reino?" — pergunta Celeste.
+        "Assim..."
+        
+        [Desenhe o número 3 no ar com o dedo]
+      card_simbolo: null
+      instrucoes_portador:
+        - acao: "Desenhe o 3 no ar"
+          fala_sugerida: "'Olha, parece uma orelha de coelho! Ou duas bolinhas empilhadas.'"
+        - acao: "Deixe a criança copiar NO AR com o dedo"
+          fala_sugerida: "'Tenta fazer também! No ar, assim...'"
+      nota_cm: |
+        Apenas reconhecimento visual. Não peça para escrever no papel.
+        O símbolo é apresentado como 'amigo visual', não como tarefa.
+         
+    extensao:
+      titulo: "A Caça ao Três"
+      descricao: |
+        Só continue se a criança pedir "mais!"
+        Se ela parece satisfeita, pule para a narração.
+      sugestoes:
+        - "Procurem juntos outras coisas que vêm em três: cores do semáforo, refeições do dia..."
+        - "Quantos dedos são três? Mostre!"
+        - "Se você desse uma semente para alguém, quantas sobravam?"
+      
+  narracao:
+    instrucao_portador: |
+      Guarde as sementes. Olhe nos olhos da criança.
+      Respire. O silêncio é parte do trabalho mental.
+    pergunta_principal: |
+      "Agora, meu pequeno explorador, me conte:
+      o que você descobriu hoje sobre o número três?"
+    perguntas_do_coracao:
+      - "Quantas sementes o Rei deixou para você?"
+      - "Qual foi a promessa que você mais gostou?"
+      - "Se você pudesse dar uma semente para alguém, quem seria?"
+    nota_cm: |
+      Narração é o método de Charlotte Mason para fixação.
+      A criança processa internamente e depois externaliza.
+      NUNCA interrompa. Espere. Conte até 10 internamente se precisar.
+       
+  ritual_fechamento:
+    fala_guardiao:
+      tom: grato
+      script: |
+        "Você foi muito esperto hoje, pequeno Herdeiro!"
+        
+        [Celeste acena com a cauda]
+        
+        "Guarde uma semente no seu bolso como lembrança..."
+        
+        "Amanhã, meu amigo Bernardo, o Urso, vai precisar de
+        ajuda na Forja. Ele está construindo algo grande e
+        precisa organizar pedras em fileiras. Você vai ajudá-lo?"
+    fio_de_ouro: |
+      A criança leva UMA semente para casa.
+      Na próxima lição (L002), ela usará 10 pedras
+      para ajudar Bernardo na construção da Fortaleza.
+    transicao_de_volta:
+      instrucao: |
+        Aumentem a luz da sala de volta ao normal.
+        Ou: Fechem juntos o livro especial.
+        Momento de silêncio.
+      fala_portador: |
+        "O Reino adormece, mas as três promessas
+        continuam crescendo em seu coração.
+        Uma para a luz. Uma para os amigos. Uma para a família.
+        Até a próxima jornada."
+         
+  catedra_dos_pais:
+    metodo_cpa: |
+      **Concreto (60%+):** A criança tocou, contou e moveu
+      sementes reais. O número '3' não foi abstrato — foi
+      a experiência de ter três coisas na mão.
+      
+      **Pictórico (Vetado):** Em Sementes, não pedimos
+      para a criança desenhar. Ela ainda está na fase
+      de conhecer as coisas reais.
+      
+      **Abstrato (Mínimo):** Apenas reconhecimento visual
+      do símbolo 3, desenhado no ar com o dedo.
+    principio_cm: |
+      > "Uma criança aprende mais em cinco minutos de
+      > maravilhamento do que em uma hora de explicação."
+      > — Charlotte Mason
+      
+      A 'Ideia Viva' de hoje é que três é o número
+      da completude — luz, companhia, família.
+      Não explicamos isso; deixamos a criança
+      descobrir ao segurar as três sementes.
+    reflexao_espiritual: |
+      Três é o número da Trindade — Pai, Filho, Espírito.
+      Três é o número da família — pai, mãe, filho.
+      Três é completo. E seu filho acabou de tocá-lo.
+    nota_de_graca: |
+      Se seu filho não contou perfeitamente hoje,
+      não houve perda. A semente foi plantada.
+      A mente florescerá no tempo de Deus.
+      
+      O valor desta lição não está na performance,
+      mas no encontro com a ideia viva de que
+      números são promessas, não apenas quantidades.
+       
+  sugestoes:
+    - guardiao: Celeste
+      emoji: "🦊"
+      dica: |
+        "Se a criança perguntar 'por que três?', não responda.
+        Diga: 'Que boa pergunta! O que você acha?'"
+      sugestao: "A curiosidade é mais valiosa que a resposta."
+    - guardiao: Bernardo
+      emoji: "🐻"
+      dica: |
+        "Se ela errar a contagem, diga: 'Mais uma vez. Comigo.'
+        E contem juntos."
+      sugestao: "Nunca 'errado'. Sempre 'vamos de novo'."
+    - guardiao: Melquior
+      emoji: "🦁"
+      dica: |
+        "Deixe a criança explorar as sementes ANTES de você
+        falar qualquer coisa. A ordem é: VER → TOCAR → CONTAR → OUVIR."
+      sugestao: "Silêncio é ensino."
+      
+  diario_portador:
+    descricao: |
+      Este espaço é para VOCÊ, Portador.
+      Anote após aplicar a lição.
+    campos:
+      - pergunta: "Como meu filho reagiu hoje?"
+        espaco: "_________________________________________________"
+      - pergunta: "O que funcionou bem?"
+        espaco: "_________________________________________________"
+      - pergunta: "O que posso ajustar na próxima?"
+        espaco: "_________________________________________________"
+      - pergunta: "Algo surpreendente?"
+        espaco: "_________________________________________________"
+        
+  auditoria_qa:
+    verificacao_cm:
+      - check: "Criança tratada como pessoa?"
+        status: true
+      - check: "Ideia Viva presente e encantadora?"
+        status: true
+      - check: "Narração incluída?"
+        status: true
+      - check: "Lição ≤ 20 min?"
+        status: true
+    verificacao_cpa:
+      - check: "Concreto ≥ 60%?"
+        status: true
+      - check: "Pictórico vetado?"
+        status: true
+      - check: "Abstrato mínimo?"
+        status: true
+    verificacao_narrativa:
+      - check: "Frase canônica guardião?"
+        status: true  # "Sente esse cheiro? É aventura."
+      - check: "Tom Lewis?"
+        status: true
+      - check: "Consistência Tolkien?"
+        status: true
+      - check: "Cores Potter?"
+        status: true
+    verificacao_template:
+      - check: "Todas seções?"
+        status: true
+      - check: "Linkage?"
+        status: true
+      - check: "Atmosfera única?"
+        status: true

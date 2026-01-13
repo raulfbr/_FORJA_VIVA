@@ -1,0 +1,68 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# REGRAS DO 8º ANO — LÓGICA III
+# ══════════════════════════════════════════════════════════════════════════════
+# STATUS: EM_CONSTRUCAO
+# Última revisão: 13/01/2026
+
+status: EM_CONSTRUCAO
+ciclo: logica
+ano: 8
+serie: "8º Ano"
+idade_alvo: "13-14 anos"
+
+proposito_narrativo:
+  frase: "O abstrato ilumina o concreto."
+  elaboracao: |
+    A criança usa álgebra para resolver problemas reais.
+    O abstrato não é fuga — é FERRAMENTA de poder sobre o mundo.
+    Ela vê que equações modelam a realidade.
+
+referencias_lore:
+  indice: "LORE/index.yaml"
+  proposito:
+    arquivo: "LORE/north_star.yaml#propositos_por_ano.8_logica"
+    frase: "O abstrato ilumina o concreto."
+  viajante:
+    arquivo: "LORE/viajante.yaml#explorador"
+    titulo: "Explorador das Verdades"
+  tom_guardioes:
+    arquivo: "LORE/evolucao_guardioes.yaml#logica"
+  artefatos:
+    aplicavel: true
+    principal: "LORE/artefatos.yaml#bussola_celeste"
+  desafios:
+    aplicavel: true
+    arquivo: "LORE/climas.yaml#desafios_atmosfericos"
+  curriculo_mestre: "curriculo/_SISTEMA/CURRICULOS_MESTRE/008_8ANO_LOGICA-3_CURRICULO_MESTRE.md"
+
+cpa:
+  concreto: { minimo: 15, maximo: 25 }
+  pictorico: { minimo: 25, maximo: 35 }
+  abstrato: { minimo: 45, maximo: 55 }
+
+tempo:
+  licao: { minimo: 35, maximo: 45, ideal: 40, unidade: minutos }
+  preparo: { maximo: 12, unidade: minutos }
+
+scaffolding:
+  tipo: "Autonomia guiada"
+  exemplos:
+    - "Como você usaria isso para resolver um problema real?"
+    - "Onde você vê essa equação no mundo?"
+
+tom:
+  principal: "Poder aplicado"
+  palavra_chave: "Aplicar"
+
+densidade_sensorial:
+  elementos_por_paragrafo: 4
+
+guardioes:
+  principal: Melquior
+  frequentes: [Melquior, Noé]
+
+selos:
+  tempo_preparo: "≤ 12 min"
+  materiais: "Ferramentas específicas OK"
+  mobile_friendly: true
+  adaptacao_bernardo: true

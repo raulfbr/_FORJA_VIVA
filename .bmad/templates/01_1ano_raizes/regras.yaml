@@ -1,0 +1,151 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# REGRAS DO 1º ANO — RAÍZES I
+# ══════════════════════════════════════════════════════════════════════════════
+# STATUS: EM_CONSTRUCAO
+# Última revisão: 13/01/2026
+
+status: EM_CONSTRUCAO
+ciclo: raizes
+ano: 1
+serie: "1º Ano"
+idade_alvo: "6-7 anos"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# PROPÓSITO NARRATIVO (Charlotte Mason)
+# ══════════════════════════════════════════════════════════════════════════════
+
+proposito_narrativo:
+  frase: "Sou o Construtor da Vila."
+  elaboracao: |
+    A criança usa as promessas que descobriu em Sementes para CONSTRUIR.
+    Cada número agora serve a um propósito: medir, contar, organizar.
+    Ela sai do jardim encantado e entra na oficina de Bernardo.
+    O tom é de AVENTURA CONSTRUTIVA — ela é capaz de fazer coisas reais.
+
+# ══════════════════════════════════════════════════════════════════════════════
+# REFERÊNCIAS LORE (SSOT)
+# ══════════════════════════════════════════════════════════════════════════════
+
+referencias_lore:
+  indice: "LORE/index.yaml"
+  
+  # Propósito narrativo do ano
+  proposito:
+    arquivo: "LORE/north_star.yaml#propositos_por_ano.1_raizes"
+    frase: "Sou o Construtor da Vila."
+    
+  # Título do Viajante neste ciclo
+  viajante:
+    arquivo: "LORE/viajante.yaml#construtor"
+    titulo: "Construtor da Vila"
+    como_tratar: "Construtor ou nome da criança"
+    
+  # Tom dos Guardiões neste ciclo
+  tom_guardioes:
+    arquivo: "LORE/evolucao_guardioes.yaml#raizes"
+    tom_geral: "Mentoria encorajadora"
+    
+  # Artefatos
+  artefatos:
+    aplicavel: true
+    principal: "LORE/artefatos.yaml#diario_do_reino"
+    nota: "Diário do Reino entregue no início deste ciclo"
+    
+  # Outras referências
+  curriculo_mestre: "curriculo/_SISTEMA/CURRICULOS_MESTRE/001_1ANO_RAIZES-1_CURRICULO_MESTRE.md"
+  template_global: ".bmad/templates/000_global/licao-base.yaml"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# PROPORÇÕES CPA (Jerome Bruner)
+# ══════════════════════════════════════════════════════════════════════════════
+
+cpa:
+  concreto:
+    minimo: 45
+    maximo: 55
+    descricao: "Manipulativos concretos, cuisenaire, base 10"
+    
+  pictorico:
+    status: PERMITIDO
+    minimo: 25
+    maximo: 35
+    descricao: "Desenhos, diagramas, representações visuais"
+    
+  abstrato:
+    minimo: 15
+    maximo: 25
+    descricao: "Símbolos numéricos, primeiras operações escritas"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# TEMPO (Charlotte Mason)
+# ══════════════════════════════════════════════════════════════════════════════
+
+tempo:
+  licao:
+    minimo: 15
+    maximo: 25
+    ideal: 20
+    unidade: minutos
+    
+  preparo:
+    maximo: 7
+    unidade: minutos
+    justificativa: "Família com 1 ano de uso do sistema"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# SCAFFOLDING (Vygotsky)
+# ══════════════════════════════════════════════════════════════════════════════
+
+scaffolding:
+  tipo: "Pergunta guiada"
+  descricao: |
+    O Portador PERGUNTA em vez de FAZER junto.
+    A criança já tem base de Sementes — pode tentar sozinha com dicas.
+    
+  exemplos:
+    - "O que vem depois do dois?"
+    - "Quantos faltam para completar a dezena?"
+    - "O que Celeste diria sobre esse padrão?"
+    
+  erro_tratamento: |
+    "Quase! O que você pode ajustar?" (Bernardo)
+    Permitir segunda tentativa antes de dar resposta.
+
+# ══════════════════════════════════════════════════════════════════════════════
+# TOM (C.S. Lewis)
+# ══════════════════════════════════════════════════════════════════════════════
+
+tom:
+  principal: "Aventura construtiva"
+  palavra_chave: "Construir"
+  descricao: |
+    A criança é CAPAZ. O tom é de confiança e desafio acessível.
+    Ela constrói, mede, organiza. O mundo responde às suas ações.
+
+# ══════════════════════════════════════════════════════════════════════════════
+# DENSIDADE SENSORIAL (Beatrix Potter)
+# ══════════════════════════════════════════════════════════════════════════════
+
+densidade_sensorial:
+  elementos_por_paragrafo: 2
+  exemplo: "O ar cheira a serragem e você ouve o martelar na oficina."
+
+# ══════════════════════════════════════════════════════════════════════════════
+# GUARDIÕES FREQUENTES
+# ══════════════════════════════════════════════════════════════════════════════
+
+guardioes:
+  principal: Bernardo
+  frequentes: [Bernardo, Celeste, Noé]
+  justificativa: "Bernardo lidera (construção/persistência). Celeste aparece em exploração de padrões."
+
+# ══════════════════════════════════════════════════════════════════════════════
+# SELOS UX (Mães Personas)
+# ══════════════════════════════════════════════════════════════════════════════
+
+selos:
+  tempo_preparo: "≤ 7 min"
+  materiais: "Casa + alguns comprados simples"
+  mobile_friendly: true
+  adaptacao_bernardo: true
+  linguagem_clara: true

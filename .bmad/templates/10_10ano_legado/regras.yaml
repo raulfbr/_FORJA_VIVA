@@ -1,0 +1,65 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# REGRAS DO 10º ANO — LEGADO II
+# ══════════════════════════════════════════════════════════════════════════════
+# STATUS: EM_CONSTRUCAO
+# Última revisão: 13/01/2026
+
+status: EM_CONSTRUCAO
+ciclo: legado
+ano: 10
+serie: "10º Ano (1º EM)"
+idade_alvo: "15-16 anos"
+
+proposito_narrativo:
+  frase: "Sou aprendiz dos mestres antigos."
+  elaboracao: |
+    A criança estuda a história da matemática. Pitágoras, Euclides,
+    Arquimedes não são nomes — são MENTORES. Ela herda uma tradição
+    de milênios. O tom é de HUMILDADE ERUDITA.
+
+referencias_lore:
+  indice: "LORE/index.yaml"
+  proposito:
+    arquivo: "LORE/north_star.yaml#propositos_por_ano.10_legado"
+    frase: "Sou aprendiz dos mestres antigos."
+  viajante:
+    arquivo: "LORE/viajante.yaml#portador_da_tocha"
+    titulo: "Portador da Tocha"
+  tom_guardioes:
+    arquivo: "LORE/evolucao_guardioes.yaml#legado"
+  artefatos:
+    aplicavel: true
+    principal: "LORE/artefatos.yaml#ampulheta_noe"
+  curriculo_mestre: "curriculo/_SISTEMA/CURRICULOS_MESTRE/010_10ANO_LEGADO-2_CURRICULO_MESTRE.md"
+
+cpa:
+  concreto: { minimo: 10, maximo: 20 }
+  pictorico: { minimo: 20, maximo: 30 }
+  abstrato: { minimo: 55, maximo: 65 }
+
+tempo:
+  licao: { minimo: 40, maximo: 50, ideal: 45, unidade: minutos }
+  preparo: { maximo: 15, unidade: minutos }
+
+scaffolding:
+  tipo: "Mentoria socrática"
+  exemplos:
+    - "Como Euclides resolveria isso?"
+    - "O que os antigos não sabiam que você sabe?"
+
+tom:
+  principal: "Humildade erudita"
+  palavra_chave: "Herdar"
+
+densidade_sensorial:
+  elementos_por_paragrafo: 4
+
+guardioes:
+  principal: Melquior
+  frequentes: [Melquior, Noé]
+
+selos:
+  tempo_preparo: "≤ 15 min"
+  materiais: "Recursos acadêmicos"
+  mobile_friendly: true
+  adaptacao_bernardo: true

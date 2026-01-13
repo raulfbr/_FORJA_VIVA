@@ -1,0 +1,65 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# REGRAS DO 4º ANO — RAÍZES IV
+# ══════════════════════════════════════════════════════════════════════════════
+# STATUS: EM_CONSTRUCAO
+# Última revisão: 13/01/2026
+
+status: EM_CONSTRUCAO
+ciclo: raizes
+ano: 4
+serie: "4º Ano"
+idade_alvo: "9-10 anos"
+
+proposito_narrativo:
+  frase: "Ordeno o que descobri."
+  elaboracao: |
+    A criança sistematiza. Frações, decimais, proporções. O que era
+    intuição vira estrutura. Ela começa a ver PADRÕES e a organizá-los.
+    O tom é de DOMÍNIO — ela controla o que aprendeu.
+
+referencias_lore:
+  indice: "LORE/index.yaml"
+  proposito:
+    arquivo: "LORE/north_star.yaml#propositos_por_ano.4_raizes"
+    frase: "Ordeno o que descobri."
+  viajante:
+    arquivo: "LORE/viajante.yaml#construtor"
+    titulo: "Construtor da Vila"
+  tom_guardioes:
+    arquivo: "LORE/evolucao_guardioes.yaml#raizes"
+  artefatos:
+    aplicavel: true
+    principal: "LORE/artefatos.yaml#diario_do_reino"
+  curriculo_mestre: "curriculo/_SISTEMA/CURRICULOS_MESTRE/004_4ANO_RAIZES-4_CURRICULO_MESTRE.md"
+
+cpa:
+  concreto: { minimo: 30, maximo: 40 }
+  pictorico: { minimo: 30, maximo: 40 }
+  abstrato: { minimo: 25, maximo: 35 }
+
+tempo:
+  licao: { minimo: 20, maximo: 30, ideal: 25, unidade: minutos }
+  preparo: { maximo: 10, unidade: minutos }
+
+scaffolding:
+  tipo: "Pista sutil + silêncio produtivo"
+  exemplos:
+    - "Você notou um padrão aqui?"
+    - "Como você organizaria isso?"
+
+tom:
+  principal: "Domínio e organização"
+  palavra_chave: "Ordenar"
+
+densidade_sensorial:
+  elementos_por_paragrafo: 3
+
+guardioes:
+  principal: Íris
+  frequentes: [Íris, Noé, Bernardo]
+
+selos:
+  tempo_preparo: "≤ 10 min"
+  materiais: "Casa + alguns comprados"
+  mobile_friendly: true
+  adaptacao_bernardo: true

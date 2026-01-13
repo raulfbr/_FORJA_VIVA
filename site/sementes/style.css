@@ -1,0 +1,319 @@
+/* 
+ * 🎨 STYLE.CSS — Estilos Forja Viva (Lições Sementes)
+ * =====================================================
+ * 
+ * Paleta: Forest Green, Warm Cream, Old Gold
+ * Fontes: Merriweather (serif), Outfit (sans)
+ * Estilo: Beatrix Potter + Glassmorphism
+ */
+
+/* ═══════════════════════════════════════════════════════════
+   VARIÁVEIS CSS
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+    /* Cores Principais */
+    --forest-green: #2D5A3D;
+    --warm-cream: #F5F1E6;
+    --old-gold: #D4A017;
+    --terra: #8B4513;
+    --musgo: #6B8E23;
+    
+    /* Guardiões */
+    --melquior: #D4A017;
+    --noe: #8B4513;
+    --celeste: #FF6B35;
+    --bernardo: #5D4E37;
+    --iris: #9B59B6;
+    
+    /* Climas */
+    --clima-ensolarado: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
+    --clima-nublado: linear-gradient(135deg, #E8E8E8 0%, #D3D3D3 100%);
+    --clima-chuvoso: linear-gradient(135deg, #B0C4DE 0%, #87CEEB 100%);
+    --clima-crepusculo: linear-gradient(135deg, #FFB6C1 0%, #DDA0DD 100%);
+    
+    /* Tipografia */
+    --font-serif: 'Merriweather', Georgia, serif;
+    --font-sans: 'Outfit', -apple-system, sans-serif;
+    
+    /* Espaçamento */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    
+    /* Bordas */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    
+    /* Sombras */
+    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESET E BASE
+   ═══════════════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-serif);
+    background: var(--warm-cream);
+    color: var(--forest-green);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CLIMAS (Backgrounds)
+   ═══════════════════════════════════════════════════════════ */
+
+.clima-Ensolarado { background: var(--clima-ensolarado); }
+.clima-Nublado { background: var(--clima-nublado); }
+.clima-Chuvoso { background: var(--clima-chuvoso); }
+.clima-Crepúsculo, .clima-Crepusculo { background: var(--clima-crepusculo); }
+
+/* ═══════════════════════════════════════════════════════════
+   HEADER DA LIÇÃO
+   ═══════════════════════════════════════════════════════════ */
+
+.lesson-header {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: var(--space-lg);
+    text-align: center;
+    border-bottom: 3px solid var(--old-gold);
+}
+
+.lesson-id {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    color: var(--terra);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.lesson-header h1 {
+    font-size: 2rem;
+    margin: var(--space-sm) 0;
+    color: var(--forest-green);
+}
+
+.lesson-meta {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   NAVEGAÇÃO
+   ═══════════════════════════════════════════════════════════ */
+
+.lesson-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.lesson-nav a {
+    font-family: var(--font-sans);
+    text-decoration: none;
+    color: var(--forest-green);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+}
+
+.lesson-nav a:hover {
+    background: var(--old-gold);
+    color: white;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CONTEÚDO PRINCIPAL
+   ═══════════════════════════════════════════════════════════ */
+
+.lesson-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.lesson-content h1, 
+.lesson-content h2, 
+.lesson-content h3 {
+    font-family: var(--font-sans);
+    margin: var(--space-lg) 0 var(--space-md);
+    color: var(--forest-green);
+}
+
+.lesson-content h2 {
+    border-bottom: 2px solid var(--old-gold);
+    padding-bottom: var(--space-sm);
+}
+
+.lesson-content p {
+    margin-bottom: var(--space-md);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ADMONITIONS (Glassmorphism)
+   ═══════════════════════════════════════════════════════════ */
+
+.admonition {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+    display: flex;
+    gap: var(--space-md);
+    box-shadow: var(--shadow-glass);
+}
+
+.admonition .icon {
+    font-size: 1.5rem;
+}
+
+.admonition.important { border-left: 4px solid var(--old-gold); }
+.admonition.note { border-left: 4px solid var(--forest-green); }
+.admonition.tip { border-left: 4px solid var(--musgo); }
+.admonition.caution { border-left: 4px solid #E74C3C; }
+.admonition.ritual { border-left: 4px solid var(--melquior); background: rgba(212, 160, 23, 0.1); }
+
+/* ═══════════════════════════════════════════════════════════
+   GUARDIAN CARDS
+   ═══════════════════════════════════════════════════════════ */
+
+.guardian-card {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: white;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border: 3px solid;
+    box-shadow: var(--shadow-soft);
+    margin: var(--space-sm) 0;
+}
+
+.guardian-card img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.guardian-emoji {
+    font-size: 1.5rem;
+}
+
+.guardian-name {
+    font-family: var(--font-sans);
+    font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TABELAS
+   ═══════════════════════════════════════════════════════════ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-md) 0;
+    background: white;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+th, td {
+    padding: var(--space-sm) var(--space-md);
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background: var(--forest-green);
+    color: white;
+    font-family: var(--font-sans);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LISTAS E CHECKBOXES
+   ═══════════════════════════════════════════════════════════ */
+
+ul {
+    list-style: none;
+    padding-left: var(--space-lg);
+}
+
+ul li::before {
+    content: "🌿 ";
+    margin-left: -1.5rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════ */
+
+.lesson-footer {
+    text-align: center;
+    padding: var(--space-lg);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    color: var(--terra);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVO
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .lesson-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .lesson-meta {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .lesson-content {
+        padding: var(--space-lg) var(--space-md);
+    }
+    
+    .lesson-nav {
+        flex-direction: column;
+        gap: var(--space-sm);
+        text-align: center;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   IMPRESSÃO
+   ═══════════════════════════════════════════════════════════ */
+
+@media print {
+    body {
+        background: white;
+    }
+    
+    .lesson-nav {
+        display: none;
+    }
+    
+    .admonition {
+        border: 1px solid #ccc;
+        backdrop-filter: none;
+    }
+}

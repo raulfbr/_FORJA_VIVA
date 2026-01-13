@@ -1,0 +1,115 @@
+# triade.yaml — Especificação da Tríade Pedagógica
+# Versão: 1.0
+# Expansion Pack: Matemática Viva
+
+# HIERARQUIA DA TRÍADE
+hierarquia:
+  coordenador: "Charlotte Mason"
+  agente_coordenador: "Sofia"
+  
+  niveis:
+    1:
+      nome: "Charlotte Mason"
+      sigla: "CM"
+      autoridade: "VETO_FINAL"
+      scope: "Filosofia pedagógica, tom, dignidade da criança"
+      
+    2:
+      nome: "Singapura (CPA)"
+      sigla: "CPA"
+      autoridade: "PROPOSITIVO"
+      scope: "Sequência didática, manipulativos, transições"
+      agente: "Euclides"
+      
+    3:
+      nome: "The Good and The Beautiful"
+      sigla: "TGTB"
+      autoridade: "REFERENCIA"
+      scope: "Scope & Sequence, alinhamento curricular"
+      agente: null  # Referência documental
+
+# REGRAS DE CONFLITO
+conflitos:
+  - id: "CONF-001"
+    situacao: "CPA propõe Pictórico, CM quer só Concreto"
+    decisao: "CM vence"
+    justificativa: "Things before Signs é princípio fundante"
+    acao: "Euclides aceita, expande Concreto"
+    
+  - id: "CONF-002"
+    situacao: "TGTB sugere ritmo acelerado"
+    decisao: "CM vence"
+    justificativa: "Lições curtas preservam atenção"
+    acao: "Manter ritmo CM, ajustar TGTB"
+    
+  - id: "CONF-003"
+    situacao: "CPA quer transição C→P antes do tempo"
+    decisao: "CM vence"
+    justificativa: "Criança demonstra domínio antes de avançar"
+    acao: "Sofia veta transição prematura"
+
+# VETOS CANONIZADOS
+vetos:
+  VR-001:
+    trigger: "pictorial_before_concrete"
+    ciclo: "Sementes"
+    decisao: "REJECT"
+    
+  VR-002:
+    trigger: "lesson_too_long"
+    limite: 20  # minutos
+    ciclo: "Sementes"
+    decisao: "REJECT"
+    
+  VR-003:
+    trigger: "over_explanation"
+    limite_paragrafos: 3
+    decisao: "REJECT"
+    
+  VR-004:
+    trigger: "no_narration"
+    decisao: "REJECT"
+
+# MAPEAMENTO POR CICLO
+ciclos:
+  sementes:
+    idade: "0-6 anos"
+    cpa_permitido: "SOMENTE_CONCRETO"
+    abstrato: "MÍNIMO"
+    tempo_max: 20
+    
+  raizes:
+    idade: "7-10 anos"
+    cpa_permitido: "CONCRETO_PICTORICO"
+    abstrato: "LEVE"
+    tempo_max: 30
+    
+  logica:
+    idade: "11-14 anos"
+    cpa_permitido: "COMPLETO"
+    abstrato: "MODERADO"
+    tempo_max: 45
+    
+  legado:
+    idade: "15-18 anos"
+    cpa_permitido: "COMPLETO"
+    abstrato: "PLENO"
+    tempo_max: 60
+
+# PRINCÍPIOS CM APLICADOS
+principios_cm:
+  - id: 1
+    texto: "Crianças são pessoas"
+    aplicacao: "Toda lição trata com dignidade"
+    
+  - id: 8
+    texto: "Dieta ampla de conhecimento"
+    aplicacao: "Conexões interdisciplinares"
+    
+  - id: 13
+    texto: "Lições curtas"
+    aplicacao: "Hábito da Atenção preservado"
+    
+  - id: 14
+    texto: "Narração"
+    aplicacao: "Método de avaliação de cada lição"

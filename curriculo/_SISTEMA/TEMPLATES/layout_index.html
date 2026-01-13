@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Reino Contado | Matemática Viva</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;0,900;1,300&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Portal Navigation -->
+    <nav class="nav-bar-portal">
+        <div class="container nav-flex">
+            <a href="#" class="brand">Matemática Viva</a>
+            <div class="links">
+                <a href="#">Início</a>
+                <a href="pages/landing.html" style="color: var(--color-gold); font-weight: bold;">✨ Descubra</a>
+                <a href="pages/comecar.html">Comece Aqui</a>
+                <a href="pages/painel.html">Painel</a>
+                <a href="pages/metodo.html">O Método</a>
+                <a href="pages/quem_somos.html">Quem Somos</a>
+                <a href="lab/index.html" style="color: var(--color-accent); font-weight: bold;">🧪 Lab 1</a>
+                <a href="lab_v2/index.html" style="color: var(--color-gold); font-weight: bold;">📖 Lab 2</a>
+                <a href="lab_v3/index.html" style="color: var(--color-green); font-weight: bold;">🌿 Lab 3</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: A Promessa -->
+    <header class="hero">
+        <div class="container">
+            <span class="hero-subtitle">Matemática Viva</span>
+            <h1>O Reino Contado</h1>
+            <p>Resgate o olhar de maravilha do seu filho. Uma jornada matemática que começa no coração, não no papel.
+            </p>
+            <a href="sementes/000_INTRODUCAO_REINO_CONTADO.html" class="btn-cta">Começar a Jornada</a>
+            <br>
+            <a href="sementes/003_NOVOS_AMIGOS_4_E_5.html" class="btn-resume">
+                ▶️ Continuar (Lição 003)
+            </a>
+            <a href="pages/livro_dourado.html" class="btn-resume"
+                style="background: linear-gradient(135deg, #C5A059, #D4B869); margin-left: 0.5rem;">
+                📖 Livro Dourado
+            </a>
+        </div>
+    </header>
+
+    <!-- Seção 1: Os Guardiões -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2>Os Guardiões do Reino</h2>
+                <p>Quem guiará seu filho nesta aventura?</p>
+            </div>
+
+            <div class="guardians-layout">
+                <!-- LEADER: Melquior -->
+                <div class="guardian-leader">
+                    <div class="guardian-card leader-card">
+                        <img src="assets/img/melquior-leao.webp" alt="Melquior" class="guardian-avatar-img">
+                        <h3>Melquior</h3>
+                        <span class="guardian-virtue">Sabedoria</span>
+                        <p>O Leão da Sabedoria. Guarda a Ordem e as Leis Eternas.</p>
+                    </div>
+                </div>
+
+                <!-- SQUAD: The 4 Guides -->
+                <div class="guardians-squad">
+                    <!-- Noé -->
+                    <div class="guardian-card">
+                        <img src="assets/img/noe-coruja.webp" alt="Noé" class="guardian-avatar-img">
+                        <h3>Noé</h3>
+                        <span class="guardian-virtue">Silêncio</span>
+                        <p>A Coruja que guarda o mistério.</p>
+                    </div>
+                    <!-- Celeste -->
+                    <div class="guardian-card">
+                        <img src="assets/img/celeste-raposa.webp" alt="Celeste" class="guardian-avatar-img">
+                        <h3>Celeste</h3>
+                        <span class="guardian-virtue">Curiosidade</span>
+                        <p>A Raposa que fareja padrões.</p>
+                    </div>
+                    <!-- Bernardo -->
+                    <div class="guardian-card">
+                        <img src="assets/img/bernardo-urso.webp" alt="Bernardo" class="guardian-avatar-img">
+                        <h3>Bernardo</h3>
+                        <span class="guardian-virtue">Persistência</span>
+                        <p>O Urso que ensina a tentar de novo.</p>
+                    </div>
+                    <!-- Íris -->
+                    <div class="guardian-card">
+                        <img src="assets/img/iris-passarinho-colar.webp" alt="Íris" class="guardian-avatar-img">
+                        <h3>Íris</h3>
+                        <span class="guardian-virtue">Atenção</span>
+                        <p>O Pássaro que vê os detalhes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- K12 Dynamic Sections Injection Point -->
+    {{ arco_despertar }}
+
+    <footer class="site-footer">
+        <p><strong>Matemática Viva</strong> • O Reino Contado v3.6</p>
+        <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.7;">
+            Feito para pais, educadores e pequenos guardiões.<br>
+            <em>Inevitable Gold Standard</em>
+        </p>
+        <p style="font-size: 0.8rem; margin-top: 2rem; opacity: 0.5;">
+            Build: {{ data_build }}
+        </p>
+    </footer>
+
+</body>
+
+</html>

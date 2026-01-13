@@ -1,0 +1,66 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# REGRAS DO 2º ANO — RAÍZES II
+# ══════════════════════════════════════════════════════════════════════════════
+# STATUS: EM_CONSTRUCAO
+# Última revisão: 13/01/2026
+
+status: EM_CONSTRUCAO
+ciclo: raizes
+ano: 2
+serie: "2º Ano"
+idade_alvo: "7-8 anos"
+
+proposito_narrativo:
+  frase: "O Mercado me ensina justiça."
+  elaboracao: |
+    A criança troca, compara, equilibra. A matemática se torna moeda de
+    relação com os outros. O zelo e a honestidade entram em cena.
+    Ela aprende que contar não é só para si — é para ser JUSTO.
+
+referencias_lore:
+  indice: "LORE/index.yaml"
+  proposito:
+    arquivo: "LORE/north_star.yaml#propositos_por_ano.2_raizes"
+    frase: "O Mercado me ensina justiça."
+  viajante:
+    arquivo: "LORE/viajante.yaml#construtor"
+    titulo: "Construtor da Vila"
+  tom_guardioes:
+    arquivo: "LORE/evolucao_guardioes.yaml#raizes"
+    tom_geral: "Mentoria encorajadora"
+  artefatos:
+    aplicavel: true
+    principal: "LORE/artefatos.yaml#diario_do_reino"
+  curriculo_mestre: "curriculo/_SISTEMA/CURRICULOS_MESTRE/002_2ANO_RAIZES-2_CURRICULO_MESTRE.md"
+
+cpa:
+  concreto: { minimo: 40, maximo: 50 }
+  pictorico: { minimo: 30, maximo: 40 }
+  abstrato: { minimo: 20, maximo: 25 }
+
+tempo:
+  licao: { minimo: 15, maximo: 25, ideal: 20, unidade: minutos }
+  preparo: { maximo: 8, unidade: minutos }
+
+scaffolding:
+  tipo: "Pergunta guiada avançada"
+  exemplos:
+    - "Como você dividiria isso de forma justa?"
+    - "O que falta para equilibrar a balança?"
+
+tom:
+  principal: "Aventura de trocas"
+  palavra_chave: "Justiça"
+
+densidade_sensorial:
+  elementos_por_paragrafo: 2
+
+guardioes:
+  principal: Bernardo
+  frequentes: [Bernardo, Íris, Noé]
+
+selos:
+  tempo_preparo: "≤ 8 min"
+  materiais: "Casa + alguns comprados"
+  mobile_friendly: true
+  adaptacao_bernardo: true

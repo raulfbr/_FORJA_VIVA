@@ -1,0 +1,218 @@
+# ════════════════════════════════════════════════════════════════════════════════
+# ARTEFATOS DO REINO CONTADO
+# ════════════════════════════════════════════════════════════════════════════════
+# 
+# PROPÓSITO:
+#   Define os 6 objetos simbólicos que marcam a jornada do Viajante.
+#   Cada artefato representa uma virtude e está ligado a um Guardião.
+# 
+# ALINHAMENTO NORTH STAR:
+#   - Propósito: "Histórias que transformam" → Artefatos dão tangibilidade
+#   - Princípio 5: "Jornada Completa" → Artefatos marcam progressão
+#   - Tolkien: "Objetos mágicos carregam significado"
+# 
+# USADO POR:
+#   - Lições em momentos específicos
+#   - Rituais de transição entre ciclos
+# 
+# REGRA:
+#   Artefatos NÃO aparecem em toda lição — apenas quando FAZ SENTIDO.
+#   Uso excessivo banaliza o significado.
+# 
+# RELACIONADO:
+#   - LORE/guardioes.yaml (guardiões associados)
+#   - LORE/viajante.yaml (rituais de transição)
+#   - LORE/index.yaml (navegação)
+# 
+# Última Atualização: 13/01/2026
+# ════════════════════════════════════════════════════════════════════════════════
+
+tipo: artefatos
+versao: "1.0"
+
+regra_geral: |
+  Cada artefato é ÚNICO e aparece em MOMENTO ESPECÍFICO.
+  Não banalize — o poder está na escassez.
+  CM: "The teacher must not be too present." O mesmo vale para artefatos.
+
+# ════════════════════════════════════════════════════════════════════════════════
+# OS 6 ARTEFATOS
+# ════════════════════════════════════════════════════════════════════════════════
+
+artefatos:
+
+  diario_do_reino:
+    nome: "Diário do Reino"
+    emoji: "📔"
+    guardiao_associado: Melquior
+    virtude: Sabedoria (registro do aprendizado)
+    
+    descricao: |
+      Um livro de couro marrom com folhas amareladas, dado por Melquior
+      ao Viajante quando ele deixa as Sementes e entra nas Raízes.
+      Nele, a criança (ou Portador) anota descobertas, perguntas, insights.
+      
+    quando_aparece:
+      primeiro_momento: "Raízes-1, Lição 1 (ritual de entrada)"
+      uso_recorrente: "Sempre que a criança tem insight digno de registro"
+      
+    como_usar_na_narrativa: |
+      "Melquior abre uma velha arca de cedro e retira algo precioso.
+      'Este é o Diário do Reino. Tudo que você descobrir e quiser lembrar,
+      escreva aqui. Um dia, quando for Portador da Tocha, este será seu mapa.'"
+      
+    nota_pratica: |
+      Na vida real, pode ser um caderno bonito que a família compra.
+      Ou uma seção no app/site para anotações.
+
+  bussola_celeste:
+    nome: "Bússola de Celeste"
+    emoji: "🧭"
+    guardiao_associado: Celeste
+    virtude: Curiosidade (direção na exploração)
+    
+    descricao: |
+      Uma bússola dourada com asas delicadas nos lados.
+      Não aponta para o Norte — aponta para PADRÕES.
+      Dada por Celeste ao Viajante ao entrar no ciclo Lógica.
+      
+    quando_aparece:
+      primeiro_momento: "Lógica-1, Lição 1 (ritual de entrada)"
+      uso_recorrente: "Em problemas complexos que exigem buscar conexões"
+      
+    como_usar_na_narrativa: |
+      "Celeste pousa no ombro do Viajante e coloca uma bússola em suas mãos.
+      'Esta não aponta para o Norte. Aponta para o próximo padrão que você
+      precisa encontrar. Siga a agulha — ela conhece sua curiosidade.'"
+
+  martelo_bernardo:
+    nome: "Martelo de Bernardo"
+    emoji: "🔨"
+    guardiao_associado: Bernardo
+    virtude: Persistência (forjar através de dificuldade)
+    
+    descricao: |
+      Um pequeno martelo de bronze com cabo de carvalho.
+      Marcado pela Grande Nevasca, como a pata de Bernardo.
+      Representa que coisas belas exigem esforço e repetição.
+      
+    quando_aparece:
+      primeiro_momento: "Quando a criança enfrenta frustração significativa"
+      uso_recorrente: "Lições difíceis, após erros repetidos"
+      
+    como_usar_na_narrativa: |
+      "Bernardo olha para o Viajante desanimado. Sem dizer nada,
+      coloca na mesa seu martelo de bronze — o mesmo que usou para
+      sobreviver à Grande Nevasca. 'Uma martelada de cada vez', diz.
+      'É assim que se forja qualquer coisa que vale a pena.'"
+
+  pena_iris:
+    nome: "Pena de Íris"
+    emoji: "🪶"
+    guardiao_associado: Íris
+    virtude: Atenção (ver os detalhes)
+    
+    descricao: |
+      Uma pena iridescente que muda de cor conforme a luz.
+      Representa a capacidade de ver beleza onde outros não veem.
+      Usada simbolicamente para "destacar" o importante.
+      
+    quando_aparece:
+      primeiro_momento: "Quando a criança descobre algo belo na matemática"
+      uso_recorrente: "Momentos de 'eureka', descobertas estéticas"
+      
+    como_usar_na_narrativa: |
+      "Íris deixa cair uma de suas penas no colo do Viajante.
+      'Guarde isso', ela murmura. 'É para você lembrar: a beleza
+      está nos detalhes que quase ninguém para para ver.'"
+
+  ampulheta_noe:
+    nome: "Ampulheta de Noé"
+    emoji: "⏳"
+    guardiao_associado: Noé
+    virtude: Paciência (respeitar o tempo)
+    
+    descricao: |
+      Uma ampulheta antiga com areia prateada que cai muito devagar.
+      Representa que aprender leva tempo — e isso é bom.
+      O tempo não é inimigo; é companheiro.
+      
+    quando_aparece:
+      primeiro_momento: "Quando a criança quer ir rápido demais"
+      uso_recorrente: "Lições de sequência, tempo, processo"
+      
+    como_usar_na_narrativa: |
+      "Noé pisca lentamente e mostra uma ampulheta antiga.
+      'Veja a areia. Ela não corre — ela dança. Cada grão
+      chega no seu tempo. Você também vai chegar.'"
+
+  tocha_melquior:
+    nome: "Tocha de Melquior"
+    emoji: "🔥"
+    guardiao_associado: Melquior
+    virtude: Sabedoria transmitida (legado)
+    
+    descricao: |
+      Uma tocha de bronze antigo que nunca se apaga.
+      Símbolo máximo do projeto: a luz que se passa adiante.
+      Entregue ao Viajante no final do ciclo Legado.
+      
+    quando_aparece:
+      primeiro_momento: "Legado-4, Lição 120 (ritual de encerramento)"
+      uso_recorrente: "NUNCA — aparece UMA VEZ na vida"
+      
+    como_usar_na_narrativa: |
+      "Melquior, com olhos brilhando, ergue a Tocha.
+      'Você entrou Herdeiro de promessas. Cresceu Construtor de vilas.
+      Brilhou Explorador de verdades. Agora, Portador da Tocha.
+      Leve esta luz. Acenda outras vidas. O Reino vive em você.'"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# REGRAS DE USO
+# ════════════════════════════════════════════════════════════════════════════════
+
+regras_uso:
+  escassez: |
+    Artefatos NÃO aparecem em toda lição.
+    O Diário pode ser mencionado com frequência.
+    A Tocha aparece UMA VEZ na vida.
+    
+  progressao: |
+    - Sementes: Nenhum artefato físico (só promessas)
+    - Raízes: Diário + Martelo (quando frustrado)
+    - Lógica: Bússola + Pena (exploração e beleza)
+    - Legado: Ampulheta + Tocha (tempo e transmissão)
+    
+  tangibilidade: |
+    Famílias podem criar versões físicas:
+    - Diário: Caderno bonito
+    - Bússola: Desenho ou miniatura
+    - Martelo: Símbolo de persistência
+    - Não é obrigatório — apenas enriquece
+
+# ════════════════════════════════════════════════════════════════════════════════
+# CONEXÃO COM RITUAIS DE TRANSIÇÃO
+# ════════════════════════════════════════════════════════════════════════════════
+
+rituais_transicao:
+  descricao: "Artefatos marcam passagem entre ciclos"
+  
+  sementes_para_raizes:
+    artefato: diario_do_reino
+    quem_entrega: Melquior
+    significado: "Você agora pode registrar sua jornada"
+    
+  raizes_para_logica:
+    artefato: bussola_celeste
+    quem_entrega: Celeste
+    significado: "Você agora pode buscar padrões profundos"
+    
+  logica_para_legado:
+    artefato: ampulheta_noe
+    quem_entrega: Noé
+    significado: "Você aprendeu que o tempo é aliado"
+    
+  encerramento_legado:
+    artefato: tocha_melquior
+    quem_entrega: Melquior
+    significado: "Você é agora o Portador da luz"

@@ -1,0 +1,271 @@
+/* 
+   Gutenberg NEXT - Lab Style 🧪
+   Aesthetic: Premium Glassmorphism & Organic Excellence
+   Focus: Mobile-First & Immersive Pedagogy
+*/
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --primary-gradient: linear-gradient(145deg, #2A3B33 0%, #1A2621 100%);
+    --gold-gradient: linear-gradient(135deg, #C5A059 0%, #E6D2A8 50%, #C5A059 100%);
+    --accent-glow: 0 12px 40px 0 rgba(31, 38, 135, 0.12);
+
+    /* Reusing base tokens for consistency */
+    --color-gold: #C5A059;
+    --color-green: #2A3B33;
+    --color-cream: #FDFBF7;
+    --color-ink: #1F2937;
+
+    --radius-premium: 32px;
+    --shadow-premium: 0 30px 60px rgba(0, 0, 0, 0.1);
+    --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+body {
+    background: var(--color-cream);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(197, 160, 89, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(42, 59, 51, 0.05) 0px, transparent 50%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Mobile Header (Sticky & Glass) */
+.lab-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1rem 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lab-header.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Immersive Hero */
+.lab-hero {
+    background: var(--primary-gradient);
+    padding: 6rem 1.5rem 8rem;
+    color: white;
+    text-align: center;
+    clip-path: ellipse(150% 100% at 50% 0%);
+    position: relative;
+}
+
+.lab-hero h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Glass Content Wrapper */
+.premium-content-card {
+    max-width: 800px;
+    margin: -5rem auto 4rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-premium);
+    box-shadow:
+        var(--shadow-premium),
+        inset 0 0 20px rgba(255, 255, 255, 0.3);
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 10;
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typography Polish */
+.prose p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 1.6rem;
+    animation: fadeIn 1s ease both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Advanced Admonitions (The "Cards") */
+blockquote {
+    border: none;
+    margin: 4rem 0;
+    padding: 3rem;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+blockquote:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+    border-color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+blockquote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    z-index: 2;
+    transition: width 0.3s ease;
+}
+
+blockquote:hover::before {
+    width: 12px;
+}
+
+blockquote.ritual {
+    background: rgba(147, 51, 234, 0.04);
+    border-left: 6px solid #9333EA;
+}
+
+blockquote.mestra {
+    background: rgba(234, 88, 12, 0.04);
+    border-left: 6px solid #EA580C;
+}
+
+blockquote.narrativa {
+    background: rgba(37, 99, 235, 0.04);
+    border-left: 6px solid #2563EB;
+}
+
+blockquote.atividade {
+    background: rgba(22, 163, 74, 0.04);
+    border-left: 6px solid #16A34A;
+}
+
+/* Stagger delay for multiple blockquotes */
+blockquote:nth-of-type(1) {
+    animation-delay: 0.2s;
+}
+
+blockquote:nth-of-type(2) {
+    animation-delay: 0.4s;
+}
+
+blockquote:nth-of-type(3) {
+    animation-delay: 0.6s;
+}
+
+/* Fixed Navigation Bar (Mobile Zone) */
+.mobile-nav-bar {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(42, 59, 51, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 0.8rem 1.6rem;
+    border-radius: 50px;
+    display: flex;
+    gap: 1.2rem;
+    z-index: 1000;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    animation: slideUpNav 1s cubic-bezier(0.16, 1, 0.3, 1) both 0.5s;
+}
+
+@keyframes slideUpNav {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.mobile-nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.3s;
+    border-radius: 50px;
+}
+
+.mobile-nav-link:active {
+    transform: scale(0.92);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-link.next {
+    background: var(--gold-gradient);
+    color: var(--color-green);
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+}
+
+.mobile-nav-link.next:hover {
+    box-shadow: 0 8px 25px rgba(197, 160, 89, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Animations for interaction */
+.btn-interaction {
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-interaction:active {
+    transform: scale(0.95);
+}
+
+/* Responvivity Adjustments */
+@media (max-width: 600px) {
+    .premium-content-card {
+        padding: 2.5rem 1.5rem;
+        margin: -3.5rem 1rem 7rem;
+        border-radius: 24px;
+    }
+
+    .lab-hero {
+        padding: 5rem 1.5rem 7rem;
+    }
+
+    .lab-hero h1 {
+        font-size: 2.4rem;
+    }
+}

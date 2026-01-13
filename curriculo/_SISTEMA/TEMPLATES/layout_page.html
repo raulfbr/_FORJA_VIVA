@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }} | Matemática Viva</title>
+    <!-- CSS Path fix: Pages are in /pages/ folder, so need to go up one level -->
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;0,900;1,300&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="nav-bar-portal">
+        <div class="container nav-flex">
+            <a href="../index.html" class="brand">Matemática Viva</a>
+            <div class="links">
+                <a href="../index.html">Início</a>
+                <a href="comecar.html" style="color: var(--color-gold); font-weight: bold;">Comece Aqui</a>
+                <a href="painel.html">Painel</a>
+                <a href="metodo.html">O Método</a>
+                <a href="quem_somos.html">Quem Somos</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>{{ titulo }}</h1>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <article class="prose">
+            {{ conteudo }}
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>Matemática Viva</strong> • O Reino Contado</p>
+        <a href="../index.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;">Voltar
+            ao Castelo</a>
+    </footer>
+
+</body>
+
+</html>

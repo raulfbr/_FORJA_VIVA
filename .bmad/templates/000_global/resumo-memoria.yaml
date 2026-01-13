@@ -1,0 +1,83 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# RESUMO-MEMÓRIA — Template para Resumos a cada 5 Lições
+# ══════════════════════════════════════════════════════════════════════════════
+# PROPÓSITO: Consolidar aprendizados de blocos de lições
+# USADO POR: Mordomo/SM após completar 5 lições
+# REFERÊNCIAS LORE: LORE/index.yaml, LORE/guardioes.yaml, LORE/artefatos.yaml
+# Versão: 1.1 | Última atualização: 13/01/2026
+# ══════════════════════════════════════════════════════════════════════════════
+
+# REFERÊNCIAS LORE
+referencias_lore:
+  indice: "LORE/index.yaml"
+  guardioes: "LORE/guardioes.yaml"
+  artefatos: "LORE/artefatos.yaml"
+  viajante: "LORE/viajante.yaml"
+
+meta:
+  ciclo: "Sementes"              # Sementes | Raízes | Lógica | Legado
+  range: "L001-L005"             # Ex: L001-L005, L006-L010
+  data_criacao: "YYYY-MM-DD"
+  autor: "Mordomo"               # Agente que criou
+
+# CONCEITOS INTRODUZIDOS
+conceitos_introduzidos:
+  - licao: "L001"
+    conceito: "[Nome do conceito]"
+    guardiao: "[Quem introduziu]"
+    tipo: "NOVO"                 # NOVO | REVISÃO | EXPANSÃO
+    
+  - licao: "L002"
+    conceito: "[Nome do conceito]"
+    guardiao: "[Quem introduziu]"
+    tipo: "NOVO"
+
+# DECISÕES PEDAGÓGICAS (PADRs)
+decisoes_pedagogicas:
+  - licao: "L003"
+    decisao: "[O que foi decidido]"
+    justificativa: "[Por que: referência CM/CPA/TGTB]"
+    tipo: "VETO_CM"              # VETO_CM | ADAPTAÇÃO | EXCEÇÃO
+
+# GUARDIÕES UTILIZADOS
+guardioes_utilizados:
+  - licao: "L001"
+    lider: "Celeste"
+    coadjuvantes: []
+    
+  - licao: "L002"
+    lider: "Bernardo"
+    coadjuvantes: ["Íris"]
+
+# ARCOS NARRATIVOS
+arcos_narrativos:
+  - id: "ARCO-001"
+    titulo: "[Nome do arco]"
+    inicio: "L001"
+    fim: "L005"
+    descricao: "[O que acontece neste arco]"
+    guardioes_envolvidos:
+      - "Celeste"
+      - "Bernardo"
+
+# REFERÊNCIAS PARA LIÇÕES FUTURAS
+referencias_futuras:
+  - para_licao: "L006"
+    tipo: "CALLBACK"             # CALLBACK | CONTINUAÇÃO | PREPARAÇÃO
+    descricao: "[O que deve ser referenciado]"
+    guardiao_responsavel: "Celeste"
+
+# MÉTRICAS
+metricas:
+  total_licoes: 5
+  tempo_total_estimado: 90       # minutos (todas as 5 lições)
+  manipulativos_usados:
+    - "Cubos de contagem"
+    - "Pedrinhas"
+  novos_simbolos: 0              # Para Sementes deve ser 0 ou mínimo
+
+# OBSERVAÇÕES
+observacoes:
+  padroes_identificados: "[O que funcionou bem]"
+  ajustes_recomendados: "[O que melhorar no próximo bloco]"
+  feedback_piloto: null          # Preenchido após teste com alunos

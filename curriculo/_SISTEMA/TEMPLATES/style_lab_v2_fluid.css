@@ -1,0 +1,128 @@
+/* 
+   LAB v2.2 FLUID — Modo Kindle AGRESSIVO
+   APLICA: Imersão Total para Zona de Ritual
+   
+   REGRA: Esconder TODOS os H2 e labels redundantes
+   O Portador lê como um livro, sem interrupções.
+*/
+
+/* ======================================
+   1. ESCONDER TODOS OS H2 NA ZONA RITUAL
+====================================== */
+
+/* Esconde TODOS os H2 dentro de .prose */
+.prose h2 {
+    display: none !important;
+}
+
+/* ======================================
+   2. ESCONDER LABELS DE BLOCKQUOTE
+====================================== */
+
+/* O primeiro <strong> dentro do primeiro <p> de qualquer blockquote */
+blockquote>p:first-child>strong:first-child {
+    display: none !important;
+}
+
+/* ======================================
+   3. HR SUBSTITUÍDO POR ESPAÇO EM BRANCO
+====================================== */
+
+.prose hr {
+    border: none !important;
+    height: 3rem !important;
+    margin: 0 !important;
+    background: transparent !important;
+}
+
+/* Adiciona um separador sutil */
+.prose hr::after {
+    content: '·';
+    display: block;
+    text-align: center;
+    color: var(--color-gold);
+    opacity: 0.3;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* ======================================
+   4. BLOCKQUOTES FLUIDOS (SEM BORDA)
+====================================== */
+
+blockquote {
+    border-left: none !important;
+    padding-left: 0 !important;
+    background: transparent !important;
+    margin: 2rem 0 !important;
+}
+
+/* Marcador sutil no topo de cada blockquote */
+blockquote::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: var(--color-gold);
+    margin-bottom: 1.5rem;
+    opacity: 0.25;
+}
+
+/* ======================================
+   5. STAGE DIRECTIONS (Ações e tons)
+====================================== */
+
+/* [Ação: ...], [pausa], [tom] em estilo teatro */
+.prose code {
+    font-family: var(--font-ui) !important;
+    font-size: 0.7rem !important;
+    color: var(--color-ink-soft) !important;
+    background: none !important;
+    padding: 0 !important;
+    display: block !important;
+    margin: 0.5rem 0 !important;
+    opacity: 0.6 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Itálicos como direções de cena */
+.prose em {
+    /* Mantém itálico mas não compete com o texto principal */
+}
+
+/* ======================================
+   6. RESPIRAÇÃO VISUAL
+====================================== */
+
+/* Mais espaço entre parágrafos */
+.prose blockquote p+p {
+    margin-top: 1.8rem;
+}
+
+/* ======================================
+   7. NOMES DOS PERSONAGENS
+====================================== */
+
+/* Celeste:, Melquior:, etc. com destaque sutil */
+.prose blockquote p>strong:first-child {
+    color: var(--color-gold) !important;
+    font-size: 0.85em !important;
+    display: block !important;
+    margin-bottom: 0.3rem !important;
+}
+
+/* ======================================
+   8. AUDITORIA E CÁTEDRA (Opcional: manter visíveis)
+   Descomente se quiser mostrar H2 nas seções 11-12
+====================================== */
+
+/*
+.prose h2:nth-last-of-type(1),
+.prose h2:nth-last-of-type(2) {
+    display: block !important;
+    font-size: 1rem !important;
+    color: var(--color-ink-soft) !important;
+    margin: 3rem 0 1rem !important;
+}
+*/

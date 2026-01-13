@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }} | Lab v3</title>
+    <link rel="stylesheet" href="../style_lab_v3.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="lab2-header" id="header">
+        <a href="../index.html">← Reino</a>
+        <span class="lab2-meta">{{ fase }} • {{ tempo }}</span>
+    </header>
+
+    <main class="lab2-content">
+        <!-- Title Block -->
+        <div class="lab2-title-block">
+            <h1>{{ titulo }}</h1>
+            <p class="subtitle">{{ meta }}</p>
+            <div class="guardian-line">
+                Guiado por <strong>{{ guardia }}</strong>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             ZONA 1: PREPARAÇÃO (Card visível para o Portador)
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="portador-card">
+            <h2>📋 Para o Portador de Tocha</h2>
+            <!-- Card Grid removido por decisão de simplificação -->
+            <!-- Dica do Dia (Integrada ao Titulo) -->
+            <!-- Conteúdo da Zona 1 (Preparação) -->
+            {{ zona_preparacao }}
+        </section>
+
+        <!-- Whitespace before immersion -->
+        <div class="ritual-separator" aria-hidden="true"></div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             ZONA 2: IMERSÃO (Fluida - Background Unificado)
+        ═══════════════════════════════════════════════════════════ -->
+        <div class="zona-ritual">
+            <article class="jornada-fluida">
+                {{ conteudo_fluido }}
+            </article>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             ZONA 3: REFLEXÃO (Apenas Auditoria Colapsável)
+        ═══════════════════════════════════════════════════════════ -->
+        <section class="reflexao-cards">
+            <details class="auditoria-card">
+                <summary>🛡️ Auditoria da Mestra (Clique para expandir)</summary>
+                {{ auditoria }}
+            </details>
+        </section>
+
+        <!-- Footer Reference -->
+        <footer class="lab2-footer">
+            📚 Referência: {{ tgtb }}
+        </footer>
+
+        <!-- Text Navigation -->
+        <nav class="lab2-nav">
+            <a href="{{ prev_url }}">← Anterior</a>
+            <span class="separator">|</span>
+            <a href="{{ next_url }}">Próxima →</a>
+        </nav>
+    </main>
+
+    <!-- Auto-hide header script -->
+    <script>
+        (function () {
+            let lastScroll = 0;
+            const header = document.getElementById('header');
+
+            window.addEventListener('scroll', function () {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > lastScroll && currentScroll > 80) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+
+                lastScroll = currentScroll;
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

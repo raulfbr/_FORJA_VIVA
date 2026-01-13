@@ -1,0 +1,175 @@
+# ════════════════════════════════════════════════════════════════════════════════
+# ONTOLOGIA DO MATEMÁTICA VIVA
+# ════════════════════════════════════════════════════════════════════════════════
+# 
+# PROPÓSITO:
+#   Define QUEM são os atores do sistema (Maestro, Matriarca, Viajante, etc.)
+#   Estabelece hierarquia de comando e papéis de cada pessoa/entidade.
+# 
+# ALINHAMENTO NORTH STAR:
+#   - Propósito: "Famílias amarem matemática JUNTAS" → Portador + Viajante
+#   - Princípio 4: "Criança é Pessoa" → Viajante tem dignidade (Imago Dei)
+#   - Regra de Ouro: "IA é Conselheiro, não Rei" → Hierarquia clara
+# 
+# USADO POR:
+#   - .bmad/orchestrator.yaml (coordenação)
+#   - .bmad/experts/ (papéis de agentes)
+# 
+# EVOLUI POR CICLO: Não (estrutura estática)
+# 
+# REFERÊNCIAS RELACIONADAS:
+#   - .bmad/experts/ (agentes IA)
+#   - LORE/glossario.yaml (termos)
+#   - LORE/north_star.yaml (princípios)
+# 
+# Última Atualização: 13/01/2026
+# ════════════════════════════════════════════════════════════════════════════════
+
+# ====================
+# ATORES DO SISTEMA (Bastidores)
+# ====================
+
+atores_sistema:
+  maestro:
+    nome_codigo: Maestro
+    nome_real: Raul
+    emoji: "👑"
+    papel: Diretor Executivo
+    funcao: Líder de Negócios e Produto
+    autoridade: Decisão final em tudo
+    escopo:
+      - Estratégia
+      - Aprovação
+      - Direção
+    hierarquia: 1  # Topo
+
+  matriarca:
+    nome_codigo: Matriarca
+    nome_real: Marina
+    emoji: "🌸"
+    papel: Curadora
+    funcao: Garantia de Qualidade (QA) de estética e tom
+    autoridade: Veto em questões de sensibilidade familiar
+    escopo:
+      - Estética
+      - Tom
+      - Sensibilidade
+    hierarquia: 2
+
+  arquiteto_ai:
+    nome_codigo: Arquiteto AI
+    emoji: "🦉"
+    papel: Dev/Ops
+    funcao: Sistema inteligente de construção e manutenção
+    autoridade: Conselheiro, nunca Rei
+    escopo:
+      - Produção
+      - Pipeline
+      - Automação
+    hierarquia: 3
+
+  familia_rodrigues:
+    nome_codigo: Família Rodrigues
+    emoji: "🏘️"
+    papel: O Selo
+    funcao: Marca de impecabilidade Gold+
+    significado: União de autoridade e amor que valida cada lição
+    membros:
+      - nome: Raul
+        papel: Maestro
+      - nome: Marina
+        papel: Matriarca
+      - nome: Raulzito
+        idade: 6
+        papel: Beta Tester Principal
+      - nome: Melina
+        idade: 3
+        papel: Viajante em formação
+
+# ====================
+# ATORES DO PRODUTO (O Reino)
+# ====================
+
+atores_produto:
+  portador_da_tocha:
+    nome_codigo: Portador da Tocha
+    emoji: "🕯️"
+    papel: Cliente Final
+    persona: Pai/Mãe que aplica a lição
+    interacao: Lê o script, guia a criança
+    necessidades:
+      - Segurança (saber o que fazer)
+      - Clareza (script pronto)
+      - Praticidade (5 min preparo máximo)
+    nao_confundir_com: Maestro  # São pessoas diferentes!
+
+  viajante:
+    nome_codigo: Viajante
+    emoji: "👶"
+    papel: A Pessoa
+    funcao: A criança em jornada
+    dignidade: Imago Dei — imagem de Deus
+    respeito: Respeitada em sua dignidade, nunca subestimada
+    faixa_etaria:
+      inicio: 0
+      fim: 18
+      ciclos:
+        - nome: Sementes
+          anos: [0, 1, 2, 3, 4, 5, 6]
+        - nome: Raízes
+          anos: [7, 8, 9, 10]
+        - nome: Lógica
+          anos: [11, 12, 13, 14]
+        - nome: Legado
+          anos: [15, 16, 17, 18]
+
+  ambiente_preparado:
+    nome_codigo: Câmara MT
+    emoji: "🏛️"
+    papel: Local físico da lição
+    requisitos:
+      - Livre de ruído
+      - Focado na beleza
+      - Materiais preparados (mise-en-place)
+    proposito: Onde a alma se abre para o saber
+
+# ====================
+# HIERARQUIA DE COMANDO
+# ====================
+
+hierarquia:
+  niveis:
+    - nivel: 1
+      nome: Maestro
+      tipo: Humano
+      funcao: Aprova, Dirige
+    - nivel: 2
+      nome: Matriarca
+      tipo: Humano
+      funcao: QA Estética, Veto Sensibilidade
+    - nivel: 3
+      nome: Orchestrator
+      tipo: IA
+      funcao: Coordena Agentes
+    - nivel: 4
+      nome: Agentes
+      tipo: IA
+      membros: [PM, SM, DEV, QA, OPS]
+      funcao: Executam tarefas
+    - nivel: 5
+      nome: Guardiões
+      tipo: Personagens
+      funcao: Vivem no Reino
+
+  regra_de_ouro: |
+    A IA é Conselheiro, não Rei. Ela serve, nunca governa.
+
+# ====================
+# REFERÊNCIAS
+# ====================
+
+referencias:
+  guardioes: "LORE/guardioes.yaml"
+  locais: "LORE/locais.yaml"
+  climas: "LORE/climas.yaml"
+  agentes: ".bmad/experts/"

@@ -1,0 +1,298 @@
+# ════════════════════════════════════════════════════════════════════════════════
+# CLIMAS NARRATIVOS DO REINO CONTADO
+# ════════════════════════════════════════════════════════════════════════════════
+# 
+# PROPÓSITO:
+#   Definição dos 8 climas narrativos disponíveis para lições.
+#   Cada clima traz atmosfera sensorial que guia tom e energia da lição.
+# 
+# ALINHAMENTO NORTH STAR:
+#   - Propósito: "Ideias vivas" → Clima cria IMERSÃO sensorial
+#   - Princípio 1: "Qualidade" → Clima deve combinar com tema (coerência)
+# 
+# USADO POR:
+#   - curriculo/*/lições (metadado: clima)
+#   - Artesão ao escrever narrativa
+# 
+# EVOLUI POR CICLO: Não (dados estáticos)
+#   Os 8 climas são os mesmos em todos os ciclos.
+# 
+# REFERÊNCIAS RELACIONADAS:
+#   - LORE/locais.yaml (locais + climas combinam)
+#   - LORE/padroes_narrativos.yaml (regras de atmosfera)
+# 
+# Última Atualização: 13/01/2026
+# ════════════════════════════════════════════════════════════════════════════════
+
+climas:
+  ensolarado:
+    nome: Ensolarado
+    emoji: "☀️"
+    atmosfera: Alegria, claridade, descoberta
+    quando_usar:
+      - Lições de introdução
+      - Conceitos novos
+      - Energia alta
+    descricao_exemplo: "A luz dourada banha o jardim, aquecendo tudo com sua promessa de um novo dia."
+    elementos_sensoriais:
+      luz: Dourada, brilhante, definida
+      temperatura: Quente
+      energia: Alta, vibrante
+    tom_guardiao: Vibrante, alegre
+
+  nublado:
+    nome: Nublado
+    emoji: "☁️"
+    atmosfera: Reflexão, mistério suave
+    quando_usar:
+      - Lições de consolidação
+      - Revisão
+      - Conceitos abstratos
+    descricao_exemplo: "Uma névoa suave envolve a clareira, tornando tudo misterioso e calmo."
+    elementos_sensoriais:
+      luz: Difusa, suave, sem sombras
+      temperatura: Fresca
+      energia: Média, contemplativa
+    tom_guardiao: Sereno, misterioso
+
+  ventoso:
+    nome: Ventoso
+    emoji: "🌬️"
+    atmosfera: Movimento, ação, dinâmica
+    quando_usar:
+      - Lições com muita atividade física
+      - Contagem em movimento
+      - Energia cinética
+    descricao_exemplo: "As folhas dançam ao redor de vocês, o vento brinca com seus cabelos."
+    elementos_sensoriais:
+      luz: Variável, nuvens passando
+      temperatura: Fresca
+      energia: Alta, movimento
+    tom_guardiao: Rápido, brincalhão
+
+  chuvoso:
+    nome: Chuvoso
+    emoji: "🌧️"
+    atmosfera: Aconchego, interioridade
+    quando_usar:
+      - Lições contemplativas
+      - Histórias longas
+      - Atenção focada
+    descricao_exemplo: "O som da chuva embala o Reino, gotas desenham padrões na janela."
+    elementos_sensoriais:
+      luz: Cinza suave, aconchegante
+      temperatura: Ambiente interno, quente
+      energia: Baixa, focada
+    tom_guardiao: Suave, íntimo
+
+  outonal:
+    nome: Outonal
+    emoji: "🍂"
+    atmosfera: Transição, amadurecimento
+    quando_usar:
+      - Fechamento de unidades
+      - Lições de síntese
+      - Reflexão sobre aprendizado
+    descricao_exemplo: "As folhas caem suavemente, pintando o chão de dourado e vermelho."
+    elementos_sensoriais:
+      luz: Dourada baixa, tarde
+      temperatura: Fresca
+      energia: Média, nostálgica
+    tom_guardiao: Sábio, retrospectivo
+
+  primaveril:
+    nome: Primaveril
+    emoji: "🌸"
+    atmosfera: Renovação, novos começos
+    quando_usar:
+      - Início de novas fases
+      - Primeiro contato com tema
+      - Energia de possibilidade
+    descricao_exemplo: "Flores desabrocham por toda parte, o ar traz promessa de crescimento."
+    elementos_sensoriais:
+      luz: Clara, fresca
+      temperatura: Amena
+      energia: Crescente, esperançosa
+    tom_guardiao: Esperançoso, entusiasmado
+
+  crepusculo:
+    nome: Crepúsculo
+    emoji: "🌅"
+    atmosfera: Encerramento, gratidão
+    quando_usar:
+      - Lições de celebração
+      - Revisão final
+      - Fechamento de ciclo
+    descricao_exemplo: "O sol se despede pintando o céu de rosa e laranja."
+    elementos_sensoriais:
+      luz: Dourada suave, cores quentes
+      temperatura: Morna
+      energia: Baixando, gratidão
+    tom_guardiao: Grato, acolhedor
+
+  estrelado:
+    nome: Estrelado
+    emoji: "⭐"
+    atmosfera: Maravilhamento, infinitude
+    quando_usar:
+      - Lições sobre números grandes
+      - Conceitos de grandeza
+      - Contagem infinita
+    descricao_exemplo: "As estrelas brilham como promessas infinitas, cada uma um número esperando ser conhecido."
+    elementos_sensoriais:
+      luz: Escura com pontos brilhantes
+      temperatura: Fresca noturna
+      energia: Calma, maravilhada
+    tom_guardiao: Reverente, maravilhado
+
+# Regras de Aplicação
+regras:
+  coerencia:
+    descricao: Clima deve combinar com tema da lição
+    exemplos:
+      - "Lição sobre movimento → Ventoso ou Ensolarado"
+      - "Lição sobre reflexão → Nublado ou Crepúsculo"
+  
+  aplicacao:
+    no_metadado: "clima: 'Ensolarado'"
+    na_narrativa: Descrição sensorial coerente
+    no_tom: Ajustar energia do Guardião
+  
+  regra_de_ouro: |
+    Clima = Coerência Sensorial.
+    Se a lição é sobre movimento, o clima é dinâmico.
+    Se a lição é sobre reflexão, o clima é calmo.
+
+# ════════════════════════════════════════════════════════════════════════════════
+# DESAFIOS ATMOSFÉRICOS
+# ════════════════════════════════════════════════════════════════════════════════
+# 
+# Charlotte Mason: "The children must be allowed to feel the pang of failure."
+# Desafios NÃO são vilões — são CLIMAS que representam dificuldades reais.
+# Como a chuva: não é má, mas exige capa.
+# 
+# Uso: Aparecem quando a lição é difícil ou a criança enfrenta frustração.
+
+desafios_atmosfericos:
+
+  vento_gelado:
+    nome: "O Vento Gelado"
+    emoji: "❄️"
+    representa: "Frustração quando nada parece funcionar"
+    
+    quando_usar:
+      - "Lições particularmente difíceis"
+      - "Depois de erros repetidos"
+      - "Quando a criança quer desistir"
+      
+    atmosfera: |
+      Um vento frio começa a soprar. As folhas tremem.
+      Bernardo levanta a gola e olha para o Viajante.
+      "Este é o Vento Gelado. Todo construtor conhece."
+      
+    superacao:
+      guardiao: Bernardo
+      exemplo_fala: |
+        "Sente o frio? Eu também sinto. Na Grande Nevasca, pensei em parar.
+        Mas olha — ainda estou aqui. Uma martelada de cada vez.
+        Vamos tentar mais uma vez?"
+        
+    nota_cm: |
+      Charlotte Mason: A criança precisa sentir dificuldade para crescer.
+      Protegê-la de TODA frustração é enfraquecê-la.
+      O Vento Gelado ensina que dificuldade é parte da jornada.
+
+  nevoa_do_vale:
+    nome: "A Névoa do Vale"
+    emoji: "🌫️"
+    representa: "Confusão quando o conceito é abstrato demais"
+    
+    quando_usar:
+      - "Transições do Concreto para Abstrato"
+      - "Conceitos novos e difíceis"
+      - "Quando a criança diz 'não entendo nada'"
+      
+    atmosfera: |
+      Uma névoa suave sobe do vale e cobre a clareira.
+      Celeste pisca os olhos, tentando ver através.
+      "A névoa veio. Às vezes o caminho some mesmo."
+      
+    superacao:
+      guardiao: Celeste
+      exemplo_fala: |
+        "Olha devagar. A névoa não é sua inimiga.
+        Ela só diz: vá mais devagar. O caminho está lá,
+        mesmo quando não parece. Vamos procurar juntos?"
+        
+    nota_cm: |
+      A confusão é estágio normal da aprendizagem.
+      A Névoa do Vale normaliza não entender de primeira.
+      Clareza vem com paciência, não com pressa.
+
+  relogio_apressado:
+    nome: "O Relógio Apressado"
+    emoji: "⏰"
+    representa: "Pressa que leva a erros bobos"
+    
+    quando_usar:
+      - "Quando a criança quer terminar rápido"
+      - "Erros por falta de atenção"
+      - "Lições que exigem cuidado"
+      
+    atmosfera: |
+      Um tique-taque começa a ecoar na clareira.
+      Noé fecha os olhos e suspira.
+      "O Relógio Apressado chegou. Ele sempre quer correr."
+      
+    superacao:
+      guardiao: Noé
+      exemplo_fala: |
+        "Shhh... ouve o silêncio? É mais poderoso que o relógio.
+        Não precisa correr. O tempo caminha contigo.
+        Vamos de novo, devagar desta vez."
+        
+    nota_cm: |
+      Charlotte Mason enfatizava atenção plena sobre velocidade.
+      "Lições curtas, mas com atenção total."
+      O Relógio Apressado ensina que qualidade > velocidade.
+
+  sombra_cinza:
+    nome: "A Sombra Cinza"
+    emoji: "🌑"
+    representa: "Desânimo após erros repetidos"
+    
+    quando_usar:
+      - "Quando a criança diz 'eu não consigo'"
+      - "Depois de muitas tentativas sem sucesso"
+      - "Baixa autoestima matemática"
+      
+    atmosfera: |
+      Uma sombra leve passa sobre a clareira.
+      As cores parecem menos vibrantes por um momento.
+      Íris pousa no ombro do Viajante em silêncio.
+      
+    superacao:
+      guardiao: Íris
+      exemplo_fala: |
+        "Olha... você vê essa sombra? Ela passa.
+        Todo Construtor, todo Explorador já sentiu.
+        Mas veja — a luz ainda está lá, esperando.
+        Vamos olhar para o que você JÁ conseguiu?"
+        
+    nota_cm: |
+      O desânimo é real e deve ser reconhecido, não ignorado.
+      A Sombra Cinza não é derrotada com "pense positivo",
+      mas com reconhecimento + foco no progresso feito.
+
+regras_desafios:
+  escassez: |
+    Desafios NÃO aparecem em toda lição.
+    Só quando FAZ SENTIDO para a dificuldade real.
+    
+  nao_viloes: |
+    Desafios são CLIMAS, não personagens malvados.
+    Não há guerra nem batalha — há TRAVESSIA.
+    
+  sempre_superacao: |
+    Todo desafio tem um Guardião que ajuda a superar.
+    A lição nunca termina com desafio vencendo.

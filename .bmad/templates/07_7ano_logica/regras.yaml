@@ -1,0 +1,69 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# REGRAS DO 7º ANO — LÓGICA II
+# ══════════════════════════════════════════════════════════════════════════════
+# STATUS: EM_CONSTRUCAO
+# Última revisão: 13/01/2026
+
+status: EM_CONSTRUCAO
+ciclo: logica
+ano: 7
+serie: "7º Ano"
+idade_alvo: "12-13 anos"
+
+proposito_narrativo:
+  frase: "O raciocínio é uma forja."
+  elaboracao: |
+    A criança aprende a PROVAR. Não basta sentir que algo é verdade —
+    ela precisa demonstrar. A lógica formal entra em cena.
+    Bernardo ensina: "Aqui na forja, cada argumento deve ser testado."
+
+referencias_lore:
+  indice: "LORE/index.yaml"
+  proposito:
+    arquivo: "LORE/north_star.yaml#propositos_por_ano.7_logica"
+    frase: "O raciocínio é uma forja."
+  viajante:
+    arquivo: "LORE/viajante.yaml#explorador"
+    titulo: "Explorador das Verdades"
+  tom_guardioes:
+    arquivo: "LORE/evolucao_guardioes.yaml#logica"
+    tom_geral: "Questionamento socrático"
+  artefatos:
+    aplicavel: true
+    principal: "LORE/artefatos.yaml#bussola_celeste"
+  desafios:
+    aplicavel: true
+    arquivo: "LORE/climas.yaml#desafios_atmosfericos"
+  curriculo_mestre: "curriculo/_SISTEMA/CURRICULOS_MESTRE/007_7ANO_LOGICA-2_CURRICULO_MESTRE.md"
+
+cpa:
+  concreto: { minimo: 20, maximo: 30 }
+  pictorico: { minimo: 25, maximo: 35 }
+  abstrato: { minimo: 40, maximo: 50 }
+
+tempo:
+  licao: { minimo: 30, maximo: 45, ideal: 40, unidade: minutos }
+  preparo: { maximo: 12, unidade: minutos }
+
+scaffolding:
+  tipo: "Silêncio produtivo + questionamento socrático"
+  exemplos:
+    - "Prove-me que isso é verdade."
+    - "E se esse número fosse negativo?"
+
+tom:
+  principal: "Desafio rigoroso"
+  palavra_chave: "Provar"
+
+densidade_sensorial:
+  elementos_por_paragrafo: 4
+
+guardioes:
+  principal: Bernardo
+  frequentes: [Bernardo, Noé, Melquior]
+
+selos:
+  tempo_preparo: "≤ 12 min"
+  materiais: "Ferramentas específicas OK"
+  mobile_friendly: true
+  adaptacao_bernardo: true

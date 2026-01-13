@@ -1,0 +1,231 @@
+# ════════════════════════════════════════════════════════════════════════════════
+# GLOSSÁRIO DA FORJA VIVA
+# ════════════════════════════════════════════════════════════════════════════════
+# 
+# PROPÓSITO:
+#   Tradução entre termos BMAD (sistema) e termos do Reino (produto).
+#   Define linguagem ubíqua (DDD) para todo o projeto.
+# 
+# ALINHAMENTO NORTH STAR:
+#   - Princípio 3: "Positividade" → Linguagem de CONVITE, não técnica para família
+#   - Propósito: "Histórias que transformam" → Criança é Viajante, não User
+# 
+# USADO POR:
+#   - Todos os workflows (tradução de termos)
+#   - Artesão ao escrever narrativa
+#   - QA na verificação de linguagem
+# 
+# EVOLUI POR CICLO: Não (termos estáticos)
+# 
+# REFERÊNCIAS RELACIONADAS:
+#   - .bmad/experts/ (agentes do sistema)
+#   - LORE/ontologia.yaml (atores do sistema)
+#   - LORE/north_star.yaml (princípios)
+# 
+# NOTA: Referências antigas a "conselheiros/*.md" devem ser lidas como ".bmad/experts/"
+# 
+# Última Atualização: 13/01/2026
+# ════════════════════════════════════════════════════════════════════════════════
+
+# ====================
+# AGENTES (SISTEMA)
+# ====================
+
+agentes:
+  orchestrator:
+    bmad_term: Orchestrator
+    forja_term: Orchestrator
+    descricao: Coordenador geral
+    arquivo: conselheiros/orchestrator.md
+    
+  pm:
+    bmad_term: PM (Product Manager)
+    forja_term: PM
+    descricao: Cria PRDs e define prioridades
+    arquivo: conselheiros/pm.md
+    
+  sm:
+    bmad_term: SM (Scrum Master)
+    forja_term: SM
+    descricao: Fragmenta e planeja stories
+    arquivo: conselheiros/sm.md
+    
+  dev:
+    bmad_term: Dev Agent
+    forja_term: Dev
+    descricao: Escreve lições
+    arquivo: conselheiros/dev.md
+    
+  qa:
+    bmad_term: QA Agent
+    forja_term: QA
+    descricao: Audita qualidade
+    arquivo: conselheiros/qa.md
+    
+  ops:
+    bmad_term: PO (Doc Mgmt)
+    forja_term: Ops
+    descricao: Gerencia estrutura
+    arquivo: conselheiros/ops.md
+
+# ====================
+# ARTEFATOS
+# ====================
+
+artefatos:
+  prd:
+    bmad_term: PRD
+    forja_term: PRD
+    descricao: Product Requirements Document
+    
+  architecture:
+    bmad_term: Architecture
+    forja_term: Architecture
+    descricao: Estrutura técnica
+    
+  epic:
+    bmad_term: Epic
+    forja_term: Epic
+    descricao: Agrupamento de stories
+    
+  story:
+    bmad_term: Story
+    forja_term: Story
+    descricao: Especificação de uma lição
+    
+  story_file:
+    bmad_term: Story File
+    forja_term: Story File
+    descricao: Arquivo .md com contexto completo
+    
+  backlog:
+    bmad_term: Backlog
+    forja_term: Backlog
+    descricao: Stories pendentes
+    
+  sprint:
+    bmad_term: Sprint
+    forja_term: Sprint
+    descricao: Ciclo de produção
+
+# ====================
+# PROCESSOS
+# ====================
+
+processos:
+  sprint:
+    bmad_term: Sprint
+    forja_term: Sprint
+    descricao: Ciclo de produção (ex: 1 semana)
+    
+  planning:
+    bmad_term: Planning
+    forja_term: Planning
+    descricao: Fase de criação de docs
+    
+  development:
+    bmad_term: Development Cycle
+    forja_term: Development
+    descricao: Fase de execução
+    
+  sharding:
+    bmad_term: Sharding
+    forja_term: Sharding
+    descricao: Dividir docs grandes
+    
+  review:
+    bmad_term: Review
+    forja_term: QA Review
+    descricao: Verificação de qualidade
+    
+  release:
+    bmad_term: Deploy
+    forja_term: Release
+    descricao: Mover para produção
+
+# ====================
+# DISTINÇÃO SISTEMA vs REINO
+# ====================
+
+contextos:
+  sistema:
+    nome: SISTEMA (Forja)
+    descricao: Fábrica de produção
+    termos:
+      - Sprint
+      - Story
+      - Epic
+      - QA
+      - Dev
+      - PM
+    quem_usa:
+      - Arquiteto
+      - Maestro
+      
+  reino:
+    nome: REINO (Produto)
+    descricao: Produto final para família
+    termos:
+      - Jornada
+      - Pergaminho
+      - Capítulo
+      - Guardião
+      - Viajante
+    quem_usa:
+      - Família
+      - Criança
+
+regra_de_ouro: |
+  Na Forja, falamos como engenheiros.
+  No produto final, falamos como poetas.
+
+# ====================
+# TERMOS PROIBIDOS (No Output Final)
+# ====================
+
+termos_proibidos:
+  - termo: User
+    motivo: Criança é Pessoa, não usuário
+    substituto: Viajante
+    
+  - termo: Deliverable
+    motivo: Lição é Presente, não entrega
+    substituto: Pergaminho
+    
+  - termo: Velocity
+    motivo: Não medimos produtividade de lições
+    substituto: null
+    
+  - termo: Ticket
+    motivo: Lição não é Ticket de suporte
+    substituto: Pergaminho
+    
+  - termo: Pipeline
+    motivo: Termo técnico demais
+    substituto: Fluxo ou Caminho
+    
+  - termo: Output
+    motivo: Termo técnico demais
+    substituto: Fruto ou Resultado
+
+# ====================
+# CPA (BRUNER)
+# ====================
+
+cpa_bruner:
+  descricao: Todo Pergaminho deve incluir as 3 fases
+  fases:
+    - id: C
+      bmad_term: ENACTIVE
+      forja_term: Concreto
+      descricao: Objeto físico descrito
+      
+    - id: P
+      bmad_term: ICONIC
+      forja_term: Pictórico
+      descricao: Representação visual/modelo
+      
+    - id: A
+      bmad_term: SYMBOLIC
+      forja_term: Abstrato
+      descricao: Notação matemática/símbolo

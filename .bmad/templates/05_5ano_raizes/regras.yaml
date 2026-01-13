@@ -1,0 +1,65 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# REGRAS DO 5º ANO — RAÍZES V
+# ══════════════════════════════════════════════════════════════════════════════
+# STATUS: EM_CONSTRUCAO
+# Última revisão: 13/01/2026
+
+status: EM_CONSTRUCAO
+ciclo: raizes
+ano: 5
+serie: "5º Ano"
+idade_alvo: "10-11 anos"
+
+proposito_narrativo:
+  frase: "A linguagem dos padrões se revela."
+  elaboracao: |
+    A criança vê que tudo se conecta. Multiplicação e divisão são
+    danças inversas. Frações, decimais e porcentagens são faces da
+    mesma moeda. Ela está PRONTA para a abstração que virá.
+
+referencias_lore:
+  indice: "LORE/index.yaml"
+  proposito:
+    arquivo: "LORE/north_star.yaml#propositos_por_ano.5_raizes"
+    frase: "A linguagem dos padrões se revela."
+  viajante:
+    arquivo: "LORE/viajante.yaml#construtor"
+    titulo: "Construtor da Vila"
+  tom_guardioes:
+    arquivo: "LORE/evolucao_guardioes.yaml#raizes"
+  artefatos:
+    aplicavel: true
+    principal: "LORE/artefatos.yaml#diario_do_reino"
+  curriculo_mestre: "curriculo/_SISTEMA/CURRICULOS_MESTRE/005_5ANO_RAIZES-5_CURRICULO_MESTRE.md"
+
+cpa:
+  concreto: { minimo: 25, maximo: 35 }
+  pictorico: { minimo: 30, maximo: 40 }
+  abstrato: { minimo: 30, maximo: 40 }
+
+tempo:
+  licao: { minimo: 25, maximo: 35, ideal: 30, unidade: minutos }
+  preparo: { maximo: 10, unidade: minutos }
+
+scaffolding:
+  tipo: "Productive struggle inicial"
+  exemplos:
+    - "O que você nota de semelhante entre estes dois problemas?"
+    - "Como isso se conecta ao que aprendemos ontem?"
+
+tom:
+  principal: "Revelação de conexões"
+  palavra_chave: "Conectar"
+
+densidade_sensorial:
+  elementos_por_paragrafo: 3
+
+guardioes:
+  principal: Noé
+  frequentes: [Noé, Íris, Celeste]
+
+selos:
+  tempo_preparo: "≤ 10 min"
+  materiais: "Casa + comprados OK"
+  mobile_friendly: true
+  adaptacao_bernardo: true

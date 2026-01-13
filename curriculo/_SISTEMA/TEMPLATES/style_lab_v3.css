@@ -1,0 +1,480 @@
+/* 
+   Gutenberg LAB v3.0 — Redesign 3 Zonas
+   Aesthetic: Preparação + Imersão + Reflexão
+   Based on: matematica-viva.netlify.app reference
+   
+   ZONAS:
+   1. Preparação: Cards visíveis (Portador se prepara)
+   2. Imersão: Fluida (Portador lê em voz alta)
+   3. Reflexão: Cards visíveis (Portador reflete)
+*/
+
+:root {
+    /* Organic Palette */
+    --color-cream: #FAF7F2;
+    --color-paper: #FEFDFB;
+    --color-ink: #2C2A26;
+    --color-ink-soft: #5A574D;
+    --color-gold: #B8A060;
+    --color-green: #3A4A40;
+    --color-card-bg: rgba(255, 255, 255, 0.85);
+
+    /* Typography Scale */
+    --font-body: 'Merriweather', Georgia, serif;
+    --font-ui: 'Outfit', system-ui, sans-serif;
+    --font-size-base: 1.4rem;
+    --line-height: 2.0;
+
+    /* Spacing */
+    --margin-content: max(6%, 1.5rem);
+    --radius-soft: 12px;
+    --radius-card: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ══════════════════════════════════════
+   HEADER (Auto-hide)
+══════════════════════════════════════ */
+
+.lab2-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(250, 247, 242, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.6rem var(--margin-content);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.lab2-header.hidden {
+    transform: translateY(-100%);
+}
+
+.lab2-header a {
+    color: var(--color-green);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.lab2-meta {
+    color: var(--color-ink-soft);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ══════════════════════════════════════
+   CONTENT CONTAINER
+══════════════════════════════════════ */
+
+.lab2-content {
+    max-width: 75ch;
+    margin: 0 auto;
+    padding: 5rem var(--margin-content) 4rem;
+}
+
+/* ══════════════════════════════════════
+   TITLE BLOCK
+══════════════════════════════════════ */
+
+.lab2-title-block {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.lab2-title-block h1 {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    font-weight: 900;
+    color: var(--color-green);
+    margin: 0 0 1rem;
+    line-height: 1.25;
+}
+
+.lab2-title-block .subtitle {
+    font-size: 1.05rem;
+    color: var(--color-ink-soft);
+    font-style: italic;
+    margin: 0 0 1rem;
+}
+
+.lab2-title-block .guardian-line {
+    font-size: 0.85rem;
+    color: var(--color-ink-soft);
+    font-family: var(--font-ui);
+}
+
+.lab2-title-block .guardian-line strong {
+    color: var(--color-gold);
+}
+
+/* ══════════════════════════════════════
+   ZONA 1: CARD DO PORTADOR (Preparação)
+══════════════════════════════════════ */
+
+.portador-card {
+    background: var(--color-card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--radius-card);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+.portador-card h2 {
+    font-family: var(--font-ui);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-green);
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--color-gold);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 500px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-item {
+    background: var(--color-paper);
+    padding: 1rem;
+    border-radius: var(--radius-soft);
+    border-left: 3px solid var(--color-gold);
+}
+
+.card-icon {
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.card-label {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-ink-soft);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.card-item p,
+.dica-do-dia p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.dica-do-dia {
+    background: linear-gradient(135deg, rgba(184, 160, 96, 0.1), rgba(58, 74, 64, 0.05));
+    padding: 1.5rem;
+    border-radius: var(--radius-soft);
+    border-left: 3px solid var(--color-gold);
+}
+
+/* ══════════════════════════════════════
+   RITUAL SEPARATOR (Whitespace)
+══════════════════════════════════════ */
+
+.ritual-separator {
+    height: 3rem;
+}
+
+/* ══════════════════════════════════════
+   ZONA 2: ZONA DE RITUAL (Background Unificado)
+══════════════════════════════════════ */
+
+.zona-ritual {
+    background: linear-gradient(180deg,
+            rgba(184, 160, 96, 0.04) 0%,
+            rgba(184, 160, 96, 0.08) 50%,
+            rgba(184, 160, 96, 0.04) 100%);
+    padding: 3rem 2rem;
+    margin: 0 calc(-1 * var(--margin-content));
+    border-radius: 0;
+}
+
+@media (min-width: 800px) {
+    .zona-ritual {
+        margin: 0 -3rem;
+        padding: 3rem;
+        border-radius: 24px;
+    }
+}
+
+/* ══════════════════════════════════════
+   ZONA 2: JORNADA FLUIDA (Imersão)
+══════════════════════════════════════ */
+
+.jornada-fluida {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    color: var(--color-ink);
+}
+
+.jornada-fluida h2 {
+    font-family: var(--font-ui);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-green);
+    margin: 0 0 2rem;
+    text-align: center;
+}
+
+/* Scene markers: — A Chegada — */
+.jornada-fluida .scene-marker {
+    text-align: center;
+    font-style: italic;
+    color: var(--color-ink-soft);
+    margin: 3rem 0 2rem;
+    font-size: 0.95rem;
+}
+
+/* Dialogue paragraphs */
+.jornada-fluida p {
+    margin: 0 0 1.8rem;
+}
+
+/* Stage directions [Ação:], [tom], [pausa] */
+.jornada-fluida code {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    color: var(--color-ink-soft);
+    background: none;
+    padding: 0;
+    display: block;
+    margin: 0.5rem 0;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Hora de Fazer (subtle highlight) */
+.hora-fazer {
+    background: rgba(184, 160, 96, 0.08);
+    padding: 2rem;
+    border-radius: var(--radius-soft);
+    margin: 2rem 0;
+    border-left: 3px solid var(--color-gold);
+}
+
+.hora-fazer>p:first-child strong {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    color: var(--color-green);
+}
+
+/* Emphasis for speech */
+.jornada-fluida em {
+    font-style: italic;
+}
+
+/* Character names */
+.jornada-fluida strong {
+    color: var(--color-green);
+}
+
+/* ══════════════════════════════════════
+   CÁTEDRA DOS PAIS (Reflexão para o Portador)
+══════════════════════════════════════ */
+
+.catedra-pais {
+    background: linear-gradient(180deg,
+            rgba(58, 74, 64, 0.04) 0%,
+            rgba(58, 74, 64, 0.08) 50%,
+            rgba(58, 74, 64, 0.04) 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    border-left: 4px solid var(--color-green);
+}
+
+.catedra-pais h2 {
+    font-family: var(--font-ui);
+    font-size: 1.2rem;
+    color: var(--color-green);
+    margin-bottom: 1.5rem;
+}
+
+.catedra-pais p {
+    margin-bottom: 1rem;
+}
+
+/* ══════════════════════════════════════
+   ZONA 3: REFLEXÃO (Cards)
+══════════════════════════════════════ */
+
+.reflexao-cards {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.reflexao-card {
+    background: var(--color-card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--radius-card);
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.reflexao-card h3 {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-green);
+    margin: 0 0 1rem;
+}
+
+.reflexao-card p,
+.reflexao-card ul {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.reflexao-card ul {
+    padding-left: 1.5rem;
+}
+
+.reflexao-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Auditoria collapsible */
+.auditoria-card {
+    background: var(--color-paper);
+    border-radius: var(--radius-soft);
+    padding: 1rem 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.auditoria-card summary {
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-ink-soft);
+    cursor: pointer;
+    list-style: none;
+}
+
+.auditoria-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.auditoria-card[open] summary {
+    margin-bottom: 1rem;
+}
+
+.auditoria-card ul {
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+/* ══════════════════════════════════════
+   FOOTER & NAVIGATION
+══════════════════════════════════════ */
+
+.lab2-footer {
+    text-align: center;
+    padding: 3rem 0 1rem;
+    font-size: 0.75rem;
+    color: var(--color-ink-soft);
+    font-family: var(--font-ui);
+}
+
+.lab2-nav {
+    text-align: center;
+    padding: 1.5rem var(--margin-content);
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    background: var(--color-cream);
+}
+
+.lab2-nav a {
+    color: var(--color-ink-soft);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
+}
+
+.lab2-nav a:hover {
+    color: var(--color-green);
+}
+
+.lab2-nav .separator {
+    color: var(--color-ink-soft);
+    opacity: 0.3;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+
+@media (max-width: 600px) {
+    :root {
+        --font-size-base: 1.25rem;
+    }
+
+    .lab2-content {
+        padding: 4rem var(--margin-content) 3rem;
+    }
+
+    .portador-card {
+        padding: 1.5rem;
+    }
+
+    .hora-fazer {
+        padding: 1.5rem;
+    }
+
+    .reflexao-card {
+        padding: 1.25rem 1.5rem;
+    }
+}

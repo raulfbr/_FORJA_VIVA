@@ -1,0 +1,67 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# REGRAS DO 9º ANO — LEGADO I
+# ══════════════════════════════════════════════════════════════════════════════
+# STATUS: EM_CONSTRUCAO
+# Última revisão: 13/01/2026
+
+status: EM_CONSTRUCAO
+ciclo: legado
+ano: 9
+serie: "9º Ano"
+idade_alvo: "14-15 anos"
+
+proposito_narrativo:
+  frase: "O que descobri é usado pelo mundo."
+  elaboracao: |
+    A criança vê matemática em engenharia, economia, ciência.
+    Ela não apenas estuda — ela APLICA. O conhecimento serve a propósitos
+    reais. O tom é de VOCAÇÃO emergente.
+
+referencias_lore:
+  indice: "LORE/index.yaml"
+  proposito:
+    arquivo: "LORE/north_star.yaml#propositos_por_ano.9_legado"
+    frase: "O que descobri é usado pelo mundo."
+  viajante:
+    arquivo: "LORE/viajante.yaml#portador_da_tocha"
+    titulo: "Portador da Tocha"
+  tom_guardioes:
+    arquivo: "LORE/evolucao_guardioes.yaml#legado"
+    tom_geral: "Comissionamento solene"
+  artefatos:
+    aplicavel: true
+    principal: "LORE/artefatos.yaml#ampulheta_noe"
+    nota: "Ampulheta de Noé entregue na transição para Legado"
+  curriculo_mestre: "curriculo/_SISTEMA/CURRICULOS_MESTRE/009_9ANO_LEGADO-1_CURRICULO_MESTRE.md"
+
+cpa:
+  concreto: { minimo: 15, maximo: 25 }
+  pictorico: { minimo: 20, maximo: 30 }
+  abstrato: { minimo: 50, maximo: 60 }
+
+tempo:
+  licao: { minimo: 40, maximo: 50, ideal: 45, unidade: minutos }
+  preparo: { maximo: 15, unidade: minutos }
+
+scaffolding:
+  tipo: "Autonomia com mentoria"
+  exemplos:
+    - "Pesquise e me conte o que descobriu."
+    - "Onde um engenheiro usaria isso?"
+
+tom:
+  principal: "Vocação nascente"
+  palavra_chave: "Servir"
+
+densidade_sensorial:
+  elementos_por_paragrafo: 4
+
+guardioes:
+  principal: Melquior
+  frequentes: [Melquior, Bernardo]
+
+selos:
+  tempo_preparo: "≤ 15 min"
+  materiais: "Ferramentas profissionais OK"
+  mobile_friendly: true
+  adaptacao_bernardo: true
