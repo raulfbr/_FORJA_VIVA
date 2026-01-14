@@ -3,50 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lição — Matemática Viva</title>
-    <link rel="stylesheet" href="style.css">
+    <title>O Ritmo do Criador | Forja Viva</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Lesson Specific Styles */
+        .lesson-container { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
+        
+        .lesson-header { text-align: center; margin-bottom: 4rem; position: relative; }
+        .lesson-id { font-size: 0.875rem; font-weight: 700; color: #9CA3AF; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 1rem; }
+        h1 { font-family: 'Lora', serif; font-size: 3rem; color: #111827; margin-bottom: 1rem; line-height: 1.2; }
+        .lesson-idea { font-family: 'Lora', serif; font-size: 1.5rem; color: #4B5563; font-style: italic; margin-bottom: 2rem; display: block; }
+        
+        .metadata-grid { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; font-size: 0.9rem; color: #6B7280; flex-wrap: wrap; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; background: #FFF; padding: 0.5rem 1rem; border-radius: 2rem; border: 1px solid #E5E7EB; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        
+        .lesson-body { background: #FFF; padding: 3rem; border-radius: 1.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); border: 1px solid #E5E7EB; line-height: 1.8; color: #374151; font-size: 1.1rem; }
+        
+        h2 { font-family: 'Lora', serif; margin-top: 2.5rem; margin-bottom: 1.5rem; font-size: 1.8rem; color: #111827; border-bottom: 2px solid #F3F4F6; padding-bottom: 0.5rem; }
+        h3 { margin-top: 2rem; font-size: 1.3rem; color: #1F2937; }
+        
+        ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        p { margin-bottom: 1.5rem; }
+        
+        .quote-box { background: #F9FAFB; border-left: 4px solid #047857; padding: 1.5rem; margin: 2rem 0; font-style: italic; color: #4B5563; }
+        
+        /* Navigation Controls */
+        .lesson-nav { display: flex; justify-content: space-between; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #E5E7EB; }
+        .nav-btn { display: flex; flex-direction: column; text-decoration: none; color: #6B7280; transition: all 0.2s; max-width: 45%; }
+        .nav-btn:hover { color: #047857; }
+        .nav-label { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+        .nav-title { font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 600; }
+        .nav-btn.prev { text-align: left; }
+        .nav-btn.next { text-align: right; }
+        .disabled { opacity: 0; pointer-events: none; }
+        
+        /* Home Button */
+        .home-btn { position: fixed; top: 2rem; left: 2rem; width: 3rem; height: 3rem; background: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #E5E7EB; color: #374151; text-decoration: none; transition: all 0.2s; z-index: 100; }
+        .home-btn:hover { transform: translateY(-2px); color: #047857; }
+
+        @media (max-width: 768px) {
+            .home-btn { top: 1rem; left: 1rem; }
+            .lesson-container { padding: 2rem 1rem; }
+            .lesson-body { padding: 1.5rem; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
-<body class="lesson-page clima-crepusculo">
-    <header class="lesson-header">
-        <span class="lesson-id">MV-S-XXX</span>
-        <h1>Lição</h1>
-        <div class="lesson-meta">
-            <span class="guardian">👤 </span>
-            <span class="time">⏱️ 15-20 min min</span>
-            <span class="clima">crepusculo</span>
-        </div>
-    </header>
-    
-    <nav class="lesson-nav"><a href="MV-S-003.html" class="nav-prev">← Anterior</a><a href="index.html" class="nav-home">🏠 Início</a></nav>
-    
-    <main class="lesson-content">
-        <p><h2>👨‍👩‍👧 Para o Portador</h2></p><p>
-<h2>💡 Ideia Viva</h2></p><p>> <strong>A luz primeiro, depois o despertar. Tudo tem sua hora certa de acontecer.</strong></p><p>
-**</p><p>
-<h2>🌤️ Atmosfera</h2></p><p>
-<h2>🎬 Ritual de Abertura</h2></p><p>
-📍 Apague as luzes. Sente-se bem perto. Faça silêncio absoluto por 10 segundos.</p><p>
-<strong>Fala do Portador:</strong>
-Shhh... Estamos na casa de Noé. Ele fala baixo.</p><p>
-<strong>Guardião:</strong>
-Hoo... Hoo... O tempo caminha devagar. Bem-vindo, Observador. Você sabe esperar?</p><p>
-<h2>🌳 A Jornada</h2></p><p>
-Entregue a Pedra/Ovo fechado. 'Segure isSo. Está fechado. O que será que vem DEPOIS?'</p><p>
-<h2>🎯 Atividade Concreta (60%+)</h2></p><p>Se a criança não entender semente, use a rotina dela: Pijama (Acordar), Roupa (Dia), Pijama (Dormir).</p><p>
-<h2>🔢 Abstrato (Mínimo)</h2></p><p><h2>📖 Narração</h2></p><p>
-Para o Noé, o que vem primeiro: a semente ou a fruta?</p><p>
-<h2>🏁 Fechamento</h2></p><p>
-Cada coisa tem seu tempo debaixo do céu. Boa noite, Observador.</p><p>
-<h2>🦊 Dicas dos Guardiões</h2></p><p>
-🦉 <strong>Noé:</strong> Use um relógio de areia (ampulheta) se tiver. É fascinante.</p><p>
-🦊 <strong>Celeste:</strong> Celeste gosta de correr, Noé gosta de parar. Brinquem de 'Vivo-Morto' versão 'Raposa-Coruja' (Rápido-Lento).
-</p>
-    </main>
-    
-    <nav class="lesson-nav"><a href="MV-S-003.html" class="nav-prev">← Anterior</a><a href="index.html" class="nav-home">🏠 Início</a></nav>
-    
-    <footer class="lesson-footer">
-        <p>Matemática Viva • Template V4.1 • 2026-01-14</p>
-    </footer>
+<body class="clima-ensolarado">
+    <a href="../index.html" class="home-btn" title="Voltar ao Dashboard">🏠</a>
+
+    <div class="lesson-container">
+        <header class="lesson-header">
+            <span class="lesson-id">MV-S-004</span>
+            <h1>O Ritmo do Criador</h1>
+            <span class="lesson-idea">"A luz primeiro, depois o despertar. Tudo tem sua hora certa de acontecer."</span>
+            
+            <div class="metadata-grid">
+                <div class="meta-item"><span>👤</span> Noé</div>
+                <div class="meta-item"><span>⏱️</span> 20 min</div>
+                <div class="meta-item"><span>🌤️</span> Ensolarado</div>
+            </div>
+        </header>
+
+        <article class="lesson-body">
+            <h2>🎬 Ritual de Abertura</h2>
+<p><strong>Instrucao Ambiente:</strong> Apague as luzes. Sente-se bem perto. Faça silêncio absoluto por 10 segundos.</p>
+<p><strong>Transicao Reino:</strong> Respire fundo... 1, 2, 3... Ouça o vento nas folhas da Árvore do Silêncio.</p>
+<p><strong>Fala Portador:</strong> {'tom': 'calmo e pausado', 'script': 'Shhh... Estamos na casa de Noé. Ele fala baixo.'}</p>
+<p><strong>Card Guardiao:</strong> CARD: NOÉ (Coruja)</p>
+<p><strong>Fala Guardiao:</strong> {'tom': 'sábio e lento', 'script': 'Hoo... Hoo... O tempo caminha devagar. Bem-vindo, Observador. Você sabe esperar?'}</p>
+<h2>🏁 Ritual de Fechamento</h2>
+<p><strong>Fala Guardiao:</strong> {'tom': 'abençoador', 'script': 'Cada coisa tem seu tempo debaixo do céu. Boa noite, Observador.'}</p>
+<p><strong>Fio Ouro:</strong> O tempo passou... e agora a Raposa Celeste quer brincar de esconder. Onde será que ela vai?</p>
+<p><strong>Transicao Volta:</strong> Espreguice bem devagar, como quem acorda de um sono bom.</p>
+        </article>
+
+        <nav class="lesson-nav">
+            <a href="003_A_ESTRELA_DO_REINO.html" class="nav-btn prev"><span class="nav-label">← Anterior</span><span class="nav-title">A Estrela do Reino</span></a>
+            <a href="005_PALAVRAS_DE_POSICAO.html" class="nav-btn next"><span class="nav-label">Próxima →</span><span class="nav-title">O Esconderijo da Glória</span></a>
+        </nav>
+    </div>
 </body>
 </html>
