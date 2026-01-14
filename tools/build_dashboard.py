@@ -9,13 +9,13 @@ import os
 import yaml
 from pathlib import Path
 from datetime import datetime
+import shutil
 
 # CONFIGURAÇÃO
 INPUT_DIR_SEMENTES = Path("curriculo/01_SEMENTES")
 OUTPUT_DIR = Path("site")
 OUTPUT_HTML = OUTPUT_DIR / "index.html"
 
-# CORES & ESTILO (Palette North Star)
 # CORES & ESTILO (Palette North Star - Potter/Morris/TocaBoca)
 STYLE_CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Gloria+Hallelujah&display=swap');
@@ -209,6 +209,66 @@ h1 { font-family: var(--font-heading); font-size: 3rem; font-weight: 600; margin
     .sidebar { display: none; }
     .main-content { margin-left: 0; padding: 2rem; }
 }
+
+/* LESSON PAGE SPECIFIC (Premium Visuals) */
+.lesson-container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+
+/* Hero Section */
+.lesson-hero { 
+    text-align: center; margin-bottom: 5rem; position: relative; 
+    padding: 4rem 2rem;
+    background: #FFFFFF;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0,0,0,0.03);
+    overflow: hidden;
+}
+.lesson-hero::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--primary); opacity: 0.5; }
+
+.lesson-meta-tag {
+    display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-tertiary); margin-bottom: 1.5rem;
+    background: #F5F5F4; padding: 0.5rem 1rem; border-radius: 99px;
+}
+
+.hero-title { font-family: var(--font-heading); font-size: 3.5rem; color: var(--text-primary); margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -0.03em; }
+.hero-quote { font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-secondary); font-style: italic; max-width: 700px; margin: 0 auto 3rem auto; line-height: 1.6; }
+
+.hero-guardian { 
+    width: 120px; height: 120px; object-fit: contain; 
+    display: block; margin: 0 auto;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+    transition: transform 0.5s ease;
+}
+.hero-guardian:hover { transform: scale(1.05) rotate(3deg); }
+
+/* Script/Persona Block (Roleplay) */
+.script-persona-block {
+    display: flex; gap: 1.5rem; margin: 3rem 0;
+    background: #FFFFFF; padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border-left: 6px solid var(--primary);
+}
+.script-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 4px solid #F3F4F6; flex-shrink: 0; }
+.script-content { flex-grow: 1; }
+.script-header { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.5rem; }
+.script-name { font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.05em; }
+.script-tone { font-size: 0.85rem; color: var(--text-tertiary); font-style: italic; }
+.script-text { font-family: var(--font-heading); font-size: 1.15rem; line-height: 1.7; color: var(--text-secondary); }
+
+/* Standard Content Styles */
+h2 { font-family: var(--font-heading); font-size: 2rem; margin-top: 4rem; margin-bottom: 2rem; color: var(--primary); display: flex; align-items: center; gap: 1rem; }
+h2::after { content: ''; flex-grow: 1; height: 2px; background: #E5E7EB; opacity: 0.5; }
+
+p { margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; color: #4B5563; }
+li { margin-bottom: 0.75rem; font-size: 1.1rem; line-height: 1.7; color: #4B5563; }
+
+.instruction-box { background: #FEF3C7; color: #92400E; padding: 1.5rem; border-radius: var(--radius-sm); font-weight: 500; font-size: 1rem; margin: 2rem 0; border: 1px solid #FCD34D; display: flex; gap: 1rem; }
+.instruction-icon { font-size: 1.5rem; }
+
+/* Navigation */
+.lesson-nav { margin-top: 6rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 """
 
 HTML_TEMPLATE = """<!DOCTYPE html>
@@ -350,7 +410,6 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     
     # 0. ASSETS SYNC (Orchestrator Infra)
-    import shutil
     CARDS_SRC = Path("docs/cards/web")
     CARDS_DEST = OUTPUT_DIR / "assets/cards"
     

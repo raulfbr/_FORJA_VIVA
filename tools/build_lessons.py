@@ -23,78 +23,35 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <title>{{TITULO}} | Matemática Viva</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <style>
-        /* Lesson Specific Styles */
-        .lesson-container { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
-        
-        .lesson-header { text-align: center; margin-bottom: 4rem; position: relative; }
-        .lesson-id { font-size: 0.875rem; font-weight: 700; color: #9CA3AF; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 1rem; }
-        h1 { font-family: 'Lora', serif; font-size: 3rem; color: #111827; margin-bottom: 1rem; line-height: 1.2; }
-        .lesson-idea { font-family: 'Lora', serif; font-size: 1.5rem; color: #4B5563; font-style: italic; margin-bottom: 2rem; display: block; }
-        
-        .metadata-grid { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; font-size: 0.9rem; color: #6B7280; flex-wrap: wrap; }
-        .meta-item { display: flex; align-items: center; gap: 0.5rem; background: #FFF; padding: 0.5rem 1rem; border-radius: 2rem; border: 1px solid #E5E7EB; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-        
-        .lesson-body { background: #FFF; padding: 3rem; border-radius: 1.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); border: 1px solid #E5E7EB; line-height: 1.8; color: #374151; font-size: 1.1rem; }
-        
-        h2 { font-family: 'Lora', serif; margin-top: 2.5rem; margin-bottom: 1.5rem; font-size: 1.8rem; color: #111827; border-bottom: 2px solid #F3F4F6; padding-bottom: 0.5rem; }
-        h3 { margin-top: 2rem; font-size: 1.3rem; color: #1F2937; }
-        
-        ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
-        li { margin-bottom: 0.5rem; }
-        p { margin-bottom: 1.5rem; }
-        
-        .quote-box { background: #F9FAFB; border-left: 4px solid #047857; padding: 1.5rem; margin: 2rem 0; font-style: italic; color: #4B5563; }
-        
-        /* Navigation Controls */
-        .lesson-nav { display: flex; justify-content: space-between; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #E5E7EB; }
-        .nav-btn { display: flex; flex-direction: column; text-decoration: none; color: #6B7280; transition: all 0.2s; max-width: 45%; }
-        .nav-btn:hover { color: #047857; }
-        .nav-label { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
-        .nav-title { font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 600; }
-        .nav-btn.prev { text-align: left; }
-        .nav-btn.next { text-align: right; }
-        .disabled { opacity: 0; pointer-events: none; }
-        
-        /* Home Button */
-        .home-btn { position: fixed; top: 2rem; left: 2rem; width: 3rem; height: 3rem; background: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #E5E7EB; color: #374151; text-decoration: none; transition: all 0.2s; z-index: 100; }
-        .home-btn:hover { transform: translateY(-2px); color: #047857; }
-
-        @media (max-width: 768px) {
-            .home-btn { top: 1rem; left: 1rem; }
-            .lesson-container { padding: 2rem 1rem; }
-            .lesson-body { padding: 1.5rem; }
-            h1 { font-size: 2rem; }
-        }
-    </style>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body class="{{CLIMA_CLASS}}">
-    <a href="../index.html" class="home-btn" title="Voltar ao Dashboard">🏠</a>
+    <a href="../index.html" class="home-btn" title="Voltar ao Dashboard">🏡</a>
 
     <div class="lesson-container">
-        <header class="lesson-header">
-            <span class="lesson-id">{{ID}}</span>
-            <h1>{{TITULO}}</h1>
-            <span class="lesson-idea">"{{IDEIA_VIVA}}"</span>
-            
-            <div class="metadata-grid">
-                <div class="meta-item">
-                    <img src="{{GUARDIAO_IMG}}" alt="{{GUARDIAO}}" style="width: 24px; height: 24px; object-fit: contain;">
-                    {{GUARDIAO}}
-                </div>
-                <div class="meta-item"><span>⏱️</span> {{TEMPO}}</div>
-                <div class="meta-item"><span>🌤️</span> {{CLIMA}}</div>
-            </div>
+        
+        <!-- Premium Hero Section -->
+        <header class="lesson-hero">
+            <div class="lesson-meta-tag">{{ID}} • {{TEMPO}} • {{CLIMA}}</div>
+            <h1 class="hero-title">{{TITULO}}</h1>
+            <p class="hero-quote">"{{IDEIA_VIVA}}"</p>
+            <img src="{{GUARDIAO_IMG}}" alt="{{GUARDIAO}}" class="hero-guardian" title="Seu Guia: {{GUARDIAO}}">
         </header>
 
+        <!-- Content Body -->
         <article class="lesson-body">
             {{CONTEUDO_HTML}}
         </article>
 
+        <!-- Navigation Footer -->
         <nav class="lesson-nav">
             {{LINK_PREV}}
             {{LINK_NEXT}}
         </nav>
+        
+        <footer style="text-align: center; margin-top: 4rem; color: #A8A29E; font-size: 0.8rem;">
+            Matemática Viva • Forjado com Estilo e Propósito
+        </footer>
     </div>
 </body>
 </html>
@@ -189,6 +146,14 @@ def load_lessons():
     # Ordena pelo ID numérico (ex: 1, 2, 10...) para garantir sequência correta
     return sorted(lessons, key=lambda x: x['sort_id'])
 
+def get_guardian_data(name):
+    name = name.lower()
+    if 'celeste' in name: return '../assets/cards/guardioes/celeste-raposa.png'
+    if 'bernardo' in name: return '../assets/cards/guardioes/bernardo-urso.png'
+    if 'noé' in name or 'noe' in name: return '../assets/cards/guardioes/noe-coruja.png'
+    if 'íris' in name or 'iris' in name: return '../assets/cards/guardioes/iris-passarinho.png'
+    return '../assets/cards/guardioes/melquior-leao.png'
+
 def format_content(content_dict):
     """
     TRANSFORMAÇÃO DE CONTEÚDO (O Coração do Builder)
@@ -234,8 +199,9 @@ def format_content(content_dict):
                         script = v.get('script', '') or v.get('fala', '') or v.get('instrucao', '')
                         
                         if 'fala' in k or 'guardiao' in k or 'portador' in k:
-                            # Rich Persona Block
+                            # Rich Persona Block (Premium Visuals)
                             nome_guardiao = k.replace('fala_', '').replace('_', ' ').strip().title()
+                            
                             # Tenta mapear o nome para achar a imagem (Portador é exceção)
                             if 'Portador' in nome_guardiao:
                                 avatar_img = "../assets/cards/guardioes/melquior-leao.png" # Fallback ou específico
@@ -244,7 +210,7 @@ def format_content(content_dict):
                             
                             tom_html = f'<span class="script-tone">({tom})</span>' if tom else ''
                             
-                            html_parts.append(f"""
+                            html_parts.append(f'''
                             <div class="script-persona-block">
                                 <img src="{avatar_img}" class="script-avatar" alt="{nome_guardiao}">
                                 <div class="script-content">
@@ -255,16 +221,16 @@ def format_content(content_dict):
                                     <p class="script-text">"{script}"</p>
                                 </div>
                             </div>
-                            """)
+                            ''')
                         
                         elif 'instrucao' in k or 'dica' in k:
                             # Instruction Box
-                            html_parts.append(f"""
+                            html_parts.append(f'''
                             <div class="instruction-box">
                                 <span class="instruction-icon">💡</span>
                                 <div>{script}</div>
                             </div>
-                            """)
+                            ''')
                             
                         else:
                             # Generic Dict
@@ -279,14 +245,6 @@ def format_content(content_dict):
     
     return "\n".join(html_parts)
 
-
-def get_guardian_data(name):
-    name = name.lower()
-    if 'celeste' in name: return '../assets/cards/guardioes/celeste-raposa.png'
-    if 'bernardo' in name: return '../assets/cards/guardioes/bernardo-urso.png'
-    if 'noé' in name or 'noe' in name: return '../assets/cards/guardioes/noe-coruja.png'
-    if 'íris' in name or 'iris' in name: return '../assets/cards/guardioes/iris-passarinho.png'
-    return '../assets/cards/guardioes/melquior-leao.png'
 
 def main():
     print("🚀 Iniciando Lesson Builder...")

@@ -6,70 +6,22 @@
     <title>O Celeiro que Cresce | Matemática Viva</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <style>
-        /* Lesson Specific Styles */
-        .lesson-container { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
-        
-        .lesson-header { text-align: center; margin-bottom: 4rem; position: relative; }
-        .lesson-id { font-size: 0.875rem; font-weight: 700; color: #9CA3AF; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 1rem; }
-        h1 { font-family: 'Lora', serif; font-size: 3rem; color: #111827; margin-bottom: 1rem; line-height: 1.2; }
-        .lesson-idea { font-family: 'Lora', serif; font-size: 1.5rem; color: #4B5563; font-style: italic; margin-bottom: 2rem; display: block; }
-        
-        .metadata-grid { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; font-size: 0.9rem; color: #6B7280; flex-wrap: wrap; }
-        .meta-item { display: flex; align-items: center; gap: 0.5rem; background: #FFF; padding: 0.5rem 1rem; border-radius: 2rem; border: 1px solid #E5E7EB; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-        
-        .lesson-body { background: #FFF; padding: 3rem; border-radius: 1.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); border: 1px solid #E5E7EB; line-height: 1.8; color: #374151; font-size: 1.1rem; }
-        
-        h2 { font-family: 'Lora', serif; margin-top: 2.5rem; margin-bottom: 1.5rem; font-size: 1.8rem; color: #111827; border-bottom: 2px solid #F3F4F6; padding-bottom: 0.5rem; }
-        h3 { margin-top: 2rem; font-size: 1.3rem; color: #1F2937; }
-        
-        ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
-        li { margin-bottom: 0.5rem; }
-        p { margin-bottom: 1.5rem; }
-        
-        .quote-box { background: #F9FAFB; border-left: 4px solid #047857; padding: 1.5rem; margin: 2rem 0; font-style: italic; color: #4B5563; }
-        
-        /* Navigation Controls */
-        .lesson-nav { display: flex; justify-content: space-between; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #E5E7EB; }
-        .nav-btn { display: flex; flex-direction: column; text-decoration: none; color: #6B7280; transition: all 0.2s; max-width: 45%; }
-        .nav-btn:hover { color: #047857; }
-        .nav-label { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
-        .nav-title { font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 600; }
-        .nav-btn.prev { text-align: left; }
-        .nav-btn.next { text-align: right; }
-        .disabled { opacity: 0; pointer-events: none; }
-        
-        /* Home Button */
-        .home-btn { position: fixed; top: 2rem; left: 2rem; width: 3rem; height: 3rem; background: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #E5E7EB; color: #374151; text-decoration: none; transition: all 0.2s; z-index: 100; }
-        .home-btn:hover { transform: translateY(-2px); color: #047857; }
-
-        @media (max-width: 768px) {
-            .home-btn { top: 1rem; left: 1rem; }
-            .lesson-container { padding: 2rem 1rem; }
-            .lesson-body { padding: 1.5rem; }
-            h1 { font-size: 2rem; }
-        }
-    </style>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body class="clima-ensolarado">
-    <a href="../index.html" class="home-btn" title="Voltar ao Dashboard">🏠</a>
+    <a href="../index.html" class="home-btn" title="Voltar ao Dashboard">🏡</a>
 
     <div class="lesson-container">
-        <header class="lesson-header">
-            <span class="lesson-id">MV-S-014</span>
-            <h1>O Celeiro que Cresce</h1>
-            <span class="lesson-idea">"Mais feixes de força para sustentar a Vila. O trabalho do Construtor se multiplica."</span>
-            
-            <div class="metadata-grid">
-                <div class="meta-item">
-                    <img src="../assets/cards/guardioes/bernardo-urso.png" alt="Bernardo" style="width: 24px; height: 24px; object-fit: contain;">
-                    Bernardo
-                </div>
-                <div class="meta-item"><span>⏱️</span> 20 min</div>
-                <div class="meta-item"><span>🌤️</span> Ensolarado</div>
-            </div>
+        
+        <!-- Premium Hero Section -->
+        <header class="lesson-hero">
+            <div class="lesson-meta-tag">MV-S-014 • 20 min • Ensolarado</div>
+            <h1 class="hero-title">O Celeiro que Cresce</h1>
+            <p class="hero-quote">"Mais feixes de força para sustentar a Vila. O trabalho do Construtor se multiplica."</p>
+            <img src="../assets/cards/guardioes/bernardo-urso.png" alt="Bernardo" class="hero-guardian" title="Seu Guia: Bernardo">
         </header>
 
+        <!-- Content Body -->
         <article class="lesson-body">
             <h2>🎬 Ritual de Abertura</h2>
 <p><strong>Instrucao Ambiente:</strong> Coloque 2 feixes amarrados e uma pilha de soltos.</p>
@@ -116,10 +68,15 @@
 <p><strong>Transicao Volta:</strong> Limpe o suor da testa (dramatização). O trabalho acabou.</p>
         </article>
 
+        <!-- Navigation Footer -->
         <nav class="lesson-nav">
             <a href="013_O_RIO_QUE_SE_UNE.html" class="nav-btn prev"><span class="nav-label">← Anterior</span><span class="nav-title">O Rio que se Une</span></a>
             <a href="015_A_ESCADA_DE_LUZ.html" class="nav-btn next"><span class="nav-label">Próxima →</span><span class="nav-title">A Escada de Luz</span></a>
         </nav>
+        
+        <footer style="text-align: center; margin-top: 4rem; color: #A8A29E; font-size: 0.8rem;">
+            Matemática Viva • Forjado com Estilo e Propósito
+        </footer>
     </div>
 </body>
 </html>
