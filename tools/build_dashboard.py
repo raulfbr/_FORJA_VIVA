@@ -302,6 +302,7 @@ def build_lesson_card(file_path):
         lid = meta.get('id', 'MV-S-XXX')
         titulo = meta.get('titulo', 'Sem Título')
         guardiao = meta.get('guardiao_lider', 'Melquior')
+        tipo = meta.get('tipo', 'Lição').upper()
         
         if not ideia: ideia = "O mistério dos números aguarda..."
         
@@ -312,7 +313,7 @@ def build_lesson_card(file_path):
         <article class="card {css_class}">
             <div class="card-body">
                 <div class="card-meta">
-                    <span class="card-id">{lid}</span>
+                    <span class="card-id">{tipo}</span>
                     <span class="guardian-icon" title="{guardiao}">{emoji}</span>
                 </div>
                 <h3 class="card-title">{titulo}</h3>
