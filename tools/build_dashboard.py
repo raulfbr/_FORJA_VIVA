@@ -200,14 +200,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forja Viva | Orchestrator Dashboard</title>
+    <title>Matemática Viva | Orchestrator Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <nav class="sidebar">
         <div class="brand">
-            <span>🔥</span> Forja Viva
+            <span>🦁</span> Matemática Viva
         </div>
         
         <div class="nav-section">Reino Contado</div>
@@ -227,7 +227,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <header>
             <div class="role-badge">Admin: Maestro Raul</div>
             <h1>Visão Geral do Reino</h1>
-            <p class="subtitle">O progresso da Forja, monitorado pelo Orchestrator. Aqui a "Qualidade Não é Negociável" se torna visível.</p>
+            <p class="subtitle">O progresso da Matemática Viva, monitorado pelo Orchestrator. Aqui a "Qualidade Não é Negociável" se torna visível.</p>
         </header>
 
         <section class="stats">
@@ -269,7 +269,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </section>
         
         <footer style="margin-top: 6rem; border-top: 1px solid #E5E7EB; padding-top: 2rem; color: #9CA3AF; font-size: 0.875rem; display: flex; justify-content: space-between;">
-            <div>&copy; 2026 Forja Viva. Built by Orchestrator.</div>
+            <div>&copy; 2026 Matemática Viva. Built by Orchestrator.</div>
             <div>Versão 1.5.0 (Vercel)</div>
         </footer>
     </main>
@@ -331,6 +331,12 @@ def main():
     print("🥁 Orchestrator: Refinando Dashboard V3...")
     
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    
+    # 1. BUILD DAS LIÇÕES (Integração Vercel)
+    # Garante que as páginas HTML existam antes de criar os links
+    print("   ↳ Disparando Build de Lições...")
+    import build_lessons
+    build_lessons.main()
     
     # Gerar CSS
     (OUTPUT_DIR / "style.css").write_text(STYLE_CSS, encoding='utf-8')

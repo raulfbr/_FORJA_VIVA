@@ -20,7 +20,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{TITULO}} | Forja Viva</title>
+    <title>{{TITULO}} | Matemática Viva</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
@@ -187,12 +187,19 @@ def load_lessons():
     return sorted(lessons, key=lambda x: x['sort_id'])
 
 def format_content(content_dict):
-    """Transforma o dicionário de seções da lição em HTML estruturado"""
+    """
+    TRANSFORMAÇÃO DE CONTEÚDO (O Coração do Builder)
+    ------------------------------------------------
+    Esta função pega o dicionário cru do YAML e o transforma em HTML bonito.
+    Ela segue uma ordem lógica pedagógica (Abertura -> Concreto -> Abstrato -> Fechamento).
+    """
     html_parts = []
     
-    # Ordem lógica de exibição
+    # ORDEM LÓGICA DE EXIBIÇÃO NA PÁGINA
+    # Aqui definimos a sequência exata em que as seções aparecem no site.
     order = ['preparacao_do_portador', 'ritual_abertura', 'atividade_concreta', 'atividade_pictorica', 'atividade_abstrata', 'narramos_juntos', 'ritual_fechamento']
     
+    # RÓTULOS AMIGÁVEIS (Para o Título da Seção)
     labels = {
         'preparacao_do_portador': '👨‍👩‍👧 Preparação do Portador',
         'ritual_abertura': '🎬 Ritual de Abertura',
