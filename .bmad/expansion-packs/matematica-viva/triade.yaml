@@ -1,40 +1,56 @@
 # TRÍADE PEDAGÓGICA — SSOT (Única Fonte)
-# YAML Lean v2.0 | 14/01/2026
+# YAML Lean v2.2 | 14/01/2026
 # Este arquivo é a ÚNICA fonte para hierarquia CM/CPA/TGTB
+# ALINHADO COM: logs/2026.01.14/2026-01-14_1416_PLANEJAMENTO_EXECUCAO_DETALHADO.md
 
 id: triade-pedagogica
-versao: "2.0"
+versao: "2.2"
 tipo: expansion_pack
+ref_log_planejamento: logs/2026.01.14/2026-01-14_1416_PLANEJAMENTO_EXECUCAO_DETALHADO.md
 
-# HIERARQUIA (ordem de autoridade)
+# HIERARQUIA (ordem de autoridade - NÃO NEGOCIÁVEL)
 hierarquia:
   coordenador: Charlotte Mason
   niveis:
     - {n: 1, nome: Charlotte Mason, sigla: CM, auth: VETO_FINAL, scope: "Filosofia, tom, dignidade criança", ref: .bmad/experts/pedagogia/charlotte_mason.yaml}
     - {n: 2, nome: "Singapura (CPA)", sigla: CPA, auth: PROPOSITIVO, scope: "Sequência didática, manipulativos", ref: .bmad/experts/matematica/jerome_bruner.yaml}
     - {n: 3, nome: "The Good and The Beautiful", sigla: TGTB, auth: REFERENCIA, scope: "Scope & Sequence", ref: curriculo/_SISTEMA/CURRICULOS_MESTRE/}
+  comunicacao:
+    - {nome: "O Embaixador", sigla: EMB, auth: VOZ_PUBLICA, scope: "Blog, Redes, Tradução para 'coração de mãe'", ref: .bmad/experts/comunicacao/embaixador.yaml}
 
-# REGRAS DE CONFLITO
+# REGRAS DE CONFLITO (Jurisprudência)
 conflitos:
-  - {id: CONF-001, sit: "CPA propõe Pictórico, CM quer só Concreto", decisao: CM, just: "Things before Signs", acao: "Euclides aceita, expande Concreto"}
+  - {id: CONF-001, sit: "CPA propõe Pictórico, CM quer só Concreto", decisao: CM, just: "Things before Signs (Sementes)", acao: "Euclides aceita, expande Concreto"}
   - {id: CONF-002, sit: "TGTB sugere ritmo acelerado", decisao: CM, just: "Lições curtas preservam atenção", acao: "Manter ritmo CM"}
-  - {id: CONF-003, sit: "CPA quer transição C→P prematura", decisao: CM, just: "Criança demonstra domínio antes avançar", acao: "Veta transição"}
+  - {id: CONF-003, sit: "Comercial quer vender 'fácil'", decisao: EMB/CM, just: "Não vendemos fácil, vendemos DIGNO", acao: "Ajustar tom para 'nobreza acessível'"}
 
-# VETOS CANONIZADOS
+# ESTRUTURA E RITMO (Definições MVP)
+estrutura_mvp:
+  sementes_1ano: 
+    ritmo: TRIMESTRAL
+    meta: 40 lições/trimestre
+    justificativa: "Fundação sólida exige tempo. Menos pressa, mais profundidade."
+  anos_subsequentes:
+    ritmo: BIMESTRAL
+    meta: ~30 lições/bimestre
+    justificativa: "Ritmo natural aumenta com a idade e hábito de atenção."
+
+# VETOS CANONIZADOS (Regras de Ouro)
 vetos:
   - {id: VR-001, trig: pictorial_before_concrete, ciclo: Sementes, act: REJECT, why: "CM Things before Signs. Sementes só Concreto."}
-  - {id: VR-002, trig: lesson_too_long, limite: 20, ciclo: Sementes, act: REJECT, why: "CM Hábito Atenção."}
-  - {id: VR-003, trig: over_explanation, limite_par: 3, act: REJECT, why: "CM mistério > explicação."}
-  - {id: VR-004, trig: no_narration, act: REJECT, why: "CM Princípio 14 obrigatório."}
+  - {id: VR-002, trig: lesson_too_long, limite: 20, ciclo: Sementes, act: REJECT, why: "CM Hábito Atenção. Respeitar tempo criança."}
+  - {id: VR-003, trig: prep_too_long, limite: 5, act: REJECT, why: "Promessa Play-and-Go. Mãe não tem tempo."}
+  - {id: VR-004, trig: dry_facts, act: REJECT, why: "Ideias Vivas apenas. Fatos secos matam o amor pelo saber."}
+  - {id: VR-005, trig: manipulation_marketing, act: REJECT, why: "Não usamos medo ou culpa. Usamos convite e beleza."}
 
-# MAPEAMENTO CPA POR CICLO — OPÇÃO D (14/01/2026)
+# MAPEAMENTO CPA POR CICLO
 ciclos:
   sementes:
     idade: "4-6 anos"
     viajante: Herdeiro
     cpa: {concreto: "80-100% (NORTE ABSOLUTO)", pictorico: VETADO, abstrato: "≤20% (traçar ar = ENATIVO)"}
     tempo_max: 20
-    nota: "Deliberação 14/01/2026. CM lidera. Traçar ar = movimento corporal = Concreto."
+    nota: "CM lidera. Traçar ar = movimento corporal = Concreto."
   raizes:
     idade: "7-10 anos"
     viajante: Construtor
@@ -51,7 +67,7 @@ ciclos:
     cpa: {concreto: "20%+", pictorico: PERMITIDO, abstrato: PLENO}
     tempo_max: 60
 
-# PRINCÍPIOS CM APLICADOS (resumo — ver expert para detalhes)
+# PRINCÍPIOS CM APLICADOS
 principios_cm:
   - {id: 1, texto: "Crianças são pessoas", app: "Dignidade em toda lição", ref: ".bmad/experts/pedagogia/charlotte_mason.yaml#principio_1"}
   - {id: 8, texto: "Dieta ampla conhecimento", app: "Conexões interdisciplinares"}

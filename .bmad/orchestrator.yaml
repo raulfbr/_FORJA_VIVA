@@ -25,6 +25,11 @@ distincao_papeis:
       - {nome: Jerome Bruner, tipo: Expert, desc: "CPA/Singapura, subordinado CM."}
       - {nome: CS Lewis, tipo: Expert, desc: "Tom dignidade narrativa."}
       - {nome: Engenharia, tipo: Conselho, desc: "QA, Clean Code, BMAD."}
+  comunicacao:
+    contexto: "Interface com o mundo (Blog, Redes, Vendas)"
+    atores:
+      - {nome: O Embaixador, tipo: Expert, desc: "Voz da Tribo. Filtro StoryBrand."}
+      - {nome: Seth Godin, tipo: Expert, desc: "Estrategista Tribal."}
   familia:
     contexto: "Pais mães aplicam currículo mundo real"
     titulos:
