@@ -1,0 +1,112 @@
+# LIÇÃO 004 — O RITMO DO CRIADOR (Ordem e Sequência)
+# id: MV-S-004
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-004
+titulo: "O Ritmo do Criador"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Noé
+guardiao_secundario: Celeste
+tgtb_ref: "000-L4 - Order of Events"
+status: final
+
+ideia_viva:
+  frase: "A luz primeiro, depois o despertar. Tudo tem sua hora certa de acontecer."
+  conceito: "Sequência Temporal (Antes, Agora, Depois). Primeiro, Meio, Fim."
+  intencao_cm: "Paciência e Ordem. Entender que não podemos pular etapas (não se colhe antes de plantar)."
+
+atmosfera:
+  clima: "crepusculo"
+  clima_desc: "O céu está roxo e laranja. O dia está mudando para a noite. Tudo está quieto."
+  local: "arvore_silencio"
+  local_desc: "Um carvalho gigante e antigo. No galho mais alto, olhos dourados brilham no escuro."
+  virtude: "paciencia"
+  artefato: "3 Cards de Sequência (Ex: Semente → Broto → Árvore)"
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-003", gancho: "Íris nos mostrou a flor já aberta. Mas como ela nasceu?"}
+  proximo: {licao_id: "MV-S-005", gancho: "Aprendemos o 'quando'. Amanhã, Celeste vai nos ensinar o 'onde'."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min (recortar ou desenhar cards)"
+  materiais:
+    - {item: "3 Cards de Sequência (Semente, Broto, Árvore OU Acordar, Brincar, Dormir)", qtd: 3, alt: "Desenhos simples em papel", essencial: true}
+    - {item: "Uma pedra ou 'ovo' (objeto fechado)", qtd: 1, alt: null, essencial: true}
+    - {item: "Card: NOÉ", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "Hoje a lição é sobre ESPERA. Fale devagar. Faça pausas. Noé não corre."
+  filho_descobre: "Que o tempo tem uma ordem. Que o jantar vem depois do almoço. Que a árvore vem depois da semente."
+  nota_graca: "Se a criança quiser 'acelerar' a história, sorria: 'A semente precisa de tempo, senão não nasce'."
+
+ritual_abertura:
+  instrucao_ambiente: "Apague as luzes. Sente-se bem perto. Faça silêncio absoluto por 10 segundos."
+  transicao_reino: "Respire fundo... 1, 2, 3... Ouça o vento nas folhas da Árvore do Silêncio."
+  fala_portador: {tom: "calmo e pausado", script: "Shhh... Estamos na casa de Noé. Ele fala baixo."}
+  card_guardiao: "CARD: NOÉ (Coruja)"
+  fala_guardiao: {tom: "sábio e lento", script: "Hoo... Hoo... O tempo caminha devagar. Bem-vindo, Observador. Você sabe esperar?"}
+
+jornada:
+  abertura_sensorial: "Entregue a Pedra/Ovo fechado. 'Segure isSo. Está fechado. O que será que vem DEPOIS?'"
+  
+  concreto:
+    desc: "Ordenando a História da Vida."
+    card_objeto: "CARDS DE SEQUÊNCIA"
+    passos:
+      - {n: 1, acao: "Coloque os 3 cards misturados no chão.", fala: "Olha só... O vento misturou o tempo! A árvore veio antes da semente? Isso está certo?"}
+      - {n: 2, acao: "Peça para a criança achar o PRIMEIRO.", fala: "O que acontece primeiro? O início de tudo."}
+      - {n: 3, acao: "Peça o MEIO.", fala: "E depois? A semente dorme e acorda..."}
+      - {n: 4, acao: "Peça o ÚLTIMO.", fala: "E no fim? Ela fica grande e forte."}
+      - {n: 5, acao: "Leiam a sequência juntos.", fala: "Primeiro semente, depois broto, por último árvore."}
+    tempo: "80%+ (Narrativa visual e ordenação)"
+    adaptacao_bernardo: "Se a criança não entender semente, use a rotina dela: Pijama (Acordar), Roupa (Dia), Pijama (Dormir)."
+    
+  pictorico: {status: VETADO, motivo: "Cards = Concreto manipulável nesta fase (são objetos)."}
+  
+  abstrato:
+    desc: "Conceitos 'Antes' e 'Depois'."
+    card: "CARD: SOL e LUA"
+    passos:
+      - {acao: "Pergunte sobre hoje.", fala: "O que você fez ANTES de vir para o tapete?"}
+      - {acao: "Pergunte sobre o futuro.", fala: "O que vamos fazer DEPOIS de terminar aqui? (Ex: lanchar, brincar)"}
+    nota: "Oral e vivencial."
+    
+  extensao:
+    titulo: "O Som do Tempo"
+    desc: "Marcar o ritmo com palmas."
+    sugestoes: ["Bata palmas lento (TI-TAC).", "Bata palmas rápido.", "Noé gosta do ritmo lento."]
+
+narracao:
+  instrucao: "Recolha os cards na ordem certa."
+  pergunta_principal: "Para o Noé, o que vem primeiro: a semente ou a fruta?"
+  perguntas_coracao: ["É difícil esperar o aniversário chegar?", "O que acontece se a gente tentar comer a banana antes de descascar?", "Você gosta mais do dia ou da noite?"]
+  nota_cm: "A narração ajuda a criar a linha do tempo mental."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "abençoador", script: "Cada coisa tem seu tempo debaixo do céu. Boa noite, Observador."}
+  fio_ouro: "O tempo passou... e agora a Raposa Celeste quer brincar de esconder. Onde será que ela vai?"
+  transicao_volta: "Espreguice bem devagar, como quem acorda de um sono bom."
+
+catedra_pais:
+  metodo_cpa: "Sequência Lógica é pré-requisito para aritmética (sucessor/antecessor). Começamos com eventos, depois vamos para números."
+  principio_cm: "Hábito da Paciência. 'Eu sou, eu posso, eu devo, eu quero'. Eu DEVO esperar a vez."
+  reflexao_espiritual: "Eclesiastes 3: 'Há um tempo para tudo'. Deus é o Senhor do Tempo, não o relógio."
+  nota_graca: "Crianças pequenas vivem no 'AGORA'. O 'ontem' e 'amanhã' são confusos. Tenha paciência."
+
+sugestoes:
+  - {guardiao: Noé, emoji: "🦉", dica: "Use um relógio de areia (ampulheta) se tiver. É fascinante.", sugestao: "Observem uma formiga andando. Ela tem pressa?"}
+  - {guardiao: Celeste, emoji: "🦊", dica: "Celeste gosta de correr, Noé gosta de parar. Brinquem de 'Vivo-Morto' versão 'Raposa-Coruja' (Rápido-Lento).", sugestao: "Corrida em câmera lenta."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["A criança conseguiu ordenar os 3 passos?", "Entendeu Antes e Depois?", "Conseguiu ficar em silêncio com Noé?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]
