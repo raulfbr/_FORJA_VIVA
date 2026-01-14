@@ -78,7 +78,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <span class="lesson-idea">"{{IDEIA_VIVA}}"</span>
             
             <div class="metadata-grid">
-                <div class="meta-item"><span>👤</span> {{GUARDIAO}}</div>
+                <div class="meta-item">
+                    <img src="{{GUARDIAO_IMG}}" alt="{{GUARDIAO}}" style="width: 24px; height: 24px; object-fit: contain;">
+                    {{GUARDIAO}}
+                </div>
                 <div class="meta-item"><span>⏱️</span> {{TEMPO}}</div>
                 <div class="meta-item"><span>🌤️</span> {{CLIMA}}</div>
             </div>
@@ -246,6 +249,15 @@ def format_content(content_dict):
     
     return "\n".join(html_parts)
 
+
+def get_guardian_data(name):
+    name = name.lower()
+    if 'celeste' in name: return '../assets/cards/guardioes/celeste-raposa.png'
+    if 'bernardo' in name: return '../assets/cards/guardioes/bernardo-urso.png'
+    if 'noé' in name or 'noe' in name: return '../assets/cards/guardioes/noe-coruja.png'
+    if 'íris' in name or 'iris' in name: return '../assets/cards/guardioes/iris-passarinho.png'
+    return '../assets/cards/guardioes/melquior-leao.png'
+
 def main():
     print("🚀 Iniciando Lesson Builder...")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -258,12 +270,16 @@ def main():
         prev_lesson = lessons[i-1] if i > 0 else None
         next_lesson = lessons[i+1] if i < len(lessons)-1 else None
         
+        # Guardian Image
+        guardiao_img = get_guardian_data(lesson['guardiao'])
+        
         # Build HTML
         html = HTML_TEMPLATE
         html = html.replace('{{TITULO}}', lesson['titulo'])
         html = html.replace('{{ID}}', lesson['id'])
         html = html.replace('{{IDEIA_VIVA}}', lesson['ideia'])
         html = html.replace('{{GUARDIAO}}', lesson['guardiao'])
+        html = html.replace('{{GUARDIAO_IMG}}', guardiao_img)
         html = html.replace('{{TEMPO}}', lesson['tempo'])
         html = html.replace('{{CLIMA}}', lesson['clima'])
         html = html.replace('{{CLIMA_CLASS}}', f"clima-{lesson['clima'].lower()}")

@@ -170,6 +170,7 @@ h1 { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; marg
 .card-meta { display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; }
 .card-id { font-size: 0.75rem; font-weight: 700; color: #9CA3AF; letter-spacing: 0.05em; text-transform: uppercase; }
 .guardian-icon { font-size: 1.5rem; line-height: 1; }
+.guardian-icon-img { width: 48px; height: 48px; object-fit: contain; }
 
 .card-title { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3; color: #111827; }
 .card-desc { font-size: 0.95rem; color: #4B5563; line-height: 1.5; font-style: italic; margin-bottom: 1.5rem; flex-grow: 1; }
@@ -207,7 +208,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <body>
     <nav class="sidebar">
         <div class="brand">
-            <span>🦁</span> Matemática Viva
+            <img src="assets/cards/guardioes/melquior-leao.png" alt="Logo" style="width: 32px; height: 32px;"> Matemática Viva
         </div>
         
         <div class="nav-section">Reino Contado</div>
@@ -277,13 +278,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 </html>
 """
 
-def get_guardian_class(name):
+def get_guardian_data(name):
     name = name.lower()
-    if 'celeste' in name: return 'celeste', '🦊'
-    if 'bernardo' in name: return 'bernardo', '🐻'
-    if 'noé' in name or 'noe' in name: return 'noe', '🦉'
-    if 'íris' in name or 'iris' in name: return 'iris', '🐦'
-    return 'melquior', '🦁'
+    if 'celeste' in name: return 'celeste', 'assets/cards/guardioes/celeste-raposa.png'
+    if 'bernardo' in name: return 'bernardo', 'assets/cards/guardioes/bernardo-urso.png'
+    if 'noé' in name or 'noe' in name: return 'noe', 'assets/cards/guardioes/noe-coruja.png'
+    if 'íris' in name or 'iris' in name: return 'iris', 'assets/cards/guardioes/iris-passarinho.png'
+    return 'melquior', 'assets/cards/guardioes/melquior-leao.png'
 
 def build_lesson_card(file_path):
     try:
@@ -307,14 +308,14 @@ def build_lesson_card(file_path):
         if not ideia: ideia = "O mistério dos números aguarda..."
         
         link = f"sementes/{file_path.stem}.html"
-        css_class, emoji = get_guardian_class(guardiao)
+        css_class, img_path = get_guardian_data(guardiao)
         
         return f"""
         <article class="card {css_class}">
             <div class="card-body">
                 <div class="card-meta">
                     <span class="card-id">{tipo}</span>
-                    <span class="guardian-icon" title="{guardiao}">{emoji}</span>
+                    <img src="{img_path}" class="guardian-icon-img" alt="{guardiao}" title="{guardiao}">
                 </div>
                 <h3 class="card-title">{titulo}</h3>
                 <p class="card-desc">“{ideia}”</p>
@@ -333,6 +334,18 @@ def main():
     
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     
+    # 0. ASSETS SYNC (Orchestrator Infra)
+    import shutil
+    CARDS_SRC = Path("docs/cards/web")
+    CARDS_DEST = OUTPUT_DIR / "assets/cards"
+    
+    if CARDS_SRC.exists():
+        print(f"   ↳ Sincronizando Assets ({len(list(CARDS_SRC.glob('*')))} files)...")
+        if CARDS_DEST.exists(): shutil.rmtree(CARDS_DEST)
+        shutil.copytree(CARDS_SRC, CARDS_DEST)
+    else:
+        print("   ⚠️ AVISO: docs/cards/web não encontrado.")
+
     # 1. BUILD DAS LIÇÕES (Integração Vercel)
     # Garante que as páginas HTML existam antes de criar os links
     print("   ↳ Disparando Build de Lições...")
