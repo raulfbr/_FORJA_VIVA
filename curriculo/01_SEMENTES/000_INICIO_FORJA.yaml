@@ -78,7 +78,7 @@ licao:
         essencial: false
         
   para_o_portador:
-    dica_de_coracao: |
+    dica_coracao: |
       Você não precisa ser um ator de teatro nem um professor perfeito.
       O "Reino" acontece no brilho dos olhos do seu filho, não na sua
       performance. Se você errar ou gaguejar, ria junto.
@@ -100,12 +100,18 @@ licao:
       Pensamentos do Rei. E que cinco Guardiões estarão ao seu
       lado em toda a jornada: Melquior, Noé, Celeste, Bernardo e Íris.
       
-    nota_de_graca: |
+    nota_graca: |
       Se seu filho hoje não "alcançou" o clima de reverência ou se
       distraiu com a vela, NÃO HOUVE PERDA. No método CM, a "Educação
       é uma Vida" e a vida não cresce sob pressão. O valor desta lição
       não está no comportamento perfeito, mas na semente de uma nova
       Atmosfera que você plantou.
+
+    conforto_emocional: |
+      Você está prestes a abrir o portal. Respire.
+      Deus o escolheu como pai deste filho não por acaso.
+      A Liturgia serve a você, não você à Liturgia.
+      Sinta-se livre para adaptar as falas. O coração importa mais que o script.
        
   ritual_abertura:
     instrucao_ambiente: |
@@ -410,7 +416,7 @@ licao:
         
         "Até a próxima jornada."
          
-  catedra_dos_pais:
+  catedra_pais:
     metodo_cpa: |
       **Concreto (40%):** Sementes na mão, Passaporte físico, 
       toque nos Cards dos Guardiões. A criança manipulou objetos reais.
@@ -436,7 +442,7 @@ licao:
       ele recebeu uma herança: a matemática não é técnica — é poesia.
       Os Guardiões são virtudes que caminharão com ele em cada lição.
       
-    nota_de_graca: |
+    nota_graca: |
       Portador da Tocha, se seu filho hoje não "chegou lá",
       ele chegará amanhã. Foque no MÉTODO DO AMOR e a mente
       dele florescerá no tempo de Deus.

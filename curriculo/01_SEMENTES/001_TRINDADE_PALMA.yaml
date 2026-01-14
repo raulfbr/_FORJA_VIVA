@@ -71,7 +71,7 @@ licao:
         essencial: true
         
   para_o_portador:
-    dica_de_coracao: |
+    dica_coracao: |
       Hoje você vai apresentar os números 1, 2 e 3.
       Mas não como símbolos mortos — como promessas vivas!
       Respire. Você não precisa ser perfeito.
@@ -98,6 +98,12 @@ licao:
       Se seu filho contar errado ou perder a atenção, sorria.
       A semente foi plantada. No método CM, repetição nunca é falha.
       Volte amanhã com alegria, não com cobrança.
+    
+    conforto_emocional: |
+      Muitos pais sentem um "frio na barriga" ao começar.
+      "Será que vou estragar tudo?"
+      A resposta é não. Se houver riso e conexão, a matemática entrou.
+      Você não é um avaliador; você é um companheiro de viagem.
        
   ritual_abertura:
     instrucao_ambiente: |
@@ -349,7 +355,7 @@ licao:
         
         "Até a próxima jornada."
          
-  catedra_dos_pais:
+  catedra_pais:
     metodo_cpa: |
       **Concreto (80%+):** NORTE ABSOLUTO. Sementes reais na mão,
       manipulação física, contagem tátil. A criança TOCOU os números.
@@ -376,7 +382,7 @@ licao:
       Quando seu filho conta, ele participa do ritmo da Criação.
       Os números não são ferramentas — são linguagem do Criador.
       
-    nota_de_graca: |
+    nota_graca: |
       Se seu filho misturou "dois" e "três", não houve perda.
       A correspondência um-a-um leva tempo para amadurecer.
       O importante é que ele BRINCOU com os números.

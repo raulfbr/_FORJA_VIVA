@@ -42,13 +42,19 @@ para_o_portador:
   dica_coracao: "Contar até 9 exige foco. Se a criança se perder, use o agrupamento (4 e 4, ou 5 e 3). O cérebro ama padrões."
   filho_descobre: "Que o 8 é 'duas vezes quatro' (simetria). Que o 9 é 'quase dez' (falta um)."
   nota_graca: "Se derrubar os grãos, lembre da Lição das Sementes. 'Olha quantas promessas no chão!'"
+  
+  conforto_emocional: |
+    Contar até 9 é uma maratona para um cérebro de 4 anos.
+    Se ele cansar no 6, pare.
+    "Noé também descansou."
+    Não force a chegada se as pernas estiverem cansadas.
 
 ritual_abertura:
   instrucao_ambiente: "Faça uma pilha com os saquinhos num canto (O Celeiro)."
   transicao_reino: "Entre na ponta dos pés... Shhh. Noé está contando o estoque."
   fala_portador: {tom: "sussurrado e grave", script: "O inverno vem aí. Precisamos saber se temos comida suficiente."}
   card_guardiao: "CARD: NOÉ (Coruja)"
-  fala_guardiao: {tom: "sábio", script: "Um, dois... a contagem deve ser precisa. Me ajude, ecônomo."}
+  fala_guardiao: {tom: "sábio e acolhedor", script: "A paz esteja com você, Guardião de Provisões. O inverno é longo, mas o celeiro é quente. Vamos contar nossas bênçãos?"}
 
 jornada:
   abertura_sensorial: "Entregue um saquinho cheio. 'Balance. O que tem dentro? Hummm... feijão!'"

@@ -42,13 +42,19 @@ para_o_portador:
   dica_coracao: "Ordinais são confusos porque mudam com a direção. Defina claramente ONDE COMEÇA a fila (o pote de comida)."
   filho_descobre: "Que 'Primeiro' é quem chega antes. Que 'Último' é quem chega no fim."
   nota_graca: "Faça corridas divertidas. Quem chegou em primeiro? Quem foi o último?"
+  
+  conforto_emocional: |
+    "Primeiro" e "Último" são conceitos de vida, não só de matemática.
+    Seu filho pode chorar se for o último. Acolha.
+    "No Reino, quem chega por último garante que ninguém ficou para trás."
+    Ensine a nobreza da retaguarda.
 
 ritual_abertura:
   instrucao_ambiente: "Arrume a fila de bichos no chão, virados para o pote."
   transicao_reino: "Olha lá na trilha... Celeste está organizando o trânsito!"
   fala_portador: {tom: "animado", script: "Bip Bip! Sai da frente! Todo mundo quer beber água."}
   card_guardiao: "CARD: CELESTE (Raposa)"
-  fala_guardiao: {tom: "autoritário e gentil", script: "Calma, pessoal! Um de cada vez. A fila é justa. Quem é o PRIMEIRO?"}
+  fala_guardiao: {tom: "nobre e gentil", script: "Não há pressa no Reino, Viajante. Cada um tem seu lugar de honra. Quem terá a honra de beber PRIMEIRO?"}
 
 jornada:
   abertura_sensorial: "Aponte para o pote. 'Aqui é a chegada'. Quem está com o focinho no pote?"

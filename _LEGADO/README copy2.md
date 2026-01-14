@@ -1,13 +1,18 @@
 <div align="center">
 
-# 🦁 Matemática Viva
-### "Não é sobre decorar regras. É sobre restaurar o amor pelo saber."
+# 🌱 Matemática Viva
 
-[![Status](https://img.shields.io/badge/Status-Beta%20Pioneiro-orange?style=for-the-badge)](https://github.com/raulfbr/_FORJA_VIVA)
-[![Método](https://img.shields.io/badge/Método-CM%20%2B%20CPA-blue?style=for-the-badge)](.bmad/expansion-packs/matematica-viva/triade.yaml)
-[![Plataforma](https://img.shields.io/badge/Plataforma-Play_and_Go-green?style=for-the-badge)](docs/README_LEGACY_TECNICO.md)
+**Onde Matemática Deixa de Ser Medo — e Vira Aventura**
 
-[**Ler Manifesto**](blog/2026-01-14_por-que-seu-filho-nao-ama-matematica.html) | [**Ver Lição**](examples/L001_demo.html) | [**Entrar na Tribo**](#-oferta-pioneira-2026)
+*Um currículo completo K-12 que transforma a forma como sua família vive matemática* | v1.0
+
+![License](https://img.shields.io/badge/license-CC%20BY%204.0-green)
+![Ages](https://img.shields.io/badge/idade-0--18%20anos-blue)
+![Method](https://img.shields.io/badge/método-Charlotte%20Mason%20%2B%20Singapore-gold)
+
+[✨ Quero Conhecer](#-o-que-é-matemática-viva) • [💛 Para Quem É](#-para-quem-é-nossa-tribo) • [🎁 O Que Você Leva](#-o-que-você-leva) • [💎 Quero Começar](#-como-começar)
+
+> 💻 **Para Desenvolvedores:** Veja [README_DEV.md](README_DEV.md) — Arquitetura técnica (BMAD v6 + YAML Lean)
 
 </div>
 
@@ -116,27 +121,28 @@ Seu filho não vai apenas "aprender matemática". Ele vai:
 
 ---
 
-## 💎 Oferta Pioneira (2026)
+## 💎 Preços
 
-### 🌟 Fase Pioneira
+### 🌟 Fase Pioneira (2026)
 
 Estamos construindo algo especial — e queremos famílias que cresçam conosco.
 
 | Plano | Valor | O Que Inclui |
 |-------|-------|--------------|
-| **Pioneiro** | **R$ 1.197/ano** | Currículo completo + Comunidade + Acesso aos criadores |
+| **Pioneiro** | R$ 1.197/ano | Currículo completo + Comunidade + Acesso aos criadores |
 | **Preço Cheio** | R$ 2.397/ano | Disponível após fase pioneira (Nov/2026) |
 
 > 💡 **Por família, não por filho.** Quanto mais filhos, mais vale a pena.
-> *(Isso é menos de R$ 100/mês para a família toda.)*
 
 ### 🏆 Mentoria Gold (10 vagas/ano)
 
 Para famílias que querem acompanhamento personalizado:
 
-*   **Valor:** R$ 4.197
-*   **Inclui:** Tudo do Pioneiro + 4 encontros ao vivo + Acesso direto ao Maestro e Matriarca
-*   **Vagas:** Apenas 10 por ano (sujeito a entrevista)
+| | |
+|---|---|
+| **Valor** | R$ 4.197 |
+| **Inclui** | Tudo do Pioneiro + 4 encontros ao vivo + Acesso direto ao Maestro e Matriarca |
+| **Vagas** | Apenas 10 por ano (com entrevista prévia) |
 
 ---
 
@@ -155,13 +161,16 @@ Para famílias que querem acompanhamento personalizado:
 ### Pronto para fazer parte?
 
 **1. Entre em contato:**
-📧 **Email:** rfbr21@gmail.com
-💬 **WhatsApp:** [Link da Comunidade]
+
+📧 **Email:** rfbr21@gmail.com  
+💬 **WhatsApp:** [Solicitar acesso]
 
 **2. Faça sua inscrição:**
+
 Pioneiros podem começar via **PIX** — facilitamos para você começar logo.
 
 **3. Receba acesso:**
+
 Comunidade + Lições + Suporte — tudo pronto para você aplicar.
 
 > 🛡️ **Garantia:** Se em 30 dias você não sentir que fez a escolha certa, devolvemos seu investimento.
@@ -203,13 +212,19 @@ Se você chegou até aqui, **você já é um de nós**.
 
 ### 📚 Quer Aprofundar?
 
-🔗 **[Ler Manifesto no Blog](blog/2026-01-14_por-que-seu-filho-nao-ama-matematica.html)**
+Temos artigos que explicam em detalhes a metodologia, respondem dúvidas frequentes e compartilham histórias de famílias:
 
-📧 **Contato:** rfbr21@gmail.com
+🔗 **Blog:** [Em construção]
+
+---
+
+📧 **Contato:** rfbr21@gmail.com  
 💻 **Desenvolvedores:** [README_DEV.md](README_DEV.md)
 
+---
+
 > *"Seu filho não odeia matemática. Ele só não encontrou o caminho certo ainda."*
->
+> 
 > **Nós somos esse caminho.**
 
 </div>

@@ -41,6 +41,12 @@ para_o_portador:
   dica_coracao: "Bernardo é o guardião do erro. Se seu filho errar, não corrija rápido. Diga: 'Vamos tentar de novo. A pedra escorregou'."
   filho_descobre: "Que os números cabem em 'casinhas'. O 5 enche uma fileira. O 10 enche tudo."
   nota_graca: "Não se preocupe com termos técnicos. Chame de 'Caminhão do Bernardo' ou 'Muro'."
+  
+  conforto_emocional: |
+    Bernardo é o guardião que mais entende o cansaço.
+    Se as pedras rolarem ou a criança não quiser participar, tudo bem.
+    A construção de uma pessoa leva tempo. Tijolo por tijolo.
+    Respire. O muro não precisa ficar pronto hoje.
 
 ritual_abertura:
   instrucao_ambiente: "Coloque o Quadro de Dez no tapete. Espalhe as pedras em volta, 'bagunçadas'."
