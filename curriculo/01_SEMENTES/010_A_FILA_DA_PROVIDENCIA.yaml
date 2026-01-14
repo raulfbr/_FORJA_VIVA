@@ -1,0 +1,112 @@
+# LIÇÃO 010 — A FILA DA PROVIDÊNCIA (Números Ordinais)
+# id: MV-S-010
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-010
+titulo: "A Fila da Providência"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Celeste
+guardiao_secundario: Melquior
+tgtb_ref: "000-L10 - Ordinal Numbers: Part 1"
+status: final
+
+ideia_viva:
+  frase: "O primeiro a colher e o terceiro a agradecer. Existe uma ordem na fila."
+  conceito: "Números Ordinais (1º ao 5º). Posição relativa em uma sequência."
+  intencao_cm: "Cortesia e Ordem. Saber esperar a vez e honrar quem chegou antes."
+
+atmosfera:
+  clima: "ensolarado"
+  clima_desc: "O sol brilha na trilha da floresta. Os animais estão indo beber água no rio."
+  local: "clareira_das_perguntas"
+  local_desc: "Uma trilha estreita onde só passa um de cada vez."
+  virtude: "cortesia"
+  artefato: "5 Brinquedos (animais ou carrinhos) fazendo fila."
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-009", gancho: "Tiramos a comida do celeiro. Agora os animais fizeram fila para comer."}
+  proximo: {licao_id: "MV-S-011", gancho: "A fila andou... e completamos as duas mãos! O Dez vem aí."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min"
+  materiais:
+    - {item: "5 Bichinhos de pelúcia ou bonecos diferentes", qtd: 5, alt: "Carrinhos, Pedras pintadas", essencial: true}
+    - {item: "Um pote de 'água' ou 'comida' no final da fila", qtd: 1, alt: null, essencial: true}
+    - {item: "Fita ou corda para marcar a 'Trilha'", qtd: 1, alt: null, essencial: true}
+    - {item: "Card: CELESTE", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "Ordinais são confusos porque mudam com a direção. Defina claramente ONDE COMEÇA a fila (o pote de comida)."
+  filho_descobre: "Que 'Primeiro' é quem chega antes. Que 'Último' é quem chega no fim."
+  nota_graca: "Faça corridas divertidas. Quem chegou em primeiro? Quem foi o último?"
+
+ritual_abertura:
+  instrucao_ambiente: "Arrume a fila de bichos no chão, virados para o pote."
+  transicao_reino: "Olha lá na trilha... Celeste está organizando o trânsito!"
+  fala_portador: {tom: "animado", script: "Bip Bip! Sai da frente! Todo mundo quer beber água."}
+  card_guardiao: "CARD: CELESTE (Raposa)"
+  fala_guardiao: {tom: "autoritário e gentil", script: "Calma, pessoal! Um de cada vez. A fila é justa. Quem é o PRIMEIRO?"}
+
+jornada:
+  abertura_sensorial: "Aponte para o pote. 'Aqui é a chegada'. Quem está com o focinho no pote?"
+  
+  concreto:
+    desc: "A Fila da Água."
+    card_objeto: "FILA DE BICHOS"
+    passos:
+      - {n: 1, acao: "Aponte o 1º bicho.", fala: "Quem está bebendo agora? O Urso. Ele é o PRIMEIRO (1º)."}
+      - {n: 2, acao: "Aponte o 2º.", fala: "Quem vem logo atrás? A Raposa. Ela é a SEGUNDA (2ª)."}
+      - {n: 3, acao: "Continue até o 5º.", fala: "Terceiro... Quarto... e o Tatu é o QUINTO (5º)."}
+      - {n: 4, acao: "Mude a fila.", fala: "Opa! O Tatu correu lá pra frente! Agora quem é o Primeiro?"}
+      - {n: 5, acao: "Pergunte pela posição.", fala: "Onde está a Raposa? Em Segundo!"}
+    tempo: "80%+ (Manipulação e Reordenamento)"
+    adaptacao_bernardo: "Coloque fitas numeradas no chão (1, 2, 3) para a criança estacionar os bichos em cima."
+    
+  pictorico: {status: VETADO, motivo: "Sementes = Concreto."}
+  
+  abstrato:
+    desc: "Nomeando Posições."
+    card: "CARDS 1º, 2º, 3º (Símbolos)"
+    passos:
+      - {acao: "Mostre o símbolo ordinals (º).", fala: "Essa bolinha pequena (º) é a coroa do número. Transforma 'Um' em 'Primeiro'."}
+    nota: "Intro visual leve."
+    
+  extensao:
+    titulo: "A Corrida da Sala"
+    desc: "Aposte corrida com a criança."
+    sugestoes: ["Corram até a porta!", "Você chegou em PRIMEIRO! Eu cheguei em SEGUNDO."]
+
+narracao:
+  instrucao: "Sentem-se. Bebam água também."
+  pergunta_principal: "Quem foi o primeiro a beber água na nossa história?"
+  perguntas_coracao: ["É difícil esperar na fila?", "Você prefere ser o primeiro ou o último?", "O último também bebe água no final?"]
+  nota_cm: "Reflexão moral sobre justiça e ordem."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "feliz", script: "Todos beberam. Todos estão felizes. A ordem traz paz."}
+  fio_ouro: "Agora que todos estão fortes... vamos olhar para nossas mãos. Dez dedos! Amanhã é dia de festa!"
+  transicao_volta: "Desfaça a fila. Guarde os bichos na caixa (dormitório)."
+
+catedra_pais:
+  metodo_cpa: "Ordinais dependem de referencial. Ensine 'frente' e 'trás' com o próprio corpo da criança na fila."
+  principio_cm: "A Vida é um Serviço. 'Os últimos serão os primeiros'. Em casa, servimos os outros antes de nós mesmos."
+  reflexao_espiritual: "Jesus lavou os pés dos discípulos. O Líder (Primeiro) serviu a todos."
+  nota_graca: "Em jogos, ganhar (Primeiro) é legal, mas 'saber perder' (Segundo) é a lição de caráter."
+
+sugestoes:
+  - {guardiao: Celeste, emoji: "🦊", dica: "Use carrinhos. Corridas são o melhor jeito de ensinar ordinais.", sugestao: "Pista de corrida no tapete."}
+  - {guardiao: Melquior, emoji: "🦁", dica: "Na hora de comer, quem é servido primeiro? A mãe? O pai? O bebê?", sugestao: "Observem a 'fila' do jantar."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["Ela entendeu onde começa a fila?", "Confundiu 'dois' com 'segundo'?", "Aceitou bem quem era o último?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]

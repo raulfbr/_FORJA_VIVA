@@ -1,849 +1,265 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matemática Viva | Pioneiros</title>
-    <meta name="description"
-        content="O currículo de matemática que faltava para famílias Charlotte Mason. Aberto no Saber, Premium na Experiência.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <title>Forja Viva — Dashboard Sementes</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root {
-            --forest-deep: #1A2F23;
-            --forest-green: #2D5A3D;
-            --warm-cream: #FFFBF5;
-            --old-gold: #D4A84B;
-            --gold-light: #F5E6C8;
-            --deep-brown: #3D2B1F;
-            --soft-sage: #8BA888;
-            --text-primary: #1A1A1A;
-            --text-secondary: #5A5A5A;
-            --gradient-hero: linear-gradient(165deg, #0D1F15 0%, #1A3525 50%, #2D5A3D 100%);
-            --gradient-gold: linear-gradient(135deg, #D4A84B 0%, #B8923C 100%);
-            --shadow-soft: 0 4px 30px rgba(0, 0, 0, 0.08);
-            --shadow-gold: 0 8px 30px rgba(212, 168, 75, 0.25);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--warm-cream);
-            color: var(--text-primary);
-            line-height: 1.7;
-            font-weight: 400;
-        }
-
-        .serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        /* === NAVIGATION === */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 20px 40px;
+        body { background-color: #f4f4f9; color: #333; font-family: 'Georgia', serif; }
+        .dashboard-container { max-width: 900px; margin: 40px auto; padding: 20px; }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 40px; font-size: 2.5em; }
+        .lesson-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .lesson-card { 
+            background: white; 
+            border-radius: 12px; 
+            padding: 20px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 5px solid #ddd;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
-            background: rgba(26, 47, 35, 0.95);
-            backdrop-filter: blur(20px);
         }
-
-        .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--old-gold);
-            letter-spacing: 2px;
-        }
-
-        .nav-cta {
-            background: transparent;
-            border: 1px solid var(--old-gold);
-            color: var(--old-gold);
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            letter-spacing: 1px;
-        }
-
-        .nav-cta:hover {
-            background: var(--old-gold);
-            color: var(--forest-deep);
-        }
-
-        /* === HERO SECTION === */
-        .hero {
-            background: var(--gradient-hero);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 120px 20px 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at 30% 20%, rgba(212, 168, 75, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 80%, rgba(212, 168, 75, 0.05) 0%, transparent 50%);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(212, 168, 75, 0.15);
-            border: 1px solid rgba(212, 168, 75, 0.4);
-            color: var(--old-gold);
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .badge::before {
-            content: '✦';
-        }
-
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 500;
-            margin-bottom: 24px;
-            line-height: 1.15;
-            letter-spacing: -1px;
-        }
-
-        .hero h1 .highlight {
-            color: var(--old-gold);
-            font-style: italic;
-        }
-
-        .hero .subtitle {
-            font-size: 1.15rem;
-            opacity: 0.85;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            font-weight: 300;
-            line-height: 1.8;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--gradient-gold);
-            color: var(--forest-deep);
-            padding: 18px 40px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.4s ease;
-            box-shadow: var(--shadow-gold);
-            letter-spacing: 0.5px;
-        }
-
-        .hero-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(212, 168, 75, 0.35);
-        }
-
-        .hero-cta::after {
-            content: '→';
-            transition: transform 0.3s ease;
-        }
-
-        .hero-cta:hover::after {
-            transform: translateX(4px);
-        }
-
-        /* === SECTION STYLES === */
-        section {
-            padding: 100px 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--forest-green);
-            margin-bottom: 16px;
-        }
-
-        .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--forest-deep);
-            margin-bottom: 20px;
-            font-weight: 500;
-            line-height: 1.2;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            line-height: 1.8;
-        }
-
-        /* === GAP SECTION === */
-        .gap-section {
-            background: white;
-        }
-
-        .gap-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .gap-card {
-            padding: 40px;
-            border-radius: 20px;
-        }
-
-        .gap-card.problem {
-            background: linear-gradient(135deg, #FFF5F5 0%, #FFEBEE 100%);
-            border: 1px solid rgba(229, 115, 115, 0.2);
-        }
-
-        .gap-card.solution {
-            background: linear-gradient(135deg, #F1F8E9 0%, #E8F5E9 100%);
-            border: 1px solid rgba(139, 168, 136, 0.3);
-        }
-
-        .gap-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .gap-card.problem h3 {
-            color: #C62828;
-        }
-
-        .gap-card.solution h3 {
-            color: var(--forest-green);
-        }
-
-        .gap-card p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-
-        /* === TRIADE SECTION === */
-        .triade-section {
-            background: var(--warm-cream);
-        }
-
-        .triade-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .triade-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: var(--shadow-soft);
-            transition: all 0.4s ease;
-            border: 1px solid rgba(0, 0, 0, 0.04);
-        }
-
-        .triade-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-        }
-
-        .triade-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin: 0 auto 24px;
-        }
-
-        .triade-card:nth-child(1) .triade-icon {
-            background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
-        }
-
-        .triade-card:nth-child(2) .triade-icon {
-            background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
-        }
-
-        .triade-card:nth-child(3) .triade-icon {
-            background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
-        }
-
-        .triade-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
-            color: var(--forest-deep);
-            margin-bottom: 12px;
-        }
-
-        .triade-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* === GUARDIOES SECTION === */
-        .guardioes-section {
-            background: var(--gradient-hero);
-            color: white;
-            text-align: center;
-        }
-
-        .guardioes-section .section-label {
-            color: var(--old-gold);
-        }
-
-        .guardioes-section .section-title {
-            color: white;
-        }
-
-        .guardioes-section .section-subtitle {
-            color: rgba(255, 255, 255, 0.7);
-            margin: 0 auto;
-        }
-
-        .guardioes-grid {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-top: 60px;
-            flex-wrap: wrap;
-        }
-
-        .guardiao-item {
-            text-align: center;
-            padding: 30px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            transition: all 0.4s ease;
-            width: 160px;
-        }
-
-        .guardiao-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .guardiao-item img {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 16px;
-            border: 3px solid var(--old-gold);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .guardiao-item h4 {
-            color: var(--old-gold);
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            margin-bottom: 4px;
-        }
-
-        .guardiao-item p {
-            font-size: 0.85rem;
-            opacity: 0.7;
-            font-weight: 300;
-        }
-
-        /* === PRICING SECTION === */
-        .pricing-section {
-            background: white;
-            text-align: center;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            max-width: 800px;
-            margin: 60px auto 0;
-        }
-
-        .pricing-card {
-            background: var(--warm-cream);
-            border-radius: 24px;
-            padding: 50px 40px;
-            text-align: center;
-            position: relative;
-            border: 2px solid transparent;
-            transition: all 0.4s ease;
-        }
-
-        .pricing-card.featured {
-            border-color: var(--old-gold);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .pricing-card.featured::before {
-            content: '✦ PIONEIROS';
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gradient-gold);
-            color: var(--forest-deep);
-            padding: 8px 24px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        .pricing-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            color: var(--forest-deep);
-            margin-bottom: 8px;
-        }
-
-        .price {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--forest-deep);
-            margin: 24px 0;
-            line-height: 1;
-        }
-
-        .price-original {
-            font-size: 1.1rem;
-            color: #999;
-            text-decoration: line-through;
-            font-weight: 400;
-        }
-
-        .price-note {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-        }
-
-        .pricing-features {
-            list-style: none;
-            text-align: left;
-            margin: 30px 0;
-        }
-
-        .pricing-features li {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--text-secondary);
-        }
-
-        .pricing-features li::before {
-            content: '✓';
-            color: var(--forest-green);
+        .lesson-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .lesson-card.melquior { border-color: #D4A017; }
+        .lesson-card.celeste { border-color: #FF6B35; }
+        .lesson-card.bernardo { border-color: #8B4513; }
+        .lesson-card.noe { border-color: #483D8B; }
+        .lesson-card.iris { border-color: #9B59B6; }
+        
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .lesson-id { font-weight: bold; color: #7f8c8d; font-size: 0.85em; }
+        .guardian-emoji { font-size: 1.5em; }
+        
+        .lesson-title { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: #2c3e50; }
+        .lesson-hook { font-size: 0.9em; color: #555; font-style: italic; margin-bottom: 20px; flex-grow: 1; }
+        
+        .btn-view { 
+            display: block; 
+            text-align: center; 
+            background: #2c3e50; 
+            color: white; 
+            text-decoration: none; 
+            padding: 10px; 
+            border-radius: 6px; 
             font-weight: bold;
-            font-size: 1.1rem;
+            transition: background 0.2s;
         }
-
-        .btn-pricing {
-            display: block;
-            width: 100%;
-            padding: 18px;
-            border: none;
-            border-radius: 50px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            text-decoration: none;
-            text-align: center;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-primary {
-            background: var(--gradient-gold);
-            color: var(--forest-deep);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(212, 168, 75, 0.4);
-        }
-
-        .btn-secondary {
-            background: var(--forest-green);
-            color: white;
-        }
-
-        .btn-secondary:hover {
-            background: var(--forest-deep);
-        }
-
-        /* === FAQ SECTION === */
-        .faq-section {
-            background: var(--warm-cream);
-        }
-
-        .faq-grid {
-            margin-top: 60px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .faq-item {
-            background: white;
-            border-radius: 16px;
-            margin-bottom: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow-soft);
-        }
-
-        .faq-question {
-            padding: 24px 30px;
-            font-weight: 600;
-            color: var(--forest-deep);
-            font-size: 1.05rem;
-        }
-
-        .faq-answer {
-            padding: 0 30px 24px;
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-
-        /* === CTA SECTION === */
-        .cta-section {
-            background: white;
-            text-align: center;
-            padding: 120px 20px;
-        }
-
-        .cta-section .section-title {
-            margin-bottom: 16px;
-        }
-
-        .cta-section .section-subtitle {
-            margin: 0 auto 40px;
-        }
-
-        /* === FOOTER === */
-        footer {
-            background: var(--forest-deep);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        footer .logo {
-            margin-bottom: 20px;
-        }
-
-        footer p {
-            opacity: 0.6;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-        }
-
-        footer .license {
-            font-size: 0.8rem;
-            opacity: 0.4;
-            margin-top: 20px;
-        }
-
-        /* === RESPONSIVE === */
-        @media (max-width: 768px) {
-            nav {
-                padding: 15px 20px;
-            }
-
-            .hero {
-                padding: 100px 20px 60px;
-            }
-
-            .gap-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .triade-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .guardioes-grid {
-                gap: 16px;
-            }
-
-            .guardiao-item {
-                width: 140px;
-                padding: 20px 15px;
-            }
-
-            .guardiao-item img {
-                width: 70px;
-                height: 70px;
-            }
-        }
+        .btn-view:hover { background: #34495e; }
+        
+        /* Stats */
+        .stats { text-align: center; margin-bottom: 30px; color: #7f8c8d; }
     </style>
 </head>
-
 <body>
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="logo">MATEMÁTICA VIVA</div>
-        <a href="#pricing" class="nav-cta">SEJA PIONEIRO</a>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <span class="badge">Famílias Pioneiras</span>
-            <h1>O Currículo de Matemática<br>que <span class="highlight">Faltava</span></h1>
-            <p class="subtitle">Charlotte Mason encontra Singapura Math. Narrativa encontra Rigor. Tudo isso com 5
-                minutos de preparo diário.</p>
-            <a href="#pricing" class="hero-cta">Quero Ser Pioneiro</a>
+    <div class="dashboard-container">
+        <h1>🌱 Ciclo Sementes</h1>
+        
+        <div class="stats">
+            <p><strong>18</strong> Lições Prontas • Última atualização: 14/01/2026 15:40</p>
         </div>
-    </section>
 
-    <!-- GAP -->
-    <section class="gap-section">
-        <div class="container">
-            <span class="section-label">O Desafio</span>
-            <h2 class="section-title">O Gap que Você Conhece</h2>
-            <p class="section-subtitle">Famílias Charlotte Mason enfrentam um vazio na matemática. Até agora.</p>
-
-            <div class="gap-grid">
-                <div class="gap-card problem">
-                    <h3>😕 O Problema</h3>
-                    <p>Você investiu em Charlotte Mason. Os materiais são genéricos, secos, sem a <strong>alma</strong>
-                        que você busca. A matemática virou um fardo.</p>
-                </div>
-
-                <div class="gap-card solution">
-                    <h3>✨ A Solução</h3>
-                    <p><strong>Matemática Viva</strong> preenche esse gap. É o currículo K-12 que une CM, CPA Singapura
-                        e TGTB — envolvido por uma narrativa que encanta.</p>
-                </div>
-            </div>
+        <div class="lesson-grid">
+            
+    <div class="lesson-card melquior">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-000</span>
+            <span class="guardian-emoji" title="Melquior">🦁</span>
         </div>
-    </section>
+        <div class="lesson-title">O Início de Tudo</div>
+        <div class="lesson-hook">"Os Números são Pensamentos do Rei — cada um, uma palavra sagrada."</div>
+        <a href="sementes/000_INICIO_FORJA.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
 
-    <!-- TRIADE -->
-    <section class="triade-section">
-        <div class="container" style="text-align: center;">
-            <span class="section-label">Fundamentos</span>
-            <h2 class="section-title">A Tríade Pedagógica</h2>
-            <p class="section-subtitle" style="margin: 0 auto;">Três pilares que garantem profundidade sem
-                sobrecarregar.</p>
-
-            <div class="triade-grid">
-                <div class="triade-card">
-                    <div class="triade-icon">🎓</div>
-                    <h3>Charlotte Mason</h3>
-                    <p>Lições curtas de 15-20 min. Narração. Hábito da Atenção. Crianças são pessoas.</p>
-                </div>
-                <div class="triade-card">
-                    <div class="triade-icon">🧱</div>
-                    <h3>Singapura CPA</h3>
-                    <p>Concreto → Pictórico → Abstrato. Materiais de casa. Feijões, botões, pedras.</p>
-                </div>
-                <div class="triade-card">
-                    <div class="triade-icon">📚</div>
-                    <h3>TGTB Structure</h3>
-                    <p>Scope & Sequence testado. 121 lições por fase. Progressão clara e consistente.</p>
-                </div>
-            </div>
+    <div class="lesson-card melquior">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-000</span>
+            <span class="guardian-emoji" title="Melquior">🦁</span>
         </div>
-    </section>
+        <div class="lesson-title">O Portal: O Convite do Rei</div>
+        <div class="lesson-hook">"O Reino Contado abre suas portas para quem tem olhos de ver."</div>
+        <a href="sementes/000_O_PORTAL.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
 
-    <!-- GUARDIOES -->
-    <section class="guardioes-section">
-        <div class="container">
-            <span class="section-label">Os Personagens</span>
-            <h2 class="section-title">Os 5 Guardiões do Reino</h2>
-            <p class="section-subtitle">Companheiros que acompanham seu filho de 5 a 18 anos, crescendo junto.</p>
-
-            <div class="guardioes-grid">
-                <div class="guardiao-item">
-                    <img src="assets/img/melquior-leao.webp" alt="Melquior, o Leão">
-                    <h4>Melquior</h4>
-                    <p>O Logos</p>
-                </div>
-                <div class="guardiao-item">
-                    <img src="assets/img/noe-coruja.webp" alt="Noé, a Coruja">
-                    <h4>Noé</h4>
-                    <p>O Tempo</p>
-                </div>
-                <div class="guardiao-item">
-                    <img src="assets/img/celeste-raposa.webp" alt="Celeste, a Raposa">
-                    <h4>Celeste</h4>
-                    <p>O Espaço</p>
-                </div>
-                <div class="guardiao-item">
-                    <img src="assets/img/bernardo-urso.webp" alt="Bernardo, o Urso">
-                    <h4>Bernardo</h4>
-                    <p>A Massa</p>
-                </div>
-                <div class="guardiao-item">
-                    <img src="assets/img/iris-passarinho-colar.webp" alt="Íris, o Pássaro">
-                    <h4>Íris</h4>
-                    <p>A Atenção</p>
-                </div>
-            </div>
+    <div class="lesson-card celeste">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-001</span>
+            <span class="guardian-emoji" title="Celeste">🦊</span>
         </div>
-    </section>
+        <div class="lesson-title">A Trindade na Palma</div>
+        <div class="lesson-hook">"Três sementes de carvalho — cada uma é uma promessa do Rei."</div>
+        <a href="sementes/001_TRINDADE_NA_PALMA.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
 
-    <!-- PRICING -->
-    <section class="pricing-section" id="pricing">
-        <div class="container">
-            <span class="section-label">Investimento</span>
-            <h2 class="section-title">Seja um Pioneiro</h2>
-            <p class="section-subtitle" style="margin: 0 auto;">Famílias que entram agora ajudam a moldar o projeto e
-                têm acesso vitalício.</p>
-
-            <div class="pricing-grid">
-                <div class="pricing-card featured">
-                    <h3>Pioneiro</h3>
-                    <div class="price-original">R$ 2.397</div>
-                    <div class="price">R$ 1.197</div>
-                    <div class="price-note">Por Família • Acesso Vitalício</div>
-                    <ul class="pricing-features">
-                        <li>Currículo completo K-12</li>
-                        <li>Comunidade WhatsApp exclusiva</li>
-                        <li>Acesso direto ao Maestro</li>
-                        <li>Participação na co-criação</li>
-                        <li>Atualizações vitalícias</li>
-                    </ul>
-                    <a href="#" class="btn-pricing btn-primary">Quero Ser Pioneiro</a>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Mentoria</h3>
-                    <div class="price">R$ 4.397</div>
-                    <div class="price-note">10 Vagas • Entrevista Prévia</div>
-                    <ul class="pricing-features">
-                        <li>Tudo do Pioneiro</li>
-                        <li>4 encontros ao vivo</li>
-                        <li>Maestro + Marina (pedagoga)</li>
-                        <li>Acompanhamento personalizado</li>
-                        <li>Mapeamento individual</li>
-                    </ul>
-                    <a href="#" class="btn-pricing btn-secondary">Aplicar para Mentoria</a>
-                </div>
-            </div>
+    <div class="lesson-card celeste">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-001</span>
+            <span class="guardian-emoji" title="Celeste">🦊</span>
         </div>
-    </section>
+        <div class="lesson-title">A Trindade na Palma</div>
+        <div class="lesson-hook">"Três sementes de carvalho encontradas pela Raposa: uma para cada promessa do Rei."</div>
+        <a href="sementes/001_TRINDADE_PALMA.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
 
-    <!-- FAQ -->
-    <section class="faq-section">
-        <div class="container" style="text-align: center;">
-            <span class="section-label">Dúvidas</span>
-            <h2 class="section-title">Perguntas Frequentes</h2>
-
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">Preciso ter experiência com Charlotte Mason?</div>
-                    <div class="faq-answer">Não! O currículo é autocontido. Mas se você já conhece CM, vai se sentir em
-                        casa.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Quanto tempo de preparo por dia?</div>
-                    <div class="faq-answer">No máximo 5 minutos. Usamos materiais de casa (feijões, botões, pedras).
-                        Nada para comprar.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">A criança usa tela?</div>
-                    <div class="faq-answer">Até 10 anos, a recomendação é zero tela. O pai/mãe usa o material digital
-                        como roteiro.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">O preço é por criança ou por família?</div>
-                    <div class="faq-answer">Por família! Valorizamos famílias com mais filhos. Use com todos os seus
-                        pequenos.</div>
-                </div>
-            </div>
+    <div class="lesson-card bernardo">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-002</span>
+            <span class="guardian-emoji" title="Bernardo">🐻</span>
         </div>
-    </section>
+        <div class="lesson-title">As Pedras da Fortaleza</div>
+        <div class="lesson-hook">"O Urso Bernardo precisa organizar as pedras pesadas em fileiras perfeitas para construir seu muro."</div>
+        <a href="sementes/002_AS_PEDRAS_DA_FORTALEZA.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <span class="section-label">Próximo Passo</span>
-            <h2 class="section-title">Pronto para Começar?</h2>
-            <p class="section-subtitle">Junte-se às famílias pioneiras que estão moldando o futuro da educação
-                matemática no Brasil.</p>
-            <a href="#pricing" class="hero-cta">Quero Ser Pioneiro</a>
+    <div class="lesson-card iris">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-003</span>
+            <span class="guardian-emoji" title="Íris">🐦</span>
         </div>
-    </section>
+        <div class="lesson-title">A Estrela do Reino</div>
+        <div class="lesson-hook">"A Pequena Pardal avista do alto uma flor roxa de cinco pontas."</div>
+        <a href="sementes/003_A_ESTRELA_DO_REINO.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="logo">MATEMÁTICA VIVA</div>
-        <p>Família Rodrigues</p>
-        <p class="license">Conteúdo sob licença CC BY 4.0 — Aberto no Saber, Premium na Experiência.</p>
-    </footer>
+    <div class="lesson-card noe">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-004</span>
+            <span class="guardian-emoji" title="Noé">🦉</span>
+        </div>
+        <div class="lesson-title">O Ritmo do Criador</div>
+        <div class="lesson-hook">"A luz primeiro, depois o despertar. Tudo tem sua hora certa de acontecer."</div>
+        <a href="sementes/004_O_RITMO_DO_CRIADOR.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+
+    <div class="lesson-card celeste">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-005</span>
+            <span class="guardian-emoji" title="Celeste">🦊</span>
+        </div>
+        <div class="lesson-title">O Esconderijo da Glória</div>
+        <div class="lesson-hook">"Saber quem se esconde atrás da rocha e quem brilha acima das nuvens."</div>
+        <a href="sementes/005_PALAVRAS_DE_POSICAO.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+
+    <div class="lesson-card iris">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-006</span>
+            <span class="guardian-emoji" title="Íris">🐦</span>
+        </div>
+        <div class="lesson-title">O Desenho do Rei</div>
+        <div class="lesson-hook">"Sentir a curva perfeita do algarismo como se fosse o rastro de beleza na areia."</div>
+        <a href="sementes/006_PRATICA_DE_NUMEROS.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+
+    <div class="lesson-card celeste">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-007</span>
+            <span class="guardian-emoji" title="Celeste">🦊</span>
+        </div>
+        <div class="lesson-title">A Coroa da Semana</div>
+        <div class="lesson-hook">"Sete cores no arco-íris e seis lados no favo de mel. A Vastidão tem geometria."</div>
+        <a href="sementes/007_NUMEROS_6_E_7.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+
+    <div class="lesson-card iris">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-008</span>
+            <span class="guardian-emoji" title="Íris">🐦</span>
+        </div>
+        <div class="lesson-title">O Par Perfeito</div>
+        <div class="lesson-hook">"Cada tesouro encontra seu lugar de repouso. A paz de encaixar."</div>
+        <a href="sementes/008_O_PAR_PERFEITO.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+
+    <div class="lesson-card noe">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-009</span>
+            <span class="guardian-emoji" title="Noé">🦉</span>
+        </div>
+        <div class="lesson-title">O Celeiro de Noé</div>
+        <div class="lesson-hook">"Oito fardos para o inverno, nove sementes para a primavera. A contagem da provisão."</div>
+        <a href="sementes/009_O_CELEIRO_DE_NOE.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+
+    <div class="lesson-card celeste">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-010</span>
+            <span class="guardian-emoji" title="Celeste">🦊</span>
+        </div>
+        <div class="lesson-title">A Fila da Providência</div>
+        <div class="lesson-hook">"O primeiro a colher e o terceiro a agradecer. Existe uma ordem na fila."</div>
+        <a href="sementes/010_A_FILA_DA_PROVIDENCIA.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+
+    <div class="lesson-card celeste">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-011</span>
+            <span class="guardian-emoji" title="Celeste">🦊</span>
+        </div>
+        <div class="lesson-title">A Plenitude das Mãos</div>
+        <div class="lesson-hook">"Dez dedos para abraçar o mundo e um a mais para apontar para o céu."</div>
+        <a href="sementes/011_A_PLENITUDE_DAS_MAOS.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+
+    <div class="lesson-card bernardo">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-012</span>
+            <span class="guardian-emoji" title="Bernardo">🐻</span>
+        </div>
+        <div class="lesson-title">O Segredo do Feixe</div>
+        <div class="lesson-hook">"Ver dez gravetos virarem UM grupo forte nas mãos do Urso que abraça."</div>
+        <a href="sementes/012_O_SEGREDO_DO_FEIXE.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+
+    <div class="lesson-card melquior">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-013</span>
+            <span class="guardian-emoji" title="Melquior">🦁</span>
+        </div>
+        <div class="lesson-title">O Rio que se Une</div>
+        <div class="lesson-hook">"Dois riachos que viram um só. A força da união tem um nome: Mais."</div>
+        <a href="sementes/013_O_RIO_QUE_SE_UNE.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+
+    <div class="lesson-card bernardo">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-014</span>
+            <span class="guardian-emoji" title="Bernardo">🐻</span>
+        </div>
+        <div class="lesson-title">O Celeiro que Cresce</div>
+        <div class="lesson-hook">"Mais feixes de força para sustentar a Vila. O trabalho do Construtor se multiplica."</div>
+        <a href="sementes/014_O_CELEIRO_QUE_CRESCE.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+
+    <div class="lesson-card melquior">
+        <div class="card-header">
+            <span class="lesson-id">MV-S-015</span>
+            <span class="guardian-emoji" title="Melquior">🦁</span>
+        </div>
+        <div class="lesson-title">A Escada de Luz</div>
+        <div class="lesson-hook">"Contemplar os trinta passos que já demos. Do alto, a vista é mais bonita."</div>
+        <a href="sementes/015_A_ESCADA_DE_LUZ.html" class="btn-view">Ver Lição →</a>
+    </div>
+    
+        </div>
+    </div>
 </body>
-
 </html>

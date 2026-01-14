@@ -1,0 +1,113 @@
+# LIÇÃO 005 — O ESCONDERIJO DA RAPOSA (Posição Espacial)
+# id: MV-S-005
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-005
+titulo: "O Esconderijo da Glória"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Celeste
+guardiao_secundario: Íris
+tgtb_ref: "000-L5 - Position Words"
+status: final
+
+ideia_viva:
+  frase: "Saber quem se esconde atrás da rocha e quem brilha acima das nuvens."
+  conceito: "Posição Espacial: Acima/Abaixo, Dentro/Fora, Frente/Atrás."
+  intencao_cm: "Observação Espacial. A criança aprende a situar-se no mundo de Deus."
+
+atmosfera:
+  clima: "ventoso"
+  clima_desc: "O vento balança as copas das árvores. Folhas dançam no ar. Dia perfeito para brincar."
+  local: "clareira_das_perguntas"
+  local_desc: "A Clareira está cheia de esconderijos. Tocos, pedras e arbustos."
+  virtude: "alegria"
+  artefato: "Um bicho de pelúcia (ou boneco) para ser a 'Raposa'."
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-004", gancho: "Noé nos ensinou o 'quando'. Agora Celeste quer brincar de 'onde'."}
+  proximo: {licao_id: "MV-S-006", gancho: "Tanto correr cansou... Íris nos convida para desenhar na areia amanhã."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "2 min"
+  materiais:
+    - {item: "Bicho de pelúcia ou boneco pequeno", qtd: 1, alt: "A própria mão fazendo 'conchinha'", essencial: true}
+    - {item: "Uma caixa ou cesto", qtd: 1, alt: "Panela", essencial: true}
+    - {item: "Uma cadeira", qtd: 1, alt: null, essencial: true}
+    - {item: "Card: CELESTE", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "Posição se aprende com o corpo, não com desenho no papel. Deixe a criança se mexer!"
+  filho_descobre: "O significado real das palavras: 'Em cima' exige escalar, 'Embaixo' exige agachar."
+  nota_graca: "Sevirar bagunça, ótimo. A Raposa adora bagunça organizada."
+
+ritual_abertura:
+  instrucao_ambiente: "Coloque a caixa no centro. A cadeira ao lado. Esconda o bicho ('Raposa') atrás das costas."
+  transicao_reino: "Feche os olhos. Sinta o vento... Vuuuush! Segure o chapéu!"
+  fala_portador: {tom: "rápido e brincalhão", script: "Celeste sumiu! Onde será que ela foi?"}
+  card_guardiao: "CARD: CELESTE (Raposa)"
+  fala_guardiao: {tom: "risada marota", script: "Achou! Eu sou rápida como o pensamento. Vamos brincar de esconde-esconde?"}
+
+jornada:
+  abertura_sensorial: "Faça o boneco 'correr' pelo braço da criança até o ombro. 'Estou no alto!'"
+  
+  concreto:
+    desc: "O Grande Esconde-Esconde."
+    card_objeto: "BONECO (RAPOSA)"
+    passos:
+      - {n: 1, acao: "Coloque a Raposa EM CIMA da cadeira.", fala: "Onde ela está? Grite bem alto: EM CIMA!"}
+      - {n: 2, acao: "Coloque EMBAIXO da cadeira.", fala: "E agora? Ela foi para a toca... EMBAIXO!"}
+      - {n: 3, acao: "Coloque DENTRO da caixa.", fala: "Pulou! Agora ela está DENTRO."}
+      - {n: 4, acao: "Tire da caixa.", fala: "Saiu! Agora ela está FORA."}
+      - {n: 5, acao: "Peça para a criança esconder.", fala: "Agora é sua vez. Coloque a Raposa ATRÁS de você."}
+    tempo: "80%+ (Movimento corporal)"
+    adaptacao_bernardo: "Para cadeirantes, use uma caixa de sapatos no colo e brinquedos menores. O conceito espacial permanece."
+    
+  pictorico: {status: VETADO, motivo: "Espaço se aprende com 3D, não 2D nesta fase."}
+  
+  abstrato:
+    desc: "Comandos Rápidos (Simon Says)."
+    card: "CARD: BARALHO DE POSIÇÕES (Opcional)"
+    passos:
+      - {acao: "Dê comandos sem mover a Raposa.", fala: "Ponha a mão EM CIMA da cabeça!"}
+      - {acao: "Mais rápido.", fala: "Mão ATRÁS das costas! Mão DENTRO do bolso!"}
+    nota: "Oral e gestual."
+    
+  extensao:
+    titulo: "A Trilha de Obstáculos"
+    desc: "Passe POR BAIXO da mesa, POR CIMA da almofada."
+    sugestoes: ["Crie um circuito na sala.", "Celeste diz: 'Pule PARA DENTRO do arco!'"]
+
+narracao:
+  instrucao: "Sentem-se ofegantes e felizes."
+  pergunta_principal: "Quais lugares a Raposa visitou hoje?"
+  perguntas_coracao: ["É mais seguro ficar dentro ou fora da toca?", "Onde o passarinho dorme?", "Onde você guarda seu tesouro?"]
+  nota_cm: "A narração espacial ajuda a criar mapas mentais."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "sussurrado", script: "Shhh... o vento parou. A toca é quentinha. Bom descanso, Explorador."}
+  fio_ouro: "O chão da clareira tem marcas... Pegadas? Amanhã Íris vai nos ensinar a seguir rastros."
+  transicao_volta: "Respire fundo para acalmar o coração. A luz volta ao normal."
+
+catedra_pais:
+  metodo_cpa: "Concreto vivido com o corpo inteiro (Gross Motor Skills). A noção matemática de espaço nasce da propriocepção."
+  principio_cm: "Vida ao Ar Livre. Se puder fazer essa lição num parquinho (trepa-trepa, escorregador), é 100x melhor."
+  reflexao_espiritual: "Salmo 139: 'Se subo aos céus, lá estás; se faço a minha cama no abismo, lá estás também'. Deus preenche todo o espaço."
+  nota_graca: "Não coreografe demais. Deixe ser uma brincadeira. O riso fixa a memória."
+
+sugestoes:
+  - {guardiao: Celeste, emoji: "🦊", dica: "Use uma lanterna no escuro. A luz está no teto? No chão?", sugestao: "Brincadeira de sombras."}
+  - {guardiao: Íris, emoji: "🐦", dica: "Olhem para uma árvore. O que está NO ALTO? O que está EMBAIXO?", sugestao: "Observação de pássaros."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["A criança confundiu trás/frente?", "Se divertiu se mexendo?", "Qual foi o esconderijo favorito?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]

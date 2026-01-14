@@ -1,0 +1,111 @@
+# LIÇÃO 006 — O DESENHO DO REI (Prática Sensorial)
+# id: MV-S-006
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-006
+titulo: "O Desenho do Rei"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Íris
+guardiao_secundario: Bernardo
+tgtb_ref: "000-L6 - Number Practice"
+status: final
+
+ideia_viva:
+  frase: "Sentir a curva perfeita do algarismo como se fosse o rastro de beleza na areia."
+  conceito: "Formação de Números (1 a 5). Memória muscular e tátil."
+  intencao_cm: "Perfeição na Execução. 'Faça uma vez e faça bem feito'."
+
+atmosfera:
+  clima: "ensolarado"
+  clima_desc: "O sol está forte e dourado. A areia brilha. Ouve-se o som de água calma."
+  local: "jardim_central"
+  local_desc: "Um canto especial do jardim onde a terra é fofa e arenosa, perfeita para desenhar."
+  virtude: "atencao"
+  artefato: "Caixa de Areia (ou prato com fubá/sal)."
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-005", gancho: "A Raposa correu tanto que deixou rastro. Vamos aprender a deixar nosso rastro também?"}
+  proximo: {licao_id: "MV-S-007", gancho: "Desenhar é bom, mas Celeste quer caçar cores. Amanhã vamos procurar o arco-íris."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "3 min"
+  materiais:
+    - {item: "Prato ou bandeja com fubá, sal ou areia fina", qtd: 1, alt: "Tinta de dedo", essencial: true}
+    - {item: "Cards dos Números 1 a 5", qtd: 5, alt: null, essencial: true}
+    - {item: "Card: ÍRIS", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "Esquecer o lápis hoje. A criança precisa sentir a resistência da matéria. O dedo grava na mente o que o lápis apenas risca."
+  filho_descobre: "Que sua mão pode criar formas que significam coisas. O '3' não é só som, é desenho."
+  nota_graca: "Se sair torto, apague (balance a areia) e sorria. A areia perdoa tudo."
+
+ritual_abertura:
+  instrucao_ambiente: "Coloque a bandeja de areia no centro. Luz forte sobre ela."
+  transicao_reino: "Feche os olhos. Sinta o grãozinho de areia na ponta do dedo... áspero e pequeno."
+  fala_portador: {tom: "calmo e concentrado", script: "Íris pousou na areia. Ela está desenhando com a asa."}
+  card_guardiao: "CARD: ÍRIS (Pardal)"
+  fala_guardiao: {tom: "doce e encorajador", script: "Olhe bem... cada curva tem um segredo. Vamos desenhar os nomes dos nossos amigos números?"}
+
+jornada:
+  abertura_sensorial: "Deixe a criança brincar na areia livremente por 1 minuto. Sentir a textura."
+  
+  concreto:
+    desc: "Escrita Tátil na Areia."
+    card_objeto: "BANDEJA DE AREIA"
+    passos:
+      - {n: 1, acao: "Mostre o Card do 1.", fala: "O Um é uma flecha para o céu. (Trace na areia)."}
+      - {n: 2, acao: "Apague (balance). Mostre o 2.", fala: "O Dois é um pescoço de cisne. Curva... e desliza. (Trace)."}
+      - {n: 3, acao: "Peça para a criança traçar o 3.", fala: "E o Três? Lembra da orelha de coelho? Tente você."}
+      - {n: 4, acao: "Continuem até o 5.", fala: "O Cinco tem chapéu, pescoço e barrignha!"}
+    tempo: "80%+ (Prática Motora)"
+    adaptacao_bernardo: "Se a criança não gosta de tocar na areia (tátil defensiva), use um pincel grosso ou vareta. Ou tinta dentro de um saco ziploc."
+    
+  pictorico: {status: VETADO, motivo: "Escrita sensorial é Concreto/Enativo."}
+  
+  abstrato:
+    desc: "Reconhecimento do Traço."
+    card: "CARDS 1-5"
+    passos:
+      - {acao: "Mostre um card rápido.", fala: "Qual número Íris desenhou?"}
+      - {acao: "Misture os cards.", fala: "Coloque na ordem 1, 2, 3, 4, 5."}
+    nota: "Visual apenas."
+    
+  extensao:
+    titulo: "Apagando Rastros"
+    desc: "Íris bate as asas."
+    sugestoes: ["Assopre a areia (devagar) para apagar o número.", "Brinquem de adivinhar: você desenha, ela adivinha."]
+
+narracao:
+  instrucao: "Limpe as mãos."
+  pergunta_principal: "Qual número foi mais gostoso de desenhar na areia?"
+  perguntas_coracao: ["A areia faz cócegas?", "O número 5 parece o que?", "O Íris gostou do seu desenho?"]
+  nota_cm: "Narração sensorial: 'Como era a areia?'"
+
+ritual_fechamento:
+  fala_guardiao: {tom: "suave", script: "Seu dedo é um pincel mágico. O Rei amou seus desenhos."}
+  fio_ouro: "Agora que sabemos escrever até 5... Celeste quer nos mostrar o 6 e o 7. Eles têm cores!"
+  transicao_volta: "Batam as mãos para limpar a 'areia mágica'. Volte para a sala."
+
+catedra_pais:
+  metodo_cpa: "Enativo (Bruner). O conhecimento é representado através da ação motora. Escrever na areia cria conexões neurais mais fortes que lápis."
+  principio_cm: "O Caminho da Vontade. A criança deve QUERER fazer o traço perfeito. A areia permite 'undo' infinito, reduzindo a frustração."
+  reflexao_espiritual: "Jesus escreveu na areia/chão (João 8). Escrever é um ato de autoridade e perdão."
+  nota_graca: "Não exija caligrafia perfeita. Exija INTENÇÃO perfeita."
+
+sugestoes:
+  - {guardiao: Íris, emoji: "🐦", dica: "Use fubá se tiver medo dela colocar na boca (bebês perto?).", sugestao: "Fubá é seguro e cheiroso."}
+  - {guardiao: Bernardo, emoji: "🐻", dica: "Bernardo tem pata grande. Se ela fizer números gigantes, tudo bem. É o começo.", sugestao: "Números grandes usam o braço todo (ombro), soltando a articulação."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["Qual número ela teve mais dificuldade motora?", "A experiência tátil foi positiva?", "Concentrou-se?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]

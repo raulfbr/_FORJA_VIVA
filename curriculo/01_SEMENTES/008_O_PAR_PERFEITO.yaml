@@ -1,0 +1,111 @@
+# LIÇÃO 008 — O PAR PERFEITO (Correspondência 1:1)
+# id: MV-S-008
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-008
+titulo: "O Par Perfeito"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Íris
+guardiao_secundario: Celeste
+tgtb_ref: "000-L8 - Matching: Part 1"
+status: final
+
+ideia_viva:
+  frase: "Cada tesouro encontra seu lugar de repouso. A paz de encaixar."
+  conceito: "Correspondência Um-a-Um (Matching). Noção de Par."
+  intencao_cm: "Hábito da Ordem e Relação. Cada coisa tem seu par na criação."
+
+atmosfera:
+  clima: "nublado"
+  clima_desc: "Nuvens fofas cobrem o sol. Luz suave e difusa, sem sombras fortes."
+  local: "ninho_mirante"
+  local_desc: "O ninho está cheio de objetos misturados. Íris precisa organizar tudo."
+  virtude: "ordem"
+  artefato: "Pares de meias coloridas (ou luvas)."
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-007", gancho: "Vimos as cores do arco-íris juntas. Mas Íris viu que algumas coisas gostam de andar de duas em duas."}
+  proximo: {licao_id: "MV-S-009", gancho: "Tudo arrumado! Agora podemos guardar a colheita no Celeiro de Noé."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min"
+  materiais:
+    - {item: "3 a 5 pares de meias diferentes (misturadas)", qtd: 6-10, alt: "Sapatos, Luvas ou Cartas de Memória", essencial: true}
+    - {item: "Pratos e Colheres (Matching de função)", qtd: 3 de cada, alt: null, essencial: true}
+    - {item: "Card: ÍRIS", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "Organizar pares é profundamente satisfatório para a criança. Acalma o caos mental."
+  filho_descobre: "Que 'um para um' é a base da contagem justa. Um prato para cada colher."
+  nota_graca: "Faça virar uma caça ao tesouro: 'Onde está o irmão desta meia?'"
+
+ritual_abertura:
+  instrucao_ambiente: "Jogue as meias misturadas no chão ('A bagunça do vento')."
+  transicao_reino: "O Vento da Raposa passou por aqui e bagunçou o Ninho da Íris!"
+  fala_portador: {tom: "preocupado e divertido", script: "Oh não! Íris não consegue achar seus sapatos!"}
+  card_guardiao: "CARD: ÍRIS (Pardal)"
+  fala_guardiao: {tom: "suave", script: "Tudo tem seu par, tudo tem seu lar. Me ajuda a encontrar a beleza da ordem?"}
+
+jornada:
+  abertura_sensorial: "Pegue uma meia. 'Sinta... é macia? Tem listras? Quem é igual a ela?'"
+  
+  concreto:
+    desc: "O Grande Encontro (Matching)."
+    card_objeto: "MEIAS MISTURADAS"
+    passos:
+      - {n: 1, acao: "Pegue uma meia vermelha (ex).", fala: "Esta meia está sozinha e triste. Vamos achar o par dela?"}
+      - {n: 2, acao: "A criança procura e junta.", fala: "Clic! Encaixou. Agora são um PAR."}
+      - {n: 3, acao: "Façam com todas.", fala: "Um par, dois pares... A bagunça virou ordem!"}
+      - {n: 4, acao: "Mude para Pratos e Colheres.", fala: "E agora? Não são iguais, mas trabalham juntos. Uma cama (prato) para cada colher."}
+    tempo: "80%+ (Manipulação e Classificação)"
+    adaptacao_bernardo: "Se for difícil achar no meio de muitas, comece com apenas 2 pares muito diferentes (preto e branco)."
+    
+  pictorico: {status: VETADO, motivo: "Sementes = Concreto."}
+  
+  abstrato:
+    desc: "Linhas Invisíveis."
+    card: "CARD: FLORES e ABELHAS (separados)"
+    passos:
+      - {acao: "Coloque 3 flores e 3 abelhas (brinquedos ou recortes).", fala: "Cada abelha quer uma flor. Tem flor para todo mundo?"}
+      - {acao: "Ligue com o dedo no ar.", fala: "Esta com esta. Esta com esta. Sobrou alguém? Não. Perfeito."}
+    nota: "Conceito de Bijeção (sem usar o nome)."
+    
+  extensao:
+    titulo: "A Dança dos Pares"
+    desc: "Dancem juntos de mãos dadas."
+    sugestoes: ["Eu sou seu par!", "Sapato combina com... Pé!", "Luva combina com... Mão!"]
+
+narracao:
+  instrucao: "Admire a pilha de pares arrumados."
+  pergunta_principal: "Como o Ninho ficou depois que a gente arrumou?"
+  perguntas_coracao: ["A meia ficou feliz de achar o irmão?", "O que acontece se uma colher ficar sem prato?", "Você gosta de arrumar suas coisas?"]
+  nota_cm: "Sensação de dever cumprido."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "grato", script: "A paz voltou ao Ninho. Obrigado, Organizador."}
+  fio_ouro: "Agora que está tudo organizado, Noé pode guardar os mantimentos. Oito sacos de trigo!"
+  transicao_volta: "Dobre as meias juntas e guarde. A lição termina com a ordem real da casa."
+
+catedra_pais:
+  metodo_cpa: "Correspondência um-a-um é mais fundamental que contar. Antes de saber que '5=5', a criança precisa saber que '5 pratos = 5 colheres'."
+  principio_cm: "Educação é uma disciplina. O hábito de parear e organizar reflete na mente."
+  reflexao_espiritual: "Deus fez os animais entrarem na Arca... de dois em dois (Genesis 6). O Par é proteção e vida."
+  nota_graca: "Meias perdidas são um mistério do universo. Ria disso."
+
+sugestoes:
+  - {guardiao: Íris, emoji: "🐦", dica: "Use a hora de dobrar roupa da família como lição de matemática.", sugestao: "Lição viva no dia a dia."}
+  - {guardiao: Celeste, emoji: "🦊", dica: "Experimente parear coisas absurdas. 'A panela combina com... o travesseiro?'", sugestao: "Risadas."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["Ela entendeu o conceito 'igual'?", "Entendeu o conceito 'correspondente' (prato/colher)?", "Gostou de organizar?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]

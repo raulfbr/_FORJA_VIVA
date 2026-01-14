@@ -1,0 +1,113 @@
+# LIÇÃO 007 — A COROA DA SEMANA (Números 6 e 7)
+# id: MV-S-007
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-007
+titulo: "A Coroa da Semana"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Celeste
+guardiao_secundario: Noé
+tgtb_ref: "000-L7 - Numbers 6 to 7"
+status: final
+
+ideia_viva:
+  frase: "Sete cores no arco-íris e seis lados no favo de mel. A Vastidão tem geometria."
+  conceito: "Números 6 (Hexágono/Meia Dúzia) e 7 (Semana/Perfeição). Contagem até 7."
+  intencao_cm: "Apreciação da Beleza Matemática na Natureza (Favo e Arco-íris)."
+
+atmosfera:
+  clima: "chuvoso"
+  clima_desc: "Choveu lá fora, mas agora o sol rompeu as nuvens. O ar está limpo e brilhante."
+  local: "clareira_das_perguntas"
+  local_desc: "Poças d'água refletem o céu. Um arco-íris cruza a clareira. Há uma colmeia numa árvore."
+  virtude: "alegria"
+  artefato: "Lápis de cor (7 cores) ou prisma de vidro."
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-006", gancho: "Desenhamos até o 5 na areia. Mas quem vem depois do 5?"}
+  proximo: {licao_id: "MV-S-008", gancho: "Agora que temos tantos números, Íris quer achar pares para eles."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min"
+  materiais:
+    - {item: "7 lápis de cor (Cores do Arco-íris)", qtd: 7, alt: "Fitas coloridas ou pedras pintadas", essencial: true}
+    - {item: "Imagem de um Favo de Mel (ou desenho de hexágono)", qtd: 1, alt: null, essencial: true}
+    - {item: "Quadro de Dez da L002", qtd: 1, alt: null, essencial: true}
+    - {item: "Card: CELESTE", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "O 7 é mágico para a criança porque é a 'semana inteira'. O 6 é o 'ninho' (favo). Use essas imagens."
+  filho_descobre: "Que o 6 enche uma mão + 1 dedo. Que o 7 enche a semana."
+  nota_graca: "Se não souber as cores exatas do arco-íris, não importa. O conceito é 'muitas cores ordenadas'."
+
+ritual_abertura:
+  instrucao_ambiente: "Coloque os lápis espalhados como um 'arco' no chão."
+  transicao_reino: "Sinta o cheiro de chuva molhando a terra... Olhe para o céu!"
+  fala_portador: {tom: "admirado", script: "Oh! Veja o que apareceu no céu da Clareira!"}
+  card_guardiao: "CARD: CELESTE (Raposa)"
+  fala_guardiao: {tom: "vibrante", script: "Um Arco-Íris! Eu tentei correr até o fim dele, mas não cheguei. Vamos contar as cores?"}
+
+jornada:
+  abertura_sensorial: "Peça para a criança pegar os lápis. 'Tantas cores... Vamos ver quantas são?'"
+  
+  concreto:
+    desc: "Contando o Arco-Íris e o Favo."
+    card_objeto: "LÁPIS DE COR"
+    passos:
+      - {n: 1, acao: "Conte os lápis um a um.", fala: "Um, dois, três, quatro, cinco... SEIS... SETE!"}
+      - {n: 2, acao: "Separe 6 lápis. Mostre o Favo de Mel.", fala: "Olha a casa da abelha. Vamos contar as paredes? 1, 2, 3, 4, 5, 6."}
+      - {n: 3, acao: "Use o Quadro de Dez.", fala: "Vamos colocar pedras no caminhão do Bernardo. Encha 5 em cima. E agora?"}
+      - {n: 4, acao: "Coloque a 6ª pedra embaixo.", fala: "SEIS! 5 em cima e 1 embaixo."}
+      - {n: 5, acao: "Coloque a 7ª pedra.", fala: "SETE! 5 em cima e 2 embaixo."}
+    tempo: "80%+ (Manipulação e Cor)"
+    adaptacao_bernardo: "Deixe a criança pintar um arco-íris livremente, contando as cores enquanto pinta."
+    
+  pictorico: {status: VETADO, motivo: "Sementes = Concreto."}
+  
+  abstrato:
+    desc: "Traçando 6 e 7 no ar."
+    card: "CARDS 6 e 7"
+    passos:
+      - {acao: "Trace o 6 no ar.", fala: "O Seis desce e faz uma barriguinha. Parece uma cereja pendurada."}
+      - {acao: "Trace o 7 no ar.", fala: "O Sete caminha e escorrega! Um teto e um escorregador."}
+    nota: "Enativo."
+    
+  extensao:
+    titulo: "A Semana de Noé"
+    desc: "Lembrar os dias da semana."
+    sugestoes: ["Domingo, Segunda... Sábado. Sete dias!", "Noé descansa no Sétimo."]
+
+narracao:
+  instrucao: "Guardem os lápis na caixa."
+  pergunta_principal: "Quem tem mais cores: o arco-íris ou o favo de mel?"
+  perguntas_coracao: ["Quantos dias tem a semana?", "Você gosta mais do 6 ou do 7?", "Qual a cor mais bonita do arco-íris?"]
+  nota_cm: "Conexão Matemática-Criação."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "feliz", script: "O mundo é colorido, Herdeiro. Leve essas cores no seu coração."}
+  fio_ouro: "Cada cor tem seu par no arco-íris... Amanhã Íris vai nos ensinar a encontrar PARES."
+  transicao_volta: "Respire o ar 'pós-chuva' do reino e abra os olhos na sala seca."
+
+catedra_pais:
+  metodo_cpa: "O 6 e o 7 são números compostos visuais (5+1, 5+2). O Quadro de Dez é crucial aqui para não virar só contagem mecânica."
+  principio_cm: "Ciência das Relações. Números relacionam-se com cores, formas (favo) e tempo (semana)."
+  reflexao_espiritual: "Deus criou em 6 dias e descansou no 7º. O Sete é o número da plenitude divina."
+  nota_graca: "Não se preocupe se ela pular o 6 na contagem oral. É comum. A rima 'cinco, seis' ajuda."
+
+sugestoes:
+  - {guardiao: Celeste, emoji: "🦊", dica: "Cores alegram. Deixe a lição ser uma festa visual.", sugestao: "Use lanterna com celofane colorido se tiver."}
+  - {guardiao: Noé, emoji: "🦉", dica: "Conte os dias da semana no calendário da casa.", sugestao: "Marquem o dia de hoje."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["Ela reconheceu o 6 no Quadro de Dez (5+1)?", "Contou até 7?", "Gostou das cores?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]

@@ -1,0 +1,112 @@
+# LIÇÃO 009 — O CELEIRO DE NOÉ (Números 8 e 9)
+# id: MV-S-009
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-009
+titulo: "O Celeiro de Noé"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Noé
+guardiao_secundario: Bernardo
+tgtb_ref: "000-L9 - Numbers 8 to 9"
+status: final
+
+ideia_viva:
+  frase: "Oito fardos para o inverno, nove sementes para a primavera. A contagem da provisão."
+  conceito: "Números 8 (Aranha/Octógono) e 9 (Quase Dez). Contagem avançada."
+  intencao_cm: "Previdência. Saber quanto temos para saber se é suficiente."
+
+atmosfera:
+  clima: "outonal"
+  clima_desc: "Folhas secas caem. O ar esfria. É hora de guardar comida."
+  local: "arvore_silencio"
+  local_desc: "Dentro do tronco oco da árvore de Noé. Cheiro de madeira e grãos."
+  virtude: "previdencia"
+  artefato: "Saquinhos de pano com 'comida' (pedras ou grãos)."
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-008", gancho: "Arrumamos os pares com Íris. Agora vamos encher a despensa."}
+  proximo: {licao_id: "MV-S-010", gancho: "Tudo guardado na fila certa. Quem foi o primeiro saco a entrar?"}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min"
+  materiais:
+    - {item: "9 saquinhos pequenos (ou trouxinhas de papel/pano)", qtd: 9, alt: "Copinhos descartáveis", essencial: true}
+    - {item: "Grãos de feijão ou milho para encher", qtd: "Punhado", alt: null, essencial: true}
+    - {item: "Quadro de Dez", qtd: 1, alt: null, essencial: true}
+    - {item: "Card: NOÉ", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "Contar até 9 exige foco. Se a criança se perder, use o agrupamento (4 e 4, ou 5 e 3). O cérebro ama padrões."
+  filho_descobre: "Que o 8 é 'duas vezes quatro' (simetria). Que o 9 é 'quase dez' (falta um)."
+  nota_graca: "Se derrubar os grãos, lembre da Lição das Sementes. 'Olha quantas promessas no chão!'"
+
+ritual_abertura:
+  instrucao_ambiente: "Faça uma pilha com os saquinhos num canto (O Celeiro)."
+  transicao_reino: "Entre na ponta dos pés... Shhh. Noé está contando o estoque."
+  fala_portador: {tom: "sussurrado e grave", script: "O inverno vem aí. Precisamos saber se temos comida suficiente."}
+  card_guardiao: "CARD: NOÉ (Coruja)"
+  fala_guardiao: {tom: "sábio", script: "Um, dois... a contagem deve ser precisa. Me ajude, ecônomo."}
+
+jornada:
+  abertura_sensorial: "Entregue um saquinho cheio. 'Balance. O que tem dentro? Hummm... feijão!'"
+  
+  concreto:
+    desc: "Estocando o Celeiro."
+    card_objeto: "SAQUINHOS DE GRÃOS"
+    passos:
+      - {n: 1, acao: "Tire saquinhos da pilha contando.", fala: "1, 2, 3, 4... pausa. Vamos fazer outra pilha do lado? 5, 6, 7, 8!"}
+      - {n: 2, acao: "Observe o 8.", fala: "Duas pilhas de 4. Oito parece um boneco de neve, ou uma aranha (4 patas de cada lado)."}
+      - {n: 3, acao: "Adicione mais um.", fala: "Mais um saquinho chegou! Oito mais um... NOVE!"}
+      - {n: 4, acao: "Use o Quadro de Dez.", fala: "Coloque 9 feijões no caminhão. Olha! Só sobrou UM lugar vazio. O nove é o 'Quase Cheio'."}
+    tempo: "80%+ (Manipulação e Agrupamento)"
+    adaptacao_bernardo: "Para contar 8 e 9, use ritmo. '1, 2, 3, 4 (bate palma) 5, 6, 7, 8 (bate palma)'."
+    
+  pictorico: {status: VETADO, motivo: "Sementes = Concreto."}
+  
+  abstrato:
+    desc: "Traçando 8 e 9."
+    card: "CARDS 8 e 9"
+    passos:
+      - {acao: "Trace o 8 no ar.", fala: "O Oito é uma pista de corrida infinita. Começa no meio, sobe, desce, cruza e fecha."}
+      - {acao: "Trace o 9 no ar.", fala: "O Nove é um balão voando no fio. Cabeça no alto, fio pra baixo."}
+    nota: "Enativo."
+    
+  extensao:
+    titulo: "A Aranha de Noé"
+    desc: "Brincadeira com os dedos."
+    sugestoes: ["Coloque 4 dedos de cada mão na mesa. Caminhe como aranha. 4+4 = 8 patas!"]
+
+narracao:
+  instrucao: "Feche o celeiro (caixa)."
+  pergunta_principal: "A gente tem comida bastante? Quantos sacos nós contamos?"
+  perguntas_coracao: ["O nove está perto ou longe do dez?", "A aranha tem quantos sapatos?", "Gostou do barulho do feijão?"]
+  nota_cm: "Narração quantitativa simples."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "tranquilo", script: "O celeiro está cheio. Podemos dormir em paz. Bom trabalho."}
+  fio_ouro: "O primeiro saco foi de feijão, o segundo de milho... Celeste quer saber quem chegou primeiro amanhã."
+  transicao_volta: "Espreguice. O trabalho de carregar peso acabou."
+
+catedra_pais:
+  metodo_cpa: "O 9 é ensinado como '10 menos 1' visualmente no Quadro de Dez. É mais fácil ver o buraco vazio do que contar 9 itens."
+  principio_cm: "Vida Sustentável. Matemática serve para cuidar da vida (comida, estoque), não só para prova."
+  reflexao_espiritual: "José no Egito guardou grãos por 7 anos. A contagem salvou o mundo da fome."
+  nota_graca: "O traçado do 8 é difícil (motora fina). Deixe fazer 'duas bolinhas' se o 'infinito' for muito complexo agora."
+
+sugestoes:
+  - {guardiao: Noé, emoji: "🦉", dica: "Conte degraus da escada. Eles são ótimos para números altos.", sugestao: "Suba contando até 9."}
+  - {guardiao: Bernardo, emoji: "🐻", dica: "Use a força. Carregar 9 saquinhos cansa! Deixe a criança sentir o 'peso' do número.", sugestao: "Matemática muscular."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["Ela viu que o 9 deixa só 1 espaço vazio?", "Conseguiu traçar o 8?", "Cansou de contar até 9?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]

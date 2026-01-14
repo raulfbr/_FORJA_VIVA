@@ -1,0 +1,111 @@
+# LIÇÃO 014 — O CELEIRO QUE CRESCE (Feixes de Dez - Parte 2)
+# id: MV-S-014
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-014
+titulo: "O Celeiro que Cresce"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Bernardo
+guardiao_secundario: Noé
+tgtb_ref: "000-L14 - Ten Sticks: Part 2"
+status: final
+
+ideia_viva:
+  frase: "Mais feixes de força para sustentar a Vila. O trabalho do Construtor se multiplica."
+  conceito: "Dezenas (Múltiplos feixes). Contagem de 10 em 10 (Intro). 20 e 30."
+  intencao_cm: "Hábito do Trabalho Útil. Ver a quantidade crescer com propósito."
+
+atmosfera:
+  clima: "ventoso"
+  clima_desc: "O vento sopra forte, testando as paredes. É preciso madeira resistente e bem amarrada."
+  local: "caverna_recomeco"
+  local_desc: "O estoque de madeira da oficina. Pilhas de feixes prontos."
+  virtude: "esforco"
+  artefato: "Vários feixes de 10 palitos já prontos."
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-013", gancho: "Melquior nos ensinou a SOMAR. Vamos somar feixes agora?"}
+  proximo: {licao_id: "MV-S-015", gancho: "Temos madeira suficiente! Amanhã vamos subir a Escada de Luz até o 30."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min"
+  materiais:
+    - {item: "30 a 40 palitos de sorvete", qtd: 40, alt: "Gravetos", essencial: true}
+    - {item: "Elásticos", qtd: 4, alt: "Barbante", essencial: true}
+    - {item: "Card: BERNARDO", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "Ver 20 como 'Dois Feixes' é a chave para a aritmética mental futura. Não corra."
+  filho_descobre: "Que 20 é 10 + 10. Que contar feixes é mais rápido que contar palitos."
+  nota_graca: "Faça uma competição: quem conta mais rápido? Você (feixes) ou ela (um por um)?"
+
+ritual_abertura:
+  instrucao_ambiente: "Coloque 2 feixes amarrados e uma pilha de soltos."
+  transicao_reino: "Ouçam as marteladas TUC TUC TUC. Bernardo está construindo um muro alto."
+  fala_portador: {tom: "enérgico", script: "Precisamos de mais madeira! O vento está derrubando a cerca!"}
+  card_guardiao: "CARD: BERNARDO (Urso)"
+  fala_guardiao: {tom: "firme", script: "Rápido, Construtor! Me passe os feixes. Um por um demora muito!"}
+
+jornada:
+  abertura_sensorial: "Entregue um feixe. 'Pese na mão'. Entregue outro. 'Dois feixes pesam mais'."
+  
+  concreto:
+    desc: "A Produção em Massa."
+    card_objeto: "PILHA DE FEIXES"
+    passos:
+      - {n: 1, acao: "Façam mais 2 ou 3 feixes juntos.", fala: "Conta 10... amarra! Conta 10... amarra!"}
+      - {n: 2, acao: "Coloque os feixes em fila.", fala: "Vamos contar como o Urso? Ele conta DEZ... VINTE... TRINTA!"}
+      - {n: 3, acao: "Desamarre um feixe.", fala: "Oh não! O elástico estourou. Agora temos 10 soltos. É a mesma madeira? Sim. Mas bagunçada."}
+      - {n: 4, acao: "Reamarre.", fala: "Ufa. 10, 20, 30. Três Dezenas."}
+    tempo: "80%+ (Manipulação e Contagem Rítmica)"
+    adaptacao_bernardo: "Use caixas de ovos (cortadas com 10 buracos) se amarrar for difícil. Encher a caixa = Fechar o feixe."
+    
+  pictorico: {status: VETADO, motivo: "Sementes = Concreto."}
+  
+  abstrato:
+    desc: "Lendo os Chefes."
+    card: "CARDS 10, 20, 30"
+    passos:
+      - {acao: "Mostre o 20.", fala: "Olha o número. Começa com 2. Por que? Porque são DOIS feixes!"}
+      - {acao: "Mostre o 30.", fala: "Começa com 3. TRÊS feixes. O zero diz: 'nenhum solto'."}
+    nota: "Conexão Símbolo-Quantidade Concreta."
+    
+  extensao:
+    titulo: "O Muro de Bernardo"
+    desc: "Empilhe os feixes como tijolos."
+    sugestoes: ["Este muro tem 30 palitos de força!", "O lobo não derruba este muro."]
+
+narracao:
+  instrucao: "Admirem a pilha de feixes."
+  pergunta_principal: "Por que o número 20 começa com o número 2?"
+  perguntas_coracao: ["Se eu te der 3 feixes, quantos palitos você tem?", "Você prefere carregar o feixe ou os soltos?", "O trabalho rendeu hoje?"]
+  nota_cm: "Narração lógica e explicativa."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "satisfeito", script: "Bom trabalho. O muro está firme. Pode vir o vento!"}
+  fio_ouro: "O estoque está cheio. Melquior quer nos levar para ver tudo do alto, na Escada de Luz."
+  transicao_volta: "Limpe o suor da testa (dramatização). O trabalho acabou."
+
+catedra_pais:
+  metodo_cpa: "Reforço do 'Unitizing'. A criança deve ver o feixe como UMA unidade de nível superior. Isso previne dificuldades com 'vai um' na adição futura."
+  principio_cm: "Autoridade e Obediência. A matéria obedece à ordem imposta pelo trabalho (o elástico). O caos vira cosmos."
+  reflexao_espiritual: "A Igreja é feita de muitas 'pedras vivas', mas é UM Templo. Unidade sem uniformidade (os palitos ainda são palitos, mas unidos)."
+  nota_graca: "Se ela contar 'um, dois... trinta' nos feixes, corrija: 'Isso, 30 palitos! E quantos PACOTES? 3 pacotes'."
+
+sugestoes:
+  - {guardiao: Bernardo, emoji: "🐻", dica: "Use blocos de madeira reais se tiver. Empilhar 10 blocos = 1 Torre (Dezena).", sugestao: "Peso real."}
+  - {guardiao: Celeste, emoji: "🦊", dica: "Esconda um feixe. 'Eu tinha 30... a Raposa levou um! Quantos sobraram?' 20.", sugestao: "Subtração concreta."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["Ela contou de 10 em 10 (dez, vinte...)?", "Entendeu a relação '2 feixes = 20'?", "Gostou de construir?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]

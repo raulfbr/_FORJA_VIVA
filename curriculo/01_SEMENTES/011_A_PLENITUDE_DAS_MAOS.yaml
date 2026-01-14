@@ -1,0 +1,112 @@
+# LIÇÃO 011 — A PLENITUDE DAS MÃOS (Números 10 e 11)
+# id: MV-S-011
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-011
+titulo: "A Plenitude das Mãos"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Celeste
+guardiao_secundario: Noé
+tgtb_ref: "000-L11 - Numbers 10 to 11"
+status: final
+
+ideia_viva:
+  frase: "Dez dedos para abraçar o mundo e um a mais para apontar para o céu."
+  conceito: "O Número 10 (Dezena) e o 11 (Dez + Um). A base do nosso sistema."
+  intencao_cm: "Plenitude e Transbordamento. O 10 enche as mãos; o 11 inicia um novo ciclo."
+
+atmosfera:
+  clima: "estrelado"
+  clima_desc: "É noite no Reino. As estrelas brilham forte. O ar é fresco e solene."
+  local: "arvore_silencio"
+  local_desc: "Sob a copa da Árvore de Noé, vagalumes piscam. Celeste observa."
+  virtude: "gratidao"
+  artefato: "Um par de luvas brancas ou tintas para carimbo de mãos."
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-010", gancho: "Depois da fila organizada, todos se reuniram em roda. Quantos somos?"}
+  proximo: {licao_id: "MV-S-012", gancho: "Temos dez gravetos soltos. Bernardo quer amarrá-los para ficarem fortes."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min"
+  materiais:
+    - {item: "Tinta guache ou canetinha (para contornar mãos)", qtd: 1, alt: "Luvas", essencial: true}
+    - {item: "11 pedrinhas ou sementes", qtd: 11, alt: null, essencial: true}
+    - {item: "Quadro de Dez (DOIS quadros se possível, ou um desenhado maior)", qtd: 2, alt: null, essencial: true}
+    - {item: "Card: CELESTE", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "O 10 é o 'rei' dos números pequenos. Celebre este marco! Batam palmas, façam festa."
+  filho_descobre: "Que 10 enche as duas mãos. Que 11 é 'transbordar' (encher as mãos e ter mais um no bolso)."
+  nota_graca: "Não se preocupe ainda com 'lugar das dezenas'. Foque na imagem visual: CHEIO + SOBRA."
+
+ritual_abertura:
+  instrucao_ambiente: "Apague as luzes. Acenda a vela ou lanterna no chão."
+  transicao_reino: "Olhe para suas mãos na luz... Elas são ferramentas mágicas."
+  fala_portador: {tom: "solene e feliz", script: "Hoje completamos nossa ferramenta. Celeste está aplaudindo!"}
+  card_guardiao: "CARD: CELESTE (Raposa)"
+  fala_guardiao: {tom: "vibrante", script: "Dez dedos! Cinco amigos na direita, cinco na esquerda. Quando eles se juntam... PLOF! Acontece mágica."}
+
+jornada:
+  abertura_sensorial: "Batam palmas 10 vezes. Contando ALTO. '1, 2... 10!'"
+  
+  concreto:
+    desc: "Mãos Cheias e o Transbordo."
+    card_objeto: "MÃOS PINTADAS"
+    passos:
+      - {n: 1, acao: "Contorne as duas mãos da criança no papel.", fala: "Olha só... uma mão é 5. Duas mãos são 10."}
+      - {n: 2, acao: "Coloque uma semente em cada dedo desenhado.", fala: "Um, dois... dez! Não cabe mais nenhuma."}
+      - {n: 3, acao: "Pegue a 11ª semente.", fala: "E essa? Onde ela vai? Ela é o ONZE. O Dez-Mais-Um."}
+      - {n: 4, acao: "No Quadro de Dez.", fala: "Enchemos o caminhão (10 pedras). O Onze tem que ir... no segundo caminhão! (Ou no chão ao lado)."}
+      - {n: 5, acao: "Trace o 10 e o 11.", fala: "O Dez é o Chefe (1) e o Vazio (0). O Onze são dois Chefes (1 e 1) lado a lado."}
+    tempo: "80%+ (Manipulação e Arte)"
+    adaptacao_bernardo: "Se a criança tiver dificuldade de escrever 10, use carimbo das duas mãos juntas. É o símbolo corporal do 10."
+    
+  pictorico: {status: VETADO, motivo: "Sementes = Concreto."}
+  
+  abstrato:
+    desc: "Os Dois Uns."
+    card: "CARDS 10 e 11"
+    passos:
+      - {acao: "Mostre o 11.", fala: "Olha, são dois números 1. Eles são gêmeos? Não! Um vale DEZ (o chefe) e o outro vale UM (o bebê)."}
+    nota: "Intro sutil ao Valor Posicional (sem tecnicismo)."
+    
+  extensao:
+    titulo: "O Salto do Dez"
+    desc: "Pulem 10 vezes."
+    sugestoes: ["Pule e grite DEZ!", "No onze, dê um passinho pequeno de formiga."]
+
+narracao:
+  instrucao: "Lavem as mãos (se usaram tinta)."
+  pergunta_principal: "O que acontece quando os dedos das mãos acabam?"
+  perguntas_coracao: ["Onde a gente coloca a semente número onze?", "Você prefere ter 10 balas ou 11?", "Por que temos 10 dedos?"]
+  nota_cm: "Reflexão sobre o design do corpo."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "profundo", script: "Suas mãos estão cheias de poder. Use-as para construir coisas boas."}
+  fio_ouro: "Agora que temos dez coisas soltas... Bernardo quer amarrar tudo num pacote só."
+  transicao_volta: "Batam 'High Ten' (as duas mãos) com o Portador."
+
+catedra_pais:
+  metodo_cpa: "O Sistema Decimal é anatômico. Ensinamos base 10 porque temos 10 dedos. O 11 é o primeiro passo na abstração 'além do corpo'."
+  principio_cm: "A Ciência da Relação. O Número 10 relaciona a mão direita com a esquerda numa unidade funcional."
+  reflexao_espiritual: "Os Dez Mandamentos. As Duas Tábuas da Lei. O número da completude moral."
+  nota_graca: "O conceito de que '1' vale '10' no número '10' é difícil. Use a linguagem 'Um Pacote Cheio' (1) e 'Zero Soltos' (0)."
+
+sugestoes:
+  - {guardiao: Celeste, emoji: "🦊", dica: "Conte os dedos do pé também! 10 em cima, 10 embaixo. 20 no total!", sugestao: "Risada garantida."}
+  - {guardiao: Noé, emoji: "🦉", dica: "Faça silêncio por 10 segundos. Depois 11 segundos. O onze demora mais?", sugestao: "Percepção de tempo."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["Ela entendeu que 11 precisa de 'mais espaço'?", "Contou até 10 sem pular?", "Gostou de ver as próprias mãos?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]

@@ -1,0 +1,113 @@
+# LIÇÃO 013 — O RIO QUE SE UNE (Sinais de Mais e Igual)
+# id: MV-S-013
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-013
+titulo: "O Rio que se Une"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Melquior
+guardiao_secundario: Bernardo
+tgtb_ref: "000-L13 - Plus and Equal Signs"
+status: final
+
+ideia_viva:
+  frase: "Dois riachos que viram um só. A força da união tem um nome: Mais."
+  conceito: "Adição (Conceitual). Sinais de Mais (+) e Igual (=)."
+  intencao_cm: "A Ciência da Relação. Como coisas separadas se relacionam para criar algo novo."
+
+atmosfera:
+  clima: "ensolarado"
+  clima_desc: "O sol brilha sobre as águas. É um dia de clareza e revelação."
+  local: "jardim_central"
+  local_desc: "Onde dois pequenos córregos se encontram para formar o Rio Principal."
+  virtude: "sabedoria"
+  artefato: "Dois gravetos cruzados (Sinal de Mais) e dois paralelos (Sinal de Igual)."
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-012", gancho: "Bernardo juntou gravetos em feixes. Hoje Melquior vai nos dar o Símbolo dessa união."}
+  proximo: {licao_id: "MV-S-014", gancho: "Agora que sabemos somar, Bernardo precisa de mais feixes para a construção."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min"
+  materiais:
+    - {item: "Pedras azuis ou contas (representando água)", qtd: 10, alt: "Botões", essencial: true}
+    - {item: "Gravetos pequenos (para fazer os sinais)", qtd: 4, alt: "Palitos", essencial: true}
+    - {item: "Fio de lã azul (para desenhar o rio)", qtd: 1, alt: "Giz", essencial: true}
+    - {item: "Card: MELQUIOR", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "Não trate '+' e '=' como regras secas. Eles são verbos. '+' é 'JUNTAR'. '=' é 'FICOU ASSIM'."
+  filho_descobre: "Que o sinal (+) é um convite para abraçar. Que (=) é a verdade final."
+  nota_graca: "Use o corpo. Abra os braços para '+'. Bata as mãos paralelas para '='."
+
+ritual_abertura:
+  instrucao_ambiente: "Faça dois caminhos no chão com o fio azul que se encontram em um só."
+  transicao_reino: "Hoje o Mentor Melquior desceu do monte. Ele quer mostrar o segredo das águas."
+  fala_portador: {tom: "reverente", script: "A água corre, a água desce... o que acontece quando elas se encontram?"}
+  card_guardiao: "CARD: MELQUIOR (Leão)"
+  fala_guardiao: {tom: "profundo e calmo", script: "Tudo no Reino gosta de companhia. Eu trago o Sinal da União. O Mais."}
+
+jornada:
+  abertura_sensorial: "Coloque 2 pedras num rio e 3 no outro. Empurre-as até se encontrarem."
+  
+  concreto:
+    desc: "O Batismo dos Sinais."
+    card_objeto: "PEDRAS DE RIO"
+    passos:
+      - {n: 1, acao: "Mostre o '+' feito de gravetos.", fala: "Este é o MAIS. Ele parece um cavalheiro de braços abertos. Ele diz: 'Venha!'"}
+      - {n: 2, acao: "Coloque entre os grupos de pedras (2 + 3).", fala: "Duas pedras MAIS Três pedras..."}
+      - {n: 3, acao: "Junte tudo.", fala: "Agora elas são uma família. Quantas são? 1, 2, 3, 4, 5."}
+      - {n: 4, acao: "Mostre o '=' (gravetos paralelos).", fala: "Este é o IGUAL. Ele é uma ponte calma. Ele diz: 'A verdade é essa'."}
+      - {n: 5, acao: "Monte a frase no chão.", fala: "2 pedras (+) 3 pedras (=) 5 pedras."}
+    tempo: "80%+ (Manipulação e Dramatização)"
+    adaptacao_bernardo: "Se a criança confundir os sinais, pinte o '+' de verde (siga) e o '=' de vermelho (pare/resultado)."
+    
+  pictorico: {status: VETADO, motivo: "Sementes = Concreto."}
+  
+  abstrato:
+    desc: "O Corpo Fala Matemática."
+    card: "CARDS + e ="
+    passos:
+      - {acao: "Faça o '+' com o corpo (braços cruzados).", fala: "Eu sou o Mais! Traga coisas para mim!"}
+      - {acao: "Faça o '=' (braços paralelos).", fala: "Igual! Tudo quieto agora."}
+    nota: "Enativo (Total Physical Response)."
+    
+  extensao:
+    titulo: "Sopa de Pedras"
+    desc: "Junte ingredientes na panela."
+    sugestoes: ["Batata MAIS Cenoura IGUAL Sopa!", "Brinquem de cozinhar somas."]
+
+narracao:
+  instrucao: "Sentem-se perto do 'rio' de lã."
+  pergunta_principal: "O que o sinal de Mais gosta de fazer?"
+  perguntas_coracao: ["O sinal de Igual parece o quê? Uma ponte? Um trilho?", "É melhor ficar sozinho ou somar com amigos?", "O que acontece se somarmos eu e você?"]
+  nota_cm: "A matemática descreve relações humanas também."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "abençoador", script: "Onde houver divisão, leve a soma. O Reino cresce quando juntamos."}
+  fio_ouro: "Agora que sabemos somar, Bernardo está chamando. O celeiro precisa crescer!"
+  transicao_volta: "Desmanche o rio. Guarde os gravetos sagrados na caixa."
+
+catedra_pais:
+  metodo_cpa: "Introduzir a notação (+, =) APÓS a experiência concreta de juntar evita que a matemática vire 'decifrar hieróglifos'."
+  principio_cm: "Educação é a Ciência das Relações. Os sinais não são arbitrários; eles descrevem uma realidade que JÁ existe na natureza."
+  reflexao_espiritual: "Matrimônio: Homem + Mulher = Uma só carne. A soma divina cria algo novo e indivisível."
+  nota_graca: "Se ela trocar o nome dos sinais, corrija gentilmente. 'Esse é o Juntar'. 'Esse é o Resultado'."
+
+sugestoes:
+  - {guardiao: Melquior, emoji: "🦁", dica: "Use palavras nobres. 'Unir', 'Agrupar', 'Somar'. Enriqueça o vocabulário.", sugestao: "A fala molda o pensamento."}
+  - {guardiao: Bernardo, emoji: "🐻", dica: "Some coisas pesadas. Livros + Livros. Sinta o peso da soma.", sugestao: "Peso é Concreto."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["Ela entendeu que '+' é uma ação?", "Confundiu '+' com 'x' (cruz)?", "Gostou de 'ler' as pedras?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]

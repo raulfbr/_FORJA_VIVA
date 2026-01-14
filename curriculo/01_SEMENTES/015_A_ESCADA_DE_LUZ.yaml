@@ -1,0 +1,111 @@
+# LIÇÃO 015 — A ESCADA DE LUZ (Contagem até 30)
+# id: MV-S-015
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-015
+titulo: "A Escada de Luz"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Melquior
+guardiao_secundario: Íris
+tgtb_ref: "000-L15 - Counting to 30 Practice"
+status: final
+
+ideia_viva:
+  frase: "Contemplar os trinta passos que já demos. Do alto, a vista é mais bonita."
+  conceito: "Sequência Numérica 1-30. Visão do Todo. Celebração de Progresso."
+  intencao_cm: "Inspiração. O conhecimento deve elevar a alma, não só encher a mente."
+
+atmosfera:
+  clima: "crepusculo"
+  clima_desc: "O sol está se pondo, dourado e roxo. Estamos no ponto mais alto do Jardim."
+  local: "ninho_mirante"
+  local_desc: "O Ninho de Íris, de onde se vê todo o caminho percorrido."
+  virtude: "perseveranca"
+  artefato: "Uma longa fita ou corda com nós (ou contas) marcando até 30."
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-014", gancho: "Construímos muito com Bernardo. Agora Melquior quer que a gente descanse e olhe."}
+  proximo: {licao_id: "MV-S-016", gancho: "A semente brotou. Uma nova estação começa. Bernardo trará a aritmética da alegria!"}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min"
+  materiais:
+    - {item: "30 pedrinhas, botões ou o Quadro de Centena (se tiver)", qtd: 30, alt: "Grãos", essencial: true}
+    - {item: "Confete ou papel picado (para celebração)", qtd: "Punhado", alt: "Folhas secas", essencial: false}
+    - {item: "Card: MELQUIOR", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "Celebre! Contar até 30 é um marco gigante para uma criança pequena. É a primeira 'conquista de gente grande'."
+  filho_descobre: "Que os números seguem um padrão (20+1, 20+2...). Que ela sabe MUITO."
+  nota_graca: "Se travar no 29 para o 30, ajude. As 'viradas de dezena' são os degraus mais altos."
+
+ritual_abertura:
+  instrucao_ambiente: "Faça uma trilha longa no chão com as 30 pedras (ou use fita crepe)."
+  transicao_reino: "Respire o ar rarefeito da montanha... Subimos muito alto!"
+  fala_portador: {tom: "admirado", script: "Olhe para baixo. Veja quantos passos já demos."}
+  card_guardiao: "CARD: MELQUIOR (Leão)"
+  fala_guardiao: {tom: "majestoso", script: "Pequeno Herdeiro, você cresceu. Cada número é um degrau. Vamos contar nossa vitória?"}
+
+jornada:
+  abertura_sensorial: "Andem ao lado da trilha de pedras. Passo a passo. Sentindo o caminho longo."
+  
+  concreto:
+    desc: "A Peregrinação do Trinta."
+    card_objeto: "TRILHA DE 30 PEDRAS"
+    passos:
+      - {n: 1, acao: "Comecem a caminhar e contar.", fala: "1, 2, 3... 10! (Primeiro Descanso de Melquior)."}
+      - {n: 2, acao: "Continuem.", fala: "11, 12... 20! (Segundo Descanso de Bernardo). Olha como estamos longe do começo!"}
+      - {n: 3, acao: "Reta final.", fala: "21, 22... 29... TRINTA! (O Topo!)"}
+      - {n: 4, acao: "Celebrem no topo.", fala: "Jogue o confete/folhas! Viva o Herdeiro!"}
+      - {n: 5, acao: "Olhem os padrões.", fala: "O 21 parece o 1. O 22 parece o 2. O ritmo se repete."}
+    tempo: "80%+ (Movimento e Celebração)"
+    adaptacao_bernardo: "Se andar for difícil, use dedos caminhando na mesa. Mas mantenha a sensação de 'longa jornada'."
+    
+  pictorico: {status: VETADO, motivo: "Sementes = Concreto."}
+  
+  abstrato:
+    desc: "O Mapa do Tesouro."
+    card: "CARD NÚMERO 30"
+    passos:
+      - {acao: "Mostre o 30.", fala: "Três dezenas cheias. Zero unidades soltas. É um número redondo e feliz."}
+    nota: "Reconhecimento visual do marco."
+    
+  extensao:
+    titulo: "A Chuva de Trinta"
+    desc: "Contar 30 palmas bem rápido."
+    sugestoes: ["Tente contar pulando num pé só (desafio).", "Conte sussurrando e depois GRITANDO no 30."]
+
+narracao:
+  instrucao: "Sentem-se 'no topo da montanha' (sofá ou almofada alta)."
+  pergunta_principal: "Qual foi a parte mais difícil da subida?"
+  perguntas_coracao: ["Você achou que não ia conseguir?", "Como se sente sabendo tantos números?", "O que dá para fazer com 30 pedras?"]
+  nota_cm: "Narração reflexiva de auto-eficácia."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "solene", script: "O horizonte se abre. Há muito mais para ver, mas hoje... hoje nós descansamos na glória."}
+  fio_ouro: "Descanse, Herdeiro. Amanhã, uma nova estação começa com os amigos que crescem."
+  transicao_volta: "Desçam da montanha (pulem do sofá/almofada) de volta para a sala."
+
+catedra_pais:
+  metodo_cpa: "O uso de trilha (Number Path) é linear e melhor para 'sequência' do que o Quadro de Centena (Matriz) nesta fase inicial. Caminhar fixa a linearidade."
+  principio_cm: "Possibilidades. A criança deve sentir que o conhecimento abre portas, não que fecha caixas."
+  reflexao_espiritual: "A idade de Cristo ao iniciar seu ministério (30 anos). Um tempo de preparação completa."
+  nota_graca: "Não transforme em prova. Se ela errar o 24, apenas diga 'vinte e quatro' e continue. O fluxo é mais importante que a precisão hoje."
+
+sugestoes:
+  - {guardiao: Melquior, emoji: "🦁", dica: "Conte coisas valiosas. '30 beijos', '30 abraços'. Matemática do afeto.", sugestao: "Vínculo."}
+  - {guardiao: Íris, emoji: "🐦", dica: "Ache 30 coisas amarelas na casa. (Caça ao tesouro visual).", sugestao: "Atenção."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["Ela ficou orgulhosa?", "Percebeu o padrão do 20 ao 29?", "A celebração foi sentida?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]
