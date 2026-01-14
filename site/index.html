@@ -3,263 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forja Viva — Dashboard Sementes</title>
+    <title>Forja Viva | Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body { background-color: #f4f4f9; color: #333; font-family: 'Georgia', serif; }
-        .dashboard-container { max-width: 900px; margin: 40px auto; padding: 20px; }
-        h1 { text-align: center; color: #2c3e50; margin-bottom: 40px; font-size: 2.5em; }
-        .lesson-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-        .lesson-card { 
-            background: white; 
-            border-radius: 12px; 
-            padding: 20px; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
-            transition: transform 0.2s, box-shadow 0.2s;
-            border-left: 5px solid #ddd;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .lesson-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
-        .lesson-card.melquior { border-color: #D4A017; }
-        .lesson-card.celeste { border-color: #FF6B35; }
-        .lesson-card.bernardo { border-color: #8B4513; }
-        .lesson-card.noe { border-color: #483D8B; }
-        .lesson-card.iris { border-color: #9B59B6; }
-        
-        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .lesson-id { font-weight: bold; color: #7f8c8d; font-size: 0.85em; }
-        .guardian-emoji { font-size: 1.5em; }
-        
-        .lesson-title { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: #2c3e50; }
-        .lesson-hook { font-size: 0.9em; color: #555; font-style: italic; margin-bottom: 20px; flex-grow: 1; }
-        
-        .btn-view { 
-            display: block; 
-            text-align: center; 
-            background: #2c3e50; 
-            color: white; 
-            text-decoration: none; 
-            padding: 10px; 
-            border-radius: 6px; 
-            font-weight: bold;
-            transition: background 0.2s;
-        }
-        .btn-view:hover { background: #34495e; }
-        
-        /* Stats */
-        .stats { text-align: center; margin-bottom: 30px; color: #7f8c8d; }
-    </style>
 </head>
 <body>
-    <div class="dashboard-container">
-        <h1>🌱 Ciclo Sementes</h1>
-        
-        <div class="stats">
-            <p><strong>18</strong> Lições Prontas • Última atualização: 14/01/2026 15:40</p>
-        </div>
-
-        <div class="lesson-grid">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="brand">🔥 Forja Viva</div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#" class="nav-link active">Dashboard</a></li>
+            <li class="nav-item"><a href="#sementes" class="nav-link">🌱 Sementes</a></li>
             
-    <div class="lesson-card melquior">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-000</span>
-            <span class="guardian-emoji" title="Melquior">🦁</span>
-        </div>
-        <div class="lesson-title">O Início de Tudo</div>
-        <div class="lesson-hook">"Os Números são Pensamentos do Rei — cada um, uma palavra sagrada."</div>
-        <a href="sementes/000_INICIO_FORJA.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+            <li class="nav-section">Blog & Conteúdo</li>
+            <li class="nav-item"><a href="#blog" class="nav-link">📝 Artigos</a></li>
+            <li class="nav-item"><a href="#recursos" class="nav-link">🧰 Recursos</a></li>
+            
+            <li class="nav-section">Sistema</li>
+            <li class="nav-item"><a href="#" class="nav-link">⚙️ Configurações</a></li>
+        </ul>
+    </aside>
 
-    <div class="lesson-card melquior">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-000</span>
-            <span class="guardian-emoji" title="Melquior">🦁</span>
-        </div>
-        <div class="lesson-title">O Portal: O Convite do Rei</div>
-        <div class="lesson-hook">"O Reino Contado abre suas portas para quem tem olhos de ver."</div>
-        <a href="sementes/000_O_PORTAL.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+    <!-- MAIN -->
+    <main class="main-content">
+        <header class="header">
+            <h1 class="page-title">Bem-vindo, Maestro.</h1>
+            <p class="page-subtitle">Visão geral do desenvolvimento do currículo Matemática Viva.</p>
+        </header>
 
-    <div class="lesson-card celeste">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-001</span>
-            <span class="guardian-emoji" title="Celeste">🦊</span>
+        <!-- STATS -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">18</div>
+                <div class="stat-label">Lições Sementes Prontas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">15/40</div>
+                <div class="stat-label">Progresso Estação 1</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">0</div>
+                <div class="stat-label">Artigos Publicados</div>
+            </div>
         </div>
-        <div class="lesson-title">A Trindade na Palma</div>
-        <div class="lesson-hook">"Três sementes de carvalho — cada uma é uma promessa do Rei."</div>
-        <a href="sementes/001_TRINDADE_NA_PALMA.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
 
-    <div class="lesson-card celeste">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-001</span>
-            <span class="guardian-emoji" title="Celeste">🦊</span>
+        <!-- SEMENTES -->
+        <section id="sementes" class="mb-12">
+            <div class="section-title">
+                <span>🌱</span> Ciclo Sementes <span style="font-size:0.8em; color:#9CA3AF; font-weight:400; margin-left:auto;">Última build: 14/01/2026 15:44</span>
+            </div>
+            <div class="grid-lessons">
+                
+        <div class="lesson-card melquior">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-000</span>
+                <div class="guardian-badge" title="Melquior">🦁</div>
+            </div>
+            <div class="lesson-title">O Início de Tudo</div>
+            <div class="lesson-hook">"Os Números são Pensamentos do Rei — cada um, uma palavra sagrada."</div>
+            <div class="lesson-footer">
+                <a href="sementes/000_INICIO_FORJA.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">A Trindade na Palma</div>
-        <div class="lesson-hook">"Três sementes de carvalho encontradas pela Raposa: uma para cada promessa do Rei."</div>
-        <a href="sementes/001_TRINDADE_PALMA.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card bernardo">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-002</span>
-            <span class="guardian-emoji" title="Bernardo">🐻</span>
+        <div class="lesson-card melquior">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-000</span>
+                <div class="guardian-badge" title="Melquior">🦁</div>
+            </div>
+            <div class="lesson-title">O Portal: O Convite do Rei</div>
+            <div class="lesson-hook">"O Reino Contado abre suas portas para quem tem olhos de ver."</div>
+            <div class="lesson-footer">
+                <a href="sementes/000_O_PORTAL.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">As Pedras da Fortaleza</div>
-        <div class="lesson-hook">"O Urso Bernardo precisa organizar as pedras pesadas em fileiras perfeitas para construir seu muro."</div>
-        <a href="sementes/002_AS_PEDRAS_DA_FORTALEZA.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card iris">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-003</span>
-            <span class="guardian-emoji" title="Íris">🐦</span>
+        <div class="lesson-card celeste">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-001</span>
+                <div class="guardian-badge" title="Celeste">🦊</div>
+            </div>
+            <div class="lesson-title">A Trindade na Palma</div>
+            <div class="lesson-hook">"Três sementes de carvalho — cada uma é uma promessa do Rei."</div>
+            <div class="lesson-footer">
+                <a href="sementes/001_TRINDADE_NA_PALMA.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">A Estrela do Reino</div>
-        <div class="lesson-hook">"A Pequena Pardal avista do alto uma flor roxa de cinco pontas."</div>
-        <a href="sementes/003_A_ESTRELA_DO_REINO.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card noe">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-004</span>
-            <span class="guardian-emoji" title="Noé">🦉</span>
+        <div class="lesson-card celeste">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-001</span>
+                <div class="guardian-badge" title="Celeste">🦊</div>
+            </div>
+            <div class="lesson-title">A Trindade na Palma</div>
+            <div class="lesson-hook">"Três sementes de carvalho encontradas pela Raposa: uma para cada promessa do Rei."</div>
+            <div class="lesson-footer">
+                <a href="sementes/001_TRINDADE_PALMA.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">O Ritmo do Criador</div>
-        <div class="lesson-hook">"A luz primeiro, depois o despertar. Tudo tem sua hora certa de acontecer."</div>
-        <a href="sementes/004_O_RITMO_DO_CRIADOR.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card celeste">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-005</span>
-            <span class="guardian-emoji" title="Celeste">🦊</span>
+        <div class="lesson-card bernardo">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-002</span>
+                <div class="guardian-badge" title="Bernardo">🐻</div>
+            </div>
+            <div class="lesson-title">As Pedras da Fortaleza</div>
+            <div class="lesson-hook">"O Urso Bernardo precisa organizar as pedras pesadas em fileiras perfeitas para construir seu muro."</div>
+            <div class="lesson-footer">
+                <a href="sementes/002_AS_PEDRAS_DA_FORTALEZA.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">O Esconderijo da Glória</div>
-        <div class="lesson-hook">"Saber quem se esconde atrás da rocha e quem brilha acima das nuvens."</div>
-        <a href="sementes/005_PALAVRAS_DE_POSICAO.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card iris">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-006</span>
-            <span class="guardian-emoji" title="Íris">🐦</span>
+        <div class="lesson-card iris">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-003</span>
+                <div class="guardian-badge" title="Íris">🐦</div>
+            </div>
+            <div class="lesson-title">A Estrela do Reino</div>
+            <div class="lesson-hook">"A Pequena Pardal avista do alto uma flor roxa de cinco pontas."</div>
+            <div class="lesson-footer">
+                <a href="sementes/003_A_ESTRELA_DO_REINO.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">O Desenho do Rei</div>
-        <div class="lesson-hook">"Sentir a curva perfeita do algarismo como se fosse o rastro de beleza na areia."</div>
-        <a href="sementes/006_PRATICA_DE_NUMEROS.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card celeste">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-007</span>
-            <span class="guardian-emoji" title="Celeste">🦊</span>
+        <div class="lesson-card noe">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-004</span>
+                <div class="guardian-badge" title="Noé">🦉</div>
+            </div>
+            <div class="lesson-title">O Ritmo do Criador</div>
+            <div class="lesson-hook">"A luz primeiro, depois o despertar. Tudo tem sua hora certa de acontecer."</div>
+            <div class="lesson-footer">
+                <a href="sementes/004_O_RITMO_DO_CRIADOR.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">A Coroa da Semana</div>
-        <div class="lesson-hook">"Sete cores no arco-íris e seis lados no favo de mel. A Vastidão tem geometria."</div>
-        <a href="sementes/007_NUMEROS_6_E_7.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card iris">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-008</span>
-            <span class="guardian-emoji" title="Íris">🐦</span>
+        <div class="lesson-card celeste">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-005</span>
+                <div class="guardian-badge" title="Celeste">🦊</div>
+            </div>
+            <div class="lesson-title">O Esconderijo da Glória</div>
+            <div class="lesson-hook">"Saber quem se esconde atrás da rocha e quem brilha acima das nuvens."</div>
+            <div class="lesson-footer">
+                <a href="sementes/005_PALAVRAS_DE_POSICAO.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">O Par Perfeito</div>
-        <div class="lesson-hook">"Cada tesouro encontra seu lugar de repouso. A paz de encaixar."</div>
-        <a href="sementes/008_O_PAR_PERFEITO.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card noe">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-009</span>
-            <span class="guardian-emoji" title="Noé">🦉</span>
+        <div class="lesson-card iris">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-006</span>
+                <div class="guardian-badge" title="Íris">🐦</div>
+            </div>
+            <div class="lesson-title">O Desenho do Rei</div>
+            <div class="lesson-hook">"Sentir a curva perfeita do algarismo como se fosse o rastro de beleza na areia."</div>
+            <div class="lesson-footer">
+                <a href="sementes/006_PRATICA_DE_NUMEROS.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">O Celeiro de Noé</div>
-        <div class="lesson-hook">"Oito fardos para o inverno, nove sementes para a primavera. A contagem da provisão."</div>
-        <a href="sementes/009_O_CELEIRO_DE_NOE.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card celeste">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-010</span>
-            <span class="guardian-emoji" title="Celeste">🦊</span>
+        <div class="lesson-card celeste">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-007</span>
+                <div class="guardian-badge" title="Celeste">🦊</div>
+            </div>
+            <div class="lesson-title">A Coroa da Semana</div>
+            <div class="lesson-hook">"Sete cores no arco-íris e seis lados no favo de mel. A Vastidão tem geometria."</div>
+            <div class="lesson-footer">
+                <a href="sementes/007_NUMEROS_6_E_7.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">A Fila da Providência</div>
-        <div class="lesson-hook">"O primeiro a colher e o terceiro a agradecer. Existe uma ordem na fila."</div>
-        <a href="sementes/010_A_FILA_DA_PROVIDENCIA.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card celeste">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-011</span>
-            <span class="guardian-emoji" title="Celeste">🦊</span>
+        <div class="lesson-card iris">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-008</span>
+                <div class="guardian-badge" title="Íris">🐦</div>
+            </div>
+            <div class="lesson-title">O Par Perfeito</div>
+            <div class="lesson-hook">"Cada tesouro encontra seu lugar de repouso. A paz de encaixar."</div>
+            <div class="lesson-footer">
+                <a href="sementes/008_O_PAR_PERFEITO.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">A Plenitude das Mãos</div>
-        <div class="lesson-hook">"Dez dedos para abraçar o mundo e um a mais para apontar para o céu."</div>
-        <a href="sementes/011_A_PLENITUDE_DAS_MAOS.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card bernardo">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-012</span>
-            <span class="guardian-emoji" title="Bernardo">🐻</span>
+        <div class="lesson-card noe">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-009</span>
+                <div class="guardian-badge" title="Noé">🦉</div>
+            </div>
+            <div class="lesson-title">O Celeiro de Noé</div>
+            <div class="lesson-hook">"Oito fardos para o inverno, nove sementes para a primavera. A contagem da provisão."</div>
+            <div class="lesson-footer">
+                <a href="sementes/009_O_CELEIRO_DE_NOE.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">O Segredo do Feixe</div>
-        <div class="lesson-hook">"Ver dez gravetos virarem UM grupo forte nas mãos do Urso que abraça."</div>
-        <a href="sementes/012_O_SEGREDO_DO_FEIXE.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card melquior">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-013</span>
-            <span class="guardian-emoji" title="Melquior">🦁</span>
+        <div class="lesson-card celeste">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-010</span>
+                <div class="guardian-badge" title="Celeste">🦊</div>
+            </div>
+            <div class="lesson-title">A Fila da Providência</div>
+            <div class="lesson-hook">"O primeiro a colher e o terceiro a agradecer. Existe uma ordem na fila."</div>
+            <div class="lesson-footer">
+                <a href="sementes/010_A_FILA_DA_PROVIDENCIA.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">O Rio que se Une</div>
-        <div class="lesson-hook">"Dois riachos que viram um só. A força da união tem um nome: Mais."</div>
-        <a href="sementes/013_O_RIO_QUE_SE_UNE.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card bernardo">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-014</span>
-            <span class="guardian-emoji" title="Bernardo">🐻</span>
+        <div class="lesson-card celeste">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-011</span>
+                <div class="guardian-badge" title="Celeste">🦊</div>
+            </div>
+            <div class="lesson-title">A Plenitude das Mãos</div>
+            <div class="lesson-hook">"Dez dedos para abraçar o mundo e um a mais para apontar para o céu."</div>
+            <div class="lesson-footer">
+                <a href="sementes/011_A_PLENITUDE_DAS_MAOS.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">O Celeiro que Cresce</div>
-        <div class="lesson-hook">"Mais feixes de força para sustentar a Vila. O trabalho do Construtor se multiplica."</div>
-        <a href="sementes/014_O_CELEIRO_QUE_CRESCE.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
 
-    <div class="lesson-card melquior">
-        <div class="card-header">
-            <span class="lesson-id">MV-S-015</span>
-            <span class="guardian-emoji" title="Melquior">🦁</span>
+        <div class="lesson-card bernardo">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-012</span>
+                <div class="guardian-badge" title="Bernardo">🐻</div>
+            </div>
+            <div class="lesson-title">O Segredo do Feixe</div>
+            <div class="lesson-hook">"Ver dez gravetos virarem UM grupo forte nas mãos do Urso que abraça."</div>
+            <div class="lesson-footer">
+                <a href="sementes/012_O_SEGREDO_DO_FEIXE.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-        <div class="lesson-title">A Escada de Luz</div>
-        <div class="lesson-hook">"Contemplar os trinta passos que já demos. Do alto, a vista é mais bonita."</div>
-        <a href="sementes/015_A_ESCADA_DE_LUZ.html" class="btn-view">Ver Lição →</a>
-    </div>
-    
+        
+
+        <div class="lesson-card melquior">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-013</span>
+                <div class="guardian-badge" title="Melquior">🦁</div>
+            </div>
+            <div class="lesson-title">O Rio que se Une</div>
+            <div class="lesson-hook">"Dois riachos que viram um só. A força da união tem um nome: Mais."</div>
+            <div class="lesson-footer">
+                <a href="sementes/013_O_RIO_QUE_SE_UNE.html" class="btn-link">Acessar Lição →</a>
+            </div>
         </div>
-    </div>
+        
+
+        <div class="lesson-card bernardo">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-014</span>
+                <div class="guardian-badge" title="Bernardo">🐻</div>
+            </div>
+            <div class="lesson-title">O Celeiro que Cresce</div>
+            <div class="lesson-hook">"Mais feixes de força para sustentar a Vila. O trabalho do Construtor se multiplica."</div>
+            <div class="lesson-footer">
+                <a href="sementes/014_O_CELEIRO_QUE_CRESCE.html" class="btn-link">Acessar Lição →</a>
+            </div>
+        </div>
+        
+
+        <div class="lesson-card melquior">
+            <div class="lesson-top">
+                <span class="lesson-id">MV-S-015</span>
+                <div class="guardian-badge" title="Melquior">🦁</div>
+            </div>
+            <div class="lesson-title">A Escada de Luz</div>
+            <div class="lesson-hook">"Contemplar os trinta passos que já demos. Do alto, a vista é mais bonita."</div>
+            <div class="lesson-footer">
+                <a href="sementes/015_A_ESCADA_DE_LUZ.html" class="btn-link">Acessar Lição →</a>
+            </div>
+        </div>
+        
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section id="blog" style="margin-top: 4rem;">
+            <div class="section-title"><span>📝</span> Blog & Artigos</div>
+            <div class="blog-placeholder">
+                <h3>Em breve</h3>
+                <p>O módulo de artigos está em construção. Aqui aparecerão as reflexões sobre CPA, CM e Narrativa.</p>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
