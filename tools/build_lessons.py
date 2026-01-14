@@ -227,17 +227,47 @@ def format_content(content_dict):
                         for item in v: html_parts.append(f"<li>{item}</li>")
                         html_parts.append("</ul>")
                     
+
                     elif isinstance(v, dict):
                         # Tratamento especial para objetos de Script (Fala, Instrução)
                         tom = v.get('tom', '')
                         script = v.get('script', '') or v.get('fala', '') or v.get('instrucao', '')
                         
                         if 'fala' in k or 'guardiao' in k or 'portador' in k:
-                            # Dialogues
+                            # Rich Persona Block
+                            nome_guardiao = k.replace('fala_', '').replace('_', ' ').strip().title()
+                            # Tenta mapear o nome para achar a imagem (Portador é exceção)
+                            if 'Portador' in nome_guardiao:
+                                avatar_img = "../assets/cards/guardioes/melquior-leao.png" # Fallback ou específico
+                            else:
+                                avatar_img = get_guardian_data(nome_guardiao) # Reutiliza lógica
+                            
                             tom_html = f'<span class="script-tone">({tom})</span>' if tom else ''
-                            html_parts.append(f'<div class="script-block"><strong class="script-role">{key_clean} {tom_html}:</strong> <span class="script-text">"{script}"</span></div>')
+                            
+                            html_parts.append(f"""
+                            <div class="script-persona-block">
+                                <img src="{avatar_img}" class="script-avatar" alt="{nome_guardiao}">
+                                <div class="script-content">
+                                    <div class="script-header">
+                                        <span class="script-name">{nome_guardiao}</span>
+                                        {tom_html}
+                                    </div>
+                                    <p class="script-text">"{script}"</p>
+                                </div>
+                            </div>
+                            """)
+                        
+                        elif 'instrucao' in k or 'dica' in k:
+                            # Instruction Box
+                            html_parts.append(f"""
+                            <div class="instruction-box">
+                                <span class="instruction-icon">💡</span>
+                                <div>{script}</div>
+                            </div>
+                            """)
+                            
                         else:
-                            # Generic Dict (Instruction/Transition)
+                            # Generic Dict
                             parts = [f"<strong>{sub_k.title()}:</strong> {sub_v}" for sub_k, sub_v in v.items()]
                             html_parts.append(f"<p class='generic-dict'>{'; '.join(parts)}</p>")
                             
