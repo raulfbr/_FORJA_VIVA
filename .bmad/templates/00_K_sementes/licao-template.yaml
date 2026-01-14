@@ -54,47 +54,64 @@ licao:
 
   para_o_portador:
     dica_coracao: "[2-3 frases que acalmam pai e preparam coração]"
+    protocolo_impecabilidade: "[NÃO EXPLIQUE. MOSTRE. Método Vygotsky]" # 🛡️
+    audio_script: "[Mensagem curta para o pai ouvir antes]"
     filho_descobre: "[1-2 frases objetivo lição]"
-    nota_graca: "[Lembrete: pai não precisa ser perfeito]"
+    nota_graca: "[Lembrete: pai não precisa ser perfeito]" # 🕊️
+    conforto_emocional: "[Validação do sentimento do pai]"
 
   ritual_abertura:
-    instrucao_ambiente: "[Tapete Reino, luzes diminuídas, silêncio]"
-    transicao_reino: "[Fechar olhos, acender luz especial, abrir no Reino]"
+    instrucao_ambiente: "[Tapete Reino, luzes diminuídas, silêncio. 🕯️]"
+    transicao_reino: "[Fechar olhos, acender luz especial, abrir no Reino. 🌫️]"
     fala_portador: {tom: "[segredo|animado|solene|misterioso]", script: "[Script abertura]"}
     card_guardiao: "[CARD: NOME_GUARDIAO]"
-    fala_guardiao: {tom: "[Ver LORE/guardioes.yaml]", script: "[Fala + frase canônica]"}
-
+    
   jornada:
-    abertura_sensorial: "[VÊ, OUVE, CHEIRA, SENTE - Ver LORE/locais.yaml]"
+    abertura_sensorial: "[VÊ, OUVE, CHEIRA, SENTE - Ver LORE/locais.yaml. 👁️]"
+    
+    narrativa_principal:
+      cena_1_capitulo:
+        local: "[Local]"
+        descricao: |
+          [Card Guardião]
+          "Fala do Guardião..."
+        card_guardiao: "[CARD: NOME]"
+      cena_2_interacao:
+        local: "[Local]"
+        descricao: |
+          "Fala do Guardião..."
+        instrucao: "[Instrução física para o Portador]"
     
     concreto:
       desc: "[Narrativa guardião + atividade concreta]"
       card_objeto: "[CARD: NOME_OBJETO]"
-      passos:
-        - {n: 1, acao: "[Instrução]", fala: "[Fala sugerida]"}
-        - {n: 2, acao: "[Instrução]", fala: "[Fala sugerida]"}
-        - {n: 3, acao: "[Instrução]", fala: "[Fala sugerida]"}
-      tempo: "80%+ lição (NORTE ABSOLUTO)"
+      instrucoes_portador:
+        - {passo: 1, acao: "[Instrução]", fala: "[Fala sugerida]"}
+        - {passo: 2, acao: "[Instrução]", fala: "[Fala sugerida]"}
+      tempo_minimo: "80%+ lição (NORTE ABSOLUTO 🧭)"
       adaptacao_bernardo: "[💡 Para crianças realidades diferentes...]"
       
     pictorico: {status: VETADO, motivo: "CM 'Things before Signs'. Sementes só Concreto.", excecao: "L000 ou Se Quiser Voar"}
     
     abstrato:
       desc: "[Introdução sutil símbolo - RECONHECE não opera]"
-      card: "[CARD: NOME_SIMBOLO]"
-      passos:
-        - {acao: "[Traçar símbolo ar]", fala: "[Comparação conhecida]"}
+      instrucoes_portador:
+        - {acao: "[Traçar símbolo ar]", fala_sugerida: "[Comparação conhecida]"}
       nota: "Abstrato Sementes = reconhecimento visual. Traçar ar = ENATIVO."
       
     extensao:
       titulo: "[Se Quiser Voar]"
       desc: "[Só se olhos criança pedirem MAIS]"
-      sugestoes: ["[Ideia 1]", "[Ideia 2]"]
+      sugestoes:
+        - {titulo: "[Título]", acao: "[Descrição]"}
+      adaptacao_bernardo: "[💡 Variações inclusivas]"
 
   narracao:
-    instrucao: "[Guarde materiais. Olhe nos olhos. Dê tempo. Silêncio é trabalho mental.]"
+    instrucao_portador: "[Guarde materiais. Olhe nos olhos. Dê tempo. Silêncio é trabalho mental. 🤫]"
     pergunta_principal: "[Pergunta aberta recontar]"
-    perguntas_coracao: ["[Alt 1 - se travar]", "[Alt 2 - aprofundar]", "[Alt 3 - conexão pessoal]"]
+    perguntas_do_coracao:
+      - "[Alt 1]"
+      - "[Alt 2]"
     nota_cm: "Narração CM = fixação. Criança processa → externaliza. NUNCA interrompa."
 
   ritual_fechamento:

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C2: Glassmorphism Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Gloria+Hallelujah&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            /* Colorful gradient background to show off glass effect */
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            font-family: 'Outfit', sans-serif;
+            padding: 20px;
+            color: #2d3748;
+        }
+
+        .lesson-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .scene-card {
+            background: rgba(255, 255, 255, 0.7);
+            /* Translucent */
+            backdrop-filter: blur(12px);
+            /* Blur behind */
+            -webkit-backdrop-filter: blur(12px);
+
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 24px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+        }
+
+        .hero-guardian {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2A5A3F;
+        }
+
+        .scene-header {
+            font-size: 1.5rem;
+            color: #2A5A3F;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lesson-container">
+        <h1>C2: Glassmorphism</h1>
+
+        <div class="scene-card">
+            <div class="scene-header">🤖 Why this works?</div>
+            <p>Moderno, premium. Sente-se "leve" e tecnológico. Bom para apps modernos.</p>
+        </div>
+
+        <!-- Content Mockup -->
+        <div class="scene-card">
+            <div class="scene-header">🦊 Cena 1: O Encontro</div>
+            <div style="display:flex; gap:1rem; align-items:center;">
+                <img src="../../assets/cards/guardioes/celeste-raposa.png" width="60" style="border-radius:50%">
+                <p>"Herdeiro! Sabe o que eu encontrei? Um tesouro de vidro e luz!"</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

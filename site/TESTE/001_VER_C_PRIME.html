@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Trindade na Palma | Matemática Viva</title>
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Gloria+Hallelujah&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        /* C-PRIME: The "Just Right" Balance 
+           Standardized for Forja Viva Production */
+
+        body {
+            background-color: #F8F9FA;
+            /* Slate-50: Crisp, clean, professional */
+            color: #374151;
+            /* Gray-700: Readable, not harsh black */
+        }
+
+        .lesson-container {
+            max-width: 768px;
+            /* Optimum reading width */
+            margin: 0 auto;
+            padding-bottom: 4rem;
+        }
+
+        /* --- CARD COMPONENT --- */
+        .scene-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            /* Smooth, modern corner */
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+
+            /* The "Prime" Shadow: Lifted but grounded */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Gold Accent: The Thread of Meaning */
+        .scene-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FCD34D 0%, #F59E0B 100%);
+            /* Amber-300 to Amber-500 */
+            opacity: 0.8;
+        }
+
+        /* Card Headers */
+        .scene-header {
+            font-family: var(--font-heading, 'Outfit', sans-serif);
+            font-size: 1.35rem;
+            color: #111827;
+            /* Gray-900 */
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+        }
+
+        .scene-icon {
+            font-size: 1.5rem;
+        }
+
+        /* --- INTERNAL BLOCKS --- */
+
+        /* Personas: Flatter, integrated */
+        .script-persona-block {
+            background: #F9FAFB;
+            border: 1px solid #F3F4F6;
+            box-shadow: none;
+            border-left: 4px solid #10B981;
+            /* Celeste Green Identity */
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        .script-avatar {
+            border: 2px solid #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Instructions: Actionable Pop */
+        .instruction-box {
+            background: #FEFCE8;
+            /* Yellow-50 */
+            border: 1px solid #FEF9C3;
+            color: #854D0E;
+            /* Yellow-800 */
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .instruction-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Portador Specifc Block (Reference: Image 1) */
+        .portador-block {
+            border-left: 4px solid #10B981 !important;
+            /* Green Accent from reference */
+            background: #FFFFFF !important;
+            /* White background */
+            /* Ensure it looks cleaner/distinct from Guardian blocks if improved */
+        }
+
+        .script-name {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        /* Icons in bold text */
+        strong {
+            font-weight: 600;
+            color: #1F2937;
+        }
+
+        /* --- MOBILE OPTIMIZATION --- */
+        @media (max-width: 768px) {
+            .lesson-container {
+                padding: 0;
+            }
+
+            .scene-card {
+                border-radius: 0;
+                margin-left: 0;
+                margin-right: 0;
+                width: auto;
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+                /* Divider Line style */
+                padding: 1.5rem;
+                margin-bottom: 0.5rem;
+                /* Tighter stack */
+                border-left: none;
+                border-right: none;
+            }
+
+            .scene-card::before {
+                height: 3px;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                padding: 0 1.5rem;
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="clima-ensolarado">
+    <a href="../index.html" class="home-btn" title="Voltar ao Dashboard">🏡</a>
+
+    <div class="lesson-container">
+
+        <!-- HERO -->
+        <header class="lesson-hero">
+            <div class="lesson-meta-tag">MV-S-001 • 20 min • Ensolarado</div>
+            <h1 class="hero-title">A Trindade na Palma</h1>
+            <p class="hero-quote">"Três sementes de carvalho encontradas pela Raposa: uma para cada promessa do Rei."
+            </p>
+            <img src="../assets/cards/guardioes/celeste-raposa.png" alt="Celeste" class="hero-guardian">
+        </header>
+
+        <article class="lesson-body">
+
+            <!-- CARD 1: Preparação -->
+            <div class="scene-card">
+                <div class="scene-header"><span class="scene-icon">👨‍👩‍👧</span> Preparação do Portador</div>
+
+                <div class="instruction-box">
+                    <span class="instruction-icon">💡</span>
+                    <div>
+                        <strong>Dica do Coração:</strong> Hoje você vai apresentar os números 1, 2 e 3.
+                        Mas não como símbolos mortos — como promessas vivas! Respire. A magia está no encontro.
+                    </div>
+                </div>
+
+                <p><strong>🛡️ Protocolo de Impecabilidade:</strong> NÃO EXPLIQUE os números. MOSTRE-OS. A criança TOCA
+                    uma
+                    semente, depois duas. O método é "Mão-na-mão" (Vygotsky).</p>
+                <p><strong>🕊️ Nota de Graça:</strong> Se seu filho contar errado ou perder a atenção, sorria. A semente
+                    foi
+                    plantada. Repetição nunca é falha.</p>
+            </div>
+
+
+            <!-- CARD 2: Ritual de Abertura -->
+            <div class="scene-card">
+                <div class="scene-header"><span class="scene-icon">🎬</span> Ritual de Abertura</div>
+
+                <div class="instruction-box">
+                    <span class="instruction-icon">🕯️</span>
+                    <div>Sentem-se no Tapete do Reino. Deixe as três sementes escondidas no bolso. Diminua as luzes.
+                    </div>
+                </div>
+
+                <p><strong>🌫️ Transição:</strong> Acenda a luz especial. Peça para a criança fechar os olhos. Quando
+                    abrir,
+                    já estará na Clareira.</p>
+
+                <div class="script-persona-block portador-block">
+                    <img src="../assets/cards/guardioes/melquior-leao.png" class="script-avatar" alt="Portador">
+                    <div class="script-content">
+                        <div class="script-header">
+                            <span class="script-name">PORTADOR</span>
+                            <span class="script-tone">(Tom de mistério — voz baixa)</span>
+                        </div>
+                        <p class="script-text">
+                            "Feche os olhos, pequeno Herdeiro..."<br><br>
+                            "Sente esse cheiro? É cheiro de folhas secas e sol quente. Ouça... as folhas do carvalho
+                            estão sussurrando."<br><br>
+                            [Pausa de 3 segundos]<br><br>
+                            "Quando abrir os olhos, estaremos na Clareira das Perguntas. Celeste está te esperando
+                            lá."<br><br>
+                            "Pode abrir."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Confirmacao Visual -->
+                <div style="text-align:center; margin-top:2rem;">
+                    <p
+                        style="font-size:0.9rem; color:#9CA3AF; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">
+                        Visualizar</p>
+                    <img src="../assets/cards/guardioes/celeste-raposa.png"
+                        style="width:120px; border-radius:12px; box-shadow:0 4px 6px rgba(0,0,0,0.1); transform: rotate(-2deg); border: 4px solid white;"
+                        alt="Card Celeste">
+                </div>
+            </div>
+
+
+            <!-- SECTION HEADER FOR JOURNEY -->
+            <!-- Note: We keep this outside cards to denote a phase shift -->
+            <h2
+                style="font-family:'Outfit'; color:#6B7280; font-size:1rem; text-transform:uppercase; letter-spacing:2px; margin: 3rem 0 1rem 0; text-align:center;">
+                🗺️ A Jornada</h2>
+
+
+            <!-- CARD 3: Cena 1 -->
+            <div class="scene-card">
+                <div class="scene-header">🦊 Cena 1: Celeste Encontra</div>
+                <p><strong>👁️ Abertura Sensorial:</strong> O sol atravessa as folhas dos carvalhos gigantes. O ar está
+                    quente. No centro, uma raposa cor de fogo fareja o ar.</p>
+                <p><strong>📍 Local:</strong> Clareira das Perguntas</p>
+
+                <div class="script-persona-block">
+                    <img src="../assets/cards/guardioes/celeste-raposa.png" class="script-avatar" alt="Celeste">
+                    <div class="script-content">
+                        <div class="script-header"><span class="script-name">Celeste</span> <span
+                                class="script-tone">(Animada)</span></div>
+                        <p class="script-text">
+                            "Herdeiro! Você veio! Eu estava te esperando!"<br>
+                            "Sabe o que eu encontrei hoje de manhã? Um tesouro escondido debaixo daquele
+                            carvalho!"<br><br>
+                            [A Raposa aponta para o chão com o focinho]<br><br>
+                            "Quer ver? Me ajuda a contar o que eu achei?"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4: Cena 2 -->
+            <div class="scene-card">
+                <div class="scene-header">1️⃣ Cena 2: Primeira Semente</div>
+
+                <div class="instruction-box">
+                    <span class="instruction-icon">👉</span>
+                    <div>Portador: Entregue UMA semente. Deixe a criança explorar.</div>
+                </div>
+
+                <div class="script-persona-block">
+                    <img src="../assets/cards/guardioes/celeste-raposa.png" class="script-avatar" alt="Celeste">
+                    <div class="script-content">
+                        <div class="script-header"><span class="script-name">Celeste</span></div>
+                        <p class="script-text">
+                            "Olha! Uma semente. Só UMA."<br>
+                            "Sente ela na sua mão. É pesada ou leve? Redonda ou pontuda?"<br><br>
+                            [Pausa]<br><br>
+                            "UM. A primeira promessa do Rei. O Rei disse 'Um' e surgiu a primeira luz."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 5: Cena 3 -->
+            <div class="scene-card">
+                <div class="scene-header">2️⃣ Cena 3: Segunda Semente</div>
+
+                <div class="instruction-box">
+                    <span class="instruction-icon">👉</span>
+                    <div>Portador: Entregue a SEGUNDA semente. Conte JUNTO: "uma... duas."</div>
+                </div>
+
+                <div class="script-persona-block">
+                    <img src="../assets/cards/guardioes/celeste-raposa.png" class="script-avatar" alt="Celeste">
+                    <div class="script-content">
+                        <div class="script-header"><span class="script-name">Celeste</span></div>
+                        <p class="script-text">
+                            "Espera... tem mais uma aqui!"<br>
+                            "Agora você tem DUAS. Uma e mais uma."<br><br>
+                            [Conte junto]<br>
+                            "DOIS. A segunda promessa do Rei. O Rei disse 'Dois' e a luz ganhou uma amiga: a sombra."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 6: Cena 4 -->
+            <div class="scene-card">
+                <div class="scene-header">3️⃣ Cena 4: Terceira Semente</div>
+                <div class="script-persona-block">
+                    <img src="../assets/cards/guardioes/celeste-raposa.png" class="script-avatar" alt="Celeste">
+                    <div class="script-content">
+                        <div class="script-header"><span class="script-name">Celeste</span></div>
+                        <p class="script-text">
+                            "E olha só! Mais UMA escondida! Agora você tem TRÊS. A família completa!"<br><br>
+                            [Conte junto]<br><br>
+                            "TRÊS. A terceira promessa do Rei. O Rei disse 'Três' e nasceu a família."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SECTION HEADER CONCRETO -->
+            <h2
+                style="font-family:'Outfit'; color:#6B7280; font-size:1rem; text-transform:uppercase; letter-spacing:2px; margin: 3rem 0 1rem 0; text-align:center;">
+                🧱 O Concreto</h2>
+
+            <!-- CARD 7: Concreto -->
+            <div class="scene-card">
+                <div class="scene-header"><span class="scene-icon">🧱</span> Atividade Concreta</div>
+
+                <div class="script-persona-block">
+                    <img src="../assets/cards/guardioes/celeste-raposa.png" class="script-avatar" alt="Celeste">
+                    <div class="script-content">
+                        <div class="script-header"><span class="script-name">Celeste</span></div>
+                        <p class="script-text">
+                            "Agora vamos brincar! Esconde as sementes atrás das costas..."<br>
+                            "Agora me mostra UMA."<br>
+                            [Espere]<br>
+                            "Me mostra DUAS."<br>
+                            [Espere]<br>
+                            "Me mostra TRÊS! Perfeito! Você é um guardião de tesouros!"
+                        </p>
+                    </div>
+                </div>
+
+                <div class="instruction-box">
+                    <span class="instruction-icon">📋</span>
+                    <div>
+                        <strong>Passo a Passo:</strong>
+                        <ol style="margin-top:0.5rem; margin-left:1rem;">
+                            <li>Peça para esconder as sementes atrás das costas. Fala: <em>"Esconde o tesouro!"</em>
+                            </li>
+                            <li>Peça "Me mostra UMA".</li>
+                            <li>Peça "Me mostra DUAS".</li>
+                            <li>Peça "Me mostra TRÊS".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <p><strong>🧭 Norte Absoluto (80%):</strong> A criança TOCA, MOVE, MANIPULA. Se errar, conte junto.
+                    "Mais
+                    uma vez. Comigo."</p>
+            </div>
+
+
+            <!-- CARD 8: Narração -->
+            <div class="scene-card">
+                <div class="scene-header"><span class="scene-icon">🗣️</span> Narramos Juntos</div>
+
+                <div class="instruction-box">
+                    <span class="instruction-icon">🤫</span>
+                    <div>Guarde as sementes. Olhe nos olhos. Dê tempo. O silêncio é parte do trabalho mental.</div>
+                </div>
+
+                <div class="script-persona-block">
+                    <img src="../assets/cards/guardioes/celeste-raposa.png" class="script-avatar" alt="Celeste">
+                    <div class="script-content">
+                        <div class="script-header"><span class="script-name">Celeste</span></div>
+                        <p class="script-text">
+                            "Herdeiro, o que você descobriu hoje na Clareira?<br>
+                            O que você contaria para o Melquior sobre os tesouros?"
+                        </p>
+                    </div>
+                </div>
+
+                <p><strong>Perguntas do Coração:</strong></p>
+                <ul style="margin-left:1.5rem; margin-top:0.5rem;">
+                    <li>Qual número você mais gostou? O um, o dois ou o três?</li>
+                    <li>Se você pudesse dar uma semente para alguém, quem seria?</li>
+                </ul>
+            </div>
+
+
+            <!-- CARD 9: Fechamento -->
+            <div class="scene-card">
+                <div class="scene-header"><span class="scene-icon">🏁</span> Ritual de Fechamento</div>
+
+                <div class="script-persona-block">
+                    <img src="../assets/cards/guardioes/celeste-raposa.png" class="script-avatar" alt="Celeste">
+                    <div class="script-content">
+                        <div class="script-header"><span class="script-name">Celeste</span></div>
+                        <p class="script-text">
+                            [A Raposa inclina a cabeça em agradecimento]<br><br>
+                            "Herdeiro, você cuidou bem dos tesouros hoje!"<br>
+                            "Guarde UMA semente no seu bolso. Amanhã, Bernardo vai precisar de ajuda na Forja."<br>
+                            "Até a próxima aventura!"
+                        </p>
+                    </div>
+                </div>
+
+                <p><strong>🧵 Fio de Ouro:</strong> A criança guarda UMA das sementes para a Lição 002.</p>
+
+                <div class="script-persona-block portador-block">
+                    <img src="../assets/cards/guardioes/melquior-leao.png" class="script-avatar" alt="Portador">
+                    <div class="script-content">
+                        <div class="script-header"><span class="script-name">Portador</span></div>
+                        <p class="script-text">"O Reino adormece, mas o tesouro continua no seu bolso. Um, dois, três —
+                            promessas do Rei. Até a próxima jornada."</p>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- Navigation Footer -->
+        <nav class="lesson-nav">
+            <a href="000_O_PORTAL.html" class="nav-btn prev">
+                <span class="nav-label">← Anterior</span>
+                <span class="nav-title">O Portal: O Convite do Rei</span>
+            </a>
+            <a href="002_AS_PEDRAS_DA_FORTALEZA.html" class="nav-btn next">
+                <span class="nav-label">Próxima →</span>
+                <span class="nav-title">As Pedras da Fortaleza</span>
+            </a>
+        </nav>
+
+        <footer style="text-align: center; margin-top: 4rem; color: #A8A29E; font-size: 0.8rem;">
+            Matemática Viva • Forjado com Estilo e Propósito
+        </footer>
+    </div>
+</body>
+
+</html>

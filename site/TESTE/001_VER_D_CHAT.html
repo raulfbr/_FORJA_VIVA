@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver D: Chat Stream</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Gloria+Hallelujah&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: #E5DDD5;
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            line-height: 1.5;
+        }
+
+        .msg-guardiao {
+            align-self: flex-start;
+            background: #FFFFFF;
+            border-top-left-radius: 0;
+        }
+
+        .msg-portador {
+            /* Instructions for parent */
+            align-self: flex-end;
+            background: #DCF8C6;
+            border-top-right-radius: 0;
+            color: #075E54;
+        }
+
+        .msg-system {
+            align-self: center;
+            background: #E1F5FE;
+            color: #0288D1;
+            font-size: 0.9rem;
+            text-align: center;
+            border-radius: 20px;
+            padding: 8px 20px;
+        }
+
+        .avatar-label {
+            font-size: 0.75rem;
+            color: #999;
+            margin-bottom: 4px;
+            display: block;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="hero">
+            <img src="../../assets/cards/guardioes/celeste-raposa.png">
+            <h2>A Trindade na Palma</h2>
+        </div>
+
+        <div class="message msg-system">🔔 Início da Aula: 20 min</div>
+
+        <div class="message msg-portador">
+            <span class="avatar-label">PORTADOR (VOCÊ)</span>
+            <strong>Dica do Coração:</strong> Hoje vou apresentar os números 1, 2 e 3 como promessas vivas. Respira
+            fundo...
+        </div>
+
+        <div class="message msg-guardiao">
+            <span class="avatar-label">CELESTE</span>
+            Herdeiro! Você veio! Eu estava te esperando! Sabe o que eu encontrei?
+        </div>
+
+        <div class="message msg-portador">
+            <span class="avatar-label">AÇÃO</span>
+            👉 Entregue UMA semente para a criança agora.
+        </div>
+
+        <div class="message msg-guardiao">
+            <span class="avatar-label">CELESTE</span>
+            Olha! Uma semente. Só UMA. Sente ela na sua mão...
+        </div>
+
+        <div class="message msg-guardiao">
+            <span class="avatar-label">CELESTE</span>
+            UM. A primeira promessa do Rei.
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver B: Accordion | Matemática Viva</title>
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Gloria+Hallelujah&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        /* VERSION B: ACCORDION */
+        /* Use <details> tags to collapse content */
+
+        details.nested-section {
+            margin-bottom: 1rem;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #FFFFFF;
+        }
+
+        summary {
+            background: #F9FAFB;
+            padding: 1rem;
+            cursor: pointer;
+            list-style: none;
+            /* Remove default triangle */
+            position: relative;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #9CA3AF;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #E5E7EB;
+            background: #FEFCE8;
+            /* Highlight when open */
+        }
+
+        .details-content {
+            padding: 1.5rem;
+        }
+
+        /* Nested recursion handling */
+        details details {
+            margin-left: 0;
+            /* No indent for inner details, keep robust */
+            border: none;
+            border-top: 1px solid #F3F4F6;
+        }
+    </style>
+</head>
+
+<body class="clima-ensolarado">
+    <div class="lesson-container">
+
+        <header class="lesson-hero">
+            <div class="lesson-meta-tag">Opção B: Accordion (Sanfona)</div>
+            <h1 class="hero-title">A Trindade na Palma</h1>
+            <p class="hero-quote">"Foco na compactação. O usuário abre o que quer ver."</p>
+            <img src="../assets/cards/guardioes/celeste-raposa.png" alt="Celeste" class="hero-guardian">
+        </header>
+
+        <article class="lesson-body">
+            <h2>🗺️ A Jornada</h2>
+
+            <p><strong>Abertura Sensorial:</strong> 🦊 O sol atravessa as folhas dos carvalhos gigantes...</p>
+
+            <!-- Outer Details -->
+            <details class="nested-section" open>
+                <summary>Capítulo 1: O Encontro</summary>
+                <div class="details-content">
+
+                    <!-- Inner Details for Scenes -->
+                    <details class="nested-section">
+                        <summary>Cena 1: Celeste Encontra</summary>
+                        <div class="details-content">
+                            <p><strong>Local:</strong> Clareira das Perguntas</p>
+                            <div class="script-persona-block">
+                                <img src="../assets/cards/guardioes/celeste-raposa.png" class="script-avatar"
+                                    alt="Celeste">
+                                <div class="script-content">
+                                    <p class="script-text">"Herdeiro! Você veio! Eu estava te esperando!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="nested-section">
+                        <summary>Cena 2: Primeira Semente</summary>
+                        <div class="details-content">
+                            <div class="instruction-box">
+                                <span class="instruction-icon">👉</span>
+                                <div>Portador: Entregue UMA semente.</div>
+                            </div>
+                            <div class="script-persona-block">
+                                <img src="../assets/cards/guardioes/celeste-raposa.png" class="script-avatar"
+                                    alt="Celeste">
+                                <div class="script-content">
+                                    <p class="script-text">"Olha! Uma semente. Só UMA."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </details>
+        </article>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver H: Game App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #6C5CE7;
+            font-family: 'Fredoka', sans-serif;
+            padding: 20px;
+            color: white;
+            margin-bottom: 80px;
+        }
+
+        .app-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .fill {
+            width: 33%;
+            height: 100%;
+            background: #00CEC9;
+        }
+
+        .card {
+            background: white;
+            color: #2D3436;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+            /* 3D pop */
+            position: relative;
+        }
+
+        .badge {
+            background: #FD79A8;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            margin-top: 5px;
+            color: #6C5CE7;
+        }
+
+        .btn-action {
+            background: #00CEC9;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: 600;
+            margin-top: 10px;
+            box-shadow: 0 5px 0 #00B894;
+        }
+
+        .nav-dock {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: #2D3436;
+            border-radius: 50px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-item {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-header">
+        <div class="progress-bar">
+            <div class="fill"></div>
+        </div>
+        <h1>Nível 01</h1>
+    </div>
+
+    <div class="card">
+        <div class="badge">MISSÃO</div>
+        <h2>Encontre 3 Sementes</h2>
+        <p>A raposa Celeste precisa de ajuda para contar seu tesouro.</p>
+    </div>
+
+    <div class="card">
+        <div class="badge">DIALOGO</div>
+        <div style="display:flex; align-items:center; gap:10px;">
+            <img src="../../assets/cards/guardioes/celeste-raposa.png" width="50" style="border-radius:50%">
+            <p><strong>Celeste:</strong> "Herdeiro! Sabe o que eu encontrei? Um tesouro!"</p>
+        </div>
+    </div>
+
+    <div class="btn-action">
+        👉 ENTREGAR 1 SEMENTE
+    </div>
+
+    <div class="nav-dock">
+        <span class="nav-item">🏠</span>
+        <span class="nav-item">🎒</span>
+        <span class="nav-item">⭐</span>
+    </div>
+</body>
+
+</html>

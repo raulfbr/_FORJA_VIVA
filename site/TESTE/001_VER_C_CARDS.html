@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver C: Cards | Matemática Viva</title>
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Gloria+Hallelujah&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        /* VERSION C: CARDS */
+        /* Each scene is a distinct card, separating logic visually without nesting trees */
+
+        .scene-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .scene-header {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: #2A5A3F;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #F3F4F6;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Mobile adjustment: Cards take full width but keep look */
+        @media (max-width: 768px) {
+            .scene-card {
+                padding: 1rem;
+                margin-left: -1rem;
+                /* Bleed slightly */
+                margin-right: -1rem;
+                border-radius: 0;
+                /* Full width flow */
+                border-top: 1px solid #E5E7EB;
+                border-bottom: 1px solid #E5E7EB;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="clima-ensolarado">
+    <div class="lesson-container">
+
+        <header class="lesson-hero">
+            <div class="lesson-meta-tag">Opção C: Cards (Cartões)</div>
+            <h1 class="hero-title">A Trindade na Palma</h1>
+            <p class="hero-quote">"Foco na separação. Cada cena é um 'card' distinto."</p>
+            <img src="../assets/cards/guardioes/celeste-raposa.png" alt="Celeste" class="hero-guardian">
+        </header>
+
+        <article class="lesson-body">
+            <h2>🗺️ A Jornada</h2>
+
+            <p><strong>Abertura Sensorial:</strong> 🦊 O sol atravessa as folhas dos carvalhos gigantes...</p>
+
+            <!-- Scene 1 -->
+            <div class="scene-card">
+                <div class="scene-header">🎬 Cena 1: Celeste Encontra</div>
+                <p><strong>Local:</strong> Clareira das Perguntas</p>
+
+                <div class="script-persona-block">
+                    <img src="../assets/cards/guardioes/celeste-raposa.png" class="script-avatar" alt="Celeste">
+                    <div class="script-content">
+                        <div class="script-header"><span class="script-name">Celeste</span> <span
+                                class="script-tone">(Animada)</span></div>
+                        <p class="script-text">
+                            "Herdeiro! Você veio! Eu estava te esperando!"<br>
+                            "Sabe o que eu encontrei hoje de manhã?"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scene 2 -->
+            <div class="scene-card">
+                <div class="scene-header">🎬 Cena 2: Primeira Semente</div>
+
+                <div class="instruction-box">
+                    <span class="instruction-icon">👉</span>
+                    <div>Portador: Entregue UMA semente. Deixe a criança explorar.</div>
+                </div>
+
+                <div class="script-persona-block">
+                    <img src="../assets/cards/guardioes/celeste-raposa.png" class="script-avatar" alt="Celeste">
+                    <div class="script-content">
+                        <div class="script-header"><span class="script-name">Celeste</span></div>
+                        <p class="script-text">
+                            "Olha! Uma semente. Só UMA."<br>
+                            "UM. A primeira promessa do Rei."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </div>
+</body>
+
+</html>

@@ -20,10 +20,49 @@ design_system:
     primarias: {forest_green: '#2A5A3F', old_gold: '#BFA265', warm_cream: '#FDF5E6'}
     secundarias: {terra: '#8B4513', indigo: '#4B0082', coral_suave: '#FF7F7F'}
     status: {sucesso: '#2E8B57', atencao: '#DAA520', erro: '#CD5C5C'}
-  tipografia: {headers: 'Merriweather Georgia serif', body: 'Outfit Roboto sans-serif', mono: 'JetBrains Mono monospace'}
+  tipografia: 
+    headers: "'Lora', serif" # Clássico, Literário (Morris)
+    body: "'Outfit', sans-serif" # Geométrico, Amigável (Toca Boca)
+    handwritten: "'Gloria Hallelujah', cursive" # Toque Humano, Notas (Potter)
+    mono: "'JetBrains Mono', monospace"
   espacamento: {base: 8px, escala: [8, 16, 24, 32, 48, 64, 96]}
-  bordas: {pequeno: 4px, medio: 8px, grande: 16px}
+  bordas: {pequeno: 4px, medio: 12px, grande: 32px} # 32px = Toca Boca Style
   sombras: {sutil: '0 2px 4px rgba(0,0,0,0.1)', media: '0 4px 12px rgba(0,0,0,0.15)', forte: '0 8px 24px rgba(0,0,0,0.2)'}
+
+biblioteca_padroes:
+  componentes_visuais:
+    - id: script_persona_block
+      desc: "Bloco de diálogo com avatar para roleplay."
+      css_class: ".script-persona-block"
+      elementos: [Avatar Circular 80px, Nome (H5), Texto (Body), Borda Lateral Accent]
+      uso: "Apenas para falas diretas (Speech) dos Guardiões ou Portador."
+    
+    - id: instruction_box
+      desc: "Caixa de destaque para instruções práticas."
+      css_class: ".instruction-box"
+      elementos: [Ícone (Emoji/SVG), Texto Instrucional]
+      uso: "Dicas de palco, ações físicas ou avisos de transição."
+      
+    - id: card_navigation
+      desc: "Botões de navegação grandes e clicáveis."
+      css_class: ".nav-btn"
+      principio: "Toca Boca Large Touch Targets (>44px)"
+      estado_hover: "Feedback de elevação (transform -4px) e sombra."
+
+  estrutura_tecnica:
+    - id: recursion_protocol
+      problema: "Conteúdo aninhado (Jornada > Narrativa > Cena) perde hierarquia se achatado."
+      solucao: "Renderização Recursiva: Detectar Dicts aninhados e criar container visual."
+      tag_html: "<div class='nested-section'>"
+      estilo: "Border-left sutil + Indentation. Não usar boxes fechados para evitar 'clutter' (Tufte)."
+      
+    - id: mixed_content_strategy
+      problema: "Dicionários contendo chaves ricas (fala) E chaves simples (local) juntos."
+      solucao: "Iteração Híbrida: Renderizar blocos ricos visualmente ONDE aparecerem, e chaves simples como parágrafos <strong>Key:</strong> Value, sem perder nada."
+
+    - id: mobile_responsive
+      problema: "Indentação profunda (.2rem+) quebra layout em telas pequenas."
+      solucao: "Media Query (max-width: 768px): Reduzir padding/margin para 0.5rem. Aumentar espessura da borda para manter hierarquia visual."
 
 veto_coletivo:
   perguntas: [É bonito E funcional? Morris, Parece natural não artificial? Potter, Criança 5 anos consegue usar? TocaBoca, Cada pixel tem propósito? Tufte]
@@ -47,3 +86,14 @@ alinhamento_north_star:
 referencias:
   primarias: [Beatrix Potter Life Nature Linda Lear, William Morris Life Our Time Fiona MacCarthy, Visual Display Quantitative Information Tufte, Toca Boca Design Philosophy]
   websites: [https://www.tocaboca.com, https://www.edwardtufte.com]
+
+guia_tecnico_implementacao:
+  recursion_protocol:
+    problema: "YAMLs complexos (ex: Jornada -> Narrativa -> Cena) geram 'generic-dict' strings se achatados."
+    solucao: "Utilizar renderização recursiva (fn render_recursive). Se um valor for dict, descer Nível+1 em vez de achatar."
+    tag: "Usar <div class='nested-section'> para agrupar visualmente sub-níveis."
+  
+  navigation_ui:
+    classe: ".nav-btn"
+    design: "Estilo Card Clicável (Toca Boca). Grande área de toque (>44px), sombra suave, feedback visual no hover."
+    layout: "Grid 2 colunas. Botão 'Anterior' alinhado à esquerda, 'Próxima' à direita."

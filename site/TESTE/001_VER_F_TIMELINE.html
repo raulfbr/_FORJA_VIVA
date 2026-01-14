@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver F: Timeline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #F3F4F6;
+            font-family: 'Outfit', sans-serif;
+            padding: 20px;
+        }
+
+        .timeline {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        /* The Line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #D1D5DB;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* The Dot */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 20px;
+            width: 16px;
+            height: 16px;
+            background: #10B981;
+            /* Green */
+            border: 4px solid #F3F4F6;
+            border-radius: 50%;
+        }
+
+        .time-badge {
+            background: #ECFDF5;
+            color: #059669;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin: 0 0 10px 0;
+            color: #111827;
+        }
+
+        p {
+            margin: 0;
+            color: #4B5563;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="timeline">
+        <div class="timeline-item">
+            <span class="time-badge">00:00 • PREPARAÇÃO</span>
+            <h3>Dica do Coração</h3>
+            <p>Hoje você vai apresentar os números 1, 2 e 3. Respire.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span class="time-badge">02:00 • RITUAL</span>
+            <h3>Entrando no Reino</h3>
+            <p>Sentem-se no tapete. Apaguem as luzes. Celeste espera.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span class="time-badge">05:00 • CENA 1</span>
+            <h3>O Encontro</h3>
+            <p>"Herdeiro! Você veio!" Celeste mostra o tesouro escondido.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span class="time-badge">08:00 • AÇÃO</span>
+            <h3>Primeira Semente</h3>
+            <p>👉 <strong>Ação:</strong> Entregue 1 semente.<br>"UM. A primeira promessa do Rei."</p>
+        </div>
+    </div>
+</body>
+
+</html>
