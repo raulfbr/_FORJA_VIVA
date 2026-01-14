@@ -7,7 +7,7 @@
 [![Método](https://img.shields.io/badge/Método-CM%20%2B%20CPA-blue?style=for-the-badge)](.bmad/expansion-packs/matematica-viva/triade.yaml)
 [![Plataforma](https://img.shields.io/badge/Plataforma-Play_and_Go-green?style=for-the-badge)](docs/README_LEGACY_TECNICO.md)
 
-[**Ler Manifesto**](blog/2026-01-14_por-que-seu-filho-nao-ama-matematica.html) | [**Ver Lição**](examples/L001_demo.html) | [**Entrar na Tribo**](#-oferta-pioneira-2026)
+[**Ler Manifesto**](site/blog/2026-01-14_por-que-seu-filho-nao-ama-matematica.html) | [**Ver Lição**](site/sementes/001_TRINDADE_PALMA.html) | [**Entrar na Tribo**](#-oferta-pioneira-2026)
 
 </div>
 
@@ -203,7 +203,7 @@ Se você chegou até aqui, **você já é um de nós**.
 
 ### 📚 Quer Aprofundar?
 
-🔗 **[Ler Manifesto no Blog](blog/2026-01-14_por-que-seu-filho-nao-ama-matematica.html)**
+🔗 **[Ler Manifesto no Blog](site/blog/2026-01-14_por-que-seu-filho-nao-ama-matematica.html)**
 
 📧 **Contato:** rfbr21@gmail.com
 💻 **Desenvolvedores:** [README_DEV.md](README_DEV.md)
