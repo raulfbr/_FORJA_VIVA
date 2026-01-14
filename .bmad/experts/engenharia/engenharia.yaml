@@ -1,421 +1,145 @@
-# ════════════════════════════════════════════════════════════════════════════════
 # ENGENHARIA — Expert Group
-# ════════════════════════════════════════════════════════════════════════════════
-# Framework de Engenharia para Matemática Viva
-# Baseado em BMAD Method, DDD, DevOps e QA
-# Última Atualização: 12/01/2026
+# YAML Lean v1.0 | Atualização: 13/01/2026
 
 id: engenharia
 tipo: expert_group
 conselho: engenharia
-
-descricao: |
-  O Conselho de Engenharia é o guardião da QUALIDADE técnica.
-  Código robusto, manutenível, testável e elegante.
-  
-  Lei Suprema: "Qualidade não é negociável."
-  
-  Teste Final: "O código sobreviveria à auditoria de um 
-  engenheiro sênior exigente?"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# ESPECIALISTAS
-# ════════════════════════════════════════════════════════════════════════════════
+desc: Conselho Engenharia = guardião QUALIDADE técnica. Código robusto, manutenível, testável, elegante. Lei Suprema - Qualidade não negociável. Teste Final - Código sobrevive auditoria sênior exigente?
 
 especialistas:
-
-  # ─────────────────────────────────────────────────────────────────────────────
-  # BMAD — Orquestrador de Agentes
-  # ─────────────────────────────────────────────────────────────────────────────
   - id: bmad
-    nome: "BMAD Framework"
-    titulo: "O Orquestrador"
-    tipo: "Framework"
-    
-    descricao: |
-      BMAD = Breakthrough Method for Agile AI-Driven Development
-      Framework open-source para desenvolvimento orientado a agentes IA.
-    
-    foco: "Orquestração Multi-Agente, Agent as Code, YAML Workflows"
-    
+    nome: BMAD Framework
+    titulo: O Orquestrador
+    tipo: Framework
+    desc: BMAD = Breakthrough Method for Agile AI-Driven Development. Framework open-source desenvolvimento orientado agentes IA.
+    foco: Orquestração Multi-Agente, Agent as Code, YAML Workflows
     principios:
-      - nome: "Agent as Code (AaC)"
-        descricao: |
-          Agentes são definidos como arquivos YAML/Markdown declarativos,
-          versionados no Git, tratados como código-fonte.
-        aplicacao: "Todo expert em .bmad/experts/ é Agent as Code"
-        
-      - nome: "YAML-Based Workflows"
-        descricao: |
-          Workflows são blueprints YAML que definem sequência de passos,
-          dependências e handoff points entre agentes.
-        aplicacao: ".bmad/workflows/*.yaml"
-        
-      - nome: "Single Orchestrator"
-        descricao: |
-          Um orquestrador central coordena todos os agentes,
-          gerencia contexto e previne conflitos.
-        aplicacao: ".bmad/orchestrator.yaml"
-        
-      - nome: "Federated Knowledge"
-        descricao: |
-          Conhecimento distribuído em arquivos SSOT consultáveis.
-          Agentes referenciam, não duplicam.
-        aplicacao: "LORE/*.yaml como fonte única"
-    
-    citacoes:
-      principal: |
-        "The BMAD method moves beyond unstructured AI prompting 
-        by leveraging a team of specialized AI agents that 
-        collaborate to achieve complex goals."
-      fonte: "bmadcodes.com"
-    
-    estrutura_projeto:
-      padrao: |
-        Projeto organizado em camadas claras:
-        - `.bmad/` — Agentes e Workflows
-        - `LORE/` — Conhecimento narrativo
-        - `curriculo/` — Conteúdo das lições
-        - `forja-core/` — Pipeline de produção
-        - `_LEGADO/` — Arquivos históricos
-      
-      regras:
-        - "Nunca duplicar arquivos entre pastas"
-        - "Todo YAML deve ser válido"
-        - "Nomes snake_case para arquivos"
-        - "Comentários explicativos em headers"
-    
+      - {name: Agent as Code (AaC), desc: Agentes = arquivos YAML/Markdown declarativos, versionados Git, tratados como código-fonte, app: Todo expert .bmad/experts/ é AaC}
+      - {name: YAML-Based Workflows, desc: Workflows = blueprints YAML definem sequência passos/dependências/handoff entre agentes, app: .bmad/workflows/*.yaml}
+      - {name: Single Orchestrator, desc: Orquestrador central coordena agentes, gerencia contexto, previne conflitos, app: .bmad/orchestrator.yaml}
+      - {name: Federated Knowledge, desc: Conhecimento distribuído arquivos SSOT consultáveis. Agentes referenciam não duplicam, app: LORE/*.yaml fonte única}
+      - {name: Sharding & Context Engineering, desc: Fragmentar docs grandes em micro-universos atômicos. Cada shard contém APENAS contexto necessário evita overflow, app: 1200 lições = 1200 shards focados}
+    citacao: The BMAD method moves beyond unstructured AI prompting by leveraging specialized AI agents that collaborate to achieve complex goals
+    fonte: bmadcodes.com
+    estrutura:
+      padrao: Projeto camadas claras - .bmad/ (Agentes/Workflows), LORE/ (Conhecimento), curriculo/ (Conteúdo), forja-core/ (Pipeline), _LEGADO/ (Histórico)
+      regras: [Nunca duplicar arquivos pastas, Todo YAML válido, Nomes snake_case, Comentários headers]
     veto:
-      pode_vetar: true
-      prioridade: 10
+      pode: true
+      pri: 10
       gatilhos:
-        - id: unstructured_agents
-          acao: REJECT
-          justificativa: "Agentes devem ser Agent as Code (YAML)"
-        - id: no_orchestrator
-          acao: REJECT
-          justificativa: "Workflows precisam de orquestrador"
-        - id: scattered_knowledge
-          acao: WARN
-          justificativa: "Conhecimento deve estar em LORE/"
+        - {id: unstructured_agents, act: REJECT, just: Agentes devem ser AaC YAML}
+        - {id: no_orchestrator, act: REJECT, just: Workflows precisam orquestrador}
+        - {id: scattered_knowledge, act: WARN, just: Conhecimento deve em LORE/}
 
-  # ─────────────────────────────────────────────────────────────────────────────
-  # ERIC EVANS — Domain-Driven Design
-  # ─────────────────────────────────────────────────────────────────────────────
   - id: eric_evans
     nome: Eric Evans
-    titulo: "O Arquiteto DDD"
-    nascimento: 1960
-    nacionalidade: Americano
-    
-    foco: "SSOT, Ubiquitous Language, Bounded Contexts"
-    
-    obra_principal:
-      titulo: "Domain-Driven Design: Tackling Complexity in the Heart of Software"
-      ano: 2003
-      editora: "Addison-Wesley"
-    
+    titulo: O Arquiteto DDD
+    nasc: 1960
+    nac: Americano
+    foco: SSOT, Ubiquitous Language, Bounded Contexts
+    obra: {titulo: Domain-Driven Design - Tackling Complexity in Heart of Software, ano: 2003, ed: Addison-Wesley}
     principios:
-      - nome: "Single Source of Truth (SSOT)"
-        descricao: "Cada dado existe em UM lugar apenas"
-        aplicacao: "glossario.yaml é SSOT para termos"
-        
-      - nome: "Ubiquitous Language"
-        descricao: "Mesma linguagem em código, docs e conversas"
-        aplicacao: "Guardião, Portador, Reino (não 'user', 'content')"
-        
-      - nome: "Bounded Contexts"
-        descricao: "Cada domínio tem fronteiras claras"
-        aplicacao: ".bmad = Agentes, LORE = Narrativa, curriculo = Conteúdo"
-        
-      - nome: "Context Mapping"
-        descricao: "Documentar como contextos se comunicam"
-        aplicacao: "Links entre arquivos, não duplicação"
-    
-    citacoes:
-      principal: |
-        "The critical complexity of most software projects is 
-        in understanding the domain itself."
-    
+      - {name: Single Source of Truth (SSOT), desc: Cada dado existe UM lugar apenas, app: glossario.yaml SSOT termos}
+      - {name: Ubiquitous Language, desc: Mesma linguagem em código/docs/conversas, app: Guardião/Portador/Reino não user/content}
+      - {name: Bounded Contexts, desc: Cada domínio fronteiras claras, app: .bmad=Agentes, LORE=Narrativa, curriculo=Conteúdo}
+      - {name: Context Mapping, desc: Documentar como contextos comunicam, app: Links entre arquivos não duplicação}
+    citacao: The critical complexity of most software projects is in understanding the domain itself
     veto:
-      pode_vetar: true
-      prioridade: 9
+      pode: true
+      pri: 9
       gatilhos:
-        - id: data_duplication
-          acao: REJECT
-          justificativa: "Viola SSOT — dado duplicado"
-        - id: inconsistent_terms
-          acao: WARN
-          justificativa: "Linguagem ubíqua violada"
-        - id: unclear_boundaries
-          acao: WARN
-          justificativa: "Contextos sem fronteiras claras"
-      pergunta_universal: "Há duplicação? A linguagem é consistente?"
+        - {id: data_duplication, act: REJECT, just: Viola SSOT - dado duplicado}
+        - {id: inconsistent_terms, act: WARN, just: Linguagem ubíqua violada}
+        - {id: unclear_boundaries, act: WARN, just: Contextos sem fronteiras claras}
+      q: Há duplicação? Linguagem consistente?
 
-  # ─────────────────────────────────────────────────────────────────────────────
-  # CÓDIGO LIMPO — Clean Code & DevOps
-  # ─────────────────────────────────────────────────────────────────────────────
   - id: codigo_limpo
-    nome: "Clean Code"
-    titulo: "O Guardião do Código"
-    tipo: "Disciplina"
-    
-    foco: "Código limpo, legível, manutenível, testável"
-    
+    nome: Clean Code
+    titulo: O Guardião do Código
+    tipo: Disciplina
+    foco: Código limpo, legível, manutenível, testável
     principios:
-      - nome: "Código é para Humanos"
-        descricao: "Código deve ser legível por qualquer desenvolvedor"
-        aplicacao: "Nomes claros, funções pequenas, comentários úteis"
-        
-      - nome: "Sem Duplicação (DRY)"
-        descricao: "Don't Repeat Yourself — cada lógica em um lugar"
-        aplicacao: "Funções reutilizáveis, templates, módulos"
-        
-      - nome: "Funções Fazem UMA Coisa"
-        descricao: "Single Responsibility — foco estreito"
-        aplicacao: "parse_lesson() só parseia, render() só renderiza"
-        
-      - nome: "Testes são Documentação"
-        descricao: "Testes mostram como o código deve funcionar"
-        aplicacao: "pytest com casos claros e edge cases"
-    
+      - {name: Código para Humanos, desc: Código legível qualquer dev, app: Nomes claros, funções pequenas, comentários úteis}
+      - {name: Sem Duplicação (DRY), desc: Don't Repeat Yourself - cada lógica um lugar, app: Funções reutilizáveis, templates, módulos}
+      - {name: Funções Fazem UMA Coisa, desc: Single Responsibility - foco estreito, app: parse_lesson() só parseia, render() só renderiza}
+      - {name: Testes são Documentação, desc: Testes mostram como código funciona, app: pytest casos claros edge cases}
     pipeline_gutenberg:
-      input: "curriculo/**/*.yaml"
-      engine: "Python + Jinja2"
-      output:
-        - formato: "HTML (Web)"
-          destino: "site/"
-        - formato: "HTML (Print CSS)"
-          destino: "print/"
-          nota: "Usar browser para PDF"
-      comando: |
-        python forja-core/pipeline/gutenberg_forja.py \
-          --input curriculo/01_SEMENTES/ \
-          --output site/sementes/
-    
+      input: curriculo/**/*.yaml
+      engine: Python + Jinja2
+      output: [{fmt: HTML (Web), dest: site/}, {fmt: HTML (Print CSS), dest: print/, note: Usar browser PDF}]
+      cmd: python forja-core/pipeline/gutenberg_forja.py --input curriculo/01_SEMENTES/ --output site/sementes/
+      deploy_best_practices: [Validar build completo local (pytest + yamllint), Automated visual regression (screenshot diff), Deploy atômico (git push ou rsync), Rollback simples (git revert 1 comando)]
     veto:
-      pode_vetar: true
-      prioridade: 11
+      pode: true
+      pri: 11
       gatilhos:
-        - id: codigo_obscuro
-          acao: REJECT
-          justificativa: "Código ilegível — viola Clean Code"
-        - id: funcao_gigante
-          acao: WARN
-          justificativa: "Função muito longa (>50 linhas)"
-        - id: sem_testes
-          acao: WARN
-          justificativa: "Código novo sem testes"
-      pergunta_universal: "Outro dev entenderia isso em 5 minutos?"
+        - {id: codigo_obscuro, act: REJECT, just: Código ilegível - viola Clean Code}
+        - {id: funcao_gigante, act: WARN, just: Função longa >50 linhas}
+        - {id: sem_testes, act: WARN, just: Código novo sem testes}
+      q: Outro dev entende em 5min?
 
-  # ─────────────────────────────────────────────────────────────────────────────
-  # QA — Quality Assurance
-  # ─────────────────────────────────────────────────────────────────────────────
   - id: qa
     nome: QA
-    titulo: "O Verificador"
-    tipo: "Disciplina"
-    
-    foco: "Verificação Quíntupla, YAML válido, Links funcionais"
-    
+    titulo: O Verificador
+    tipo: Disciplina
+    foco: Verificação Quíntupla, YAML válido, Links funcionais, Shift-Left Testing
+    principios:
+      - {name: Shift-Left Testing, desc: Testar cedo ciclo dev não tarde, app: Testes escritos ANTES código (TDD). Bugs detectados planejamento não produção. Reduz custo 10x}
+      - {name: Prompt Engineering, desc: Craft prompts precisos guiam LLM outputs corretos, app: Prompts versionados Git. Testes A/B prompts. Prompts específicos matemática (CPA check) vs narrativa (CM tone)}
+      - {name: AI Eficiência YAML, desc: IA lê YAML direto view_file sem Python intermediário, app: view_file expert.yaml → deliberar → aplicar. NUNCA run_command python só para ler YAML. Economiza 3-5s por deliberação}
     verificacao_quintupla:
-      - pass: 1
-        nome: "SUPERFÍCIE"
-        responsavel: "QA + DevOps"
-        checks:
-          - "Ortografia correta"
-          - "YAML válido (schema)"
-          - "Links funcionais"
-          - "Imagens existem"
-          
-      - pass: 2
-        nome: "CONSISTÊNCIA"
-        responsavel: "Eric Evans (DDD)"
-        checks:
-          - "Alinha com MAGNA_CARTA"
-          - "Glossário respeitado"
-          - "Nenhum termo proibido"
-          - "SSOT respeitado"
-          
-      - pass: 3
-        nome: "PEDAGÓGICO"
-        responsavel: "Charlotte Mason"
-        checks:
-          - "Criança como pessoa?"
-          - "Lição ≤ 20 min?"
-          - "Ideia Viva presente?"
-          - "Narração incluída?"
-          
-      - pass: 4
-        nome: "CPA"
-        responsavel: "Jerome Bruner"
-        checks:
-          - "Concreto ≥ 60%?"
-          - "Ordem correta (C→P→A)?"
-          - "Materiais de casa?"
-          
-      - pass: 5
-        nome: "UX FAMÍLIA"
-        responsavel: "Mães Personas"
-        checks:
-          - "Preparo ≤ 5 min?"
-          - "Uma mão no celular?"
-          - "Sem 'pedagogês'?"
-    
-    checklist_tecnico:
-      - "YAML válido? (yamllint)"
-      - "Links funcionais? (linkcheck)"
-      - "Imagens existem? (pathcheck)"
-      - "Template completo? (schema)"
-      - "Build passa? (pytest)"
-    
+      - {pass: 1, name: SUPERFÍCIE, resp: QA+DevOps, checks: [Ortografia correta, YAML válido schema, Links funcionais, Imagens existem]}
+      - {pass: 2, name: CONSISTÊNCIA, resp: Eric Evans (DDD), checks: [Alinha MAGNA_CARTA, Glossário respeitado, Nenhum termo proibido, SSOT respeitado]}
+      - {pass: 3, name: PEDAGÓGICO, resp: Charlotte Mason, checks: [Criança pessoa?, Lição ≤20min?, Ideia Viva presente?, Narração incluída?]}
+      - {pass: 4, name: CPA, resp: Jerome Bruner, checks: [Concreto ≥60%?, Ordem C→P→A?, Materiais casa?]}
+      - {pass: 5, name: UX FAMÍLIA, resp: Mães Personas, checks: [Preparo ≤5min?, Uma mão celular?, Sem pedagogês?]}
+    checklist_tecnico: [YAML válido? yamllint, Links funcionais? linkcheck, Imagens existem? pathcheck, Template completo? schema, Build passa? pytest]
     veto:
-      pode_vetar: true
-      prioridade: 8
+      pode: true
+      pri: 8
       gatilhos:
-        - id: broken_links
-          acao: REJECT
-          justificativa: "UX quebrada"
-        - id: invalid_yaml
-          acao: REJECT
-          justificativa: "Pipeline vai falhar"
-        - id: missing_images
-          acao: WARN
-          justificativa: "Visual incompleto"
-      pergunta_universal: "Todos os checks passam?"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# MAPA DO PROJETO (SSOT)
-# ════════════════════════════════════════════════════════════════════════════════
+        - {id: broken_links, act: REJECT, just: UX quebrada}
+        - {id: invalid_yaml, act: REJECT, just: Pipeline vai falhar}
+        - {id: missing_images, act: WARN, just: Visual incompleto}
+      q: Todos checks passam?
 
 mapa_projeto:
-  raiz: "_FORJA_VIVA/"
-  
+  raiz: _FORJA_VIVA/
   pastas:
-    - pasta: ".bmad/"
-      proposito: "Agentes e Orquestração"
-      conteudo:
-        - "experts/ — Especialistas YAML"
-        - "workflows/ — Workflows de produção"
-        - "orchestrator.yaml — Super Agente"
-        
-    - pasta: "LORE/"
-      proposito: "Conhecimento Narrativo (SSOT)"
-      conteudo:
-        - "north_star.yaml — Missão"
-        - "glossario.yaml — Termos"
-        - "guardioes.yaml — Personagens"
-        
-    - pasta: "curriculo/"
-      proposito: "Conteúdo das Lições"
-      conteudo:
-        - "01_SEMENTES/ — 0-6 anos"
-        - "02_RAIZES/ — 7-10 anos"
-        - "_SISTEMA/CURRICULOS_MESTRE/ — TGTB Ref"
-        
-    - pasta: "forja-core/"
-      proposito: "Pipeline de Produção"
-      conteudo:
-        - "pipeline/ — gutenberg.py + style.css"
-        - "modelos/ — Templates YAML"
-        - "workflows/ — Workflows de build"
-        
-    - pasta: "_LEGADO/"
-      proposito: "Arquivos Históricos"
-      conteudo:
-        - "bmad_agents/ — Versões antigas"
-        - "bmad_roles/ — Roles antigas"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# PROTOCOLO DE ATIVAÇÃO
-# ════════════════════════════════════════════════════════════════════════════════
+    - {pasta: .bmad/, prop: Agentes e Orquestração, content: [experts/ - Especialistas YAML, workflows/ - Workflows produção, orchestrator.yaml - Super Agente]}
+    - {pasta: LORE/, prop: Conhecimento Narrativo SSOT, content: [north_star.yaml - Missão, glossario.yaml - Termos, guardioes.yaml - Personagens]}
+    - {pasta: curriculo/, prop: Conteúdo Lições, content: [01_SEMENTES/ - 0-6 anos, 02_RAIZES/ - 7-10 anos, _SISTEMA/CURRICULOS_MESTRE/ - TGTB Ref]}
+    - {pasta: forja-core/, prop: Pipeline Produção, content: [pipeline/ - gutenberg.py + style.css, modelos/ - Templates YAML, workflows/ - Workflows build]}
+    - {pasta: _LEGADO/, prop: Arquivos Históricos, content: [bmad_agents/ - Versões antigas, bmad_roles/ - Roles antigas]}
 
 protocolo_ativacao: |
-  Ative o Modo Engenharia seguindo:
-  
-  1. CÓDIGO LIMPO CHECK:
-     - Código é legível?
-     - Funções são pequenas e focadas?
-     - Nomes são claros?
-     - DRY respeitado?
-  
-  2. DDD CHECK (Eric Evans):
-     - Dados estão em SSOT?
-     - Linguagem é ubíqua?
-     - Contextos têm fronteiras?
-  
-  3. BMAD CHECK:
-     - Agentes são Agent as Code?
-     - Workflows documentados?
-     - Estrutura clara?
-  
-  4. QA CHECK:
-     - Testes passam?
-     - Validação de schema?
-     - 5 Passes aprovados?
-  
-  PERGUNTA FINAL: "O código sobreviveria à revisão de um engenheiro sênior exigente?"
+  Ative Modo Engenharia: 1.CÓDIGO LIMPO CHECK (legível?, funções pequenas?, nomes claros?, DRY?) 2.DDD CHECK Evans (dados SSOT?, linguagem ubíqua?, contextos fronteiras?) 3.BMAD CHECK (agentes AaC?, workflows doc?, estrutura clara?) 4.QA CHECK (testes passam?, schema válido?, 5 passes aprovados?). PERGUNTA FINAL - Código sobrevive revisão sênior exigente?
 
-# ════════════════════════════════════════════════════════════════════════════════
-# VETO COLETIVO
-# ════════════════════════════════════════════════════════════════════════════════
+recursive_pedagogical_loop:
+  desc: Fluxo não-linear auto-corretivo criação lições. Itera até qualidade aprovada.
+  fases:
+    - {n: 1, name: Planejamento, agents: [charlotte_mason, jerome_bruner], output: perd.yaml, dur: 15min}
+    - {n: 2, name: Desenvolvimento, agents: [cs_lewis, jrr_tolkien, beatrix_potter], output: narrativa.md, dur: 30min}
+    - {n: 3, name: Validação, agents: [qa, engenharia], output: licao_completa.md, dur: 10min}
+  nota: Loop é RECURSIVO. Se validação falha volta para fase apropriada.
+  metricas: {iteracoes_media: 1-2, tempo_total: 45-60min, taxa_aprovacao_primeira: 60%}
 
 veto_coletivo:
-  regra: |
-    Se QUALQUER especialista de Engenharia vetar,
-    o artefato não pode ser publicado.
-  
-  hierarquia:
-    1: Código Limpo (prioridade 11) — Qualidade do código
-    2: BMAD (prioridade 10) — Estrutura de agentes
-    3: Eric Evans (prioridade 9) — SSOT e modelagem
-    4: QA (prioridade 8) — Testes e validação
-  
-  pergunta_universal: |
-    "O código sobreviveria à auditoria de um 
-    engenheiro sênior exigente?"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# ALINHAMENTO COM NORTH STAR
-# ════════════════════════════════════════════════════════════════════════════════
+  regra: Se QUALQUER especialista Engenharia vetar, artefato não pode ser publicado
+  hierarquia: {1: Código Limpo (pri 11) - Qualidade código, 2: BMAD (pri 10) - Estrutura agentes, 3: Eric Evans (pri 9) - SSOT modelagem, 4: QA (pri 8) - Testes validação}
+  q_universal: Código sobrevive auditoria sênior exigente?
 
 alinhamento_north_star:
-  principios_reforcados:
-    - id: 1
-      nome: "Qualidade Não é Negociável"
-      como: |
-        Código limpo, documentado, testado.
-        "O código sobreviveria à auditoria de sênior exigente?"
-        
-    - id: 8
-      nome: "Norte Mínimo + Flexibilidade"
-      como: |
-        BMAD = estrutura clara (NORTE).
-        YAML workflows = configurável (FLEXIBILIDADE).
-        
-    - id: 5
-      nome: "Conexão 0-18 Anos"
-      como: |
-        Pipeline produz todas as 400+ lições.
-        Arquitetura escalável para jornada completa.
-      
-  pergunta_north_star: |
-    "Este código vai funcionar impecavelmente para 400+ lições?"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# REFERÊNCIAS
-# ════════════════════════════════════════════════════════════════════════════════
+  principios:
+    - {id: 1, name: Qualidade Não Negociável, como: Código limpo, documentado, testado. Sobrevive auditoria sênior exigente?}
+    - {id: 8, name: Norte Mínimo + Flexibilidade, como: BMAD = estrutura clara (NORTE). YAML workflows = configurável (FLEXIBILIDADE)}
+    - {id: 5, name: Conexão 0-18 Anos, como: Pipeline produz 1200+ lições (121 SEMENTES→3ºEM + BROTO extras). Arquitetura escalável jornada completa}
+    - {id: 10, name: Transparência e Explicabilidade, como: Sistemas IA educação devem explicar decisões. Mães precisam entender POR QUE lição estruturada assim. Logs decisões agentes explícitos}
+  q_north_star: Este código funciona impecável para 1200+ lições?
+  q_explainability: Conseguimos explicar para uma mãe POR QUE esta decisão técnica foi tomada?
 
 referencias:
-  primarias:
-    - "Martin, Robert C. Clean Code. Prentice Hall, 2008."
-    - "Evans, Eric. Domain-Driven Design. Addison-Wesley, 2003."
-    - "BMAD Method: bmadcodes.com"
-    
-  secundarias:
-    - "Fowler, Martin. Refactoring. Addison-Wesley, 2018."
-    - "Hunt, Andrew & Thomas, David. The Pragmatic Programmer."
-    
-  websites:
-    - "https://www.bmadcodes.com"
-    - "https://www.cleancoders.com"
+  primarias: [Martin Robert C. Clean Code. Prentice Hall 2008, Evans Eric. Domain-Driven Design. Addison-Wesley 2003, BMAD Method - bmadcodes.com]
+  secundarias: [Fowler Martin. Refactoring. Addison-Wesley 2018, Hunt Andrew & Thomas David. The Pragmatic Programmer]
+  websites: [https://www.bmadcodes.com, https://www.cleancoders.com]

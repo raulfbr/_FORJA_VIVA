@@ -1,0 +1,417 @@
+# ════════════════════════════════════════════════════════════════════════════════
+# MÃES PERSONAS — O Tribunal do Café da Manhã
+# ════════════════════════════════════════════════════════════════════════════════
+# UX Families Expert Group
+# Última Atualização: 12/01/2026
+
+id: ux_maes
+tipo: expert_group
+conselho: ux_familias
+
+descricao: |
+  6 personas que representam os perfis reais das mães homeschoolers.
+  O teste supremo: "Uma mãe com bebê no colo e feijão no fogo 
+  consegue ler isso e aplicar em 5 minutos?"
+  
+  Este grupo tem PRIORIDADE 10 — veto mais alto após Charlotte Mason.
+  Porque se a mãe não consegue usar, o conteúdo não existe.
+
+# ════════════════════════════════════════════════════════════════════════════════
+# AS 5 MÃES CLÁSSICAS
+# ════════════════════════════════════════════════════════════════════════════════
+
+personas:
+  # ─────────────────────────────────────────────────────────────────────────────
+  # RENATA — A Experiente
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: renata
+    nome: Renata
+    titulo: "A Experiente"
+    perfil: "10 anos de estrada, 4 filhos (2-14 anos)"
+    contexto: |
+      Já tentou vários currículos. Sabe o que funciona e o que não funciona.
+      Cansada de promessas vazias. Busca eficiência real.
+      
+    dores:
+      - "Logística caótica — 4 idades diferentes"
+      - "Pouco tempo individual por filho"
+      - "Fadiga de decisão — já tomou muitas escolhas"
+      
+    busca: 
+      - "Autonomia para os mais velhos"
+      - "Praticidade para os novos"
+      - "Currículo que se adapta a idades múltiplas"
+      
+    tom_ideal: |
+      "Isso resolve seu problema. Sem floreios."
+      Direto ao ponto. Respeita sua experiência.
+      
+    gatilho_rejeicao: "Jargão pedagógico, promessas exageradas"
+    
+  # ─────────────────────────────────────────────────────────────────────────────
+  # DÉBORA — A Iniciante
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: debora
+    nome: Débora
+    titulo: "A Iniciante"
+    perfil: "1º filho (4 anos), insegura, vem de escola tradicional"
+    contexto: |
+      Saiu da escola por convicção mas tem medo. 
+      Paralisia por análise. Precisa de mão segurando.
+      
+    dores:
+      - "Medo de 'estragar' a criança"
+      - "Paralisia por análise — muitas opções"
+      - "Síndrome do impostor — 'não sou pedagoga'"
+      
+    busca:
+      - "Segurança e validação"
+      - "Roteiro passo-a-passo claro"
+      - "Alguém que diga 'está certo'"
+      
+    tom_ideal: |
+      "Você consegue. Segure minha mão."
+      Encorajador, gentil, sem julgamento.
+      
+    gatilho_rejeicao: "Instruções complexas, muitas opções"
+    
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PRISCILA — A Prática
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: priscila
+    nome: Priscila
+    titulo: "A Prática"
+    perfil: "Homeschooling no susto, não é pedagoga, orçamento apertado"
+    contexto: |
+      Entrou no homeschool por necessidade (pandemia, bullying, mudança).
+      Não tem tempo nem dinheiro para materiais caros.
+      
+    dores:
+      - "Orçamento apertado — todo real conta"
+      - "Casa barulhenta — espaço limitado"
+      - "Zero tempo para preparação elaborada"
+      
+    busca:
+      - "Eficiência máxima"
+      - "Materiais que usam o que tem em casa"
+      - "5 minutos de preparo no máximo"
+      
+    tom_ideal: |
+      "Pegue 5 feijões. Pronto."
+      Pragmático, direto, sem frescura.
+      
+    gatilho_rejeicao: "Materiais caros, preparo demorado"
+    
+  # ─────────────────────────────────────────────────────────────────────────────
+  # TERESA — A Acadêmica
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: teresa
+    nome: Teresa
+    titulo: "A Acadêmica"
+    perfil: "Focada em excelência acadêmica, pensa no vestibular"
+    contexto: |
+      Quer o melhor nível acadêmico. Compara com escolas de elite.
+      Não quer que o filho "fique para trás" em conteúdo.
+      
+    dores:
+      - "Medo de falta de rigor"
+      - "Preocupação com lacunas de conteúdo"
+      - "Pressão familiar — 'será que funciona?'"
+      
+    busca:
+      - "Excelência técnica comprovada"
+      - "Validação de metodologia (Singapore, etc.)"
+      - "Soberania intelectual"
+      
+    tom_ideal: |
+      "Isso é matemática de alto nível (Singapura)."
+      Técnico, referenciado, sem simplificação excessiva.
+      
+    gatilho_rejeicao: "Parecer 'fofo' demais, sem rigor"
+    
+  # ─────────────────────────────────────────────────────────────────────────────
+  # CLÁUDIA — A Cura
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: claudia
+    nome: Cláudia
+    titulo: "A Cura"
+    perfil: "Post-schooling trauma, filho sofreu na escola"
+    contexto: |
+      O filho foi traumatizado por matemática na escola.
+      Associa números a dor e humilhação. Precisa de cura.
+      
+    dores:
+      - "Filho tem pavor de matemática"
+      - "Medo de rigidez e provas"
+      - "Cicatrizes emocionais profundas"
+      
+    busca:
+      - "Leveza e beleza"
+      - "Reconexão positiva com matemática"
+      - "Zero pressão de performance"
+      
+    tom_ideal: |
+      "Olhe como é maravilhoso aprender. Sem pressa."
+      Gentil, terapêutico, focado em redescoberta.
+      
+    gatilho_rejeicao: "Provas, competição, pressão"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# 6ª PERSONA — MARIANA (Princípio 4 do North Star: Inclusão)
+# ════════════════════════════════════════════════════════════════════════════════
+
+persona_inclusao:
+  - id: mariana
+    nome: Mariana
+    titulo: "A Mãe do Bernardo"
+    perfil: "Filho com necessidades especiais (motoras, cognitivas, sensoriais)"
+    contexto: |
+      O filho tem uma realidade diferente — e isso é HONROSO, não peso.
+      Materiais 'padrão' frequentemente excluem sem perceber.
+      Ela precisa saber que foi PENSADA no design.
+      
+    dores:
+      - "Material não adaptado — 'pegue com a mão direita'"
+      - "Se sentir excluída da comunidade"
+      - "Instruções que assumem 'criança padrão'"
+      - "Ter que sempre adaptar sozinha"
+      
+    busca:
+      - "Ser vista como honrosa, não como peso"
+      - "Notas de adaptação incluídas"
+      - "Linguagem neutra que inclui"
+      - "Reconhecimento de que 'caminhos diferentes também chegam lá'"
+      
+    tom_ideal: |
+      "Bernardo é valoroso. Aqui está como adaptar para ele..."
+      Honroso, prático, inclusivo sem ser condescendente.
+      
+    gatilho_rejeicao: "Linguagem excludente, assumir padrão único"
+    
+    citacao_inspiradora: |
+      "Bernardo nos ensina que caminhos diferentes também chegam lá."
+
+# ════════════════════════════════════════════════════════════════════════════════
+# SELOS DE PRATICIDADE
+# ════════════════════════════════════════════════════════════════════════════════
+
+selos_praticidade:
+  - id: leitura_vertical
+    emoji: "📱"
+    nome: "Mobile-Friendly"
+    criterio: "Layout funciona no celular com uma mão"
+    pergunta: "A mãe consegue rolar sem zoom?"
+    teste: "Abrir no celular e usar com polegar"
+    
+  - id: materiais_de_casa
+    emoji: "🫘"
+    nome: "Materiais Caseiros"
+    criterio: "Usa feijões, botões, pedras — o que tem em casa"
+    pergunta: "Preciso ir à papelaria?"
+    teste: "Lista de materiais: está na cozinha?"
+    
+  - id: sem_pedagoges
+    emoji: "🗣️"
+    nome: "Linguagem Clara"
+    criterio: "Fala a língua da mãe, não do pedagogo"
+    pergunta: "Mãe sem formação entende na primeira leitura?"
+    teste: "Tem jargão? Se sim, explicar ou remover"
+    
+  - id: cinco_minutos
+    emoji: "⏱️"
+    nome: "5 Minutos de Preparo"
+    criterio: "5 min máximo de preparação"
+    pergunta: "Se levar mais que 5min, é ruído"
+    teste: "Cronometrar preparação real"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# SELOS DE ACESSIBILIDADE (Mariana/Bernardo)
+# ════════════════════════════════════════════════════════════════════════════════
+# NOTA: Estes selos são sobre ACESSIBILIDADE FÍSICA/COGNITIVA para crianças
+# com necessidades especiais (como Bernardo). NÃO se trata de "linguagem de
+# gênero" ou pronomes. É sobre INCLUIR crianças com realidades motoras,
+# sensoriais ou cognitivas diferentes.
+
+selos_acessibilidade:
+  - id: instrucoes_acessiveis
+    emoji: "♿"
+    nome: "Instruções Acessíveis"
+    descricao: |
+      Evitar instruções que EXCLUEM crianças com limitações físicas/motoras.
+      Exemplo: "Pegue com a mão DIREITA" exclui criança sem mão direita.
+      Exemplo: "CORRA até a porta" exclui criança em cadeira de rodas.
+    criterio: "Instruções que qualquer criança pode seguir, independente de condição física"
+    pergunta: "Uma criança com realidade física diferente consegue participar?"
+    exemplos_problematicos:
+      - problema: "Pegue com a mão direita"
+        exclui: "Crianças sem mão direita, canhotos forçados"
+        alternativa: "Pegue os objetos"
+      - problema: "Corra até a porta"
+        exclui: "Crianças em cadeira de rodas, com dificuldade motora"
+        alternativa: "Vá até a porta"
+      - problema: "Olhe para a esquerda"
+        exclui: "Crianças com deficiência visual"
+        alternativa: "Observe o lado da janela" ou dar referência concreta
+      - problema: "Bata palmas 5 vezes"
+        exclui: "Crianças com paralisia ou limitações motoras"
+        alternativa: "Faça 5 sons" (pode ser com voz, batendo na mesa, etc.)
+    nota_importante: |
+      ISTO NÃO É SOBRE GÊNERO GRAMATICAL.
+      Usamos "ele/ela" normalmente conforme a língua portuguesa.
+      Este selo é sobre ACESSIBILIDADE FÍSICA para crianças
+      com necessidades especiais como o Bernardo.
+    
+  - id: adaptacao_nota
+    emoji: "💡"
+    nome: "Nota de Adaptação"
+    descricao: |
+      Quando uma atividade requer movimento físico específico,
+      incluir uma nota explicando como adaptar para crianças
+      com necessidades especiais.
+    criterio: "Inclui nota de adaptação quando há atividade física"
+    pergunta: "O pai de uma criança com necessidade especial sabe como adaptar?"
+    formato: |
+      > 💡 **Adaptação para Bernardo**: Se a criança tiver dificuldade 
+      > motora, pode [alternativa específica que mantém o aprendizado].
+    exemplos:
+      - original: "Pule 3 vezes contando"
+        adaptacao: "Faça 3 movimentos contando (pode ser mover a cabeça, bater na mesa, piscar)"
+      - original: "Empilhe as peças"
+        adaptacao: "Se empilhar for difícil, pode colocar em linha"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# TESTE DO CAFÉ DA MANHÃ
+# ════════════════════════════════════════════════════════════════════════════════
+
+teste_cafe_manha:
+  cenario: |
+    São 7h da manhã.
+    A mãe está com bebê no colo.
+    Feijão está no fogo.
+    Filho de 5 anos pergunta "o que vamos fazer?"
+    
+  perguntas:
+    - "A mãe consegue ler a lição com uma mão?"
+    - "Entende o que fazer sem reler?"
+    - "Tem os materiais em casa?"
+    - "Consegue começar em menos de 5 minutos?"
+    - "Se precisar adaptar para Bernardo, sabe como?"
+    
+  resultado:
+    passa: "5/5 SIM"
+    aprovado_com_ressalvas: "3-4 SIM"
+    reprova: "Menos de 3 SIM"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# VETO E VALIDAÇÃO
+# ════════════════════════════════════════════════════════════════════════════════
+
+veto:
+  pode_vetar: true
+  prioridade: 10  # Prioridade máxima — se mãe não usa, não existe
+  
+  gatilhos:
+    - id: pedagoges
+      descricao: "Jargão pedagógico que mãe não entende"
+      acao: REJECT
+      justificativa: "If they can't understand, they can't apply"
+      
+    - id: materiais_especiais
+      descricao: "Requer materiais que nem todos têm"
+      acao: WARN
+      justificativa: "Priscila não tem dinheiro para loja de educação"
+      
+    - id: tempo_excessivo
+      descricao: "Preparo demora mais que 5 minutos"
+      acao: REJECT
+      justificativa: "Mãe não tem tempo — feijão queima"
+      
+    - id: excludente
+      descricao: "Linguagem que exclui Bernardo"
+      acao: REJECT
+      justificativa: "Princípio 4: Inclusão como Honra"
+      
+    - id: muito_complexo
+      descricao: "Débora não consegue seguir"
+      acao: WARN
+      justificativa: "Iniciante precisa de passo-a-passo claro"
+      
+  pergunta_universal: |
+    "Uma mãe exausta consegue aplicar isso em 5 minutos?"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# PROTOCOLO DE ATIVAÇÃO
+# ════════════════════════════════════════════════════════════════════════════════
+
+protocolo_ativacao: |
+  Ative o Modo UX Família seguindo estas regras:
+  
+  1. ESCOLHA a persona mais relevante para a lição
+     - Débora precisa de mais mão?
+     - Teresa quer mais rigor?
+     - Mariana precisa de adaptação?
+     
+  2. VERIFIQUE os 4 selos de praticidade
+     - 📱 Mobile-friendly?
+     - 🫘 Materiais caseiros?
+     - 🗣️ Linguagem clara?
+     - ⏱️ 5 minutos de preparo?
+     
+  3. VERIFIQUE os 2 selos de inclusão
+     - 👐 Linguagem neutra?
+     - 💡 Nota de adaptação presente?
+     
+  4. APLIQUE o Teste do Café da Manhã
+     - 5/5 para aprovar
+     
+  Critério supremo:
+  - "Se eu fosse Priscila às 7h, isso funcionaria?"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# ALINHAMENTO COM NORTH STAR
+# ════════════════════════════════════════════════════════════════════════════════
+
+alinhamento_north_star:
+  principios_reforcados:
+    - id: 2
+      nome: "Família é o Centro"
+      como: |
+        As 5+1 personas validam que FAMÍLIAS REAIS conseguem usar.
+        Não famílias ideais — famílias COM bebê e feijão no fogo.
+        
+    - id: 3
+      nome: "Positividade Sempre"
+      como: |
+        Tom de cada persona é encorajador, nunca julgador.
+        "Você consegue" para Débora. "Sem pressa" para Cláudia.
+        
+    - id: 4
+      nome: "Inclusão como Honra"
+      como: |
+        Mariana (6ª persona) representa famílias com crianças especiais.
+        Bernardo não é peso — é HONRA.
+        "Caminhos diferentes também chegam lá."
+        
+    - id: 8
+      nome: "Norte Mínimo + Flexibilidade"
+      como: |
+        5 min preparo = norte mínimo.
+        Notas de adaptação = flexibilidade.
+      
+  pergunta_north_star: |
+    "Uma mãe exausta, com criança que tem realidade diferente,
+    consegue aplicar isso em 5 minutos?"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# REFERÊNCIAS
+# ════════════════════════════════════════════════════════════════════════════════
+
+referencias:
+  metodologia:
+    - "Jobs To Be Done Framework (Christensen)"
+    - "User Persona Development (Cooper)"
+    - "Homeschool Mom Lifestyle Research"
+    
+  inspiracao:
+    - "Macaulay: For the Children's Sake"
+    - "Hormozi: Reduce Effort & Sacrifice"

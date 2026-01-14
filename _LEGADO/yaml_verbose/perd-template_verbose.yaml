@@ -1,0 +1,76 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# PERD TEMPLATE — Pedagogical Requirements Document
+# ══════════════════════════════════════════════════════════════════════════════
+# PROPÓSITO: Documento de planejamento para cada nova lição
+# USADO POR: SM/Artesão antes de criar lição
+# REFERÊNCIAS LORE: LORE/index.yaml (navegação), LORE/guardioes.yaml
+# Versão: 1.1 | Última atualização: 13/01/2026
+# ══════════════════════════════════════════════════════════════════════════════
+
+meta:
+  licao_id: "LXXX"          # Ex: L001, L002
+  ciclo: "Sementes"          # Sementes | Raízes | Lógica | Legado
+  tema: "[Título do tema]"   # Ex: "Contagem de 1 a 3"
+  data_criacao: "YYYY-MM-DD"
+  status: "RASCUNHO"         # RASCUNHO | EM_REVISÃO | APROVADO
+
+# REFERÊNCIAS LORE (consultar para preencher abaixo)
+referencias_lore:
+  indice: "LORE/index.yaml"
+  guardioes: "LORE/guardioes.yaml"
+  locais: "LORE/locais.yaml"
+  propositos: "LORE/north_star.yaml#propositos_por_ano"
+  viajante: "LORE/viajante.yaml"
+  tom_por_ciclo: "LORE/evolucao_guardioes.yaml"
+
+# FASE 1: PLANEJAMENTO (Sofia)
+ideia_viva:
+  definicao: "[Uma frase que captura a essência da lição]"
+  fonte_cm: "[Princípio CM relacionado]"
+  por_que_importa: "[1-2 frases explicando o valor duradouro]"
+
+# FASE 1: CPA (Euclides)
+estrutura_cpa:
+  concreto:
+    manipulativos:
+      - "[Manipulativo 1]"
+      - "[Manipulativo 2]"
+    atividade: "[Descrição da atividade com manipulativos]"
+    tempo_estimado: 10  # minutos
+    
+  pictorico:
+    status: "VETADO_POR_CM"   # VETADO_POR_CM | APROVADO | N/A
+    representacao: null       # Se aprovado, descrever
+    
+  abstrato:
+    nivel: "MÍNIMO"           # MÍNIMO | LEVE | MODERADO
+    simbolos_introduzidos:
+      - "[Símbolo 1]"
+    atividade: "[Como os símbolos são usados]"
+
+# FASE 1: GUARDIÃO (Artesão)
+guardiao_lider:
+  nome: "[Celeste | Bernardo | Íris | Noé | Melquior]"
+  frase_assinatura: "[Frase oficial do guardião]"
+  tom: "[Curioso | Firme | Suave | Calmo | Acolhedor]"
+  coadjuvantes: []  # Outros guardiões que aparecem
+
+# FASE 1: VALIDAÇÃO CM (Sofia)
+checklist_cm:
+  crianca_como_pessoa: false       # Princípio 1
+  licao_curta: false               # ≤20 min para Sementes
+  narracao_presente: false         # Princípio 14
+  ideia_viva_apresentada: false    # Não explicada
+
+# OUTPUT
+aprovacao:
+  sofia: null          # APROVADO | VETADO
+  euclides: null       # APROVADO | AJUSTADO
+  matriarca: null      # APROVADO | REVISÃO_NECESSÁRIA
+  data_aprovacao: null
+
+# NOTAS
+notas:
+  decisoes_pedagogicas: []  # PADRs aplicados
+  referencias_anteriores: []  # Lições que esta referencia
+  proximos_passos: []

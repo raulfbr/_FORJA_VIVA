@@ -1,347 +1,49 @@
-# ════════════════════════════════════════════════════════════════════════════════
-# DESIGN — Expert Group de Design Visual
-# ════════════════════════════════════════════════════════════════════════════════
-# Última Atualização: 12/01/2026
+# DESIGN — Expert Group Visual Identity (Potter Morris TocaBoca Tufte)
+# YAML Lean v1.0 | Atualização: 13/01/2026
 
 id: design
 tipo: expert_group
 conselho: design
-
-descricao: |
-  Garante que o design visual seja impecável, acessível e encantador.
-  Combina arte botânica clássica com UX moderna para crianças.
-
-# ════════════════════════════════════════════════════════════════════════════════
-# ESPECIALISTAS
-# ════════════════════════════════════════════════════════════════════════════════
+desc: Garante design visual impecável acessível encantador. Combina arte botânica clássica com UX moderna crianças
 
 especialistas:
-
-  # ─────────────────────────────────────────────────────────────────────────────
-  # BEATRIX POTTER — Estética Visual
-  # ─────────────────────────────────────────────────────────────────────────────
-  - id: beatrix_potter
-    nome: Beatrix Potter
-    titulo: "A Ilustradora"
-    nascimento: 1866
-    falecimento: 1943
-    nacionalidade: Britânica
-    
-    foco: "Estética Visual — Aquarela Botânica"
-    
-    filosofia:
-      conceito: "Whimsical Realism"
-      descricao: |
-        Combina precisão científica com encanto narrativo.
-        O ilustrador deve ter olhos de cientista e mãos de poeta.
-      
-    tecnicas:
-      - nome: "Dry Brush Watercolor"
-        descricao: "Pinceladas secas, construção gradual de texturas"
-        aplicacao: "Ilustrações com profundidade orgânica"
-        
-      - nome: "India Ink Outlines"
-        descricao: "Contornos em tinta nanquim (preto ou sépia)"
-        aplicacao: "Definição clara sem artificialidade"
-        
-      - nome: "Botanical Accuracy"
-        descricao: "Observação científica de flora e fauna"
-        aplicacao: "Personagens e cenários anatomicamente corretos"
-    
-    paleta:
-      cores_permitidas:
-        - nome: "Terra de Siena"
-          hex: "#A0522D"
-        - nome: "Verde Seiva"
-          hex: "#2E8B57"
-        - nome: "Ocre Amarelo"
-          hex: "#CC7722"
-        - nome: "Carmim"
-          hex: "#960018"
-        - nome: "Azul Índigo"
-          hex: "#4B0082"
-        - nome: "Creme Quente"
-          hex: "#FDF5E6"
-          
-      cores_proibidas:
-        - "Neon/Fluorescente"
-        - "Gradientes digitais artificiais"
-        - "Cores saturadas demais"
-    
-    citacoes:
-      principal: |
-        "I cannot rest, I must draw, however poor the result, 
-        and when I have a bad time come over me, it is a 
-        stronger desire than ever."
-      
-      aplicacao: |
-        "There is something delicious about writing the first 
-        words of a story. You never quite know where they'll take you."
-    
-    veto:
-      pode_vetar: true
-      prioridade: 7
-      gatilhos:
-        - id: cartoon_generic
-          acao: REJECT
-          justificativa: "Estilo cartoon genérico viola Potter"
-        - id: neon_colors
-          acao: REJECT
-          justificativa: "Cores neon não são naturais"
-        - id: vector_flat
-          acao: REJECT
-          justificativa: "Vetores planos não têm textura orgânica"
-      pergunta_universal: "Isso parece saído de uma floresta inglesa ou de um app genérico?"
-
-  # ─────────────────────────────────────────────────────────────────────────────
-  # WILLIAM MORRIS — Tipografia e Ornamentos
-  # ─────────────────────────────────────────────────────────────────────────────
-  - id: william_morris
-    nome: William Morris
-    titulo: "O Artesão"
-    nascimento: 1834
-    falecimento: 1896
-    nacionalidade: Britânico
-    
-    foco: "Tipografia e Ornamentos — Arts & Crafts"
-    
-    filosofia:
-      conceito: "Beauty in Utility"
-      descricao: |
-        Todo elemento deve ser belo E funcional.
-        Não existem ornamentos supérfluos.
-      
-    principios:
-      - "Tipografia legível e elegante"
-      - "Bordas e divisores com propósito"
-      - "Padrões orgânicos inspirados na natureza"
-      - "Harmonia entre texto e ilustração"
-    
-    aplicacao:
-      headers: "Fontes serifadas clássicas (Merriweather, Garamond)"
-      body: "Fontes limpas (Outfit, Lato) para leitura em tela"
-      ornamentos: "Divisores florais, capitulares decorativas"
-    
-    citacoes:
-      principal: |
-        "Have nothing in your houses that you do not know 
-        to be useful, or believe to be beautiful."
-    
-    veto:
-      pode_vetar: true
-      prioridade: 8
-      gatilhos:
-        - id: ugly_fonts
-          acao: WARN
-          justificativa: "Fonte feia degrada a experiência"
-        - id: cluttered_layout
-          acao: REJECT
-          justificativa: "Layout poluído distrai"
-
-  # ─────────────────────────────────────────────────────────────────────────────
-  # TOCA BOCA — UX para Crianças
-  # ─────────────────────────────────────────────────────────────────────────────
-  - id: toca_boca
-    nome: Toca Boca
-    titulo: "O Time de UX Kids"
-    tipo: "Estúdio"
-    fundacao: 2010
-    nacionalidade: Sueco
-    
-    foco: "UX/UI para Crianças"
-    
-    filosofia:
-      conceito: "Play-First Design"
-      descricao: |
-        Crianças aprendem brincando. 
-        O design deve ser intuitivo, grande e divertido.
-    
-    principios:
-      - nome: "Large Tappable Elements"
-        descricao: "Botões grandes (mínimo 44x44px, ideal 60px+)"
-        motivo: "Coordenação motora fina em desenvolvimento"
-        
-      - nome: "Minimal Text"
-        descricao: "Ícones > Texto para crianças pré-alfabetizadas"
-        motivo: "Navegação visual independente"
-        
-      - nome: "Forgiving Interactions"
-        descricao: "Sem punição por erros, feedback positivo"
-        motivo: "Aprendizado sem frustração"
-        
-      - nome: "Age-Appropriate Complexity"
-        descricao: "Design adaptado à faixa etária"
-        motivo: "Criança de 4 anos ≠ criança de 10"
-        
-      - nome: "8-12 Minute Attention Spans"
-        descricao: "Sessões curtas com pausas naturais"
-        motivo: "Capacidade de atenção limitada"
-    
-    checklist_ux:
-      - "Botões são grandes o suficiente para dedos pequenos?"
-      - "Navegação funciona sem ler texto?"
-      - "Há feedback visual/sonoro para cada ação?"
-      - "O design é amigável ou intimidador?"
-      - "Pais conseguem supervisionar facilmente?"
-    
-    veto:
-      pode_vetar: true
-      prioridade: 6
-      gatilhos:
-        - id: tiny_buttons
-          acao: REJECT
-          justificativa: "Botões pequenos frustram crianças"
-        - id: complex_navigation
-          acao: REJECT
-          justificativa: "Navegação complexa = abandono"
-        - id: too_much_text
-          acao: WARN
-          justificativa: "Texto demais para pré-leitores"
-
-  # ─────────────────────────────────────────────────────────────────────────────
-  # EDWARD TUFTE — Visualização de Dados
-  # ─────────────────────────────────────────────────────────────────────────────
-  - id: edward_tufte
-    nome: Edward Tufte
-    titulo: "O Estatístico Visual"
-    nascimento: 1942
-    nacionalidade: Americano
-    
-    foco: "Visualização de Dados e Clareza"
-    
-    filosofia:
-      conceito: "Data-Ink Ratio"
-      descricao: |
-        Maximize a informação por pixel.
-        Elimine chartjunk (decoração sem significado).
-    
-    principios:
-      - "Clareza sobre decoração"
-      - "Cada elemento visual deve ter propósito"
-      - "Evitar 3D desnecessário"
-      - "Escala e proporção corretas"
-    
-    aplicacao:
-      tabelas: "Linhas mínimas, espaço branco generoso"
-      graficos: "Simples, legendas integradas"
-      layouts: "Hierarquia visual clara"
-    
-    citacoes:
-      principal: |
-        "Clutter and confusion are not attributes of data — 
-        they are shortcomings of design."
-    
-    veto:
-      pode_vetar: true
-      prioridade: 5
-      gatilhos:
-        - id: chartjunk
-          acao: WARN
-          justificativa: "Decoração sem propósito"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# DESIGN SYSTEM — Matemática Viva
-# ════════════════════════════════════════════════════════════════════════════════
+  - {id: beatrix_potter, nome: Beatrix Potter, titulo: A Ilustradora, nasc: 1866, falec: 1943, nac: Britânica, foco: Estética Visual Aquarela Botânica, filosofia: Whimsical Realism precisão científica + encanto narrativo, tecnicas: [Dry Brush Watercolor pinceladas secas textura orgânica, India Ink Outlines nanquim definição, Botanical Accuracy observação científica flora fauna], paleta_permitidas: [{nome: Terra Siena, hex: '#A0522D'}, {nome: Verde Seiva, hex: '#2E8B57'}, {nome: Ocre Amarelo, hex: '#CC7722'}, {nome: Carmim, hex: '#960018'}, {nome: Azul Índigo, hex: '#4B0082'}, {nome: Creme Quente, hex: '#FDF5E6'}], paleta_proibidas: [Neon Fluorescente, Gradientes digitais artificiais, Cores saturadas demais], veto: {pri: 7, triggers: [cartoon_generic, neon_colors, vector_flat], q: Parece floresta inglesa ou app genérico?}}
+  
+  - {id: william_morris, nome: William Morris, titulo: O Artesão, nasc: 1834, falec: 1896, nac: Britânico, foco: Tipografia Ornamentos Arts Crafts, filosofia: Beauty in Utility todo elemento belo E funcional, principios: [Tipografia legível elegante, Bordas divisores propósito, Padrões orgânicos natureza, Harmonia texto ilustração], aplicacao: {headers: Fontes serifadas clássicas Merriweather Garamond, body: Fontes limpas Outfit Lato leitura tela, ornamentos: Divisores florais capitulares decorativas}, veto: {pri: 8, triggers: [ugly_fonts, cluttered_layout], q: Elemento belo E funcional?}}
+  
+  - {id: toca_boca, nome: Toca Boca, titulo: Time UX Kids, tipo: Estúdio, fundacao: 2010, nac: Sueco, foco: UX UI Crianças, filosofia: Play-First Design crianças aprendem brincando design intuitivo grande divertido, principios: [{nome: Large Tappable Elements, desc: Botões grandes mín 44x44px ideal 60px+, motivo: Coordenação motora fina desenvolvimento}, {nome: Minimal Text, desc: Ícones > Texto pré-alfabetizados, motivo: Navegação visual independente}, {nome: Forgiving Interactions, desc: Sem punição erros feedback positivo, motivo: Aprendizado sem frustração}, {nome: Age-Appropriate Complexity, desc: Design adaptado faixa etária, motivo: Criança 4 anos ≠ 10}, {nome: 8-12 Min Attention, desc: Sessões curtas pausas naturais, motivo: Atenção limitada}], checklist: [Botões grandes dedos pequenos?, Navegação sem ler texto?, Feedback visual sonoro ação?, Design amigável intimidador?, Pais supervisionar fácil?], veto: {pri: 6, triggers: [tiny_buttons, complex_navigation, too_much_text], q: Criança 5 anos consegue usar?}}
+  
+  - {id: edward_tufte, nome: Edward Tufte, titulo: O Estatístico Visual, nasc: 1942, nac: Americano, foco: Visualização Dados Clareza, filosofia: Data-Ink Ratio maximizar informação por pixel eliminar chartjunk decoração sem significado, principios: [Clareza sobre decoração, Cada elemento visual propósito, Evitar 3D desnecessário, Escala proporção corretas], aplicacao: {tabelas: Linhas mínimas espaço branco generoso, graficos: Simples legendas integradas, layouts: Hierarquia visual clara}, veto: {pri: 5, triggers: [chartjunk], q: Cada pixel tem propósito?}}
 
 design_system:
   paleta_cores:
-    primarias:
-      forest_green: "#2A5A3F"
-      old_gold: "#BFA265"
-      warm_cream: "#FDF5E6"
-    secundarias:
-      terra: "#8B4513"
-      indigo: "#4B0082"
-      coral_suave: "#FF7F7F"
-    status:
-      sucesso: "#2E8B57"
-      atencao: "#DAA520"
-      erro: "#CD5C5C"
-      
-  tipografia:
-    headers: "Merriweather, Georgia, serif"
-    body: "Outfit, Roboto, sans-serif"
-    mono: "JetBrains Mono, monospace"
-    
-  espacamento:
-    unidade_base: "8px"
-    escala: [8, 16, 24, 32, 48, 64, 96]
-    
-  bordas:
-    raio_pequeno: "4px"
-    raio_medio: "8px"
-    raio_grande: "16px"
-    
-  sombras:
-    sutil: "0 2px 4px rgba(0,0,0,0.1)"
-    media: "0 4px 12px rgba(0,0,0,0.15)"
-    forte: "0 8px 24px rgba(0,0,0,0.2)"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# VETO COLETIVO
-# ════════════════════════════════════════════════════════════════════════════════
+    primarias: {forest_green: '#2A5A3F', old_gold: '#BFA265', warm_cream: '#FDF5E6'}
+    secundarias: {terra: '#8B4513', indigo: '#4B0082', coral_suave: '#FF7F7F'}
+    status: {sucesso: '#2E8B57', atencao: '#DAA520', erro: '#CD5C5C'}
+  tipografia: {headers: 'Merriweather Georgia serif', body: 'Outfit Roboto sans-serif', mono: 'JetBrains Mono monospace'}
+  espacamento: {base: 8px, escala: [8, 16, 24, 32, 48, 64, 96]}
+  bordas: {pequeno: 4px, medio: 8px, grande: 16px}
+  sombras: {sutil: '0 2px 4px rgba(0,0,0,0.1)', media: '0 4px 12px rgba(0,0,0,0.15)', forte: '0 8px 24px rgba(0,0,0,0.2)'}
 
 veto_coletivo:
-  perguntas:
-    - "É bonito E funcional? (Morris)"
-    - "Parece natural, não artificial? (Potter)"
-    - "Uma criança de 5 anos consegue usar? (Toca Boca)"
-    - "Cada pixel tem propósito? (Tufte)"
-  
-  regra_geral: |
-    Se QUALQUER expert vetar, o design precisa ser revisado.
-    Potter + Morris definem estética.
-    Toca Boca + Tufte definem usabilidade.
+  perguntas: [É bonito E funcional? Morris, Parece natural não artificial? Potter, Criança 5 anos consegue usar? TocaBoca, Cada pixel tem propósito? Tufte]
+  regra: Se qualquer expert vetar design revisado. Potter+Morris estética. TocaBoca+Tufte usabilidade
 
-protocolo_ativacao: |
-  Ative o Modo Design seguindo estas regras:
-  
-  1. VERIFIQUE paleta de cores (Potter)
-  2. CONFIRME tipografia e ornamentos (Morris)
-  3. VALIDE UX para crianças (Toca Boca)
-  4. CERTIFIQUE clareza visual (Tufte)
-  
-  Pergunta Final: "Uma mãe estressada às 7h da manhã
-  consegue usar isso com uma mão no celular?"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# ALINHAMENTO COM NORTH STAR
-# ════════════════════════════════════════════════════════════════════════════════
+protocolo_ativacao:
+  regras:
+    - {n: 1, desc: VERIFIQUE paleta cores Potter}
+    - {n: 2, desc: CONFIRME tipografia ornamentos Morris}
+    - {n: 3, desc: VALIDE UX crianças TocaBoca}
+    - {n: 4, desc: CERTIFIQUE clareza visual Tufte}
+  criterio: Mãe estressada 7h manhã consegue usar uma mão celular?
 
 alinhamento_north_star:
-  principios_reforcados:
-    - id: 1
-      nome: "Qualidade Não é Negociável"
-      como: |
-        4 experts garantem qualidade visual impecável.
-        Cada pixel tem propósito (Tufte).
-        
-    - id: 2
-      nome: "Família é o Centro"
-      como: |
-        UX infantil (Toca Boca) + Mobile-first = funciona em casa real.
-        "Uma mão no celular às 7h da manhã."
-        
-    - id: 4
-      nome: "Inclusão como Honra"
-      como: |
-        Contraste e legibilidade para todos.
-        UX que funciona em diferentes contextos.
-      
-  pergunta_north_star: |
-    "Este design é bonito E funcional para uma família real?"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# REFERÊNCIAS
-# ════════════════════════════════════════════════════════════════════════════════
+  principios:
+    - {id: 1, name: Qualidade Não Negociável, como: '4 experts garantem qualidade visual impecável. Cada pixel propósito Tufte'}
+    - {id: 2, name: Família Centro, como: 'UX infantil TocaBoca + Mobile-first funciona casa real. Uma mão celular 7h'}
+    - {id: 4, name: Inclusão Honra, como: Contraste legibilidade todos. UX diferentes contextos}
+  q_design: Design bonito E funcional família real?
 
 referencias:
-  especialistas:
-    potter: "Beatrix Potter: A Life in Nature (Linda Lear)"
-    morris: "William Morris: A Life for Our Time (Fiona MacCarthy)"
-    tufte: "The Visual Display of Quantitative Information"
-    toca_boca: "Toca Boca Design Philosophy"
-    
-  websites:
-    - "https://www.tocaboca.com"
-    - "https://www.edwardtufte.com"
+  primarias: [Beatrix Potter Life Nature Linda Lear, William Morris Life Our Time Fiona MacCarthy, Visual Display Quantitative Information Tufte, Toca Boca Design Philosophy]
+  websites: [https://www.tocaboca.com, https://www.edwardtufte.com]

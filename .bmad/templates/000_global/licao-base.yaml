@@ -1,145 +1,40 @@
-# ══════════════════════════════════════════════════════════════════════════════
-# LICÃO BASE GLOBAL — Seções Obrigatórias em TODAS as Lições
-# ══════════════════════════════════════════════════════════════════════════════
-# Este arquivo define a ESTRUTURA BASE que toda lição deve seguir.
-# Templates por ano HERDAM desta base e adicionam regras específicas.
-# Última revisão: 13/01/2026
+# LIÇÃO BASE GLOBAL — Estrutura Obrigatória Todas Lições
+# YAML Lean v1.0 | Atualização: 13/01/2026
 
 tipo: licao_base_global
-versao: "5.0"
-
-# ══════════════════════════════════════════════════════════════════════════════
-# SEÇÕES OBRIGATÓRIAS EM TODA LIÇÃO
-# ══════════════════════════════════════════════════════════════════════════════
+versao: '5.0'
 
 secoes_obrigatorias:
-  - id: metadados
-    descricao: "Identificação da lição (id, titulo, fase, guardião, status)"
-    obrigatorio: true
-    
-  - id: ideia_viva
-    descricao: "A frase central que encapsula o conceito vivo"
-    obrigatorio: true
-    
-  - id: atmosfera
-    descricao: "Clima, local, virtude, artefato"
-    obrigatorio: true
-    
-  - id: linkage
-    descricao: "Conexão com lição anterior e próxima"
-    obrigatorio: true
-    
-  - id: preparacao
-    descricao: "Materiais, tempo, checklist"
-    obrigatorio: true
-    
-  - id: para_o_portador
-    descricao: "Dicas para o pai/mãe"
-    obrigatorio: true
-    
-  - id: ritual_abertura
-    descricao: "Transição para o Reino"
-    obrigatorio: true
-    
-  - id: jornada
-    descricao: "Conteúdo principal (Concreto, Pictórico, Abstrato)"
-    obrigatorio: true
-    subsecoes:
-      - concreto: { obrigatorio: true }
-      - pictorico: { obrigatorio: "depende_do_ciclo" }
-      - abstrato: { obrigatorio: "depende_do_ciclo" }
-      
-  - id: narracao
-    descricao: "Momento de a criança contar o que aprendeu"
-    obrigatorio: true
-    
-  - id: ritual_fechamento
-    descricao: "Retorno do Reino, fio de ouro para próxima lição"
-    obrigatorio: true
-
-# ══════════════════════════════════════════════════════════════════════════════
-# SEÇÕES OPCIONAIS
-# ══════════════════════════════════════════════════════════════════════════════
+  - {id: metadados, desc: 'ID titulo fase guardião status', obr: true}
+  - {id: ideia_viva, desc: Frase central conceito vivo, obr: true}
+  - {id: atmosfera, desc: 'Clima local virtude artefato', obr: true}
+  - {id: linkage, desc: Conexão anterior próxima, obr: true}
+  - {id: preparacao, desc: 'Materiais tempo checklist', obr: true}
+  - {id: para_o_portador, desc: Dicas pai mãe, obr: true}
+  - {id: ritual_abertura, desc: Transição Reino, obr: true}
+  - {id: jornada, desc: 'Conteúdo principal CPA', obr: true, subsecoes: [{ concreto: obr_true}, {pictorico: depende_ciclo}, {abstrato: depende_ciclo}]}
+  - {id: narracao, desc: Criança conta aprendeu, obr: true}
+  - {id: ritual_fechamento, desc: 'Retorno Reino fio ouro próxima', obr: true}
 
 secoes_opcionais:
-  - id: extensao
-    descricao: "Atividades extras se a criança pedir 'mais'"
-    
-  - id: catedra_dos_pais
-    descricao: "Explicação teórica para os pais"
-    
-  - id: sugestoes
-    descricao: "Dicas dos Guardiões"
-    
-  - id: diario_portador
-    descricao: "Espaço para anotações do pai/mãe"
+  - {id: extensao, desc: Atividades extras criança pedir mais}
+  - {id: catedra_pais, desc: Explicação teórica pais}
+  - {id: sugestoes, desc: Dicas Guardiões}
+  - {id: diario_portador, desc: Espaço anotações pai mãe}
 
-# ══════════════════════════════════════════════════════════════════════════════
-# REFERÊNCIAS SSOT GLOBAIS
-# ══════════════════════════════════════════════════════════════════════════════
+referencias_globais_ssot:
+  core_obrigatorios: {indice: LORE/index.yaml, north_star: LORE/north_star.yaml, guardioes: LORE/guardioes.yaml, locais: LORE/locais.yaml, climas: LORE/climas.yaml, padroes_narrativos: LORE/padroes_narrativos.yaml}
+  extensoes_conforme: {evolucao_guardioes: LORE/evolucao_guardioes.yaml, artefatos: LORE/artefatos.yaml, viajante: LORE/viajante.yaml, glossario: LORE/glossario.yaml, ontologia: LORE/ontologia.yaml}
+  nota: 'Toda lição REFERENCIA estes SSóT. Link never duplicate Eric Evans. Navegar por LORE/index.yaml'
 
-referencias_globais:
-  # Ponto de entrada
-  indice: "LORE/index.yaml"
-  
-  # Camada Core (obrigatórios para toda lição)
-  north_star: "LORE/north_star.yaml"
-  guardioes: "LORE/guardioes.yaml"
-  locais: "LORE/locais.yaml"
-  climas: "LORE/climas.yaml"
-  padroes_narrativos: "LORE/padroes_narrativos.yaml"
-  
-  # Camada Extensões (conforme necessidade)
-  evolucao_guardioes: "LORE/evolucao_guardioes.yaml"
-  artefatos: "LORE/artefatos.yaml"
-  viajante: "LORE/viajante.yaml"
-  glossario: "LORE/glossario.yaml"
-  ontologia: "LORE/ontologia.yaml"
-  
-  nota: |
-    Toda lição deve REFERENCIAR estes arquivos SSOT.
-    Nunca duplicar dados dos Guardiões ou Locais.
-    O princípio é: "Link, don't duplicate." (Eric Evans)
-    
-    Para navegar: comece por LORE/index.yaml
-
-# ══════════════════════════════════════════════════════════════════════════════
-# REGRAS UNIVERSAIS (Charlotte Mason)
-# ══════════════════════════════════════════════════════════════════════════════
-
-regras_universais:
-  - id: crianca_pessoa
-    regra: "A criança é tratada como pessoa capaz, não recipiente vazio"
-    fonte: "Princípio 1 CM"
-    
-  - id: ideia_viva
-    regra: "O conceito é apresentado como IDEIA VIVA, não dado seco"
-    fonte: "Princípio 6 CM"
-    
-  - id: narracao
-    regra: "A criança narra (conta) o que aprendeu — isso fixa o conhecimento"
-    fonte: "Princípio 14 CM"
-    
-  - id: habito_atencao
-    regra: "Lições curtas preservam atenção plena"
-    fonte: "Princípio 9 CM"
-    
-  - id: nunca_infantilizar
-    regra: "Nunca estar DENTRO do alcance mental da criança"
-    fonte: "C.S. Lewis"
-
-# ══════════════════════════════════════════════════════════════════════════════
-# ADAPTAÇÃO BERNARDO (Inclusão)
-# ══════════════════════════════════════════════════════════════════════════════
+regras_universais_cm:
+  - {id: crianca_pessoa, regra: Criança tratada pessoa capaz não recipiente, fonte: Princípio 1 CM}
+  - {id: ideia_viva, regra: Conceito apresentado IDEIA VIVA não dado seco, fonte: Princípio 6 CM}
+  - {id: narracao, regra: Criança narra conta aprendeu fixa conhecimento, fonte: Princípio 14 CM}
+  - {id: habito_atencao, regra: Lições curtas preservam atenção plena, fonte: Princípio 9 CM}
+  - {id: nunca_infantilizar, regra: Nunca estar DENTRO alcance mental criança, fonte: CS Lewis}
 
 adaptacao_bernardo:
-  obrigatorio_em: ["concreto", "extensao"]
-  formato: |
-    💡 **Para crianças com realidades diferentes:**
-    - [adaptação 1]
-    - [adaptação 2]
-    - "Bernardo nos ensina que caminhos diferentes também chegam lá."
-    
-  principio: |
-    CM Princípio 1: "Children are born persons."
-    Toda criança merece acesso. Inclusão é HONRA, não peso.
+  obrigatorio_em: [concreto, extensao]
+  formato: '💡 Para crianças realidades diferentes: [adaptação 1] [adaptação 2]. Bernardo ensina caminhos diferentes também chegam lá'
+  principio: 'CM Princípio 1 Children born persons. Toda criança merece acesso. Inclusão HONRA não peso'

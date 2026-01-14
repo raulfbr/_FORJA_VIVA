@@ -1,0 +1,280 @@
+# ════════════════════════════════════════════════════════════════════════════════
+# WORKFLOW: REVISAR PONTOS
+# ════════════════════════════════════════════════════════════════════════════════
+# Revisão manual assistida por experts em pontos específicos
+# Versão: 1.0
+
+id: revisar_pontos
+tipo: workflow
+versao: "1.0"
+coordenadora: charlotte_mason
+
+nome: "Revisar Pontos — Revisão Manual Assistida"
+descricao: |
+  O Maestro identifica pontos específicos a corrigir.
+  Experts relevantes dão parecer embasado.
+  Correções aplicadas na FONTE (YAML), depois re-renderizadas.
+
+# ════════════════════════════════════════════════════════════════════════════════
+# ENTENDIMENTO DO PIPELINE
+# ════════════════════════════════════════════════════════════════════════════════
+
+pipeline_awareness:
+  conceito: |
+    Existem DOIS MOMENTOS distintos no projeto:
+    
+    1. FONTE (YAML)
+       - É o CONTEÚDO da lição
+       - Onde os experts revisam e corrigem
+       - Onde a qualidade pedagógica e narrativa está
+       
+    2. OUTPUT (HTML/PDF)
+       - É a APRESENTAÇÃO visual
+       - Gerada pelo Gutenberg a partir do YAML
+       - HTML para web, PDF para impressão
+       
+  regra_ouro: |
+    "Experts revisam a FONTE (YAML).
+     A aparência visual é responsabilidade do Gutenberg (HTML/PDF).
+     Se o conteúdo está bom no YAML, o HTML e PDF serão bons automaticamente."
+     
+  pipeline:
+    entrada: "curriculo/[CICLO]/L[XXX].yaml"
+    gutenberg_html: "forja-core/pipeline/gutenberg_html.py"
+    gutenberg_pdf: "forja-core/pipeline/gutenberg_pdf.py"
+    saida_html: "site/[ciclo]/L[XXX].html"
+    saida_pdf: "print/[ciclo]/L[XXX].pdf"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# INVOCAÇÃO
+# ════════════════════════════════════════════════════════════════════════════════
+
+invocacao:
+  comando: "/revisar-pontos [ponto1], [ponto2], [ponto3]"
+  exemplo: "/revisar-pontos 'tom condescendente', 'tempo longo', 'falta narração'"
+  uso: "Executar após revisão automática, quando Maestro identifica pontos"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# MAPEAMENTO PONTO → EXPERT
+# ════════════════════════════════════════════════════════════════════════════════
+
+mapeamento_experts:
+  # Pontos relacionados a TOM
+  tom_condescendente:
+    experts: [cs_lewis, charlotte_mason]
+    dominio: narrativa
+    pergunta: "Como reescrever sem infantilizar?"
+    
+  tom_seco:
+    experts: [beatrix_potter, makoto_fujimura]
+    dominio: narrativa
+    pergunta: "Como adicionar encantamento sem forçar?"
+    
+  tom_muito_florido:
+    experts: [cs_lewis, jerome_bruner]
+    dominio: narrativa
+    pergunta: "Como simplificar sem perder beleza?"
+    
+  # Pontos relacionados a TEMPO
+  tempo_longo:
+    experts: [charlotte_mason, maes_personas]
+    dominio: pedagogia
+    pergunta: "Como reduzir para ≤20 min (Sementes)?"
+    
+  tempo_curto:
+    experts: [jerome_bruner, lev_vygotsky]
+    dominio: matematica
+    pergunta: "Falta scaffolding? A criança precisa de mais tempo?"
+    
+  # Pontos relacionados a PEDAGOGIA
+  falta_narracao:
+    experts: [charlotte_mason, susan_macaulay]
+    dominio: pedagogia
+    pergunta: "Onde inserir momento de narração pela criança?"
+    
+  cpa_fora_ordem:
+    experts: [jerome_bruner, charlotte_mason]
+    dominio: matematica
+    pergunta: "Como reorganizar para C→P→A correto?"
+    
+  abstrato_demais:
+    experts: [jerome_bruner, lev_vygotsky]
+    dominio: matematica
+    pergunta: "Como tornar mais concreto? Que manipulativos usar?"
+    
+  # Pontos relacionados a UX/FAMÍLIA
+  preparacao_demorada:
+    experts: [maes_personas, alex_hormozi]
+    dominio: ux
+    pergunta: "Como reduzir preparo para ≤5 min?"
+    
+  materiais_dificeis:
+    experts: [maes_personas, seth_godin]
+    dominio: ux
+    pergunta: "Que materiais caseiros podem substituir?"
+    
+  linguagem_tecnica:
+    experts: [maes_personas, susan_macaulay]
+    dominio: ux
+    pergunta: "Como traduzir para linguagem de mãe?"
+    
+  # Pontos relacionados a INCLUSÃO
+  exclui_bernardo:
+    experts: [maes_personas, charlotte_mason]
+    dominio: inclusao
+    pergunta: "Como adaptar para crianças com necessidades especiais?"
+    
+  # Pontos relacionados a GUARDIÃO
+  guardiao_inconsistente:
+    experts: [jrr_tolkien, cs_lewis]
+    dominio: narrativa
+    pergunta: "A fala está alinhada com a personalidade canônica?"
+    
+  # Pontos relacionados a TÉCNICO
+  yaml_invalido:
+    experts: [engenharia]
+    dominio: tecnico
+    pergunta: "Qual o erro de sintaxe? Como corrigir?"
+    
+  template_incompleto:
+    experts: [engenharia, charlotte_mason]
+    dominio: tecnico
+    pergunta: "Que seções estão faltando no Template V4?"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# FASES DA REVISÃO
+# ════════════════════════════════════════════════════════════════════════════════
+
+fases:
+  - fase: 1
+    nome: "IDENTIFICAÇÃO"
+    acao: |
+      Maestro lista os pontos a revisar.
+      Para cada ponto, identificar:
+      - Experts relevantes (usar mapeamento)
+      - Domínio do problema
+      - Pergunta específica
+    output: "Lista de pontos com experts mapeados"
+    
+  - fase: 2
+    nome: "CONSULTA"
+    acao: |
+      Para cada ponto:
+      1. Invocar experts mapeados
+      2. Apresentar o trecho problemático (do YAML fonte)
+      3. Perguntar como corrigir
+      4. Expert responde com:
+         - Diagnóstico (o que está errado)
+         - Solução (como corrigir)
+         - Embasamento (citação de fonte/princípio)
+    output: "Pareceres embasados para cada ponto"
+    
+  - fase: 3
+    nome: "CORREÇÃO NA FONTE"
+    acao: |
+      Aplicar correções no arquivo YAML fonte.
+      Registrar cada correção com:
+      - Antes (trecho original)
+      - Depois (trecho corrigido)
+      - Expert que recomendou
+      - Embasamento usado
+    nota: |
+      IMPORTANTE: Corrigir apenas o YAML.
+      O HTML e PDF serão gerados depois pelo Gutenberg.
+    output: "YAML corrigido"
+    
+  - fase: 4
+    nome: "REGENERAÇÃO"
+    acao: |
+      Executar Gutenberg para regerarHTML e PDF:
+      ```
+      python forja-core/pipeline/gutenberg_html.py --input [YAML] --output [HTML]
+      python forja-core/pipeline/gutenberg_pdf.py --input [YAML] --output [PDF]
+      ```
+    output: "HTML e PDF atualizados"
+    
+  - fase: 5
+    nome: "VALIDAÇÃO PÓS-CORREÇÃO"
+    acao: |
+      Verificar se as correções resolveram os pontos.
+      Se ainda houver problemas, retornar à Fase 2.
+    output: "Pontos resolvidos ✅"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# OUTPUT
+# ════════════════════════════════════════════════════════════════════════════════
+
+output:
+  arquivo: "logs/{data}_REVISAO_PONTOS_{licao_id}.md"
+  
+  formato: |
+    # 🔧 REVISÃO DE PONTOS: {licao_id}
+    
+    **Data:** {data}
+    **Lição:** {licao_id}
+    **Pontos revisados:** {count_pontos}
+    
+    ---
+    
+    ## Ponto 1: {nome_ponto}
+    
+    **Experts consultados:** {lista_experts}
+    
+    **Diagnóstico:**
+    > {diagnóstico}
+    
+    **Solução:**
+    > {solução}
+    
+    **Embasamento:**
+    > {citação_fonte}
+    
+    **Correção aplicada:**
+    ```yaml
+    # ANTES
+    {antes}
+    
+    # DEPOIS
+    {depois}
+    ```
+    
+    ---
+    
+    [Repetir para cada ponto]
+    
+    ---
+    
+    ## 🎖️ STATUS FINAL
+    
+    - YAML atualizado: ✅
+    - HTML regenerado: ✅
+    - PDF regenerado: ✅
+    - Todos os pontos resolvidos: ✅
+    
+    ---
+    
+    *Revisão manual assistida em {data}*
+
+# ════════════════════════════════════════════════════════════════════════════════
+# EXEMPLOS DE USO
+# ════════════════════════════════════════════════════════════════════════════════
+
+exemplos:
+  - input: "/revisar-pontos 'tom condescendente'"
+    fluxo: |
+      1. Identificar: ponto = tom_condescendente
+      2. Experts: C.S. Lewis + Charlotte Mason
+      3. Lewis pergunta: "Qual trecho infantiliza?"
+      4. Lewis diagnostica: "Frase X usa 'vejam só, crianças'"
+      5. Lewis sugere: "Reescrever como 'observe...'"
+      6. Embasamento: "Never be within the child's mental range"
+      7. Correção aplicada no YAML
+      8. Gutenberg regenera HTML/PDF
+      
+  - input: "/revisar-pontos 'tempo longo', 'materiais difíceis'"
+    fluxo: |
+      1. Ponto 1: tempo_longo → CM + Mães
+      2. Ponto 2: materiais_dificeis → Mães + Godin
+      3. Cada expert dá parecer
+      4. Correções aplicadas no YAML
+      5. Gutenberg regenera

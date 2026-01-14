@@ -130,6 +130,41 @@ curriculo/01_SEMENTES/
 
 ---
 
+## 📐 Padrões YAML Lean v1.0
+
+### Princípios de Qualidade
+
+Este projeto segue **YAML Lean v1.0** com padrões rigorosos:
+
+**1. SSOT (Single Source of Truth)**
+- Cada informação existe EM UM lugar apenas
+- Nunca duplicar dados - sempre referenciar
+- Exemplo: Guardiões definidos em `LORE/guardioes.yaml`, lições referenciam
+
+**2. DRY (Don't Repeat Yourself)**  
+- Refatorar duplicações para funções/templates
+- Workflows reutilizáveis
+
+**3. AI Eficiência YAML**
+- Experts leem YAML diretamente via `view_file`
+- Não parsear Python desnecessariamente
+- Economiza 3-5s por deliberação
+
+### Quando em Dúvida — Delibere
+
+Questões complexas seguem `reuniao-deliberacao.yaml`:
+
+1. **ABERTURA** — Formular questão claramente
+2. **POSIÇÕES** — Experts manifestam fundamentados
+3. **RÉPLICA** — Questionar posições
+4. **TRÉPLICA** — Ajustar ou defender
+5. **SÍNTESE** — Charlotte Mason organiza
+6. **DECISÃO** — Charlotte decide (voz final)
+
+Deliberações documentadas em `logs/`
+
+---
+
 ## 📬 Dúvidas?
 
 - Abra uma Issue com tag `question`

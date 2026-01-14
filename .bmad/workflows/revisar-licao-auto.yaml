@@ -1,243 +1,40 @@
-# ════════════════════════════════════════════════════════════════════════════════
-# WORKFLOW: REVISAR LIÇÃO AUTO
-# ════════════════════════════════════════════════════════════════════════════════
-# Revisão automática por TODOS os 14 experts
-# Versão: 1.0
+# REVISAR LIÇÃO AUTO — Validação Completa 14 Experts
+# YAML Lean v1.0 | Atualização: 13/01/2026
 
 id: revisar_licao_auto
 tipo: workflow
-versao: "1.0"
+versao: '1.0'
 coordenadora: charlotte_mason
+desc: 'Revisão automática invoca TODOS 14 experts. Cada responde pergunta_north_star própria. Gera relatório consolidado aprovações ressalvas vetos'
 
-nome: "Revisar Lição Auto — Validação Completa"
-descricao: |
-  Revisão automática que invoca TODOS os 14 experts.
-  Cada expert responde sua pergunta_north_star.
-  Gera relatório consolidado de aprovações, ressalvas e vetos.
-
-# ════════════════════════════════════════════════════════════════════════════════
-# INVOCAÇÃO
-# ════════════════════════════════════════════════════════════════════════════════
-
-invocacao:
-  comando: "/revisar-licao-auto [LICAO_ID]"
-  exemplo: "/revisar-licao-auto L001"
-  uso: "Executar após /criar-licao-premium para validação completa"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# OS 14 EXPERTS E SUAS PERGUNTAS
-# ════════════════════════════════════════════════════════════════════════════════
-
-experts_invocados:
-  # PEDAGOGIA
-  - id: charlotte_mason
-    conselho: pedagogia
-    pergunta_north_star: "Esta lição trata a criança como PESSOA (Princípio 1)?"
-    veto_poder: ABSOLUTO
-    
-  - id: susan_macaulay
-    conselho: pedagogia
-    pergunta_north_star: "A tradução prática de CM está presente e acessível?"
-    veto_poder: CONSULTIVO
-    
-  # MATEMÁTICA
-  - id: jerome_bruner
-    conselho: matematica
-    pergunta_north_star: "A progressão CPA foi respeitada? (C≥60%, ordem correta)"
-    veto_poder: DOMINIO_CPA
-    
-  - id: lev_vygotsky
-    conselho: matematica
-    pergunta_north_star: "O scaffolding é adequado? A ZPD foi respeitada?"
-    veto_poder: CONSULTIVO
-    
-  # NARRATIVA
-  - id: cs_lewis
-    conselho: narrativa
-    pergunta_north_star: "O tom é digno? Não infantilizamos o Mistério?"
-    veto_poder: DOMINIO_TOM
-    
-  - id: jrr_tolkien
-    conselho: narrativa
-    pergunta_north_star: "Há consistência interna? O mundo faz sentido?"
-    veto_poder: DOMINIO_CONSISTENCIA
-    
-  - id: beatrix_potter
-    conselho: narrativa
-    pergunta_north_star: "A estética honra a natureza? Visual é encantador?"
-    veto_poder: CONSULTIVO
-    
-  - id: makoto_fujimura
-    conselho: narrativa
-    pergunta_north_star: "A beleza generativa está presente? Kintsugi quando necessário?"
-    veto_poder: CONSULTIVO
-    
-  # NEGÓCIOS
-  - id: seth_godin
-    conselho: negocios
-    pergunta_north_star: "Isso fortalece a tribo? É para 'pessoas como nós'?"
-    veto_poder: CONSULTIVO
-    
-  - id: alex_hormozi
-    conselho: negocios
-    pergunta_north_star: "Esforço baixo? Valor alto? (Value Equation positiva)"
-    veto_poder: CONSULTIVO
-    
-  - id: peter_thiel
-    conselho: negocios
-    pergunta_north_star: "Isso reforça nosso monopólio criativo? É único?"
-    veto_poder: CONSULTIVO
-    
-  # UX FAMÍLIAS
-  - id: maes_personas
-    conselho: ux_familias
-    pergunta_north_star: "Uma mãe exausta consegue aplicar isso em 5 minutos?"
-    veto_poder: ALTA_PRIORIDADE
-    selos_verificar:
-      - "📱 Mobile-Friendly"
-      - "🫘 Materiais Caseiros"
-      - "🗣️ Linguagem Clara"
-      - "⏱️ 5 Minutos de Preparo"
-      - "♿ Instruções Acessíveis"
-      - "💡 Nota de Adaptação"
-    
-  # DESIGN
-  - id: design
-    conselho: design
-    pergunta_north_star: "O design visual está alinhado com a identidade do projeto?"
-    veto_poder: CONSULTIVO
-    
-  # ENGENHARIA
-  - id: engenharia
-    conselho: engenharia
-    pergunta_north_star: "O código/YAML sobrevive auditoria de sênior exigente?"
-    veto_poder: DOMINIO_TECNICO
-    checks:
-      - "YAML válido"
-      - "Links funcionais"
-      - "Template V4 completo"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# FASES DA REVISÃO
-# ════════════════════════════════════════════════════════════════════════════════
+experts_invocados_dinamicamente:
+  nota: 'Orchestrator lê experts/*.yaml diretamente (AI Eficiência YAML). Não duplicar perguntas aqui (SSOT violação)'
+  total: 14
+  por_conselho: {pedagogia: 2, matematica: 2, narrativa: 4, negocios: 3, ux_familias: 1, design: 1, engenharia: 1}
+  fonte: '.bmad/experts/*/*.yaml'
 
 fases:
-  - fase: 1
-    nome: "CARREGAMENTO"
-    acao: |
-      Carregar a lição do arquivo YAML.
-      Identificar: ID, ciclo, tema, guardião.
-    output: "Contexto da lição carregado"
-    
-  - fase: 2
-    nome: "INVOCAÇÃO EM PARALELO"
-    acao: |
-      Para cada um dos 14 experts:
-      1. Apresentar a lição
-      2. Perguntar a pergunta_north_star
-      3. Registrar resposta: APROVADO | RESSALVA | VETO
-      4. Se RESSALVA ou VETO: capturar justificativa
-    output: "14 respostas coletadas"
-    
-  - fase: 3
-    nome: "CONSOLIDAÇÃO"
-    acao: |
-      Agrupar respostas por status:
-      - Aprovações: lista de experts que aprovaram
-      - Ressalvas: lista com observações
-      - Vetos: lista com justificativas (bloqueia se houver)
-    output: "Relatório consolidado"
-    
-  - fase: 4
-    nome: "DECISÃO"
-    responsavel: charlotte_mason
-    acao: |
-      CM analisa o relatório.
-      Se VETO de prioridade alta: BLOQUEIA lição.
-      Se apenas RESSALVAS: APROVADO COM OBSERVAÇÕES.
-      Se tudo aprovado: APROVADO TOTAL.
-    output: "Veredito final"
+  - {fase: 1, nome: CARREGAMENTO, acao: 'Carregar lição arquivo YAML. Identificar: ID ciclo tema guardião', output: Contexto lição carregado}
+  
+  - {fase: 2, nome: INVOCAÇÃO PARALELO, acao: 'Para cada 14 experts: 1.Apresentar lição 2.Perguntar pergunta_north_star 3.Registrar APROVADO|RESSALVA|VETO 4.Se RESSALVA VETO capturar justificativa', output: 14 respostas coletadas}
+  
+  - {fase: 3, nome: CONSOLIDAÇÃO, acao: 'Agrupar respostas status: Aprovações lista experts. Ressalvas lista observações. Vetos lista justificativas bloqueia se houver', output: Relatório consolidado}
+  
+  - {fase: 4, nome: DECISÃO, resp: charlotte_mason, acao: 'CM analisa relatório. Se VETO prioridade alta BLOQUEIA. Se apenas RESSALVAS APROVADO COM OBSERVAÇÕES. Se tudo aprovado APROVADO TOTAL', output: Veredito final}
 
-# ════════════════════════════════════════════════════════════════════════════════
-# OUTPUT
-# ════════════════════════════════════════════════════════════════════════════════
+niveis_veto:
+  - {nivel: ABSOLUTO, experts: [charlotte_mason], efeito: Bloqueia imediatamente lição não publicada}
+  - {nivel: ALTA_PRIORIDADE, experts: [maes_personas], efeito: Bloqueia até resolver se mãe não usa não existe}
+  - {nivel: DOMINIO, experts: [jerome_bruner, cs_lewis, jrr_tolkien, engenharia], efeito: Bloqueia domínio específico requer correção}
+  - {nivel: CONSULTIVO, experts: [susan_macaulay, lev_vygotsky, beatrix_potter, makoto_fujimura, seth_godin, alex_hormozi, peter_thiel, design], efeito: Observação registrada não bloqueia recomendado corrigir}
 
 output:
-  arquivo: "logs/{data}_REVISAO_AUTO_{licao_id}.md"
-  
-  formato: |
-    # 🔍 REVISÃO AUTOMÁTICA: {licao_id}
-    
-    **Data:** {data}
-    **Lição:** {licao_id} — {titulo}
-    **Ciclo:** {ciclo}
-    **Guardião:** {guardiao}
-    
-    ---
-    
-    ## ✅ APROVAÇÕES ({count_aprovados}/14)
-    
-    | Expert | Conselho | Parecer |
-    |--------|----------|---------|
-    {lista_aprovados}
-    
-    ---
-    
-    ## ⚠️ RESSALVAS ({count_ressalvas})
-    
-    | Expert | Observação |
-    |--------|------------|
-    {lista_ressalvas}
-    
-    ---
-    
-    ## ❌ VETOS ({count_vetos})
-    
-    | Expert | Justificativa | Ação Requerida |
-    |--------|---------------|----------------|
-    {lista_vetos}
-    
-    ---
-    
-    ## 🎖️ VEREDITO FINAL (Charlotte Mason)
-    
-    **Status:** {status_final}
-    **Justificativa:** {justificativa_cm}
-    
-    ---
-    
-    *Revisão automática executada em {data}*
-
-# ════════════════════════════════════════════════════════════════════════════════
-# REGRAS DE VETO
-# ════════════════════════════════════════════════════════════════════════════════
-
-regras_veto:
-  - nivel: ABSOLUTO
-    experts: [charlotte_mason]
-    efeito: "Bloqueia imediatamente. Lição não pode ser publicada."
-    
-  - nivel: ALTA_PRIORIDADE
-    experts: [maes_personas]
-    efeito: "Bloqueia até resolver. Se mãe não usa, não existe."
-    
-  - nivel: DOMINIO
-    experts: [jerome_bruner, cs_lewis, jrr_tolkien, engenharia]
-    efeito: "Bloqueia no domínio específico. Requer correção."
-    
-  - nivel: CONSULTIVO
-    experts: [susan_macaulay, lev_vygotsky, beatrix_potter, makoto_fujimura, seth_godin, alex_hormozi, peter_thiel, design]
-    efeito: "Observação registrada. Não bloqueia, mas recomendado corrigir."
-
-# ════════════════════════════════════════════════════════════════════════════════
-# INTEGRAÇÃO
-# ════════════════════════════════════════════════════════════════════════════════
+  arquivo: 'logs/{data}_REVISAO_AUTO_{licao_id}.md'
+  formato: '# 🔍 REVISÃO AUTOMÁTICA {licao_id}\n**Data** {data}\n**Lição** {licao_id} {titulo}\n**Ciclo** {ciclo}\n**Guardião** {guardiao}\n\n## ✅ APROVAÇÕES ({count}/14)\n{lista_aprovados}\n\n## ⚠️ RESSALVAS ({count})\n{lista_ressalvas}\n\n## ❌ VETOS ({count})\n{lista_vetos}\n\n## 🎖️ VEREDITO FINAL CM\n**Status** {status}\n**Justificativa** {justificativa}'
 
 integracao:
-  pos_criar_licao: |
-    Este workflow deve ser executado AUTOMATICAMENTE após /criar-licao-premium.
-    O orchestrator deve chamar /revisar-licao-auto ao final da fase 4.
-    
-  pre_publicacao: |
-    Nenhuma lição pode ser publicada sem passar por este workflow.
-    Status APROVADO ou APROVADO_COM_OBSERVACOES é obrigatório.
+  pos_criar_licao: Executar AUTOMATICAMENTE após /criar-licao-premium orchestrator chama final fase 4
+  pre_publicacao: Nenhuma lição publicada sem passar workflow Status APROVADO ou APROVADO_COM_OBSERVACOES obrigatório
+
+invocacao: '/revisar-licao-auto [LICAO_ID]'
+exemplo: '/revisar-licao-auto L001'

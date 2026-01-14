@@ -1,141 +1,23 @@
-# ════════════════════════════════════════════════════════════════════════════════
-# WORKFLOW: CRIAR LIÇÃO PREMIUM
-# ════════════════════════════════════════════════════════════════════════════════
+# CRIAR LIÇÃO PREMIUM — Workflow Completo Alta Qualidade
+# YAML Lean v1.0 | Atualização: 13/01/2026
 
 id: criar_licao_premium
-tipo: workflow
-versao: "1.0"
+tipo: workflow  
+versao: '1.0'
 coordenadora: charlotte_mason
-
-descricao: |
-  Workflow completo para criar lição de alta qualidade.
-  CM coordena. Especialistas contribuem. QA valida.
-
-# ════════════════════════════════════════════════════════════════════════════════
-# FASES
-# ════════════════════════════════════════════════════════════════════════════════
+desc: Workflow completo criar lição alta qualidade. CM coordena especialistas contribuem QA valida
 
 fases:
-  - fase: 1
-    nome: "PLANEJAMENTO"
-    especialistas:
-      - charlotte_mason
-      - jerome_bruner
-      - lev_vygotsky
-    
-    passos:
-      - passo: 1
-        acao: "Receber tema e consultar TGTB"
-        responsavel: orchestrator
-        fonte_tgtb: "curriculo/_SISTEMA/CURRICULOS_MESTRE/"
-        arquivos_por_fase:
-          sementes: "000_K_SEMENTES_CURRICULO_MESTRE.md"
-          raizes_1: "001_1ANO_RAIZES-1_CURRICULO_MESTRE.md"
-          raizes_2: "002_2ANO_RAIZES-2_CURRICULO_MESTRE.md"
-        regra: "SEMPRE consultar o currículo mestre para obter tgtb_ref"
-        
-      - passo: 2
-        acao: "Definir Ideia Viva"
-        responsavel: charlotte_mason
-        pergunta: "Qual verdade viva a criança vai descobrir?"
-        
-      - passo: 3
-        acao: "Propor estrutura CPA"
-        responsavel: jerome_bruner
-        regras:
-          - "Concreto ≥ 60%"
-          - "Pictórico vetado para Sementes"
-          - "Abstrato mínimo"
-          
-      - passo: 4
-        acao: "Definir ZPD e scaffolding"
-        responsavel: lev_vygotsky
-        pergunta: "Qual andaime a criança precisa?"
-        
-      - passo: 5
-        acao: "CM valida ou veta"
-        responsavel: charlotte_mason
-        poder: "Veto absoluto"
-        
-    output: "perd.yaml"  # Pedagogical Requirements Doc
-    checkpoint: true  # Humano aprova antes de continuar
+  - {fase: 1, nome: PLANEJAMENTO, experts: [charlotte_mason, jerome_bruner, lev_vygotsky], passos: [{p: 1, acao: Receber tema consultar TGTB, resp: orchestrator, fonte: curriculo/_SISTEMA/CURRICULOS_MESTRE/, arquivos: {sementes: 000_K_SEMENTES_CURRICULO_MESTRE.md, raizes_1: 001_1ANO_RAIZES-1_CURRICULO_MESTRE.md, raizes_2: 002_2ANO_RAIZES-2_CURRICULO_MESTRE.md}, regra: SEMPRE consultar currículo mestre obter tgtb_ref}, {p: 2, acao: Definir Ideia Viva, resp: charlotte_mason, q: Qual verdade viva criança vai descobrir?}, {p: 3, acao: Propor estrutura CPA, resp: jerome_bruner, regras: [Concreto ≥ 60%, Pictórico vetado Sementes, Abstrato mínimo]}, {p: 4, acao: Definir ZPD scaffolding, resp: lev_vygotsky, q: Qual andaime criança precisa?}, {p: 5, acao: CM valida ou veta, resp: charlotte_mason, poder: Veto absoluto}], output: perd.yaml, checkpoint: true}
+  
+  - {fase: 2, nome: DESENVOLVIMENTO, experts: [cs_lewis, jrr_tolkien, beatrix_potter], passos: [{p: 6, acao: Escrever narrativa guardião, resp: cs_lewis, crit: Tom nobre não condescendente}, {p: 7, acao: Validar consistência Reino, resp: jrr_tolkien, q: Contradição lições anteriores?}, {p: 8, acao: Escolher paleta cores ilustrações, resp: beatrix_potter, regra: Cores naturais nunca neon}], output: narrativa.md, checkpoint: false}
+  
+  - {fase: 3, nome: VALIDAÇÃO, experts: [qa, engenharia], passos: [{p: 9, acao: Rodar 5-Point Verification, resp: qa, checks: [TGTB ref válido?, CPA estrutura correta?, Tom CM nobre?, Cores naturais?, Sem chartjunk?]}, {p: 10, acao: Verificar SSOT DRY, resp: engenharia, q: Duplicação desnecessária?}, {p: 11, acao: CM aprovação final, resp: charlotte_mason, poder: Veto absoluto}], output: licao_completa.md, checkpoint: true}
 
-  - fase: 2
-    nome: "DESENVOLVIMENTO"
-    especialistas:
-      - cs_lewis
-      - jrr_tolkien
-      - beatrix_potter
-    
-    passos:
-      - passo: 6
-        acao: "Escrever narrativa com guardião"
-        responsavel: cs_lewis
-        criterio: "Tom nobre, não condescendente"
-        
-      - passo: 7
-        acao: "Validar consistência do Reino"
-        responsavel: jrr_tolkien
-        pergunta: "Há contradição com lições anteriores?"
-        
-      - passo: 8
-        acao: "Validar estética visual"
-        responsavel: beatrix_potter
-        criterio: "Cores naturais, realismo caprichoso"
-        
-      - passo: 9
-        acao: "CM revisa fluxo geral"
-        responsavel: charlotte_mason
-        
-    output: "rascunho.yaml"
-    checkpoint: true  # Matriarca valida tom
+checkpoints:
+  - {id: CP1, após_fase: 1, aprovador: humano, pergunta: PERD pedagógico sólido aprovar desenvolvimento?}
+  - {id: CP2, após_fase: 3, aprovador: charlotte_mason, pergunta: Lição impecável publicar?}
 
-  - fase: 3
-    nome: "VERIFICAÇÃO"
-    especialistas:
-      - makoto_fujimura
-      - engenharia
-      - maes_personas
-    
-    passos:
-      - passo: 10
-        acao: "QA Quíntupla"
-        responsavel: engenharia
-        checks:
-          - "CM: 20 Princípios"
-          - "CPA: Ordem correta"
-          - "Tempo: ≤ 20 min"
-          - "Guardião: Frases corretas"
-          - "Template: Completo"
-          
-      - passo: 11
-        acao: "Teste do Café da Manhã"
-        responsavel: maes_personas
-        pergunta: "Mãe exausta consegue em 5 min?"
-        
-      - passo: 12
-        acao: "Kintsugi se necessário"
-        responsavel: makoto_fujimura
-        acao_kintsugi: "Transformar erros em ouro"
-        
-      - passo: 13
-        acao: "Aprovação final"
-        responsavel: charlotte_mason
-        
-    output: "licao_final.yaml"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# OUTPUTS
-# ════════════════════════════════════════════════════════════════════════════════
-
-outputs:
-  - "curriculo/01_SEMENTES/{numero}_{titulo}.yaml"
-  - "site/sementes/{numero}.html" (via pipeline)
-
-# ════════════════════════════════════════════════════════════════════════════════
-# INVOCAÇÃO
-# ════════════════════════════════════════════════════════════════════════════════
-
-invocacao:
-  comando: "/criar-licao [numero] [tema]"
-  exemplo: "/criar-licao L002 Contagem até 5"
+validacao_final:
+  criterios: [TGTB alinhado?, Ideia Viva clara?, CPA bem estruturado?, Tom nobre não condescendente?, Consistência Reino preservada?, 5-Point Verification passed?, CM aprovou?]
+  output: {sucesso: licao_premium_aprovada.md, falha: retornar_fase_indicada}

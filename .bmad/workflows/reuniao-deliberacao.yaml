@@ -1,182 +1,46 @@
-# ════════════════════════════════════════════════════════════════════════════════
-# WORKFLOW: REUNIÃO DE DELIBERAÇÃO
-# ════════════════════════════════════════════════════════════════════════════════
+# REUNIÃO DELIBERAÇÃO — Conselho Experts Debate Estruturado
+# YAML Lean v1.0 | Atualização: 13/01/2026
 
 id: reuniao_deliberacao
 tipo: workflow
-versao: "2.0"
+versao: '2.0'
 coordenadora: charlotte_mason
+desc: 'Deliberação experts réplica tréplica. CM organiza decide. Log registra tudo. Todos 14 experts ou seleção tema'
 
-nome: "Reunião de Deliberação — Todos os Experts"
-descricao: |
-  Deliberação entre especialistas com réplica e tréplica.
-  CM organiza e decide. Log registra tudo.
-  Pode invocar TODOS os 14 experts ou selecionar por tema.
-
-# ════════════════════════════════════════════════════════════════════════════════
-# PIPELINE AWARENESS
-# ════════════════════════════════════════════════════════════════════════════════
-
-pipeline_awareness:
-  conceito: |
-    DOIS MOMENTOS no projeto:
-    1. FONTE (YAML) — conteúdo da lição
-    2. OUTPUT (HTML/PDF) — apresentação visual via Gutenberg
-    
-  nota: |
-    Decisões desta reunião afetam a FONTE (YAML).
-    A aparência visual é gerada depois pelo Gutenberg.
-
-# ════════════════════════════════════════════════════════════════════════════════
-# MODOS DE CONVOCAÇÃO
-# ════════════════════════════════════════════════════════════════════════════════
+pipeline_awareness: 'DOIS MOMENTOS: 1.FONTE YAML conteúdo 2.OUTPUT HTML/PDF via Gutenberg. Reunião afeta FONTE decisões pedagógicas'
 
 modos_convocacao:
-  todos:
-    comando: "/reuniao-todos [TEMA]"
-    descricao: "Convoca TODOS os 14 experts"
-    experts: 
-      - charlotte_mason
-      - susan_macaulay
-      - jerome_bruner
-      - lev_vygotsky
-      - cs_lewis
-      - jrr_tolkien
-      - beatrix_potter
-      - makoto_fujimura
-      - seth_godin
-      - alex_hormozi
-      - peter_thiel
-      - maes_personas
-      - design
-      - engenharia
-      
-  por_tema:
-    comando: "/reuniao [TEMA]"
-    descricao: "CM escolhe experts relevantes ao tema"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# FASES DA REUNIÃO
-# ════════════════════════════════════════════════════════════════════════════════
+  todos: {cmd: '/reuniao-todos [TEMA]', desc: Convoca TODOS 14 experts, experts: [charlotte_mason, susan_macaulay, jerome_bruner, lev_vygotsky, cs_lewis, jrr_tolkien, beatrix_potter, makoto_fujimura, seth_godin, alex_hormozi, peter_thiel, maes_personas, design, engenharia]}
+  por_tema: {cmd: '/reuniao [TEMA]', desc: CM escolhe experts relevantes tema}
 
 fases:
-  - fase: 1
-    nome: "ABERTURA"
-    responsavel: charlotte_mason
-    acao: |
-      CM apresenta o tema da deliberação.
-      Define quais especialistas serão convocados.
-    output: "Tema + Participantes definidos"
-    
-  - fase: 2
-    nome: "POSIÇÕES INICIAIS"
-    acao: |
-      Cada especialista convocado apresenta sua POSIÇÃO sobre o tema.
-      Formato: Nome, Posição, Embasamento (citação).
-    regras:
-      - "Cada um fala sem interrupção"
-      - "Citar fonte ou princípio"
-      - "Máximo 3 parágrafos"
-    output: "Lista de posições"
-    
-  - fase: 3
-    nome: "RÉPLICA"
-    acao: |
-      Especialistas QUESTIONAM as posições uns dos outros.
-      Podem concordar, discordar ou pedir clarificação.
-    regras:
-      - "Questionar com respeito"
-      - "Citar o ponto específico"
-      - "Propor alternativa se discordar"
-    output: "Lista de questionamentos"
-    
-  - fase: 4
-    nome: "TRÉPLICA"
-    acao: |
-      Especialistas RESPONDEM aos questionamentos.
-      Podem ajustar posição ou defender original.
-    regras:
-      - "Responder diretamente"
-      - "Admitir se mudou de posição"
-      - "Manter tom construtivo"
-    output: "Lista de respostas"
-    
-  - fase: 5
-    nome: "SÍNTESE"
-    responsavel: charlotte_mason
-    acao: |
-      CM organiza os pontos de convergência e divergência.
-      Propõe uma decisão que integre as melhores contribuições.
-    output: "Proposta de síntese"
-    
-  - fase: 6
-    nome: "DECISÃO"
-    responsavel: charlotte_mason
-    acao: |
-      CM decide. Pode usar veto se necessário.
-      Decisão é registrada no log.
-    poder: "Veto absoluto"
-    output: "Decisão final + Justificativa"
-
-# ════════════════════════════════════════════════════════════════════════════════
-# ESPECIALISTAS POR TEMA
-# ════════════════════════════════════════════════════════════════════════════════
+  - {fase: 1, nome: ABERTURA, resp: charlotte_mason, acao: 'CM apresenta tema deliberação. Define especialistas convocados', output: Tema+Participantes definidos}
+  
+  - {fase: 2, nome: POSIÇÕES INICIAIS, acao: 'Cada especialista apresenta POSIÇÃO tema. Formato: Nome Posição Embasamento citação', regras: [Cada fala sem interrupção, Citar fonte princípio, Máximo 3 parágrafos], output: Lista posições}
+  
+  - {fase: 3, nome: RÉPLICA, acao: 'Especialistas QUESTIONAM posições uns outros. Concordar discordar pedir clarificação', regras: [Questionar respeito, Citar ponto específico, Propor alternativa se discordar], output: Lista questionamentos}
+  
+  - {fase: 4, nome: TRÉPLICA, acao: 'Especialistas RESPONDEM questionamentos. Ajustar posição ou defender original', regras: [Responder diretamente, Admitir se mudou posição, Manter tom construtivo], output: Lista respostas}
+  
+  - {fase: 5, nome: SÍNTESE, resp: charlotte_mason, acao: 'CM organiza pontos convergência divergência. Propõe decisão integra melhores contribuições', output: Proposta síntese}
+  
+  - {fase: 6, nome: DECISÃO, resp: charlotte_mason, acao: 'CM decide. Pode usar veto necessário. Registra log', poder: Veto absoluto, output: Decisão final+Justificativa}
 
 especialistas_por_tema:
-  pedagogia:
-    - charlotte_mason
-    - susan_macaulay
-    - jerome_bruner
-    - lev_vygotsky
-    
-  narrativa:
-    - cs_lewis
-    - jrr_tolkien
-    - beatrix_potter
-    - makoto_fujimura
-    
-  negocios:
-    - seth_godin
-    - alex_hormozi
-    - peter_thiel
-    
-  ux:
-    - maes_personas
-    
-  tecnico:
-    - engenharia
-
-# ════════════════════════════════════════════════════════════════════════════════
-# OUTPUT
-# ════════════════════════════════════════════════════════════════════════════════
+  pedagogia: [charlotte_mason, susan_macaulay, jerome_bruner, lev_vygotsky]
+  narrativa: [cs_lewis, jrr_tolkien, beatrix_potter, makoto_fujimura]
+  negocios: [seth_godin, alex_hormozi, peter_thiel]
+  ux: [maes_personas]
+  design: [design]
+  tecnico: [engenharia]
 
 output:
-  arquivo: "logs/{data}_REUNIAO_{tema}.md"
-  formato: |
-    # REUNIÃO: {tema}
-    **Data:** {data}
-    **Coordenadora:** Charlotte Mason
-    **Participantes:** [lista]
-    
-    ## Posições Iniciais
-    [cada especialista]
-    
-    ## Réplica
-    [questionamentos]
-    
-    ## Tréplica
-    [respostas]
-    
-    ## Síntese CM
-    [proposta]
-    
-    ## DECISÃO FINAL
-    [decisão + justificativa]
+  arquivo: 'logs/{data}_REUNIAO_{tema}.md'
+  formato: '# REUNIÃO {tema}\n**Data** {data}\n**Coordenadora** Charlotte Mason\n**Participantes** [lista]\n\n## Posições Iniciais\n[cada especialista]\n\n## Réplica\n[questionamentos]\n\n## Tréplica\n[respostas]\n\n## Síntese CM\n[proposta]\n\n## DECISÃO FINAL\n[decisão+justificativa]'
 
-# ════════════════════════════════════════════════════════════════════════════════
-# INVOCAÇÃO
-# ════════════════════════════════════════════════════════════════════════════════
+exemplos_reais:
+  - {caso: CS Lewis expansão, questao: Adicionar Abolition Man?, participantes: [cs_lewis, engenharia, charlotte_mason], decisao: Manter conciso YAGNI, log: 2026-01-13_1921_DELIBERACAO_CS_LEWIS_EXPANSAO.md}
+  - {caso: CM Tribal, questao: Adicionar princípio #6 PNEU 1887?, participantes: [charlotte_mason, engenharia, north_star], decisao: Aprovar único não duplicado, log: 2026-01-13_1846_DELIBERACAO_ENG_CM.md}
 
-invocacao:
-  comando: "/reuniao [tema]"
-  exemplo: "/reuniao Devemos incluir Pictórico em Sementes?"
+invocacao: '/reuniao [tema]'
+exemplo: '/reuniao Devemos incluir Pictórico Sementes?'
