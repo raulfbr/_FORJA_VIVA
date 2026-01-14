@@ -4,7 +4,7 @@
 
 **Onde Matemática Deixa de Ser Medo — e Vira Aventura**
 
-*Um currículo completo K-12 que transforma a forma como sua família vive matemática*
+*Um currículo completo K-12 que transforma a forma como sua família vive matemática* | v1.0
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-green)
 ![Ages](https://img.shields.io/badge/idade-0--18%20anos-blue)
