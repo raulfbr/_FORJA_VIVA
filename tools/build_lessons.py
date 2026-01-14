@@ -137,6 +137,14 @@ def simple_markdown_to_html(md_text):
     return "\n".join(new_lines)
 
 def load_lessons():
+    """
+    CARREGAMENTO DE DADOS (O 'Crawler')
+    -----------------------------------
+    1. Varre a pasta 'curriculo/01_SEMENTES'.
+    2. Lê cada arquivo .yaml.
+    3. Normaliza os dados (lida com diferenças de indentação entre versões).
+    4. Retorna uma lista limpa pronta para virar HTML.
+    """
     lessons = []
     if not INPUT_DIR.exists(): return []
     
@@ -145,17 +153,20 @@ def load_lessons():
         try:
             content = f.read_text(encoding='utf-8')
             data = {}
+            # Tratamento para Frontmatter (se houver --- no início)
             if content.startswith('---'):
                 parts = content.split('---', 2)
                 if len(parts) >= 2: data = yaml.safe_load(parts[1])
             else:
                 data = yaml.safe_load(content)
             
+            # NORMALIZAÇÃO DE ESTRUTURA (Premium Nested vs Lean Flat)
+            # Alguns arquivos têm 'licao: { metadados: ... }', outros são diretos.
             meta = data.get('licao', {}).get('metadados', {}) if 'licao' in data else data
             ideia = data.get('licao', {}).get('ideia_viva', {}).get('frase', '') if 'licao' in data else data.get('ideia_viva', {}).get('frase', '')
             corpo = data.get('licao', {}) if 'licao' in data else data
             
-            # Remove metadata keys from corpo dict to process content
+            # Remove chaves de metadados do dicionário de conteúdo para não imprimir duplicado
             content_dict = {k:v for k,v in corpo.items() if k not in ['metadados', 'ideia_viva']}
             
             lessons.append({
@@ -172,7 +183,7 @@ def load_lessons():
         except Exception as e:
             print(f"⚠️ Erro ao carregar {f.name}: {e}")
             
-    # Sort by numeric ID
+    # Ordena pelo ID numérico (ex: 1, 2, 10...) para garantir sequência correta
     return sorted(lessons, key=lambda x: x['sort_id'])
 
 def format_content(content_dict):
