@@ -1,0 +1,112 @@
+# LIÇÃO 000 — O PORTAL (INTRO)
+# id: MV-S-000
+# versao: 1.0 (Gold)
+# status: Produção
+
+id: MV-S-000
+titulo: "O Portal: O Convite do Rei"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Melquior
+guardiao_secundario: Todos
+tgtb_ref: "000-INTRO"
+status: final
+
+ideia_viva:
+  frase: "O Reino Contado abre suas portas para quem tem olhos de ver."
+  conceito: "Introdução à Atmosfera Sagrada e aos Guardiões (Pertencimento)"
+  intencao_cm: "Estabelecer o hábito da atenção e da reverência antes do conteúdo."
+
+atmosfera:
+  clima: "ensolarado"
+  clima_desc: "Luz dourada da tarde, suave e acolhedora, filtrada pelas folhas do Jardim Central."
+  local: "jardim_central"
+  local_desc: "O centro de tudo. Musgo macio, cheiro de terra antiga e flores que nunca murcham."
+  virtude: "sabedoria"
+  artefato: "A Pequena Vela (ou luz focal)"
+
+linkage:
+  elo_anterior: {licao_id: null, gancho: "O silêncio antes do início."}
+  proximo: {licao_id: "MV-S-001", gancho: "A Raposa Celeste encontrou algo na palma da mão..."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min"
+  materiais:
+    - {item: "Cards dos 5 Guardiões (Melquior, Noé, Celeste, Bernardo, Íris)", qtd: 1, alt: "Imagens no tablet/celular se não impresso", essencial: true}
+    - {item: "Uma vela pequena (real ou LED)", qtd: 1, alt: "Abajur ou lanterna", essencial: true}
+    - {item: "Tapete ou almofada confortável", qtd: 1, alt: "Chão da sala", essencial: true}
+
+para_o_portador:
+  dica_coracao: "Respire fundo. Hoje não há 'lição' para ensinar, apenas um convite para fazer. Você é o porteiro do Reino para seu filho."
+  filho_descobre: "Que a matemática é um lugar seguro e mágico, habitado por amigos."
+  nota_graca: "Se a criança se agitar, não force. O convite fica feito mesmo no caos."
+
+ritual_abertura:
+  instrucao_ambiente: "Prepare o 'Chão do Reino'. Coloque os Cards dos Guardiões em semi-círculo no tapete. Apague as luzes fortes, acenda a Vela no centro."
+  transicao_reino: "Convide a criança: 'Feche os olhos. Vamos viajar para longe, sem sair do lugar... 1, 2, 3... Reino Contado.'"
+  fala_portador: {tom: "solene e carinhoso", script: "Olhe em volta. Este não é mais o nosso chão. Este é o Jardim do Rei. E alguém estava esperando por você."}
+  card_guardiao: "CARD: MELQUIOR (Leão)"
+  fala_guardiao: {tom: "profundo, grave, acolhedor", script: "O Rei sorriu ao ver você chegar. Eu sou Melquior. Seja bem-vindo ao Reino Contado."}
+
+jornada:
+  abertura_sensorial: "Sente o musgo macio? Sente o cheiro de aventura no ar? Tudo aqui está vivo."
+  
+  concreto:
+    desc: "Melquior apresenta seus amigos Guardiões, um a um."
+    card_objeto: "CARDS: TODOS OS GUARDIÕES"
+    passos:
+      - {n: 1, acao: "Aponte para o Card da CORUJA (ainda no chão ou levante-o).", fala: "Veja! Ali no galho alto está NOÉ. Ele guarda o Tempo. (Sussurre) Ele nos ensina a esperar."}
+      - {n: 2, acao: "Aponte para o Card da RAPOSA.", fala: "Sentiu esse vento? É a CELESTE! Ela é rápida e curiosa. Ela adora descobrir segredos escondidos."}
+      - {n: 3, acao: "Aponte para o Card do URSO.", fala: "Ouça o passo pesado... É o BERNARDO. Ele é forte, mas suas mãos são gentis. Ele constrói coisas belas."}
+      - {n: 4, acao: "Aponte para o Card do PASSARINHO.", fala: "E olhe bem de perto... vê a ÍRIS? Pequena Pardal. Ela vê a beleza nas coisas minúsculas."}
+    tempo: "100% (Imersão e Ritual)"
+    adaptacao_bernardo: "Deixe a criança segurar os cards, escolher o favorito, dar 'oi' para cada um."
+    
+  pictorico: {status: VETADO, motivo: "Lição puramente Concreta/Imersiva."}
+  
+  abstrato:
+    desc: "O Compromisso do Viajante."
+    card: "CARD: SÍMBOLO DO REINO (ou apenas aperto de mão)"
+    passos:
+      - {acao: "Segure a mão da criança sobre a 'Vela' (luz).", fala: "Melquior pergunta: 'Você aceita caminhar conosco e descobrir os segredos do Rei?'"}
+    nota: "O 'Sim' da criança é o primeiro ato abstrato de vontade e compromisso."
+    
+  extensao:
+    titulo: "Nomeando o Viajante"
+    desc: "Dê um título especial à criança no Reino."
+    sugestoes: ["Guardou os cards? Diga: 'Muito bem, [Nome], o Explorador'.", "Pergunte qual Guardião ela gostou mais."]
+
+narracao:
+  instrucao: "Apague a vela. Olhe nos olhos."
+  pergunta_principal: "Quem você encontrou no Jardim hoje?"
+  perguntas_coracao: ["De qual amigo você gostou mais?", "O que a Celeste gosta de fazer?", "O que o Noé guarda?"]
+  nota_cm: "Deixe a criança falar. Se ela disser só 'o leão', sorria. É o começo."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "abençoador", script: "Agora você é um de nós. O portão estará sempre aberto. Até breve, Viajante."}
+  fio_ouro: "Amanhã, a Raposa Celeste tem um segredo para te mostrar na palma da mão."
+  transicao_volta:
+    instrucao: "Sopre a vela juntos (ou desligue a luz). Espreguice."
+    fala: "Voltamos! Mas o Reino continua lá."
+
+catedra_pais:
+  metodo_cpa: "Concreto puro. Estamos construindo a 'base afetiva' antes da base cognitiva."
+  principio_cm: "Princípio 14: 'Não diga à criança o que pensar, mostre a ela o que amar'."
+  reflexao_espiritual: "Todo aprendizado começa com um convite e um 'sim' do coração."
+  nota_graca: "Não se preocupe se parecer 'pouco'. O encantamento é a semente mais forte."
+
+sugestoes:
+  - {guardiao: Melquior, emoji: "🦁", dica: "Use sua voz mais calma e grave para Melquior.", sugestao: "Ler sentados no chão muda a perspectiva da criança."}
+  - {guardiao: Íris, emoji: "🐦", dica: "Esconda os cards pela sala para ela 'encontrar' se for muito ativa.", sugestao: "Caça ao Tesouro dos Guardiões."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ, Portador."
+  campos: ["A criança 'entrou' na imaginação?", "Qual Guardião chamou mais atenção?", "Como foi o clima?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]
