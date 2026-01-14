@@ -1,0 +1,121 @@
+# ORIGEM DOS GUARDIÕES — A GRANDE NEVASCA
+# SSOT Narrativa | Baseado em Deliberação 14/01/2026
+# Alinhamento: Virtude da Fortaleza (Bernardo) e Amizade (Íris)
+# Ref: _LEGADO/09_MATRIZ_DE_EVOLUCAO_K12.md
+
+id: origem_nevasca
+tipo: lore_narrativa
+status: canonico
+versao: '1.1'
+
+# SEÇÃO 1: A HISTÓRIA CANÔNICA
+
+historia:
+  evento: A Grande Nevasca
+  resumo: "O inverno onde o Reino quase congelou."
+  
+  o_conflito:
+    - "Uma tempestade de neve nunca vista assolou o Reino Contado."
+    - "Os 5 Guardiões (Melquior, Noé, Celeste, Bernardo, Íris) buscaram refúgio na Caverna, mas a entrada desabou."
+    - "O peso da neve ameaçava colapsar o teto sobre todos eles."
+
+  o_sacrificio_de_bernardo:
+    - "Bernardo, o Urso, era o único forte o suficiente para alcançar a Viga Mestra de pedra que estava rachando."
+    - "Ele se colocou sob a viga e a sustentou com os ombros."
+    - "Ficou lá por 3 dias e 3 noites, impedindo que o teto esmagasse seus amigos."
+    - "O frio da pedra e o peso esmagador feriram sua perna permanentemente ('Perna de Inverno')."
+
+  o_papel_de_iris:
+    - "Bernardo não podia dormir, pois se relaxasse, o teto cederia."
+    - "Íris (Pardal) pousou em seu ombro e cantou histórias e enigmas por 3 dias."
+    - "Ela manteve a mente de Bernardo acordada quando o corpo queria desistir."
+    - "Nasceu ali o vínculo inquebrável: Força (Bernardo) + Atenção (Íris)."
+
+  o_papel_dos_outros:
+    melquior: "Guiou os outros em oração e manteve a esperança. Sua voz ressoava confiança."
+    noe: "Observou os padrões da neve e previu quando a nevasca pararia. Seu silêncio era força."
+    celeste: "Farejou frestas de ar e encontrou uma pequena abertura por onde entravam gotas de orvalho (água)."
+
+  consequencia:
+    - "Quando a neve parou e foram resgatados, Bernardo estava manco para sempre."
+    - "Ele recusa a cura mágica. A mancadura é sua 'Cicatriz de Glória'."
+    - "Ensina que a força real não é ausência de dor, mas a permanência no posto."
+
+# SEÇÃO 2: CONEXÃO À MATRIZ K12 (Evolução Épica)
+# Ref: _LEGADO/09_MATRIZ_DE_EVOLUCAO_K12.md
+
+evolucao_por_ciclo:
+  sementes:
+    como_contar: "Versão Fábula. Bernardo é o 'Urso Grande e Forte' que protegeu os amigos. Foco: Amizade e Bravura."
+    uso_em_licoes: [L002, Qualquer lição sobre persistência ou erro]
+    tom: "Místico, simples, acolhedor."
+    exemplo_fala: "'Bernardo é forte, mas sabe o que o tornou mais forte? Os amigos que ele protegeu.'"
+
+  raizes:
+    como_contar: "Versão Aventura. A Nevasca é um 'Evento Histórico do Reino'. Detalhes técnicos (3 dias, peso da pedra)."
+    uso_em_licoes: [L020 (Transição de fase), Lição sobre medidas de tempo]
+    tom: "Técnico, encorajador, narrativo."
+    exemplo_fala: "'Sabia que Bernardo ficou 72 horas sustentando aquela pedra? Isso é 3 dias inteiros. Vamos calcular quantas horas têm 3 dias?'"
+
+  logica:
+    como_contar: "Versão Épica/Rigor. Análise das escolhas de Bernardo (Ética da Persistência). Por que não desistiu?"
+    uso_em_licoes: [Lição sobre probabilidades, Discussão sobre virtude]
+    tom: "Socrático, desafiador."
+    exemplo_fala: "'Se Bernardo tivesse soltado a pedra na hora 50, teria salvado menos esforço? Ou teria perdido tudo?'"
+
+  legado:
+    como_contar: "Versão Mordomia. Bernardo como modelo de Stewardship. Ele governou seu corpo para servir aos outros."
+    uso_em_licoes: [Capstones, Projetos de engenharia real]
+    tom: "Visionário, responsável."
+    exemplo_fala: "'Governar é servir. Bernardo governou sua dor para que seus amigos não sofressem.'"
+
+# SEÇÃO 3: USO PEDAGÓGICO (Charlotte Mason)
+
+pedagogia:
+  virtudes_ensinadas:
+    - {virtude: Persistência, guardiao: Bernardo, frase: "A força real não é ausência de dor."}
+    - {virtude: Atenção, guardiao: Íris, frase: "A mente acordada salva o corpo cansado."}
+    - {virtude: Esperança, guardiao: Melquior, frase: "A luz volta mesmo na noite mais longa."}
+    - {virtude: Paciência, guardiao: Noé, frase: "A tempestade tem fim. Observe os sinais."}
+    - {virtude: Curiosidade, guardiao: Celeste, frase: "Sempre há uma fresta. Encontre-a."}
+
+  lei_da_cicatriz:
+    descricao: "A mancadura de Bernardo é a prova de sua vitória, não de sua fraqueza."
+    aplicacao_em_aula: |
+      Quando a criança erra, lembramos: "Bernardo também sofreu para aprender.
+      Sua perna conta uma história de glória, não de fracasso."
+    ref_legado: "_LEGADO/GOVERNANCA/01_MAGNA_CARTA.md > Lei da Cicatriz"
+
+  lapiz_verde:
+    descricao: "Usamos o verde (cor da vida) para circular o erro, não riscar de vermelho."
+    conexao_nevasca: "Assim como Bernardo transformou dor em força, a criança transforma erro em aprendizado."
+
+# SEÇÃO 4: LACUNAS E PERGUNTAS ABERTAS (Para Deliberação)
+
+perguntas_abertas:
+  - id: Q1
+    pergunta: "Quem resgatou os Guardiões após a Nevasca?"
+    status: CANONIZADO
+    decisao: |
+      HÍBRIDO: Os Guardiões cavaram juntos para fora (união e esforço coletivo).
+      Quando emergeram, o sol já brilhava — o Rei havia enviado a luz (sempre invisível).
+      CM validou: "O trabalho é deles. A graça é do Rei."
+  
+  - id: Q2
+    pergunta: "A Caverna da Nevasca é a mesma Caverna do Recomeço (local de Bernardo)?"
+    status: CANONIZADO
+    decisao: "SIM. Bernardo transformou o local de sua dor no local de trabalho. A Forja nasceu ali."
+
+  - id: Q3
+    pergunta: "Os Guardiões tinham VIRTUDES antes da Nevasca ou ganharam depois?"
+    status: CANONIZADO
+    decisao: |
+      NÃO existem "poderes". Apenas VIRTUDES.
+      Eles SEMPRE tiveram suas virtudes, mas a Nevasca REVELOU sua profundidade.
+      A crise não cria caráter; ela o revela.
+
+  - id: Q4
+    pergunta: "Quando a Nevasca aconteceu na cronologia do Reino? Antes ou depois do Viajante?"
+    status: CANONIZADO
+    decisao: "ANTES. A Nevasca é 'mitologia fundadora'. Aconteceu em tempo imemorial, antes de qualquer Viajante chegar."
+

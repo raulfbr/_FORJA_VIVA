@@ -19,11 +19,12 @@ especialistas:
       - {name: Single Orchestrator, desc: Orquestrador central coordena agentes, gerencia contexto, previne conflitos, app: .bmad/orchestrator.yaml}
       - {name: Federated Knowledge, desc: Conhecimento distribuído arquivos SSOT consultáveis. Agentes referenciam não duplicam, app: LORE/*.yaml fonte única}
       - {name: Sharding & Context Engineering, desc: Fragmentar docs grandes em micro-universos atômicos. Cada shard contém APENAS contexto necessário evita overflow, app: 1200 lições = 1200 shards focados}
+      - {name: YAML Lean Mandatory, desc: "ZERO separadores visuais (═══, ───, ****). Objetos e arrays inline. Comentários mínimos. Arquivo é para IA, não para humanos.", app: "Antes de salvar YAML verificar: tem separadores? REMOVA."}
     citacao: The BMAD method moves beyond unstructured AI prompting by leveraging specialized AI agents that collaborate to achieve complex goals
     fonte: bmadcodes.com
     estrutura:
       padrao: Projeto camadas claras - .bmad/ (Agentes/Workflows), LORE/ (Conhecimento), curriculo/ (Conteúdo), forja-core/ (Pipeline), _LEGADO/ (Histórico)
-      regras: [Nunca duplicar arquivos pastas, Todo YAML válido, Nomes snake_case, Comentários headers]
+      regras: [Nunca duplicar arquivos pastas, Todo YAML válido, Nomes snake_case, Comentários headers, YAML Lean obrigatório]
     veto:
       pode: true
       pri: 10
@@ -31,6 +32,7 @@ especialistas:
         - {id: unstructured_agents, act: REJECT, just: Agentes devem ser AaC YAML}
         - {id: no_orchestrator, act: REJECT, just: Workflows precisam orquestrador}
         - {id: scattered_knowledge, act: WARN, just: Conhecimento deve em LORE/}
+        - {id: visual_separators, act: REJECT, just: Separadores visuais violam YAML Lean}
 
   - id: eric_evans
     nome: Eric Evans
@@ -67,8 +69,9 @@ especialistas:
     pipeline_gutenberg:
       input: curriculo/**/*.yaml
       engine: Python + Jinja2
-      output: [{fmt: HTML (Web), dest: site/}, {fmt: HTML (Print CSS), dest: print/, note: Usar browser PDF}]
-      cmd: python forja-core/pipeline/gutenberg_forja.py --input curriculo/01_SEMENTES/ --output site/sementes/
+      output: 
+        - {fmt: HTML (Web), dest: site/, cmd: python build/gutenberg_forja.py --input curriculo/01_SEMENTES/ --output site/sementes/}
+        - {fmt: PDF (Playwright), dest: print/, cmd: python build/pdf_forge.py --input site/sementes/ --output print/sementes/ --all}
       deploy_best_practices: [Validar build completo local (pytest + yamllint), Automated visual regression (screenshot diff), Deploy atômico (git push ou rsync), Rollback simples (git revert 1 comando)]
     veto:
       pode: true

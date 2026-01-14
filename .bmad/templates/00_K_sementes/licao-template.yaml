@@ -1,0 +1,127 @@
+# TEMPLATE V5 — LIÇÃO SEMENTES (YAML Lean)
+# Versão: 5.1 LEAN | 14/01/2026
+# Refs: LORE/*.yaml, .bmad/templates/000_global/licao-base.yaml
+# Uso: Copie e preencha placeholders [...]
+
+id: template-v5-sementes
+versao: "5.1"
+tipo: template
+fase: Sementes
+status: canonico
+extends: .bmad/templates/000_global/licao-base.yaml
+
+# REGRAS RÁPIDAS (Ver regras.yaml para detalhes)
+# - CPA: 80%+ Concreto (NORTE ABSOLUTO), Pictórico VETADO, Abstrato ≤20%
+# - Tempo: 15-20 min (CM Princípio 15)
+# - Narração: Obrigatória (CM Princípio 14)
+# - Traçar ar = ENATIVO (conta como Concreto)
+
+licao:
+  metadados:
+    id: MV-S-XXX
+    titulo: "[Título Poético]"
+    fase: Sementes
+    trimestre: 1
+    guardiao_lider: "[Ver LORE/guardioes.yaml]"
+    guardiao_secundario: null
+    tgtb_ref: "000-LXX"
+    status: rascunho
+
+  ideia_viva:
+    frase: "[Uma frase que captura essência]"
+    conceito: "[O que criança descobre]"
+    intencao_cm: "[Por que é 'viva' segundo CM]"
+
+  atmosfera:
+    clima: "[ensolarado|nublado|ventoso|chuvoso|outonal|primaveril|crepusculo|estrelado]"
+    clima_desc: "[Luz, temperatura, energia - Ver LORE/climas.yaml]"
+    local: "[jardim_central|arvore_silencio|clareira_perguntas|caverna_recomeco|ninho_mirante]"
+    local_desc: "[Luz, cheiro, som, textura - Ver LORE/locais.yaml]"
+    virtude: "[curiosidade|persistencia|atencao|paciencia|sabedoria|coragem|gratidao]"
+    artefato: "[Objeto concreto especial]"
+
+  linkage:
+    elo_anterior: {licao_id: "MV-S-XXX", gancho: "[Conexão lição anterior]"}
+    proximo: {licao_id: "MV-S-XXX", gancho: "[Antecipação próxima]"}
+
+  preparacao:
+    tempo_licao: "15-20 min"
+    tempo_preparo: "≤ 5 min"
+    materiais:
+      - {item: "[Material 1]", qtd: 1, alt: "[Alternativa]", essencial: true}
+      - {item: "[Material 2]", qtd: 1, alt: "[Alternativa]", essencial: true}
+      - {item: "[Opcional]", qtd: 1, alt: null, essencial: false}
+
+  para_o_portador:
+    dica_coracao: "[2-3 frases que acalmam pai e preparam coração]"
+    filho_descobre: "[1-2 frases objetivo lição]"
+    nota_graca: "[Lembrete: pai não precisa ser perfeito]"
+
+  ritual_abertura:
+    instrucao_ambiente: "[Tapete Reino, luzes diminuídas, silêncio]"
+    transicao_reino: "[Fechar olhos, acender luz especial, abrir no Reino]"
+    fala_portador: {tom: "[segredo|animado|solene|misterioso]", script: "[Script abertura]"}
+    card_guardiao: "[CARD: NOME_GUARDIAO]"
+    fala_guardiao: {tom: "[Ver LORE/guardioes.yaml]", script: "[Fala + frase canônica]"}
+
+  jornada:
+    abertura_sensorial: "[VÊ, OUVE, CHEIRA, SENTE - Ver LORE/locais.yaml]"
+    
+    concreto:
+      desc: "[Narrativa guardião + atividade concreta]"
+      card_objeto: "[CARD: NOME_OBJETO]"
+      passos:
+        - {n: 1, acao: "[Instrução]", fala: "[Fala sugerida]"}
+        - {n: 2, acao: "[Instrução]", fala: "[Fala sugerida]"}
+        - {n: 3, acao: "[Instrução]", fala: "[Fala sugerida]"}
+      tempo: "80%+ lição (NORTE ABSOLUTO)"
+      adaptacao_bernardo: "[💡 Para crianças realidades diferentes...]"
+      
+    pictorico: {status: VETADO, motivo: "CM 'Things before Signs'. Sementes só Concreto.", excecao: "L000 ou Se Quiser Voar"}
+    
+    abstrato:
+      desc: "[Introdução sutil símbolo - RECONHECE não opera]"
+      card: "[CARD: NOME_SIMBOLO]"
+      passos:
+        - {acao: "[Traçar símbolo ar]", fala: "[Comparação conhecida]"}
+      nota: "Abstrato Sementes = reconhecimento visual. Traçar ar = ENATIVO."
+      
+    extensao:
+      titulo: "[Se Quiser Voar]"
+      desc: "[Só se olhos criança pedirem MAIS]"
+      sugestoes: ["[Ideia 1]", "[Ideia 2]"]
+
+  narracao:
+    instrucao: "[Guarde materiais. Olhe nos olhos. Dê tempo. Silêncio é trabalho mental.]"
+    pergunta_principal: "[Pergunta aberta recontar]"
+    perguntas_coracao: ["[Alt 1 - se travar]", "[Alt 2 - aprofundar]", "[Alt 3 - conexão pessoal]"]
+    nota_cm: "Narração CM = fixação. Criança processa → externaliza. NUNCA interrompa."
+
+  ritual_fechamento:
+    fala_guardiao: {tom: "[grato|acolhedor|misterioso|esperançoso]", script: "[Reconhecimento + gancho próxima + bênção]"}
+    fio_ouro: "[Conexão explícita próxima]"
+    transicao_volta:
+      instrucao: "[Apagar luz especial juntos]"
+      fala: "[Frase encerramento]"
+
+  catedra_pais:
+    metodo_cpa: "[Como CPA aplicado: Concreto X%, Pictórico vetado?, Abstrato mínimo]"
+    principio_cm: "[Princípio CM + citação]"
+    reflexao_espiritual: "[Conexão matemática verdade maior]"
+    nota_graca: "[Encorajamento: se não funcionou, semente plantada]"
+
+  sugestoes:
+    - {guardiao: "[Líder]", emoji: "[🦊]", dica: "[Dica prática]", sugestao: "[Aplicação]"}
+    - {guardiao: "[Secundário]", emoji: "[🐻]", dica: "[Dica complementar]", sugestao: "[Aplicação]"}
+    - {guardiao: Melquior, emoji: "🦁", dica: "[Sabedoria geral]", sugestao: "[Aplicação]"}
+
+  diario_portador:
+    desc: "Espaço para VOCÊ, Portador. Anote após aplicar."
+    campos: ["Como filho reagiu?", "O que funcionou?", "Ajustar próxima?", "Algo surpreendente?"]
+
+  auditoria_qa:
+    cm: [Criança pessoa?, Ideia Viva?, Narração?, Lição ≤20min?]
+    cpa: [Concreto ≥80%?, Pictórico vetado?, Abstrato mínimo?]
+    narrativa: [Frase canônica guardião?, Tom Lewis?, Consistência Tolkien?, Cores Potter?]
+    template: [Seções obrigatórias?, Linkage?, Atmosfera única?]
+    triade: [CM Nível1 OK?, CPA Nível2 OK?, TGTB ref válida?]

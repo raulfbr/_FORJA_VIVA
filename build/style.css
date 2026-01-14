@@ -516,38 +516,164 @@ ol li {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   🖨️ IMPRESSÃO
+   🖨️ IMPRESSÃO — Otimizado para PDF (economia de tinta + 2 colunas)
    ═══════════════════════════════════════════════════════════════════════════ */
 
 @media print {
+
+    /* Reset completo para fundo branco */
+    *,
+    *::before,
+    *::after {
+        background: white !important;
+        background-image: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
     body {
-        background: white;
-        color: black;
-        font-size: 12pt;
+        background: white !important;
+        color: #222 !important;
+        font-size: 10pt;
+        line-height: 1.5;
     }
 
+    /* Navegação oculta */
     .lesson-nav {
-        display: none;
+        display: none !important;
     }
 
+    /* Header simplificado - single column */
     .lesson-header {
-        background: none;
+        background: white !important;
         backdrop-filter: none;
-        border-bottom: 2px solid black;
+        border-bottom: 0.5pt solid #999;
+        padding: 0.5cm 0;
+        column-span: all;
     }
 
+    .lesson-id {
+        background: #555 !important;
+        color: white !important;
+        font-size: 8pt;
+    }
+
+    .lesson-header h1 {
+        color: #111 !important;
+        font-size: 16pt;
+        margin: 0.3cm 0;
+    }
+
+    .lesson-meta {
+        color: #666 !important;
+        font-size: 9pt;
+    }
+
+    /* ═══ LAYOUT DUAS COLUNAS ═══ */
+    .lesson-content {
+        max-width: 100%;
+        padding: 0.3cm 0;
+        column-count: 2;
+        column-gap: 0.8cm;
+        column-rule: 0.5pt solid #ddd;
+        text-align: justify;
+    }
+
+    /* Títulos atravessam as colunas */
+    .lesson-content h2 {
+        color: #222 !important;
+        border-bottom: 0.5pt solid #bbb;
+        font-size: 12pt;
+        margin-top: 0.5cm;
+        column-span: all;
+        break-after: avoid;
+    }
+
+    /* Admonitions sem cores de fundo */
     .admonition {
-        border: 1px solid #ccc;
+        background: white !important;
+        border: 1px solid #999 !important;
+        border-left-width: 3px !important;
+        border-left-color: #666 !important;
         backdrop-filter: none;
         page-break-inside: avoid;
+        margin: 0.5cm 0;
+        padding: 0.3cm;
     }
 
+    .admonition.important {
+        border-left-color: #555 !important;
+    }
+
+    .admonition.note {
+        border-left-color: #777 !important;
+    }
+
+    .admonition.tip {
+        border-left-color: #555 !important;
+    }
+
+    .admonition.caution {
+        border-left-color: #333 !important;
+    }
+
+    .admonition.ritual {
+        border-left-color: #444 !important;
+    }
+
+    /* Guardian cards simplificados */
     .guardian-card {
+        background: white !important;
+        border: 1px solid #999 !important;
         page-break-inside: avoid;
     }
 
+    .guardian-card img {
+        border: 1px solid #666 !important;
+    }
+
+    /* Blockquotes */
+    blockquote {
+        background: white !important;
+        border-left: 2px solid #666 !important;
+    }
+
+    /* Tabelas */
+    th {
+        background: #eee !important;
+        color: #222 !important;
+    }
+
+    /* Footer discreto */
+    .lesson-footer {
+        background: white !important;
+        border-top: 1px solid #ccc;
+        color: #888 !important;
+        font-size: 9pt;
+        padding: 0.3cm 0;
+    }
+
+    /* Listas sem emoji */
+    ul li::before {
+        content: "•" !important;
+        color: #666;
+    }
+
+    /* Controle de quebras de página */
     h2,
     h3 {
         page-break-after: avoid;
+    }
+
+    p,
+    li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* Links sem destaque */
+    a {
+        color: #222 !important;
+        text-decoration: none !important;
     }
 }

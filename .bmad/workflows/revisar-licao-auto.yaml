@@ -1,40 +1,35 @@
-# REVISAR LIÇÃO AUTO — Validação Completa 14 Experts
-# YAML Lean v1.0 | Atualização: 13/01/2026
+# REVISAR LIÇÃO AUTO — Workflow (YAML Lean)
+# v1.1 LEAN | 14/01/2026
+# SSOT: .bmad/experts/*.yaml
 
 id: revisar_licao_auto
 tipo: workflow
-versao: '1.0'
-coordenadora: charlotte_mason
-desc: 'Revisão automática invoca TODOS 14 experts. Cada responde pergunta_north_star própria. Gera relatório consolidado aprovações ressalvas vetos'
+versao: '1.1'
+trilha: qa
+coord: charlotte_mason
+desc: Revisão automática 14 experts paralelo. Gera relatório aprovações/vetos.
 
-experts_invocados_dinamicamente:
-  nota: 'Orchestrator lê experts/*.yaml diretamente (AI Eficiência YAML). Não duplicar perguntas aqui (SSOT violação)'
+experts:
+  modo: DINAMICO
+  fonte: .bmad/experts/*/*.yaml
   total: 14
-  por_conselho: {pedagogia: 2, matematica: 2, narrativa: 4, negocios: 3, ux_familias: 1, design: 1, engenharia: 1}
-  fonte: '.bmad/experts/*/*.yaml'
 
 fases:
-  - {fase: 1, nome: CARREGAMENTO, acao: 'Carregar lição arquivo YAML. Identificar: ID ciclo tema guardião', output: Contexto lição carregado}
-  
-  - {fase: 2, nome: INVOCAÇÃO PARALELO, acao: 'Para cada 14 experts: 1.Apresentar lição 2.Perguntar pergunta_north_star 3.Registrar APROVADO|RESSALVA|VETO 4.Se RESSALVA VETO capturar justificativa', output: 14 respostas coletadas}
-  
-  - {fase: 3, nome: CONSOLIDAÇÃO, acao: 'Agrupar respostas status: Aprovações lista experts. Ressalvas lista observações. Vetos lista justificativas bloqueia se houver', output: Relatório consolidado}
-  
-  - {fase: 4, nome: DECISÃO, resp: charlotte_mason, acao: 'CM analisa relatório. Se VETO prioridade alta BLOQUEIA. Se apenas RESSALVAS APROVADO COM OBSERVAÇÕES. Se tudo aprovado APROVADO TOTAL', output: Veredito final}
+  - {n: 1, acao: "Carregar lição YAML + contexto."}
+  - {n: 2, acao: "14 Experts paralelo: Pergunta North Star → APROVADO/RESSALVA/VETO."}
+  - {n: 3, acao: "Consolidar respostas. Agrupar por status."}
+  - {n: 4, acao: "CM decide: VETO (bloqueia), RESSALVAS (ok com obs), APROVADO."}
 
-niveis_veto:
-  - {nivel: ABSOLUTO, experts: [charlotte_mason], efeito: Bloqueia imediatamente lição não publicada}
-  - {nivel: ALTA_PRIORIDADE, experts: [maes_personas], efeito: Bloqueia até resolver se mãe não usa não existe}
-  - {nivel: DOMINIO, experts: [jerome_bruner, cs_lewis, jrr_tolkien, engenharia], efeito: Bloqueia domínio específico requer correção}
-  - {nivel: CONSULTIVO, experts: [susan_macaulay, lev_vygotsky, beatrix_potter, makoto_fujimura, seth_godin, alex_hormozi, peter_thiel, design], efeito: Observação registrada não bloqueia recomendado corrigir}
+vetos:
+  - {nivel: ABSOLUTO, quem: [charlotte_mason], ef: BLOQUEIA}
+  - {nivel: ALTA, quem: [maes_personas], ef: "Bloqueia até resolver"}
+  - {nivel: DOMINIO, quem: [jerome_bruner, cs_lewis, jrr_tolkien, engenharia], ef: "Requer correção"}
+  - {nivel: CONSULTIVO, quem: [outros], ef: "Observação (não bloqueia)"}
 
 output:
-  arquivo: 'logs/{data}_REVISAO_AUTO_{licao_id}.md'
-  formato: '# 🔍 REVISÃO AUTOMÁTICA {licao_id}\n**Data** {data}\n**Lição** {licao_id} {titulo}\n**Ciclo** {ciclo}\n**Guardião** {guardiao}\n\n## ✅ APROVAÇÕES ({count}/14)\n{lista_aprovados}\n\n## ⚠️ RESSALVAS ({count})\n{lista_ressalvas}\n\n## ❌ VETOS ({count})\n{lista_vetos}\n\n## 🎖️ VEREDITO FINAL CM\n**Status** {status}\n**Justificativa** {justificativa}'
+  arquivo: 'logs/{data}_REVISAO_AUTO_{id}.md'
+  template: "# REVISÃO {id}\n## Aprovados ({n})\n## Ressalvas ({n})\n## Vetos ({n})\n## Veredito CM"
 
-integracao:
-  pos_criar_licao: Executar AUTOMATICAMENTE após /criar-licao-premium orchestrator chama final fase 4
-  pre_publicacao: Nenhuma lição publicada sem passar workflow Status APROVADO ou APROVADO_COM_OBSERVACOES obrigatório
-
-invocacao: '/revisar-licao-auto [LICAO_ID]'
-exemplo: '/revisar-licao-auto L001'
+trigger:
+  pos_criar: Sim
+  pre_publicar: Obrigatório

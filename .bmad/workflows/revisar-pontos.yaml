@@ -1,43 +1,36 @@
-# REVISAR PONTOS — Auditoria Profunda Pontos Críticos Lição
-# YAML Lean v1.0 | Atualização: 13/01/2026
+# REVISAR PONTOS — Workflow (YAML Lean)
+# v1.1 LEAN | 14/01/2026
+# SSOT: LORE/climas.yaml (cores), triade.yaml (CPA)
 
 id: revisar_pontos
 tipo: workflow
-versao: '1.0'
-coordenadora: charlotte_mason
-desc: Auditoria profunda pontos críticos após validação auto. CM revisa todos aspectos pedagógicos narrativos estéticos
+versao: '1.1'
+trilha: qa
+coord: charlotte_mason
+desc: Auditoria profunda pontos críticos (Pedagogia/Narrativa/Estética/UX).
 
-pontos_criticos:
+pontos:
   pedagogia:
-    - {id: P1, ponto: Ideia Viva clara criança descobrir, auditor: charlotte_mason, q: Qual verdade viva? Criança vai descobrir ou decorar?, aprova: Ideia evidente experienciável, rejeita: Abstração vazia decoreba}
-    - {id: P2, ponto: ZPD scaffolding adequado, auditor: lev_vygotsky, q: Andaime suficiente? Zona proximal respeitada?, aprova: Criança consegue com suporte certo, rejeita: Fácil demais ou difícil demais}
-    - {id: P3, ponto: CPA sequência correta, auditor: jerome_bruner, q: 'C→P→A respeitado? Concreto ≥60%?', aprova: Manipulação física predomina, rejeita: Pictórico abstrato precoce}
-  
+    - {id: P1, o_que: Ideia Viva, quem: charlotte_mason, crit: "Evidente? Experienciável?"}
+    - {id: P2, o_que: ZPD Scaffolding, quem: lev_vygotsky, crit: "Andaime suficiente?"}
+    - {id: P3, o_que: CPA Sequência, quem: jerome_bruner, crit: "C80%+ (Opção D)? P vetado?"}
   narrativa:
-    - {id: N1, ponto: Tom nobre não condescendente, auditor: cs_lewis, q: Fala igual criança ou talking down?, aprova: Dignidade igualdade alma, rejeita: Infantilização simplificação}
-    - {id: N2, ponto: Consistência Reino guardião, auditor: jrr_tolkien, q: Contradição anterior? Guardião fiel personalidade?, aprova: Coerência total lore, rejeita: Plot hole character break}
-    - {id: N3, ponto: Beleza generativa não chartjunk, auditor: makoto_fujimura, q: Arte generosidade ou commodity? Kintsugi aplicado?, aprova: Beleza com propósito, rejeita: Decoração vazia}
-  
+    - {id: N1, o_que: Tom Nobre, quem: cs_lewis, crit: "Dignidade? Sem 'talking down'?"}
+    - {id: N2, o_que: Consistência, quem: jrr_tolkien, crit: "Sem contradição lore/guardião?"}
+    - {id: N3, o_que: Beleza/Kintsugi, quem: makoto_fujimura, crit: "Beleza generativa?"}
   estetica:
-    - {id: E1, ponto: Paleta cores natural, auditor: beatrix_potter, q: Cores natureza ou neon artificial?, aprovadas: [Forest Green #2D5016, Warm Cream #FDF6E3, Old Gold #CFB53B, Terra #8B4513, Musgo #8A9A5B], proibidas: [Neon, Rosa chiclete, Azul elétrico], rejeita: Cores artificiais}
-    - {id: E2, ponto: Tipografia legível hierarquia, auditor: william_morris, q: Fonte elegante? Hierarquia clara?, aprova: Merriweather headers Outfit body, rejeita: Fonts feias layout poluído}
-    - {id: E3, ponto: UX criança consegue usar, auditor: toca_boca, q: Botões grandes? Navegação intuitiva?, checks: [Botões ≥44px?, Navegação sem ler?, Feedback visual?], rejeita: Botões pequenos texto demais}
-  
+    - {id: E1, o_que: Paleta Cores, quem: beatrix_potter, crit: "Naturais? Sem neon?", ref: LORE/climas.yaml}
+    - {id: E2, o_que: Tipografia, quem: william_morris, crit: "Legível? Hierarquia?"}
+    - {id: E3, o_que: UX Criança, quem: toca_boca, crit: "Intuitivo? Botões grandes?"}
   usabilidade:
-    - {id: U1, ponto: Mãe 5min consegue aplicar, auditor: maes_personas, tribunal: [Débora consegue?, Priscila aplicaria?, Elisa rastreia?, Júlia criança sorri?, Raquel vê Deus?, Renata 4 idades gerencia?], rejeita: Qualquer mãe veta}
-    - {id: U2, ponto: Tempo real ≤20min, auditor: qa, q: Tempo estimado realista?, máximo: 20min incluindo preparação, rejeita: Acima 20min}
-    - {id: U3, ponto: Materiais casa comum, auditor: qa, q: Materiais acessíveis casa?, evitar: [Equipamento especializado, Materiais caros raros, Preparação complexa], aprova: Itens cotidianos}
+    - {id: U1, o_que: Mãe consegue?, quem: maes_personas, crit: "5 personas aprovam?"}
+    - {id: U2, o_que: Tempo ≤20m, quem: qa, crit: "Realista?"}
+    - {id: U3, o_que: Materiais casa, quem: qa, crit: "Acessíveis?"}
 
-processo_revisao:
-  - {fase: 1, acao: Revisar todos 13 pontos críticos sequência, ordem: Pedagogia→Narrativa→Estética→Usabilidade}
-  - {fase: 2, acao: Cada auditor APROVA REJEITA SINALIZA, output: parecer_ponto.md}
-  - {fase: 3, acao: CM consolida pareceres decisão final, poder: Veto absoluto qualquer ponto}
-  - {fase: 4, acao: Se aprovado publica. Se rejeitado lista correções necessárias, output: {aprovado: licao_impecavel.md, rejeitado: correcoes_obrigatorias.md}}
+fases:
+  - {n: 1, acao: "Revisar 12 pontos sequencial."}
+  - {n: 2, acao: "Expert APROVA/REJEITA/SINALIZA."}
+  - {n: 3, acao: "CM consolida. Veto absoluto."}
 
-metricas_aprovacao:
-  - pontos_críticos_verificados: 13
-  - taxa_aprovacao_tipica: 60-70% primeira revisão
-  - taxa_aprovacao_pós_correção: 95%+
-  - tempo_médio_revisão: 25-30min
-
-invocacao: '/revisar-pontos [licao]'
+output: {aprovado: licao_impecavel.md, rejeitado: correcoes_obrigatorias.md}
+metrica: "95% aprovação pós-correção"

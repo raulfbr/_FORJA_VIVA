@@ -1,323 +1,83 @@
-# ════════════════════════════════════════════════════════════════════════════════
 # PADRÕES NARRATIVOS — Guia de Estilo Imersivo
-# ════════════════════════════════════════════════════════════════════════════════
-# 
-# PROPÓSITO:
-#   Regras de COMO escrever narrativa imersiva no Reino Contado.
-#   Define transições sensoriais, falas com [tom], pausas, scaffolding por ciclo.
-# 
-# ALINHAMENTO NORTH STAR:
-#   - Propósito: "Ideias vivas e histórias que transformam" → Narração é a ALMA
-#   - Princípio 1: "Qualidade" → Narração impecável, nunca genérica
-#   - Princípio 4: "Inclusão" → Pausas respeitam ritmo da criança
-#   - Princípio 5: "Jornada K-12" → Tom evolui por ciclo, nunca infantiliza
-# 
-# USADO POR:
-#   - Artesão ao escrever lições
-#   - .bmad/templates/*/regras.yaml (referência para tom/scaffolding)
-#   - QA na verificação de padrões
-# 
-# EVOLUI POR CICLO: PARCIAL
-#   - Dados estáticos: tipos de pausas, formatos de [tom]
-#   - Regras por ciclo: scaffolding_por_ciclo, tom_por_ciclo, densidade_por_ciclo
-# 
-# REFERÊNCIAS RELACIONADAS:
-#   - LORE/guardioes.yaml (frases canônicas)
-#   - LORE/locais.yaml (atmosferas para transição)
-#   - LORE/climas.yaml (climas para combinar)
-#   - .bmad/templates/*/regras.yaml (regras específicas)
-# 
-# Última Atualização: 13/01/2026
-# ════════════════════════════════════════════════════════════════════════════════
+# YAML Lean v2.0 | 14/01/2026
+# SSOT: Regras de narração imersiva no Reino Contado
 
 id: padroes_narrativos
 tipo: lore_reference
 versao: "2.0"
-
-descricao: |
-  Padrões de narração imersiva extraídos de L000 e canonizados
-  para uso em todas as futuras lições do Reino Contado.
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 1. TRANSIÇÕES SENSORIAIS
-# ══════════════════════════════════════════════════════════════════════════════
+descricao: "Padrões de narração imersiva extraídos de L000 e canonizados."
 
 transicoes_sensoriais:
-  regra: |
-    Descrever clima, cheiro e som ANTES de apresentar personagem ou cena.
-    A criança "entra" no ambiente antes de encontrar o Guardião.
-    
-  exemplos:
-    - ciclo: sementes
-      exemplo: |
-        "O ar muda: cheira a pedra, a terra e a madeira de cedro.
-        Lá dentro, iluminado por uma fogueira baixa, um urso forte
-        está sentado, polindo uma ferramenta de bronze."
-        
-    - ciclo: raizes
-      exemplo: |
-        "O vento traz cheiro de sal e mar. O horizonte se abre
-        em um azul infinito. Celeste fareja algo diferente no ar..."
-        
-    - ciclo: logica
-      exemplo: |
-        "A biblioteca está em silêncio. O cheiro de papel antigo
-        envolve você. Noé ajusta os óculos e aponta para um mapa..."
-        
+  regra: "Descrever clima, cheiro e som ANTES de apresentar personagem. Criança 'entra' antes."
+  exemplos: [
+    {ciclo: sementes, ex: "O ar cheira a pedra e terra. Fogueira ilumina urso polindo bronze."},
+    {ciclo: raizes, ex: "Vento traz sal e mar. Horizonte azul. Celeste fareja o ar."},
+    {ciclo: logica, ex: "Silêncio de biblioteca. Cheiro de papel antigo. Noé ajusta óculos."}
+  ]
   elementos:
-    - elemento: "Clima físico"
-      descricao: "Temperatura, vento, umidade"
-      exemplo: "O ar esfria um pouco"
-      
-    - elemento: "Cheiro"
-      descricao: "Aromas naturais específicos"
-      exemplo: "Cheira a musgo fresco e orvalho"
-      
-    - elemento: "Som"
-      descricao: "O que se ouve ou o silêncio"
-      exemplo: "O som de água correndo lá embaixo"
-      
-    - elemento: "Luz"
-      descricao: "Qualidade da luz"
-      exemplo: "Um dourado morno atravessa as folhas"
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 2. FALAS COM [TOM]
-# ══════════════════════════════════════════════════════════════════════════════
+    - {el: Clima, desc: temp/vento, ex: "Ar esfria"}
+    - {el: Cheiro, desc: aroma natural, ex: "Musgo fresco"}
+    - {el: Som, desc: audição/silêncio, ex: "Água correndo"}
+    - {el: Luz, desc: qualidade luz, ex: "Dourado morno"}
 
 falas_com_tom:
-  regra: |
-    Sempre indicar o TOM da fala entre colchetes antes do script.
-    Isso ajuda o Portador a modular a voz corretamente.
-    
-  tons_disponiveis:
-    - tom: segredo
-      descricao: "Voz baixa e grave, como quem compartilha algo precioso"
-      guardiao_tipico: Melquior
-      
-    - tom: curioso
-      descricao: "Voz rápida e animada, com inflexão de pergunta"
-      guardiao_tipico: Celeste
-      
-    - tom: calmo
-      descricao: "Voz pausada e serena, como sussurro do vento"
-      guardiao_tipico: Noé
-      
-    - tom: firme
-      descricao: "Voz grave e estável, como rocha"
-      guardiao_tipico: Bernardo
-      
-    - tom: encantado
-      descricao: "Voz leve e cristalina, com maravilhamento"
-      guardiao_tipico: Íris
-      
-    - tom: nobre
-      descricao: "Voz de autoridade gentil, como bênção"
-      guardiao_tipico: Melquior (despedida)
-      
-  formato_script: |
-    [tom de segredo]
-    "Sente o calor no seu rosto? É o mesmo sol que aqueceu
-    o primeiro dia do Reino."
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 3. PAUSAS EXPLÍCITAS
-# ══════════════════════════════════════════════════════════════════════════════
+  regra: "Sempre indicar [tom] antes do script para guiar Portador."
+  tons:
+    - {tom: segredo, desc: "Voz baixa grave", guardiao: Melquior}
+    - {tom: curioso, desc: "Rápida animada", guardiao: Celeste}
+    - {tom: calmo, desc: "Pausada serena", guardiao: Noé}
+    - {tom: firme, desc: "Grave estável", guardiao: Bernardo}
+    - {tom: encantado, desc: "Leve cristalina", guardiao: Íris}
+    - {tom: nobre, desc: "Autoridade gentil", guardiao: Melquior}
+  exemplo: "[tom de segredo]\n\"Sente o calor? É o sol do primeiro dia.\""
 
 pausas:
-  regra: |
-    Usar pausas EXPLÍCITAS no script para marcar momentos de respiração.
-    O Portador não deve correr. O silêncio é parte da lição.
-    
+  regra: "Pausas EXPLÍCITAS marcam respiração. Silêncio é lição."
   tipos:
-    - pausa: "[pausa]"
-      duracao: "2-3 segundos"
-      uso: "Transição entre ideias"
-      
-    - pausa: "[Pausa. Respire com a criança.]"
-      duracao: "5-7 segundos"
-      uso: "Momento de absorção profunda"
-      
-    - pausa: "[pausa de 3 segundos — deixe o silêncio pesar]"
-      duracao: "3 segundos exatos"
-      uso: "Ritual de entrada/saída"
-      
-    - pausa: "[pausa — respeite solenemente o tempo da criança]"
-      duracao: "Indefinido (até a criança responder)"
-      uso: "Narração"
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 4. FRASES CANÔNICAS DOS GUARDIÕES — REFERÊNCIA SSOT
-# ══════════════════════════════════════════════════════════════════════════════
+    - {tag: "[pausa]", tempo: "2-3s", uso: "Transição ideias"}
+    - {tag: "[Pausa. Respire com a criança.]", tempo: "5-7s", uso: "Absorção profunda"}
+    - {tag: "[pausa 3s — deixe silêncio pesar]", tempo: "3s", uso: "Ritual entrada"}
+    - {tag: "[pausa — respeite o tempo da criança]", tempo: "Indefinido", uso: "Narração"}
 
 frases_canonicas:
   ssot: "LORE/guardioes.yaml"
-  campo: "frase_assinatura"
-  regra: |
-    Cada Guardião tem frases CANÔNICAS que devem aparecer em suas lições.
-    Estas frases encapsulam a virtude e podem ser usadas como "assinaturas".
-    
-    CONSULTAR: LORE/guardioes.yaml → campo "frase_assinatura" de cada guardião
-    
-    Exemplo de uso:
-    - Melquior: "O Rei sorriu ao ver você chegar."
-    - Celeste: "Sente esse cheiro? É aventura."
-    - Bernardo: "Mais uma vez. Comigo."
-    - Noé: "Respire. O número espera por você."
-    - Íris: "Olhe bem. A beleza está no detalhe."
-    
-  como_usar: |
-    Em vez de duplicar aqui, consulte o SSOT:
-    1. Abra LORE/guardioes.yaml
-    2. Encontre o guardião desejado
-    3. Use a frase_assinatura ou tom_de_voz
-    Isso garante consistência em todo o projeto.
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 5. VIRTUDE ENCARNADA — REFERÊNCIA SSOT
-# ══════════════════════════════════════════════════════════════════════════════
+  regra: "Não duplicar. Consultar campo 'frase' no arquivo guardioes.yaml."
+  exemplo_uso: {Melquior: "O Rei sorriu...", Celeste: "Sente esse cheiro?..."}
 
 virtude_encarnada:
   ssot: "LORE/guardioes.yaml"
-  campo: "semente"
-  regra: |
-    Cada Guardião REGA uma semente de virtude. Isso deve estar claro
-    na lição, mesmo que sutilmente. Não é obrigatório dizer "rega a
-    semente de..." toda vez, mas a virtude deve estar presente na ação.
-    
-    CONSULTAR: LORE/guardioes.yaml → campo "semente" de cada guardião
-    
-    Mapeamento rápido:
-    - Melquior → Sabedoria (perguntas profundas, perspectiva ampla)
-    - Noé → Paciência (não ter pressa, respirar, esperar)
-    - Celeste → Curiosidade (perguntas "E se...?", exploração)
-    - Bernardo → Persistência (tentar de novo, erro é rascunho)
-    - Íris → Atenção (olhar devagar, notar detalhes)
-    
-  como_manifestar: |
-    A virtude se manifesta na AÇÃO do Guardião, não em palavras:
-    - Melquior faz perguntas que abrem perspectiva
-    - Noé simplesmente espera, respira, não apresa
-    - Celeste fareja, pergunta, explora
-    - Bernardo diz "mais uma vez", nunca critica
-    - Íris aponta detalhes que ninguém viu
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 6. SCAFFOLDING POR CICLO
-# ══════════════════════════════════════════════════════════════════════════════
+  regra: "Virtude manifesta na AÇÃO do Guardião, não só palavras."
+  acoes:
+    - {guardiao: Melquior, acao: Perguntas abrem perspectiva}
+    - {guardiao: Noé, acao: Espera, respira, não apressa}
+    - {guardiao: Celeste, acao: Fareja, explora, pergunta}
+    - {guardiao: Bernardo, acao: Encoraja tentativa, não critica}
+    - {guardiao: Íris, acao: Aponta detalhe invisível}
 
 scaffolding_por_ciclo:
-  regra: |
-    O apoio do Portador/Guardião DIMINUI conforme a criança cresce.
-    Vygotsky: "Você é o andaime, não a escada."
-    
+  regra: "Apoio DIMINUI com idade."
+  citacao: "Vygotsky: Você é o andaime, não a escada."
   evolucao:
-    - ciclo: sementes
-      idade: "4-6 anos"
-      tipo: "Mão-na-mão"
-      exemplo: "Vamos contar JUNTOS: um, dois, três."
-      portador_faz: "Fala junto, segura a mão, modela"
-      
-    - ciclo: raizes_1
-      idade: "6-8 anos"
-      tipo: "Pergunta guiada"
-      exemplo: "O que vem depois do dois?"
-      portador_faz: "Pergunta e espera, dá dica se precisar"
-      
-    - ciclo: raizes_2
-      idade: "8-10 anos"
-      tipo: "Pista sutil"
-      exemplo: "Lembra o que Celeste disse sobre padrões?"
-      portador_faz: "Aponta direção, não dá resposta"
-      
-    - ciclo: logica
-      idade: "10-12 anos"
-      tipo: "Produtive struggle"
-      exemplo: "Descubra. Eu sei que você consegue."
-      portador_faz: "Silêncio, permite frustração produtiva"
-      
-    - ciclo: legado
-      idade: "12+ anos"
-      tipo: "Autonomia total"
-      exemplo: "Pesquise e me conte o que descobriu."
-      portador_faz: "Apenas ouve e questiona depois"
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 7. TOM POR CICLO
-# ══════════════════════════════════════════════════════════════════════════════
+    - {ciclo: sementes, tipo: "Mão-na-mão", ex: "Vamos contar JUNTOS", acao: "Fala junto"}
+    - {ciclo: raizes_1, tipo: "Pergunta guiada", ex: "O que vem depois?", acao: "Espera"}
+    - {ciclo: raizes_2, tipo: "Pista sutil", ex: "Lembra dos padrões?", acao: "Aponta direção"}
+    - {ciclo: logica, tipo: "Luta produtiva", ex: "Descubra você.", acao: "Silêncio"}
+    - {ciclo: legado, tipo: "Autonomia", ex: "Pesquise e conte.", acao: "Ouve"}
 
 tom_por_ciclo:
-  regra: |
-    O TOM da narrativa evolui, mas a DIGNIDADE permanece constante.
-    Lewis: "Never be within the child's mental range."
-    
+  regra: "Tom EVOLUI, Dignidade CONSTANTE."
+  citacao: "Lewis: Never be within the child's mental range."
   evolucao:
-    - ciclo: sementes
-      tom: "Encantamento mágico"
-      palavra_chave: "Maravilha"
-      exemplo: "Sente o calor no seu rosto? É o mesmo sol..."
-      
-    - ciclo: raizes_1
-      tom: "Aventura exploratória"
-      palavra_chave: "Descoberta"
-      exemplo: "Há um mistério escondido neste problema."
-      
-    - ciclo: raizes_2
-      tom: "Investigação corajosa"
-      palavra_chave: "Desafio"
-      exemplo: "Isso parece difícil. Perfeito para você."
-      
-    - ciclo: logica
-      tom: "Exploração intelectual"
-      palavra_chave: "Profundidade"
-      exemplo: "Os antigos matemáticos chamavam isso de..."
-      
-    - ciclo: legado
-      tom: "Maestria vocacional"
-      palavra_chave: "Aplicação"
-      exemplo: "O que você descobriu aqui é usado por engenheiros."
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 8. DENSIDADE SENSORIAL
-# ══════════════════════════════════════════════════════════════════════════════
+    - {ciclo: sementes, tom: "Encantamento mágico", key: Maravilha}
+    - {ciclo: raizes_1, tom: "Aventura exploratória", key: Descoberta}
+    - {ciclo: raizes_2, tom: "Investigação corajosa", key: Desafio}
+    - {ciclo: logica, tom: "Exploração intelectual", key: Profundidade}
+    - {ciclo: legado, tom: "Maestria vocacional", key: Aplicação}
 
 densidade_sensorial:
-  regra: |
-    A quantidade de elementos sensoriais por parágrafo AUMENTA com a idade.
-    Potter: "Comece simples, termine rico."
-    
-  evolucao:
-    - ciclo: sementes
-      elementos_por_paragrafo: 1
-      exemplo: "O ar cheira a musgo fresco."
-      
-    - ciclo: raizes_1
-      elementos_por_paragrafo: 2
-      exemplo: "O ar cheira a musgo fresco e você sente o vento frio."
-      
-    - ciclo: raizes_2
-      elementos_por_paragrafo: 3
-      exemplo: "O ar cheira a musgo fresco, o vento frio toca seu rosto, e você ouve água correndo."
-      
-    - ciclo: logica
-      elementos_por_paragrafo: 4
-      exemplo: "Parágrafos densos com camadas sensoriais entrelaçadas"
-
-# ══════════════════════════════════════════════════════════════════════════════
-# USO
-# ══════════════════════════════════════════════════════════════════════════════
+  regra: "Elementos sensoriais por parágrafo AUMENTAM com idade."
+  citacao: "Potter: Comece simples, termine rico."
+  evolucao: {sementes: 1, raizes_1: 2, raizes_2: 3, logica: 4}
 
 uso:
-  como_consultar: |
-    1. O Artesão consulta este arquivo ao escrever narrativa
-    2. O workflow `/criar-licao-premium` referencia as regras do ciclo
-    3. A verificação QA checa se os padrões foram aplicados
-    
-  checklist_qa:
-    - "Transição sensorial presente antes de cena?"
-    - "Tom indicado entre colchetes?"
-    - "Pausas explícitas presentes?"
-    - "Frase canônica do Guardião usada?"
-    - "Virtude manifesta na ação do Guardião?"
-    - "Scaffolding adequado ao ciclo?"
-    - "Densidade sensorial correta?"
+  checklist_qa: [Transição sensorial?, Tom indicado?, Pausas explícitas?, Frase canônica?, Virtude na ação?, Scaffolding correto?, Densidade correta?]

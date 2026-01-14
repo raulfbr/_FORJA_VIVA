@@ -1,0 +1,107 @@
+# CURRÍCULO EM ESPIRAL — SSOT da Progressão K-12
+# YAML Lean v1.0 | 14/01/2026
+# Origem: Deliberação 2026-01-14_1203_DELIBERACAO_CURRICULO_ESPIRAL.yaml
+# Criador Original: Jerome Bruner (The Process of Education, 1960)
+
+id: curriculo_espiral
+tipo: lore_ssot
+versao: "1.0"
+desc: "Define a progressão espiral de conceitos matemáticos através dos 4 ciclos K-12"
+
+# DEFINIÇÃO FUNDAMENTAL
+definicao:
+  nome: "Currículo em Espiral (Spiral Curriculum)"
+  autor: {nome: Jerome Bruner, obra: "The Process of Education", ano: 1960}
+  principio: "Qualquer assunto pode ser ensinado de forma intelectualmente honesta a qualquer criança em qualquer estágio de desenvolvimento."
+  mecanismo: "O mesmo conceito é introduzido em forma simples e revisitado repetidamente ao longo dos anos, cada vez com maior profundidade."
+  regra_ouro: "Espiral ≠ Repetição. Cada volta traz perspectiva NOVA, não a mesma informação."
+
+# DISTINÇÃO IMPORTANTE
+distincao:
+  espiral_bruner:
+    e: "Conceito de progressão curricular criado por Jerome Bruner (1960)"
+    nao_e: "Método específico de ensino"
+    aplicacao: "Usado por VÁRIOS métodos: Singapura, Montessori, CM adaptado"
+  metodo_singapura:
+    e: "CPA (Bruner) + Bar Models + Mastery Approach + Espiral"
+    nao_e: "Sinônimo de Espiral — é MAIOR que apenas espiral"
+    componentes: [CPA de Bruner, Bar Models (Kho Tek Hong), Mastery Learning, Spiral Curriculum]
+  relacao: "Singapura USA Espiral, mas Espiral não É Singapura"
+
+# OS 4 CICLOS K-12
+ciclos:
+  - {id: sementes, range: "0-6 anos", titulo: Herdeiro, tom: "Maravilhamento mágico", cpa_foco: "80%+ Concreto"}
+  - {id: raizes, range: "7-10 anos", titulo: Construtor, tom: "Aventura exploratória", cpa_foco: "C+P equilibrado"}
+  - {id: logica, range: "11-14 anos", titulo: Explorador, tom: "Investigação intelectual", cpa_foco: "P+A crescente"}
+  - {id: legado, range: "15-18 anos", titulo: "Portador da Tocha", tom: "Maestria vocacional", cpa_foco: "Abstrato dominante"}
+
+# COMO FUNCIONA A ESPIRAL
+mecanismo_espiral:
+  analogia: "Escada em caracol — você passa pelo mesmo 'ponto' (conceito), mas está um andar acima."
+  calibracao: "Por ZPD (Vygotsky), não apenas idade cronológica."
+  tom: "Evolui (Maravilhamento → Aventura → Investigação → Maestria), dignidade CONSTANTE."
+  ideia_viva: "Cada volta traz perspectiva NOVA — Charlotte Mason Princípio 10."
+
+# EXEMPLO: CONCEITO "NÚMERO 3"
+exemplo_conceito:
+  conceito: "Número 3"
+  espiral:
+    - {ciclo: sementes, idade: "4-6", abordagem: "3 maçãs na mão", modo: CONCRETO, profundidade: "Intuição numérica, correspondência 1-a-1"}
+    - {ciclo: raizes, idade: "7-10", abordagem: "1/3 de pizza", modo: PICTÓRICO, profundidade: "Frações, divisão, parte-todo"}
+    - {ciclo: logica, idade: "11-14", abordagem: "2³ = 8", modo: ABSTRATO, profundidade: "Expoentes, crescimento exponencial"}
+    - {ciclo: legado, idade: "15-18", abordagem: "lim x→3", modo: ABSTRATO_AVANÇADO, profundidade: "Limites, continuidade, cálculo"}
+  observacao: "O MESMO número '3', QUATRO perspectivas completamente diferentes."
+
+# CONCEITOS-CHAVE PARA MAPEAR (Piloto)
+conceitos_piloto:
+  - {id: contagem, desc: "Números naturais 1-10, 1-100, etc.", status: A_MAPEAR}
+  - {id: adicao, desc: "Adição de inteiros, decimais, frações, polinômios", status: A_MAPEAR}
+  - {id: fracoes, desc: "Conceito de parte-todo através dos ciclos", status: A_MAPEAR}
+  - {id: proporcao, desc: "Razão, proporção, porcentagem, taxa", status: A_MAPEAR}
+  - {id: funcoes, desc: "Relações funcionais até cálculo", status: A_MAPEAR}
+
+# PRINCÍPIOS APROVADOS (Deliberação)
+principios:
+  - {id: ESP-001, principio: "Espiral ≠ Repetição — cada volta traz perspectiva NOVA"}
+  - {id: ESP-002, principio: "Calibração por ZPD, não apenas idade cronológica"}
+  - {id: ESP-003, principio: "Tom evolui, dignidade constante"}
+  - {id: ESP-004, principio: "Visualização clara para famílias"}
+  - {id: ESP-005, principio: "SSOT em curriculo_espiral.yaml (este arquivo)"}
+
+# INTEGRAÇÃO COM SISTEMA
+integracao:
+  referencias:
+    - {arquivo: LORE/north_star.yaml, secao: "mission.k12.cycles", relacao: "Define os 4 ciclos"}
+    - {arquivo: LORE/padroes_narrativos.yaml, secao: "tom_por_ciclo", relacao: "Define tom narrativo por ciclo"}
+    - {arquivo: .bmad/expansion-packs/matematica-viva/triade.yaml, secao: "cpa", relacao: "Define progressão CPA"}
+    - {arquivo: .bmad/experts/matematica/jerome_bruner.yaml, secao: "principios.Spiral Curriculum", relacao: "Fonte teórica"}
+  usado_por:
+    - "Workflows de criação de lição (calibrar volta espiral)"
+    - "Templates por ciclo (ajustar profundidade)"
+    - "Visualizações para famílias (mostrar progressão)"
+
+# VISUALIZAÇÃO (Para Mães)
+visualizacao:
+  descricao: "Diagrama espiral mostrando conceito subindo pelos 4 ciclos"
+  formato: "PDF/PNG para impressão, SVG para web"
+  status: PENDENTE
+  responsavel: design
+
+# CITAÇÕES FUNDAMENTAIS
+citacoes:
+  bruner: "We begin with the hypothesis that any subject can be taught effectively in some intellectually honest form to any child at any stage of development."
+  vygotsky: "What the child can do with assistance today, she will be able to do by herself tomorrow."
+  charlotte_mason: "Never be within the child's mental range — a espiral garante sempre desafio apropriado."
+  sintese: "The child is a person — at every stage of the spiral."
+
+# REFERÊNCIAS
+referencias:
+  primarias:
+    - "Bruner, Jerome. The Process of Education. Harvard University Press, 1960"
+    - "Bruner, Jerome. Toward a Theory of Instruction. Harvard University Press, 1966"
+  secundarias:
+    - "Ministry of Education Singapore. Primary Mathematics Syllabus"
+    - "Kho Tek Hong et al. The Singapore Model Method. Marshall Cavendish, 2009"
+  websites:
+    - "https://www.singaporemath.com"
+    - "https://www.simplycharlottemason.com"

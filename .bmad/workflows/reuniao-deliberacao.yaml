@@ -1,46 +1,35 @@
-# REUNIÃO DELIBERAÇÃO — Conselho Experts Debate Estruturado
-# YAML Lean v1.0 | Atualização: 13/01/2026
+# REUNIÃO DELIBERAÇÃO — Workflow (YAML Lean)
+# v2.1 LEAN | 14/01/2026
+# SSOT: .bmad/experts/*.yaml
 
 id: reuniao_deliberacao
 tipo: workflow
-versao: '2.0'
+versao: '2.1'
+trilha: pedagogia
 coordenadora: charlotte_mason
-desc: 'Deliberação experts réplica tréplica. CM organiza decide. Log registra tudo. Todos 14 experts ou seleção tema'
+desc: Deliberação estruturada experts. Réplica/Tréplica/Síntese.
 
-pipeline_awareness: 'DOIS MOMENTOS: 1.FONTE YAML conteúdo 2.OUTPUT HTML/PDF via Gutenberg. Reunião afeta FONTE decisões pedagógicas'
-
-modos_convocacao:
-  todos: {cmd: '/reuniao-todos [TEMA]', desc: Convoca TODOS 14 experts, experts: [charlotte_mason, susan_macaulay, jerome_bruner, lev_vygotsky, cs_lewis, jrr_tolkien, beatrix_potter, makoto_fujimura, seth_godin, alex_hormozi, peter_thiel, maes_personas, design, engenharia]}
-  por_tema: {cmd: '/reuniao [TEMA]', desc: CM escolhe experts relevantes tema}
+modos:
+  todos: {cmd: '/reuniao-todos [TEMA]', desc: "Todos 14 experts", experts: [charlotte_mason, susan_macaulay, jerome_bruner, lev_vygotsky, cs_lewis, jrr_tolkien, beatrix_potter, makoto_fujimura, seth_godin, alex_hormozi, peter_thiel, maes_personas, design, engenharia]}
+  tema: {cmd: '/reuniao [TEMA]', desc: "CM seleciona experts relevantes"}
 
 fases:
-  - {fase: 1, nome: ABERTURA, resp: charlotte_mason, acao: 'CM apresenta tema deliberação. Define especialistas convocados', output: Tema+Participantes definidos}
-  
-  - {fase: 2, nome: POSIÇÕES INICIAIS, acao: 'Cada especialista apresenta POSIÇÃO tema. Formato: Nome Posição Embasamento citação', regras: [Cada fala sem interrupção, Citar fonte princípio, Máximo 3 parágrafos], output: Lista posições}
-  
-  - {fase: 3, nome: RÉPLICA, acao: 'Especialistas QUESTIONAM posições uns outros. Concordar discordar pedir clarificação', regras: [Questionar respeito, Citar ponto específico, Propor alternativa se discordar], output: Lista questionamentos}
-  
-  - {fase: 4, nome: TRÉPLICA, acao: 'Especialistas RESPONDEM questionamentos. Ajustar posição ou defender original', regras: [Responder diretamente, Admitir se mudou posição, Manter tom construtivo], output: Lista respostas}
-  
-  - {fase: 5, nome: SÍNTESE, resp: charlotte_mason, acao: 'CM organiza pontos convergência divergência. Propõe decisão integra melhores contribuições', output: Proposta síntese}
-  
-  - {fase: 6, nome: DECISÃO, resp: charlotte_mason, acao: 'CM decide. Pode usar veto necessário. Registra log', poder: Veto absoluto, output: Decisão final+Justificativa}
-
-especialistas_por_tema:
-  pedagogia: [charlotte_mason, susan_macaulay, jerome_bruner, lev_vygotsky]
-  narrativa: [cs_lewis, jrr_tolkien, beatrix_potter, makoto_fujimura]
-  negocios: [seth_godin, alex_hormozi, peter_thiel]
-  ux: [maes_personas]
-  design: [design]
-  tecnico: [engenharia]
+  - {n: 1, nome: ABERTURA, resp: charlotte_mason, acao: "CM apresenta tema e convoca."}
+  - {n: 2, nome: POSIÇÕES, acao: "Cada expert: Posição + Embasamento (3 parágrafos max)."}
+  - {n: 3, nome: RÉPLICA, acao: "Questionar outros. Respeito + Ponto específico."}
+  - {n: 4, nome: TRÉPLICA, acao: "Responder, ajustar ou defender."}
+  - {n: 5, nome: SÍNTESE, resp: charlotte_mason, acao: "CM organiza convergência/divergência."}
+  - {n: 6, nome: DECISÃO, resp: charlotte_mason, acao: "CM decide (veto). Registra log.", out: "Log final"}
 
 output:
   arquivo: 'logs/{data}_REUNIAO_{tema}.md'
-  formato: '# REUNIÃO {tema}\n**Data** {data}\n**Coordenadora** Charlotte Mason\n**Participantes** [lista]\n\n## Posições Iniciais\n[cada especialista]\n\n## Réplica\n[questionamentos]\n\n## Tréplica\n[respostas]\n\n## Síntese CM\n[proposta]\n\n## DECISÃO FINAL\n[decisão+justificativa]'
+  template: |
+    # REUNIÃO {tema}
+    **Data:** {data} | **Coord:** CM
+    ## Posições
+    ...
+    ## Decisão Final
+    ...
 
-exemplos_reais:
-  - {caso: CS Lewis expansão, questao: Adicionar Abolition Man?, participantes: [cs_lewis, engenharia, charlotte_mason], decisao: Manter conciso YAGNI, log: 2026-01-13_1921_DELIBERACAO_CS_LEWIS_EXPANSAO.md}
-  - {caso: CM Tribal, questao: Adicionar princípio #6 PNEU 1887?, participantes: [charlotte_mason, engenharia, north_star], decisao: Aprovar único não duplicado, log: 2026-01-13_1846_DELIBERACAO_ENG_CM.md}
-
-invocacao: '/reuniao [tema]'
-exemplo: '/reuniao Devemos incluir Pictórico Sementes?'
+ex:
+  - {caso: "Pictórico Sementes", q: "Incluir?", part: [cm, cpa, eng], dec: "Não (Opção D)", log: "...DELIBERACAO_CM_VS_CPA.md"}

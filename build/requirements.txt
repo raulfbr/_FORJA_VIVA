@@ -1,0 +1,8 @@
+# 📦 Dependências — Build Pipeline Matemática Viva
+# Versão: 1.0.0
+
+# Pipeline HTML
+pyyaml>=6.0
+
+# Pipeline PDF
+playwright>=1.40.0

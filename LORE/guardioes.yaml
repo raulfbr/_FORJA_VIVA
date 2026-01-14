@@ -1,32 +1,12 @@
-# ════════════════════════════════════════════════════════════════════════════════
-# GUARDIÕES DO REINO CONTADO
-# ════════════════════════════════════════════════════════════════════════════════
-# 
-# PROPÓSITO:
-#   Dados canônicos dos 5 Guardiões que guiam o Viajante pelo Reino Contado.
-#   Cada Guardião representa uma virtude (semente) que será cultivada na criança.
-# 
-# ALINHAMENTO NORTH STAR:
-#   - Princípio 4: "Cada Criança é Pessoa" → Bernardo modela inclusão
-#   - Princípio 5: "Jornada Completa K-12" → Guardiões aparecem em TODOS os ciclos
-#   - Propósito: "Ideias vivas e histórias que transformam" → Guardiões são a história
-# 
-# USADO POR:
-#   - .bmad/templates/*/regras.yaml
-#   - curriculo/*/lições
-#   - LORE/padroes_narrativos.yaml
-# 
-# EVOLUI POR CICLO: Não (dados estáticos)
-#   Os DADOS são os mesmos em todos os ciclos.
-#   O que muda é o USO (profundidade de revelação).
-# 
-# REFERÊNCIAS RELACIONADAS:
-#   - LORE/locais.yaml (locais associados)
-#   - LORE/padroes_narrativos.yaml (como usar frases/virtudes)
-#   - LORE/north_star.yaml (princípios que guiam)
-# 
-# Última Atualização: 13/01/2026
-# ════════════════════════════════════════════════════════════════════════════════
+# GUARDIÕES DO REINO CONTADO — SSOT
+# YAML Lean v1.0 | 14/01/2026
+# Alinhamento: North Star Princípios 4 e 5
+
+id: guardioes_lore
+versao: '1.0'
+tipo: lore_entity
+ref_north_star: LORE/north_star.yaml
+ref_locais: LORE/locais.yaml
 
 guardioes:
   melquior:
@@ -34,120 +14,88 @@ guardioes:
     especie: Leão
     dominio: O Logos / Sabedoria
     semente: Sabedoria
-    cor_primaria: "#D4A84B"  # Dourado
-    cor_secundaria: "#8B7355"
+    cores: {pri: "#D4A84B", sec: "#8B7355"}
     emoji: "🦁"
-    frase_assinatura: "O Rei sorriu ao ver você chegar."
-    tom_de_voz: Acolhedor, sábio, profundo
-    papel_narrativo: |
+    frase: "O Rei sorriu ao ver você chegar."
+    tom: "Acolhedor, sábio, profundo"
+    papel: |
       Melquior é o líder dos Guardiões. Ele introduz o Viajante ao Reino
       e aparece em momentos de transição importante. Sua voz é grave e calorosa.
-    aparicao_obrigatoria:
-      - L000  # Introdução
-      - Transições de fase
-    local_associado: Jardim Central
-    imagem: "assets/img/melquior-leao.webp"
+    quando: [L000, Transições de fase]
+    local: Jardim Central
+    img: "assets/img/melquior-leao.webp"
 
   noe:
     nome: Noé
     especie: Coruja
     dominio: O Tempo / Paciência
     semente: Paciência
-    cor_primaria: "#6A5ACD"  # Roxo
-    cor_secundaria: "#483D8B"
+    cores: {pri: "#6A5ACD", sec: "#483D8B"}
     emoji: "🦉"
-    frase_assinatura: "Respire. O número espera por você."
-    tom_de_voz: Calmo, paciente, pausado
-    papel_narrativo: |
+    frase: "Respire. O número espera por você."
+    tom: "Calmo, paciente, pausado"
+    papel: |
       Noé vive no silêncio. Ele nunca tem pressa. Aparece quando a criança
       precisa desacelerar ou quando o tema envolve tempo, sequência ou espera.
-    aparicao_obrigatoria:
-      - L004  # Quarta imersão
-    local_associado: Árvore do Silêncio
-    imagem: "assets/img/noe-coruja.webp"
+    quando: [L004]
+    local: Árvore do Silêncio
+    img: "assets/img/noe-coruja.webp"
 
   celeste:
     nome: Celeste
     especie: Raposa
     dominio: O Espaço / Curiosidade
     semente: Curiosidade
-    cor_primaria: "#FF6B35"  # Laranja
-    cor_secundaria: "#E55B2B"
+    cores: {pri: "#FF6B35", sec: "#E55B2B"}
     emoji: "🦊"
-    frase_assinatura: "Sente esse cheiro? É aventura."
-    tom_de_voz: Curioso, rápido, vibrante
-    papel_narrativo: |
+    frase: "Sente esse cheiro? É aventura."
+    tom: "Curioso, rápido, vibrante"
+    papel: |
       Celeste fareja segredos. Ela adora perguntar "E se...?" e explorar.
       Aparece quando há descoberta, exploração de padrões ou busca ativa.
-    aparicao_obrigatoria:
-      - L001  # Primeira imersão
-    local_associado: Clareira das Perguntas
-    imagem: "assets/img/celeste-raposa.webp"
+    quando: [L001]
+    local: Clareira das Perguntas
+    img: "assets/img/celeste-raposa.webp"
 
   bernardo:
     nome: Bernardo
     especie: Urso
     dominio: A Massa / Persistência
     semente: Persistência
-    cor_primaria: "#8B4513"  # Marrom
-    cor_secundaria: "#654321"
+    cores: {pri: "#8B4513", sec: "#654321"}
     emoji: "🐻"
-    frase_assinatura: "Mais uma vez. Comigo."
-    tom_de_voz: Firme, encorajador, caloroso
-    papel_narrativo: |
-      Bernardo é manco (ver história da Nevasca). Ele trabalha na forja
-      e representa que erro não é fracasso. Íris fica em seu ombro.
-    historia_origem: |
-      Durante a Grande Nevasca, Bernardo salvou filhotes de raposa
-      (ancestrais de Celeste) segurando uma pedra. Sua perna cedeu,
-      mas ele salvou todos. Desde então, Íris escolheu ficar em seu ombro.
-    inclusao:
-      mensagem: Deficiência como força, não fraqueza
-      representacao: Herói ferido, não coitado
-      parceria: Íris ajuda por gratidão, não por pena
-    aparicao_obrigatoria:
-      - L002  # Segunda imersão
-    local_associado: Caverna do Recomeço
-    imagem: "assets/img/bernardo-urso.webp"
+    frase: "Mais uma vez. Comigo."
+    tom: "Firme, encorajador, caloroso"
+    papel: |
+      Bernardo é manco (ver história). Ele trabalha na forja e representa
+      que erro não é fracasso. Íris fica em seu ombro para ajudar.
+    origem: |
+      Na Grande Nevasca, a caverna onde os Guardiões se abrigaram ameaçou
+      desabar. Bernardo segurou a pedra mestra por 3 dias para salvar seus
+      amigos (Melquior, Noé, Celeste, Íris). O peso feriu sua perna para sempre.
+    inclusao: "Deficiência = força (Herói ferido). Íris ajuda por gratidão e lealdade."
+    quando: [L002]
+    local: Caverna do Recomeço
+    img: "assets/img/bernardo-urso.webp"
 
   iris:
     nome: Íris
     especie: Pardal
     dominio: A Atenção / Detalhe
     semente: Atenção
-    cor_primaria: "#FFB6C1"  # Rosa
-    cor_secundaria: "#FF69B4"
+    cores: {pri: "#FFB6C1", sec: "#FF69B4"}
     emoji: "🐦"
-    frase_assinatura: "Olhe bem. A beleza está no detalhe."
-    tom_de_voz: Suave, atento, gentil
-    papel_narrativo: |
+    frase: "Olhe bem. A beleza está no detalhe."
+    tom: "Suave, atento, gentil"
+    papel: |
       Íris vê beleza num grão de areia. Ela traz o Viajante de volta quando
       a mente quer voar longe. Fica no ombro de Bernardo, ajudando-o.
-    caracteristicas:
-      - Usa colar de contas de vidro (gotas de orvalho)
-      - Menor dos Guardiões
-      - Muito observadora
-    aparicao_obrigatoria:
-      - L003  # Terceira imersão
-    local_associado: Ninho Mirante
-    imagem: "assets/img/iris-passarinho-colar.webp"
+    traits: [Usa colar de contas, Menor guardião, Observadora]
+    quando: [L003]
+    local: Ninho Mirante
+    img: "assets/img/iris-passarinho-colar.webp"
 
-# Regras de Uso
 regras:
-  distribuicao_licoes:
-    L000: melquior  # Introduz todos
-    L001: celeste   # Primeira imersão
-    L002: bernardo  # Segunda imersão
-    L003: iris      # Terceira imersão
-    L004: noe       # Quarta imersão
-    L005_mais: varia  # Por tema da lição
-  
-  interacao:
-    conversa_entre_guardioes: true
-    novos_guardioes: false
-    personagens_secundarios: true
-    arcos_longos: true
-  
-  evolucao_visual:
-    por_fase: true
-    referencia: "GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md"
+  distribuicao: {L000: melquior, L001: celeste, L002: bernardo, L003: iris, L004: noe, L005+: varia}
+  interacao: {conversa: true, novos: false, secundarios: true, arcos: true}
+  evolucao: {visual: true, ref: GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md}

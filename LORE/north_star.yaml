@@ -26,7 +26,6 @@ purpose:
   motto: Matemática Viva existe para ajudar famílias a amarem matemática juntas
   essence: MOVIMENTO de famílias que descobriram que matemática pode ser viva
 
-
 mission:
   one_liner: Infraestrutura Educacional K-12 — Aberta no Saber, Premium na Experiência
   
@@ -49,7 +48,6 @@ mission:
     premium:
       desc: Valor na curadoria, não exclusividade
       value: [Qualidade impecável, Comunidade, Conveniência 5min, Cards físicos]
-
 
 principios_fundamentais:
   - id: 1
@@ -114,28 +112,45 @@ metricas:
 
 validacao:
   q: Isso nos aproxima ou afasta do North Star?
-  when: [Nova feature?, Mudança arquitetura?, Novo workflow?, Decisão negócio?]
+  when: ["Nova feature?", "Mudança arquitetura?", "Novo workflow?", "Decisão negócio?"]
 
-triade:
-  charlotte_mason:
-    sigla: CM
-    foco: Alma
-    principles: [Crianças são pessoas, Educação é vida/atmosfera/disciplina, Lições curtas 15-20min, Narração como método, Hábito Atenção]
-    ref: .bmad/experts/pedagogia/charlotte_mason.yaml
-    
-  singapura_cpa:
-    sigla: CPA
-    foco: Corpo
-    method: [{C: Mãos (manipulativos)}, {P: Olhos (representação visual)}, {A: Símbolo (notação matemática)}]
-    ref: GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md
-    
-  tgtb:
-    sigla: TGTB
-    name: The Good and The Beautiful
-    foco: Estrutura
-    use: Scope & Sequence referência
-    note: Não obrigatório famílias
-    ref: curriculo/_SISTEMA/CURRICULOS_MESTRE/*.md
+# VOCABULÁRIO REINANÊS E TÉCNICO — SSOT
+# Consolidado de glossario.yaml e ontologia.yaml
+
+vocabulario:
+  reino_nobres:
+    - {termo: Viajante, sistema: Aluno, razao: "Dignidade: descobre, não recebe."}
+    - {termo: Portador da Tocha, sistema: Professor, razao: "Apresenta o banquete."}
+    - {termo: Jornada, sistema: Aula, razao: "Processo vivo."}
+    - {termo: Pergaminho, sistema: Lição/Deliverable, razao: "Artefato de valor."}
+    - {termo: Cicatriz de Glória, sistema: Erro, razao: "Prova de esforço."}
+  
+  tecnico_sistema:
+    - {bmad: Orchestrator, forja: Orchestrator, desc: "Coordenador IA"}
+    - {bmad: PRD, forja: PRD, desc: "Requisitos de Produto"}
+    - {bmad: Story, forja: Story, desc: "Especificação Lição"}
+    - {bmad: ENACTIVE, forja: Concreto, desc: "CPA Fase 1"}
+    - {bmad: ICONIC, forja: Pictórico, desc: "CPA Fase 2"}
+    - {bmad: SYMBOLIC, forja: Abstrato, desc: "CPA Fase 3"}
+
+atores_sistema:
+  maestro: {nome: Raul, papel: Diretor Executivo, autoridade: DECISÃO_FINAL}
+  matriarca: {nome: Marina, papel: Curadora, autoridade: VETO_SENSIBILIDADE}
+  familia_rodrigues: {papel: Selo Gold+, funcao: Validação Final}
+  orchestrator: {tipo: IA, papel: Coordenador, regra: "Conselheiro, nunca Rei"}
+
+# ARTEFATOS SIMBÓLICOS — VER SSOT
+# LORE/artefatos.yaml é a fonte única (6 artefatos completos)
+artefatos_simbolicos:
+  ref: LORE/artefatos.yaml
+  nota: "6 artefatos com descrições completas e rituais de transição."
+  resumo:
+    - {id: diario_do_reino, guardiao: Melquior, ciclo: Raízes}
+    - {id: bussola_celeste, guardiao: Celeste, ciclo: Lógica}
+    - {id: martelo_bernardo, guardiao: Bernardo, ciclo: Quando frustrado}
+    - {id: pena_iris, guardiao: Íris, ciclo: Descobertas estéticas}
+    - {id: ampulheta_noe, guardiao: Noé, ciclo: Lógica→Legado}
+    - {id: tocha_melquior, guardiao: Melquior, ciclo: Encerramento}
 
 diretrizes_operacionais:
   - {id: 1, name: Zero Tela até 10 anos, desc: Material físico criança, digital pai}

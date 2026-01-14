@@ -1,45 +1,39 @@
-# PERD TEMPLATE — Pedagogical Requirements Document
-# YAML Lean v1.0 | Atualização: 13/01/2026
+# PERD TEMPLATE — Pedagogical Requirements Document (YAML Lean)
+# Versão: 1.1 LEAN | 14/01/2026
+# Extends: licao-base.yaml (refs SSOT lá, não duplicar)
 
 meta:
   licao_id: LXXX
   ciclo: Sementes
-  tema: '[Título tema]'
-  data_criacao: YYYY-MM-DD
+  tema: "[Título tema]"
+  data: "YYYY-MM-DD"
   status: RASCUNHO
 
-referencias_lore_ssot:
-  consultar: {indice: LORE/index.yaml, guardioes: LORE/guardioes.yaml, locais: LORE/locais.yaml, propositos: 'LORE/north_star.yaml#propositos_por_ano', viajante: LORE/viajante.yaml, tom_ciclo: LORE/evolucao_guardioes.yaml}
-
 ideia_viva:
-  def: '[Frase captura essência]'
-  fonte_cm: '[Princípio CM relacionado]'
-  por_que: '[1-2 frases valor duradouro]'
+  frase: "[Captura essência]"
+  fonte_cm: "[Princípio CM]"
+  por_que: "[Valor duradouro 1-2 frases]"
 
-estrutura_cpa:
-  concreto: {manipulativos: ['[Manip 1]', '[Manip 2]'], atividade: '[Desc atividade  manipulativos]', tempo: 10}
-  pictorico: {status: VETADO_POR_CM, representacao: null}
-  abstrato: {nivel: MÍNIMO, simbolos: ['[Símbolo 1]'], atividade: '[Como símbolos usados]'}
+cpa:
+  concreto: {manipulativos: ["[M1]", "[M2]"], atividade: "[Desc]", tempo: 10}
+  pictorico: {status: VETADO_CM, just: "Things before Signs"}
+  abstrato: {nivel: MÍNIMO, simbolos: ["[S1]"], atividade: "[Como usados]", nota: "Traçar ar = ENATIVO"}
 
-guardiao_lider:
-  nome: '[Celeste|Bernardo|Íris|Noé|Melquior]'
-  frase_assinatura: '[Frase oficial guardião]'
-  tom: '[Curioso|Firme|Suave|Calmo|Acolhedor]'
-  coadjuvantes: []
+guardiao:
+  lider: "[Celeste|Bernardo|Íris|Noé|Melquior]"
+  frase: "[Frase oficial]"
+  tom: "[Curioso|Firme|Suave|Calmo|Acolhedor]"
+  coadj: []
 
-checklist_cm:
-  crianca_pessoa: false
-  licao_curta: false
-  narracao: false
-  ideia_viva_apresentada: false
+checklist_cm: {crianca_pessoa: false, licao_curta: false, narracao: false, ideia_viva: false}
 
 aprovacao:
-  sofia: null
-  euclides: null
+  cm: null
+  cpa: null
   matriarca: null
   data: null
 
 notas:
-  decisoes_pedagogicas: []
-  referencias_anteriores: []
-  proximos_passos: []
+  decisoes: []
+  refs_anteriores: []
+  proximos: []

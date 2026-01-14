@@ -125,10 +125,23 @@ def licao_to_markdown(licao: dict) -> str:
     """Converte estrutura de lição YAML para Markdown."""
     lines = []
     
+    # Para o Portador (CRÍTICO para Débora)
+    if 'para_o_portador' in licao:
+        pp = licao['para_o_portador']
+        lines.append("## 👨‍👩‍👧 Para o Portador\n")
+        if pp.get('dica_de_coracao'):
+            lines.append(f"> **Dica de Coração:** {pp['dica_de_coracao']}\n")
+        if pp.get('o_que_seu_filho_vai_descobrir'):
+            lines.append(f"\n**O que seu filho vai descobrir:** {pp['o_que_seu_filho_vai_descobrir']}\n")
+        if pp.get('audio_script'):
+            lines.append(f"\n🎧 **Áudio-Script:** {pp['audio_script']}\n")
+        if pp.get('nota_de_graca'):
+            lines.append(f"\n💚 {pp['nota_de_graca']}\n")
+    
     # Ideia Viva
     if 'ideia_viva' in licao:
         iv = licao['ideia_viva']
-        lines.append(f"## 💡 Ideia Viva\n")
+        lines.append(f"\n## 💡 Ideia Viva\n")
         lines.append(f"> **{iv.get('frase', '')}**\n")
         lines.append(f"\n*{iv.get('conceito_matematico', '')}*\n")
     
@@ -143,12 +156,33 @@ def licao_to_markdown(licao: dict) -> str:
     if 'ritual_abertura' in licao:
         ra = licao['ritual_abertura']
         lines.append(f"\n## 🎬 Ritual de Abertura\n")
+        if ra.get('instrucao_ambiente'):
+            lines.append(f"\n📍 {ra['instrucao_ambiente']}\n")
+        if ra.get('fala_portador', {}).get('script'):
+            lines.append(f"\n**Fala do Portador:**\n{ra['fala_portador']['script']}\n")
         if ra.get('fala_guardiao', {}).get('script'):
-            lines.append(f"\n{ra['fala_guardiao']['script']}\n")
+            lines.append(f"\n**Guardião:**\n{ra['fala_guardiao']['script']}\n")
     
-    # Jornada - Concreto
+    # Jornada - Narrativa Principal
     if 'jornada' in licao:
         jornada = licao['jornada']
+        
+        # Abertura Sensorial
+        if jornada.get('abertura_sensorial'):
+            lines.append(f"\n## 🌳 A Jornada\n")
+            lines.append(f"\n{jornada['abertura_sensorial']}\n")
+        
+        # Narrativa Principal (CRÍTICO - estava faltando)
+        if 'narrativa_principal' in jornada:
+            np = jornada['narrativa_principal']
+            for cena_key, cena in np.items():
+                if isinstance(cena, dict) and cena.get('descricao'):
+                    lines.append(f"\n### {cena_key.replace('_', ' ').title()}\n")
+                    lines.append(f"{cena['descricao']}\n")
+                    if cena.get('instrucao_portador'):
+                        lines.append(f"\n📝 *{cena['instrucao_portador']}*\n")
+        
+        # Concreto
         if 'concreto' in jornada:
             c = jornada['concreto']
             lines.append(f"\n## 🎯 Atividade Concreta (60%+)\n")
@@ -156,7 +190,12 @@ def licao_to_markdown(licao: dict) -> str:
             if c.get('instrucoes_portador'):
                 lines.append("\n### Passos:\n")
                 for p in c['instrucoes_portador']:
-                    lines.append(f"- **{p.get('acao', '')}:** {p.get('fala_sugerida', '')}\n")
+                    passo = p.get('passo', p.get('acao', ''))
+                    acao = p.get('acao', '')
+                    fala = p.get('fala_sugerida', '')
+                    lines.append(f"- **{acao}:** {fala}\n")
+            if c.get('adaptacao_bernardo'):
+                lines.append(f"\n{c['adaptacao_bernardo']}\n")
         
         # Abstrato
         if 'abstrato' in jornada:
@@ -169,6 +208,10 @@ def licao_to_markdown(licao: dict) -> str:
         n = licao['narracao']
         lines.append(f"\n## 📖 Narração\n")
         lines.append(f"\n{n.get('pergunta_principal', '')}\n")
+        if n.get('perguntas_do_coracao'):
+            lines.append("\n**Perguntas do Coração:**\n")
+            for q in n['perguntas_do_coracao']:
+                lines.append(f"- {q}\n")
     
     # Fechamento
     if 'ritual_fechamento' in licao:
@@ -176,30 +219,17 @@ def licao_to_markdown(licao: dict) -> str:
         lines.append(f"\n## 🏁 Fechamento\n")
         if rf.get('fala_guardiao', {}).get('script'):
             lines.append(f"\n{rf['fala_guardiao']['script']}\n")
+        if rf.get('fio_de_ouro'):
+            lines.append(f"\n🧵 **Fio de Ouro:** {rf['fio_de_ouro']}\n")
     
-    return "\n".join(lines)
-    """Converte estrutura YAML de conteúdo para Markdown."""
-    lines = []
-    
-    # Processar cada seção
-    for key, value in conteudo.items():
-        if key == 'abertura':
-            lines.append(f"## 🎬 Abertura\n\n{value.get('texto', '')}\n")
-        elif key == 'atividade':
-            lines.append(f"## 🎯 Atividade\n")
-            if isinstance(value, dict):
-                if 'titulo' in value:
-                    lines.append(f"### {value['titulo']}\n")
-                if 'passos' in value:
-                    for i, passo in enumerate(value['passos'], 1):
-                        lines.append(f"{i}. {passo}\n")
-        elif key == 'narracao':
-            lines.append(f"## 📖 Narração\n\n{value}\n")
-        elif key == 'encerramento':
-            lines.append(f"## 🏁 Encerramento\n\n{value}\n")
-        else:
-            # Seção genérica
-            lines.append(f"## {key.title()}\n\n{value}\n")
+    # Sugestões dos Guardiões
+    if 'sugestoes' in licao:
+        lines.append(f"\n## 🦊 Dicas dos Guardiões\n")
+        for s in licao['sugestoes']:
+            emoji = s.get('emoji', '💡')
+            guardiao = s.get('guardiao', '')
+            dica = s.get('dica', '')
+            lines.append(f"\n{emoji} **{guardiao}:** {dica}\n")
     
     return "\n".join(lines)
 

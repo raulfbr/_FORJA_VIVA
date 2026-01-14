@@ -1,6 +1,6 @@
-# ════════════════════════════════════════════════════════════════════════════════
+
 # O VIAJANTE — Identidade e Evolução da Criança
-# ════════════════════════════════════════════════════════════════════════════════
+
 # 
 # PROPÓSITO:
 #   Define os títulos e a evolução do Viajante (criança) ao longo dos ciclos.
@@ -22,14 +22,11 @@
 #   - LORE/index.yaml (navegação)
 # 
 # Última Atualização: 13/01/2026
-# ════════════════════════════════════════════════════════════════════════════════
 
 tipo: viajante
 versao: "1.0"
 
-# ════════════════════════════════════════════════════════════════════════════════
 # FUNDAMENTO
-# ════════════════════════════════════════════════════════════════════════════════
 
 fundamento:
   quem_e: |
@@ -47,9 +44,7 @@ fundamento:
     Os títulos refletem isso: Herdeiro de promessas,
     Construtor que cria, Explorador que descobre, Portador que transmite.
 
-# ════════════════════════════════════════════════════════════════════════════════
 # OS 5 TÍTULOS (incluindo pré-formal)
-# ════════════════════════════════════════════════════════════════════════════════
 
 titulos:
 
@@ -206,9 +201,7 @@ titulos:
         Brilhou Explorador de verdades. Agora sai Portador da Tocha.
         O Reino não está nos livros — está em você. Vá e acenda outras vidas.'"
 
-# ════════════════════════════════════════════════════════════════════════════════
 # EVOLUÇÃO DO PORTADOR (PAI/MÃE)
-# ════════════════════════════════════════════════════════════════════════════════
 
 portador_adulto:
   descricao: |
@@ -236,9 +229,7 @@ portador_adulto:
       precisa: "Autonomia, direção geral"
       tom_para_ele: "O filho ensina o pai também. Vocês caminham juntos."
 
-# ════════════════════════════════════════════════════════════════════════════════
 # USO NA NARRATIVA
-# ════════════════════════════════════════════════════════════════════════════════
 
 uso:
   como_referir:

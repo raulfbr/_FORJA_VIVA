@@ -1,0 +1,266 @@
+# DELIBERAÇÃO: CURRÍCULO EM ESPIRAL — O Coração da Progressão K-12
+# Data: 14/01/2026 | Hora: 12:03 | Local: Câmara de Deliberação (Virtual)
+# Tipo: REUNIAO-TODOS | Tema: Formalização do Currículo em Espiral no Matemática Viva
+# Status: DELIBERAÇÃO COMPLETA
+
+# PARTICIPANTES
+participantes:
+  coordenadora: {id: charlotte_mason, titulo: "A Governanta", role: "Coordenadora Pedagógica, Veto Final"}
+  especialistas:
+    - {id: jerome_bruner, titulo: "O Arquiteto do CPA", area: "Criador do Currículo Espiral + CPA"}
+    - {id: lev_vygotsky, titulo: "O Mestre do Andaime", area: "ZPD e Scaffolding Progressivo"}
+    - {id: cs_lewis, titulo: "O Guardião da Dignidade", area: "Tom Narrativo por Idade"}
+    - {id: maes_personas, titulo: "O Tribunal do Café", area: "Praticidade para Famílias"}
+    - {id: engenharia, titulo: "O Conselho Técnico", area: "Implementação e SSOT"}
+
+# FASE 1: ABERTURA — Charlotte Mason
+abertura:
+  coordenadora: charlotte_mason
+  tema_formal: "Como formalizar o Currículo em Espiral no sistema Matemática Viva?"
+  contexto: |
+    O Maestro trouxe a observação de que existe "muita repetição" e uma "ideia cíclica" —
+    onde o que se aprende agora é revisitado e aprofundado conforme a idade aumenta.
+    Esta é exatamente a descrição do SPIRAL CURRICULUM de Jerome Bruner.
+    
+    Precisamos:
+    1. Definir formalmente o que é o Currículo em Espiral
+    2. Distinguir de Método Singapura (que É Bruner + outros)
+    3. Documentar como isso se aplica nos 4 ciclos K-12
+    4. Criar um arquivo SSOT para esta estrutura
+  
+  pergunta_central: |
+    Como garantir que cada conceito matemático seja revisitado ciclicamente,
+    com profundidade crescente, respeitando a dignidade da criança em cada estágio?
+
+# FASE 2: POSIÇÕES INICIAIS (Cada especialista dá sua perspectiva)
+posicoes_iniciais:
+
+  jerome_bruner:
+    posicao: "O Currículo em Espiral é a ESPINHA DORSAL de todo ensino eficaz"
+    fundamento:
+      teoria: "The Process of Education (1960) - Qualquer assunto pode ser ensinado de forma intelectualmente honesta a qualquer criança em qualquer estágio de desenvolvimento."
+      mecanismo: |
+        O mesmo conceito é introduzido em forma simples e revisitado 
+        repetidamente ao longo dos anos, cada vez com maior profundidade.
+        Não é repetição vazia — é REFINAMENTO PROGRESSIVO.
+    exemplo_concreto:
+      conceito: "Número 3"
+      espiral:
+        - {ciclo: Sementes, idade: "4-6 anos", abordagem: "3 maçãs na mão (CONCRETO)", profundidade: "Intuição numérica"}
+        - {ciclo: Raízes, idade: "7-10 anos", abordagem: "1/3 de pizza (FRAÇÃO)", profundidade: "Divisão e parte-todo"}
+        - {ciclo: Lógica, idade: "11-14 anos", abordagem: "2³ = 8 (EXPOENTE)", profundidade: "Crescimento exponencial"}
+        - {ciclo: Legado, idade: "15-18 anos", abordagem: "lim x→3 (CÁLCULO)", profundidade: "Limites e continuidade"}
+    citacao: "We begin with the hypothesis that any subject can be taught effectively in some intellectually honest form to any child at any stage of development."
+    proposta: |
+      Cada conceito-chave do Matemática Viva deve ter um MAPA ESPIRAL documentando 
+      como ele evolui do Sementes ao Legado.
+
+  lev_vygotsky:
+    posicao: "A Espiral funciona porque RESPEITA a Zona de Desenvolvimento Proximal"
+    fundamento:
+      teoria: "O que a criança faz COM AJUDA hoje, fará SOZINHA amanhã."
+      conexao_espiral: |
+        A cada volta da espiral, o conceito que antes estava na ZPD 
+        agora está na Zona de Conforto. A nova volta apresenta o 
+        conceito em nível que novamente desafia a ZPD atual.
+        
+        É como subir uma escada em caracol: você passa pelo mesmo 
+        "ponto" (conceito), mas está um andar acima.
+    mecanismo:
+      - {volta: 1, zona: "Antes fora ZPD (frustração)", depois: "Dentro ZPD (com ajuda)"}
+      - {volta: 2, zona: "Antes dentro ZPD", depois: "Conforto (já domina)"}
+      - {volta: 3, zona: "Nova ZPD (próximo nível)", depois: "Novo desafio apropriado"}
+    citacao: "What the child can do with assistance today, she will be able to do by herself tomorrow."
+    proposta: |
+      Cada volta da espiral deve ser calibrada para atingir a ZPD 
+      daquela idade, nem abaixo (tédio) nem acima (frustração).
+
+  charlotte_mason:
+    posicao: "A Espiral é NATURAL porque respeita a criança como PESSOA em desenvolvimento"
+    fundamento:
+      principio_1: "Children are born persons — mas pessoas que CRESCEM."
+      principio_7: "Wide and generous curriculum — o mesmo assunto, muitas vezes, de muitas formas."
+      conexao: |
+        A criança de 5 anos É uma pessoa completa, com dignidade plena.
+        Mas seu entendimento de "3" é diferente da criança de 15.
+        A Espiral honra AMBAS as verdades: dignidade AGORA + crescimento FUTURO.
+    pratica_cm:
+      - "Short lessons (15-20min) em cada volta — não exaurir"
+      - "Living ideas — não fatos secos em cada revisita"
+      - "Narration — criança articula entendimento ATUAL do conceito"
+    citacao: "Never be within the child's mental range — a espiral garante sempre desafio apropriado."
+    proposta: |
+      A Espiral deve ser implementada COM dignidade: cada volta 
+      trata a criança como pessoa capaz, não como repetição mecânica.
+    veto_potencial:
+      - "Se 'espiral' virar 'repetição maçante', VETO."
+      - "Se voltas não apresentarem IDEIA VIVA nova, VETO."
+
+  cs_lewis:
+    posicao: "O TOM da narrativa deve EVOLUIR com a espiral, mas a DIGNIDADE permanece constante"
+    fundamento:
+      principio: "Não escrevemos 'para crianças' — escrevemos para pessoas em estágio inicial de desenvolvimento biológico."
+      evolucao_tom:
+        - {ciclo: Sementes, tom: "Maravilhamento mágico", exemplo: "O número 3 é um amigo especial..."}
+        - {ciclo: Raízes, tom: "Aventura exploratória", exemplo: "Há um mistério escondido no 3..."}
+        - {ciclo: Lógica, tom: "Investigação intelectual", exemplo: "Os matemáticos antigos descobriram que 3..."}
+        - {ciclo: Legado, tom: "Maestria e vocação", exemplo: "Esta propriedade de 3 é usada por engenheiros para..."}
+    citacao: "A children's story which can only be enjoyed by children is not a good children's story."
+    proposta: |
+      Cada volta da espiral tem TOM ESPECÍFICO documentado, 
+      mas todas respeitam a dignidade intelectual da criança.
+
+  maes_personas:
+    posicao: "A Espiral só funciona se a MÃE conseguir implementar"
+    fundamento:
+      teste_pratico: "Mãe com bebê no colo, feijão no fogo, consegue em 5 minutos?"
+      preocupacoes_por_persona:
+        - {persona: Débora, medo: "Como sei em que volta estamos?", solucao: "Indicador visual claro de progressão"}
+        - {persona: Priscila, medo: "Isso é repetição disfarçada?", solucao: "Mostrar diferença clara entre voltas"}
+        - {persona: Elisa, medo: "Onde está o roadmap?", solucao: "Mapa visual espiral com marcos"}
+        - {persona: Renata, medo: "4 filhos em 4 voltas diferentes?", solucao: "Atividades que unificam idades"}
+    teste_supremo: |
+      Se a mãe não entender ONDE seu filho está na espiral e PARA ONDE vai,
+      o conceito falha. Precisa de VISUALIZAÇÃO clara.
+    proposta: |
+      Criar uma representação VISUAL da espiral que a mãe possa 
+      consultar para entender a progressão de cada conceito.
+
+  engenharia:
+    posicao: "Precisamos de um arquivo SSOT para documentar as espirais"
+    fundamento:
+      principio_ssot: "Cada conceito deve ter UM lugar onde sua progressão espiral está definida."
+      estrutura_proposta:
+        arquivo: "LORE/curriculo_espiral.yaml"
+        conteudo:
+          - conceitos_chave (lista de conceitos que seguem espiral)
+          - mapa_por_conceito (como cada conceito evolui K-12)
+          - integracao_ciclos (como Sementes conecta com Raízes, etc.)
+          - visualizacao (diagrama espiral)
+    citacao_bmad: "Single Source of Truth — cada dado existe em UM lugar apenas."
+    proposta: |
+      Criar curriculo_espiral.yaml como SSOT da progressão espiral,
+      referenciado por todos os templates e workflows.
+
+# FASE 3: RÉPLICAS E DEBATE
+replicas:
+
+  vygotsky_a_bruner:
+    de: lev_vygotsky
+    para: jerome_bruner
+    questao: "A espiral assume progressão LINEAR de idade. Mas e crianças que avançam ou atrasam em relação ao esperado?"
+    resposta_bruner: |
+      Excelente ponto. A espiral é GUIA, não camisa de força. 
+      Criança pode estar na volta 'Raízes' cronologicamente mas 
+      na volta 'Sementes' cognitivamente para um conceito.
+      A ZPD de Vygotsky é o calibrador: ajustar volta ao INDIVÍDUO.
+
+  lewis_a_charlotte:
+    de: cs_lewis
+    para: charlotte_mason
+    questao: "Como evitar que 'repetição' vire 'tédio' para crianças brilhantes que 'já sabem'?"
+    resposta_charlotte: |
+      Princípio 12 — Single reading enough. A espiral não é 'repetir a mesma lição'.
+      É apresentar o MESMO CONCEITO de forma COMPLETAMENTE NOVA.
+      Se a criança boceja, a volta não foi bem desenhada.
+      Ideia Viva em cada volta ou não é espiral, é maçã.
+
+  maes_a_engenharia:
+    de: maes_personas
+    para: engenharia
+    questao: "O arquivo SSOT vai ajudar mães ou é só para IA?"
+    resposta_engenharia: |
+      Ambos. O YAML é para IA processar. Mas dele geramos:
+      - PDF visual para mães (Débora/Elisa adoram)
+      - Indicador de progresso no app (Priscila quer resultado)
+      - Certificados por volta (Júlia quer celebração)
+      A fonte é SSOT, os outputs são múltiplos.
+
+# FASE 4: TRÉPLICA E REFINAMENTO
+treplica:
+
+  sintese_bruner:
+    autor: jerome_bruner
+    refinamento: |
+      Incorporando feedback de todos:
+      
+      1. ESPIRAL ≠ REPETIÇÃO
+         - Cada volta apresenta NOVA perspectiva, não a mesma informação
+      
+      2. CALIBRADO POR ZPD
+         - Volta determinada por desenvolvimento, não apenas idade cronológica
+      
+      3. TOM EVOLUI, DIGNIDADE CONSTANTE
+         - Maravilhamento → Aventura → Investigação → Maestria
+      
+      4. VISUALIZAÇÃO PARA FAMÍLIAS
+         - Mães precisam VER onde estão e para onde vão
+      
+      5. SSOT DOCUMENTADO
+         - curriculo_espiral.yaml como fonte única
+
+  modelo_espiral_final:
+    nome: "Espiral de Bruner Adaptada Matemática Viva"
+    caracteristicas:
+      - {c: "Progressão Vertical", desc: "Mesmo conceito, profundidade crescente"}
+      - {c: "Calibração ZPD", desc: "Ajuste individual, não apenas por idade"}
+      - {c: "Tom Evolutivo", desc: "Linguagem e narrativa apropriadas ao ciclo"}
+      - {c: "Ideia Viva", desc: "Cada volta traz NOVA perspectiva, não repetição"}
+      - {c: "Visualização Clara", desc: "Mãe consegue ver progressão"}
+      - {c: "SSOT Documentado", desc: "Um arquivo define todas as espirais"}
+
+# FASE 5: SÍNTESE — Charlotte Mason
+sintese:
+  coordenadora: charlotte_mason
+  resumo: |
+    Após ouvir todos os especialistas, a síntese é clara:
+    
+    O CURRÍCULO EM ESPIRAL (Jerome Bruner, 1960) é o mecanismo fundamental 
+    que permite ao Matemática Viva cobrir 0-18 anos de forma conectada.
+    
+    NÃO É o mesmo que Método Singapura:
+    - Singapura = CPA (Bruner) + Bar Models + Mastery Approach
+    - Espiral = Conceito de Bruner que Singapura USA, mas não inventou
+    
+    A implementação no Matemática Viva deve:
+    1. Documentar espirais por conceito-chave
+    2. Calibrar por ZPD, não apenas idade
+    3. Garantir Ideia Viva em cada volta (não repetição seca)
+    4. Evoluir tom narrativo mantendo dignidade
+    5. Visualizar para famílias de forma clara
+    
+  citacao_final: |
+    "The child is a person — at every stage of the spiral."
+    — Síntese Charlotte Mason + Bruner
+
+# FASE 6: DECISÃO FINAL
+decisao:
+  coordenadora: charlotte_mason
+  veredito: APROVADO_UNANIME
+  acoes:
+    - {acao: "Criar arquivo SSOT", arq: "LORE/curriculo_espiral.yaml", resp: engenharia, prazo: "Imediato"}
+    - {acao: "Documentar 5 conceitos-piloto", ex: [Contagem, Adição, Frações, Proporção, Funções], resp: jerome_bruner, prazo: "Próxima Sprint"}
+    - {acao: "Definir tom por ciclo", ref: "padroes_narrativos.yaml#tom_por_ciclo", resp: cs_lewis, status: "Já feito"}
+    - {acao: "Criar visualização mães", tipo: "Diagrama espiral PDF/PNG", resp: design, prazo: "Próxima Sprint"}
+  
+  principios_aprovados:
+    - {id: ESP-001, principio: "Espiral ≠ Repetição — cada volta traz perspectiva NOVA"}
+    - {id: ESP-002, principio: "Calibração por ZPD, não apenas idade cronológica"}
+    - {id: ESP-003, principio: "Tom evolui, dignidade constante"}
+    - {id: ESP-004, principio: "Visualização clara para famílias"}
+    - {id: ESP-005, principio: "SSOT em curriculo_espiral.yaml"}
+
+# ASSINATURAS
+assinaturas:
+  - {expert: charlotte_mason, voto: APROVADO, comentario: "Espiral honra criança como pessoa em crescimento. Aprovado."}
+  - {expert: jerome_bruner, voto: APROVADO, comentario: "Minha teoria finalmente aplicada com rigor. Satisfeito."}
+  - {expert: lev_vygotsky, voto: APROVADO, comentario: "Calibração por ZPD foi incorporada. Essencial."}
+  - {expert: cs_lewis, voto: APROVADO, comentario: "Tom evolutivo preserva dignidade. Correto."}
+  - {expert: maes_personas, voto: APROVADO, comentario: "Se a visualização for clara, as mães conseguem. Aprovado."}
+  - {expert: engenharia, voto: APROVADO, comentario: "SSOT definido. Implementação clara. Aprovado."}
+
+log_encerramento:
+  hora_fim: "12:45"
+  duracao: "42 minutos"
+  status: DELIBERACAO_CONCLUIDA
+  proximo_passo: "Criar LORE/curriculo_espiral.yaml como SSOT"

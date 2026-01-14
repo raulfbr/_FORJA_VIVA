@@ -1,14 +1,16 @@
 # CRIAR LIÇÃO PREMIUM — Workflow Completo Alta Qualidade
-# YAML Lean v1.0 | Atualização: 13/01/2026
+# YAML Lean v1.1 | Atualização: 14/01/2026
+# Ref: .bmad/expansion-packs/matematica-viva/triade.yaml (SSOT)
 
 id: criar_licao_premium
 tipo: workflow  
-versao: '1.0'
+versao: '1.1'
 coordenadora: charlotte_mason
 desc: Workflow completo criar lição alta qualidade. CM coordena especialistas contribuem QA valida
+triade_ref: .bmad/expansion-packs/matematica-viva/triade.yaml
 
 fases:
-  - {fase: 1, nome: PLANEJAMENTO, experts: [charlotte_mason, jerome_bruner, lev_vygotsky], passos: [{p: 1, acao: Receber tema consultar TGTB, resp: orchestrator, fonte: curriculo/_SISTEMA/CURRICULOS_MESTRE/, arquivos: {sementes: 000_K_SEMENTES_CURRICULO_MESTRE.md, raizes_1: 001_1ANO_RAIZES-1_CURRICULO_MESTRE.md, raizes_2: 002_2ANO_RAIZES-2_CURRICULO_MESTRE.md}, regra: SEMPRE consultar currículo mestre obter tgtb_ref}, {p: 2, acao: Definir Ideia Viva, resp: charlotte_mason, q: Qual verdade viva criança vai descobrir?}, {p: 3, acao: Propor estrutura CPA, resp: jerome_bruner, regras: [Concreto ≥ 60%, Pictórico vetado Sementes, Abstrato mínimo]}, {p: 4, acao: Definir ZPD scaffolding, resp: lev_vygotsky, q: Qual andaime criança precisa?}, {p: 5, acao: CM valida ou veta, resp: charlotte_mason, poder: Veto absoluto}], output: perd.yaml, checkpoint: true}
+  - {fase: 1, nome: PLANEJAMENTO, experts: [charlotte_mason, jerome_bruner, lev_vygotsky], passos: [{p: 1, acao: Receber tema consultar TGTB, resp: orchestrator, fonte: curriculo/_SISTEMA/CURRICULOS_MESTRE/, arquivos: {sementes: 000_K_SEMENTES_CURRICULO_MESTRE.md, raizes_1: 001_1ANO_RAIZES-1_CURRICULO_MESTRE.md, raizes_2: 002_2ANO_RAIZES-2_CURRICULO_MESTRE.md}, regra: SEMPRE consultar currículo mestre obter tgtb_ref}, {p: 2, acao: Definir Ideia Viva, resp: charlotte_mason, q: Qual verdade viva criança vai descobrir?}, {p: 3, acao: Propor estrutura CPA, resp: jerome_bruner, regras: [Concreto ≥ 80% (OPÇÃO D), Pictórico vetado Sementes, Abstrato ≤20%, Traçar ar = ENATIVO]}, {p: 4, acao: Definir ZPD scaffolding, resp: lev_vygotsky, q: Qual andaime criança precisa?}, {p: 5, acao: CM valida ou veta, resp: charlotte_mason, poder: Veto absoluto}], output: perd.yaml, checkpoint: true}
   
   - {fase: 2, nome: DESENVOLVIMENTO, experts: [cs_lewis, jrr_tolkien, beatrix_potter], passos: [{p: 6, acao: Escrever narrativa guardião, resp: cs_lewis, crit: Tom nobre não condescendente}, {p: 7, acao: Validar consistência Reino, resp: jrr_tolkien, q: Contradição lições anteriores?}, {p: 8, acao: Escolher paleta cores ilustrações, resp: beatrix_potter, regra: Cores naturais nunca neon}], output: narrativa.md, checkpoint: false}
   

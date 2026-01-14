@@ -1,6 +1,6 @@
-# ════════════════════════════════════════════════════════════════════════════════
+
 # ARTEFATOS DO REINO CONTADO
-# ════════════════════════════════════════════════════════════════════════════════
+
 # 
 # PROPÓSITO:
 #   Define os 6 objetos simbólicos que marcam a jornada do Viajante.
@@ -25,7 +25,6 @@
 #   - LORE/index.yaml (navegação)
 # 
 # Última Atualização: 13/01/2026
-# ════════════════════════════════════════════════════════════════════════════════
 
 tipo: artefatos
 versao: "1.0"
@@ -35,9 +34,7 @@ regra_geral: |
   Não banalize — o poder está na escassez.
   CM: "The teacher must not be too present." O mesmo vale para artefatos.
 
-# ════════════════════════════════════════════════════════════════════════════════
 # OS 6 ARTEFATOS
-# ════════════════════════════════════════════════════════════════════════════════
 
 artefatos:
 
@@ -167,9 +164,7 @@ artefatos:
       Brilhou Explorador de verdades. Agora, Portador da Tocha.
       Leve esta luz. Acenda outras vidas. O Reino vive em você.'"
 
-# ════════════════════════════════════════════════════════════════════════════════
 # REGRAS DE USO
-# ════════════════════════════════════════════════════════════════════════════════
 
 regras_uso:
   escassez: |
@@ -190,9 +185,7 @@ regras_uso:
     - Martelo: Símbolo de persistência
     - Não é obrigatório — apenas enriquece
 
-# ════════════════════════════════════════════════════════════════════════════════
 # CONEXÃO COM RITUAIS DE TRANSIÇÃO
-# ════════════════════════════════════════════════════════════════════════════════
 
 rituais_transicao:
   descricao: "Artefatos marcam passagem entre ciclos"

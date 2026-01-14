@@ -1,6 +1,6 @@
-# ════════════════════════════════════════════════════════════════════════════════
+
 # EVOLUÇÃO DOS GUARDIÕES — Como Comunicam por Ciclo
-# ════════════════════════════════════════════════════════════════════════════════
+
 # 
 # PROPÓSITO:
 #   Define COMO cada Guardião evolui na comunicação ao longo dos ciclos.
@@ -21,7 +21,6 @@
 #   - LORE/index.yaml (navegação)
 # 
 # Última Atualização: 13/01/2026
-# ════════════════════════════════════════════════════════════════════════════════
 
 tipo: evolucao_guardioes
 versao: "1.0"
@@ -31,9 +30,7 @@ regra_geral: |
   O que muda é o TOM, a complexidade do vocabulário, e a profundidade.
   Melquior aos 5 é o MESMO leão que aos 17, mas sua voz amadurece junto.
 
-# ════════════════════════════════════════════════════════════════════════════════
 # MELQUIOR — O Leão Sábio
-# ════════════════════════════════════════════════════════════════════════════════
 
 melquior:
   dados_fixos: "ver LORE/guardioes.yaml#melquior"
@@ -79,9 +76,7 @@ melquior:
         Agora sai Portador da Tocha. Vá — e acenda outras vidas."
       frequencia: "Lição 120 de cada ano, especialmente 12º"
 
-# ════════════════════════════════════════════════════════════════════════════════
 # NOÉ — A Coruja Paciente
-# ════════════════════════════════════════════════════════════════════════════════
 
 noe:
   dados_fixos: "ver LORE/guardioes.yaml#noe"
@@ -119,9 +114,7 @@ noe:
         aprendeu algo que a anterior não sabia. Você carrega tudo isso."
       frequencia: "Reflexões de final de ciclo"
 
-# ════════════════════════════════════════════════════════════════════════════════
 # CELESTE — A Andorinha Curiosa
-# ════════════════════════════════════════════════════════════════════════════════
 
 celeste:
   dados_fixos: "ver LORE/guardioes.yaml#celeste"
@@ -159,9 +152,7 @@ celeste:
         as órbitas dos planetas. Galileu chorou quando descobriu isso."
       frequencia: "Aplicações, modelagem"
 
-# ════════════════════════════════════════════════════════════════════════════════
 # BERNARDO — O Urso Persistente
-# ════════════════════════════════════════════════════════════════════════════════
 
 bernardo:
   dados_fixos: "ver LORE/guardioes.yaml#bernardo"
@@ -199,9 +190,7 @@ bernardo:
         Precisa de você mesmo. Eu só estou aqui para dizer: vá em frente."
       frequencia: "Autonomia, projetos independentes"
 
-# ════════════════════════════════════════════════════════════════════════════════
 # ÍRIS — A Borboleta Observadora
-# ════════════════════════════════════════════════════════════════════════════════
 
 iris:
   dados_fixos: "ver LORE/guardioes.yaml#iris"
@@ -239,9 +228,7 @@ iris:
         Olhe bem — não porque precisa, mas porque é bela."
       frequencia: "Provas elegantes, estética"
 
-# ════════════════════════════════════════════════════════════════════════════════
 # USO
-# ════════════════════════════════════════════════════════════════════════════════
 
 uso:
   como_consultar: |

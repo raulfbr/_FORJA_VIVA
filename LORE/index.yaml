@@ -1,182 +1,82 @@
-# ════════════════════════════════════════════════════════════════════════════════
-# ÍNDICE DO LORE — Arquivo Mestre de Navegação
-# ════════════════════════════════════════════════════════════════════════════════
-# 
-# PROPÓSITO:
-#   Mapa de navegação ÚNICO para todo o LORE.
-#   Responde: "Onde está o quê? Qual arquivo consultar?"
-# 
-# ALINHAMENTO NORTH STAR:
-#   - Princípio 1: "Qualidade" → Organização clara serve qualidade
-#   - BMAD: "Federated Knowledge" → Índice coordena sem duplicar
-#   - Eric Evans: "Aggregate Root" → Ponto de entrada único
-# 
-# USADO POR:
-#   - Todos os workflows
-#   - Artesão ao criar lições
-#   - QA na verificação
-#   - Novos colaboradores para entender estrutura
-# 
-# Última Atualização: 13/01/2026
-# ════════════════════════════════════════════════════════════════════════════════
+# LORE INDEX — Arquivo Central de Navegação e Arquitetura
+# YAML Lean v3.1 | 14/01/2026 | Ponto de Entrada Único
 
-tipo: indice_lore
-versao: "1.0"
+id: indice_lore
+versao: "3.1"
+tipo: indice
+nota: "Consolidado: navegação + diretrizes + mapa SSOT. Sem separadores visuais."
 
-# ════════════════════════════════════════════════════════════════════════════════
-# ESTRUTURA DO LORE — Camadas
-# ════════════════════════════════════════════════════════════════════════════════
-
+# ESTRUTURA (3 Camadas)
 estrutura:
-  descricao: "LORE organizado em 3 camadas: Índice, Core, Extensões"
-  
-  camada_indice:
-    arquivo: index.yaml
-    proposito: "Este arquivo — navegação única"
-    
-  camada_core:
-    descricao: "Arquivos essenciais para TODA lição"
-    arquivos:
-      - arquivo: north_star.yaml
-        proposito: "Propósito, princípios, propósitos por ano"
-        
-      - arquivo: guardioes.yaml
-        proposito: "5 Guardiões — dados canônicos fixos"
-        
-      - arquivo: locais.yaml
-        proposito: "5 Locais — atmosferas sensoriais"
-        
-      - arquivo: climas.yaml
-        proposito: "8 Climas + 4 Desafios atmosféricos"
-        
-      - arquivo: padroes_narrativos.yaml
-        proposito: "Regras de narração imersiva"
-        
-  camada_extensoes:
-    descricao: "Arquivos usados conforme necessidade"
-    arquivos:
-      - arquivo: evolucao_guardioes.yaml
-        proposito: "Como Guardiões comunicam por ciclo"
-        
-      - arquivo: artefatos.yaml
-        proposito: "6 objetos simbólicos da jornada"
-        
-      - arquivo: viajante.yaml
-        proposito: "Títulos do Viajante por ciclo"
-        
-      - arquivo: glossario.yaml
-        proposito: "Termos Sistema vs Reino"
-        
-      - arquivo: ontologia.yaml
-        proposito: "Atores (Maestro, Portador, Viajante)"
+  indice: {arquivo: index.yaml, desc: "Este arquivo"}
+  core:
+    - {arquivo: north_star.yaml, desc: "Propósito, princípios, vocabulário, ciclos K12"}
+    - {arquivo: guardioes.yaml, desc: "5 Guardiões dados visuais fixos"}
+    - {arquivo: locais.yaml, desc: "5 Locais atmosferas sensoriais"}
+    - {arquivo: climas.yaml, desc: "8 Climas + 4 Desafios atmosféricos"}
+    - {arquivo: origem_guardioes.yaml, desc: "Nevasca canonizada (SSOT Bernardo)"}
+    - {arquivo: padroes_narrativos.yaml, desc: "Regras narração (YAML Lean)"}
+    - {arquivo: curriculo_espiral.yaml, desc: "Progressão espiral K-12 (Bruner)"}
+  extensoes:
+    - {arquivo: evolucao_guardioes.yaml, desc: "Guardiões por ciclo K12"}
+    - {arquivo: artefatos.yaml, desc: "6 objetos simbólicos rituais"}
+    - {arquivo: viajante.yaml, desc: "Títulos Viajante por ciclo"}
 
-# ════════════════════════════════════════════════════════════════════════════════
 # NAVEGAÇÃO POR TAREFA
-# ════════════════════════════════════════════════════════════════════════════════
-
 navegacao:
-  
   criar_licao:
-    descricao: "Ao criar uma nova lição, consulte:"
-    sempre:
-      - guardioes.yaml
-      - locais.yaml
-      - padroes_narrativos.yaml
-    conforme_ciclo:
-      sementes:
-        - evolucao_guardioes.yaml#sementes
-        - viajante.yaml#herdeiro
-      raizes:
-        - evolucao_guardioes.yaml#raizes
-        - artefatos.yaml#diario_do_reino
-        - viajante.yaml#construtor
-      logica:
-        - evolucao_guardioes.yaml#logica
-        - artefatos.yaml#bussola_celeste
-        - viajante.yaml#explorador
-        - climas.yaml#desafios_atmosfericos
-      legado:
-        - evolucao_guardioes.yaml#legado
-        - artefatos.yaml#tocha_melquior
-        - viajante.yaml#portador_da_tocha
-        
-  revisar_licao:
-    descricao: "Ao revisar qualidade:"
-    sempre:
-      - north_star.yaml#propositos_por_ano
-      - glossario.yaml#termos_proibidos
-      - padroes_narrativos.yaml#checklist_qa
-      
-  entender_sistema:
-    descricao: "Para novos colaboradores:"
-    ordem:
-      - 1: "index.yaml (este arquivo)"
-      - 2: "north_star.yaml (propósito)"
-      - 3: "ontologia.yaml (quem é quem)"
-      - 4: "guardioes.yaml + locais.yaml (mundo narrativo)"
+    sempre: [guardioes.yaml, locais.yaml, padroes_narrativos.yaml]
+    por_ciclo:
+      sementes: [evolucao_guardioes.yaml#sementes, viajante.yaml#herdeiro]
+      raizes: [evolucao_guardioes.yaml#raizes, artefatos.yaml#diario_do_reino]
+      logica: [evolucao_guardioes.yaml#logica, artefatos.yaml#bussola_celeste]
+      legado: [evolucao_guardioes.yaml#legado, artefatos.yaml#tocha_melquior]
+  revisar_licao: {sempre: [north_star.yaml, padroes_narrativos.yaml]}
+  entender_sistema: {ordem: [index.yaml, north_star.yaml, guardioes.yaml, locais.yaml]}
 
-# ════════════════════════════════════════════════════════════════════════════════
-# MAPA DE CONEXÕES
-# ════════════════════════════════════════════════════════════════════════════════
-
-conexoes:
-  descricao: "Como os arquivos se relacionam"
-  
-  mapa: |
-    ┌─────────────────────────────────────────────────────────────────┐
-    │                         index.yaml                              │
-    │                      (PONTO DE ENTRADA)                         │
-    └───────────────────────────┬─────────────────────────────────────┘
-                                │
-            ┌───────────────────┼───────────────────┐
-            │                   │                   │
-            ▼                   ▼                   ▼
-    ┌───────────────┐   ┌───────────────┐   ┌───────────────┐
-    │  north_star   │   │  guardioes    │   │    locais     │
-    │  (princípios) │   │  (5 person.)  │   │  (5 lugares)  │
-    └───────────────┘   └───────┬───────┘   └───────────────┘
-                                │
-                                ▼
-                    ┌───────────────────────┐
-                    │  evolucao_guardioes   │
-                    │  (como falam/ciclo)   │
-                    └───────────────────────┘
-                    
-    Extensões:
-    ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
-    │  artefatos  │  │  viajante   │  │   climas    │
-    │  (objetos)  │  │  (títulos)  │  │  (atmosfera)│
-    └─────────────┘  └─────────────┘  └─────────────┘
-
-# ════════════════════════════════════════════════════════════════════════════════
-# REGRAS DO LORE
-# ════════════════════════════════════════════════════════════════════════════════
-
-regras:
+# DIRETRIZES ARQUITETURA
+diretrizes:
+  tamanho:
+    - {regra: "Coesão Semântica (Eric Evans)", principio: "Se mudam juntas, vivem juntas"}
+    - {regra: "Limite Linhas", ideal: 100-150, max: 200, excecao: "north_star até 350"}
+    - {regra: "Frequência Consulta", alta: "guardioes ~100 linhas", baixa: "padroes ~200"}
   ssot:
-    nome: "Single Source of Truth"
-    descricao: "Cada dado existe em UM arquivo apenas"
-    exemplo: "Dados do Melquior → guardioes.yaml, não duplicar"
-    
-  referencia:
-    nome: "Link, don't duplicate"
-    descricao: "Sempre referenciar, nunca copiar"
-    exemplo: "Template diz 'ver guardioes.yaml', não repete dados"
-    
-  evolucao:
-    nome: "Extensão, não modificação"
-    descricao: "Dados fixos em Core, evolução em Extensões"
-    exemplo: "Melquior fixo em guardioes.yaml, tom por ciclo em evolucao_guardioes.yaml"
+    - {regra: "Single Source of Truth", principio: "Cada dado em UM arquivo. Outros usam ref."}
+    - {regra: "Link don't duplicate", ex: "Template ref guardioes.yaml, não duplica dados"}
+  yaml_lean:
+    - {regra: "Inline objects", fmt: "{key: val, key2: val2}"}
+    - {regra: "Inline arrays", fmt: "[a, b, c]"}
+    - {regra: "ZERO separadores visuais", proibido: "═══, ───, ****"}
 
-# ════════════════════════════════════════════════════════════════════════════════
-# CHANGELOG
-# ════════════════════════════════════════════════════════════════════════════════
+# MAPA SSOT (Quem é Dono de Quê)
+mapa_ssot:
+  lore:
+    north_star: {dono: [Propósito, Princípios, Vocabulário, Ciclos K12], linhas: ~350}
+    guardioes: {dono: [Dados visuais 5 Guardiões], linhas: ~100}
+    origem_guardioes: {dono: [Nevasca, Lei Cicatriz, Evolução K12], linhas: ~130}
+    climas: {dono: [8 Climas, 4 Desafios atmosféricos], linhas: ~160}
+    locais: {dono: [5 Locais sensoriais], linhas: ~76}
+    artefatos: {dono: [6 Artefatos + Rituais transição], linhas: ~219}
+    padroes_narrativos: {dono: [Regras narração, Tom, Stage Directions], linhas: ~90}
+  bmad:
+    orchestrator: {path: .bmad/orchestrator.yaml, dono: [Modos, Vetos, Comandos]}
+    triade: {path: .bmad/expansion-packs/matematica-viva/triade.yaml, dono: [CM/CPA/TGTB, Ciclos CPA]}
+    workflows: {path: .bmad/workflows/, dono: [Fluxos trabalho]}
+  curriculo:
+    mestres: {path: curriculo/_SISTEMA/CURRICULOS_MESTRE/, dono: [Scope Sequence TGTB], status: IMUTAVEL}
 
-changelog:
-  - data: "2026-01-13"
-    versao: "1.0"
-    autor: Maestro
-    mudancas:
-      - "Criação do arquivo índice"
-      - "Definição das 3 camadas"
-      - "Mapa de navegação por tarefa"
+# REFERÊNCIAS CRUZADAS
+referencias_cruzadas:
+  triade.yaml: {ref_por: [orchestrator, north_star, workflows, regras]}
+  guardioes.yaml: {ref_por: [locais, climas, origem, padroes]}
+  north_star.yaml: {ref_por: [TODOS]}
+  CURRICULOS_MESTRE: {ref_por: [workflows], principio: "Não duplicar conteúdo"}
+
+# CHECKLIST REVISÃO
+checklist: [Sintaxe YAML válida?, SSOT respeitado?, YAML Lean aplicado?, North Star alinhado?]
+
+# PENDENTES
+pendentes:
+  - {arquivo: north_star.yaml, acao: "Remover separadores visuais", prioridade: ALTA}
+  - {arquivo: artefatos.yaml, acao: "Remover separadores visuais", prioridade: ALTA}
+  - {arquivo: templates, acao: "Verificar se precisam update Lean", prioridade: MEDIA}

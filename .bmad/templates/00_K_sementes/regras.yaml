@@ -1,314 +1,129 @@
-# ══════════════════════════════════════════════════════════════════════════════
-# REGRAS DO CICLO SEMENTES (K / 4-6 anos)
-# ══════════════════════════════════════════════════════════════════════════════
-# Decisão aprovada na Reunião de 13/01/2026 por unanimidade.
+# REGRAS SEMENTES — Ciclo K (4-6 anos) YAML Lean
+# Versão: 2.0 LEAN | 14/01/2026
+# Extends: .bmad/templates/000_global/licao-base.yaml
 
-id: regras_sementes
-tipo: ciclo_rules
-ciclo: sementes
-idade_alvo: "4-6 anos"
-serie_equivalente: "Jardim de Infância (K)"
-versao: "1.1"
+id: regras-sementes-v2
+versao: "2.0"
+ciclo: Sementes
+idade: "4-6 anos"
+viajante: Herdeiro
+frase_ciclo: "Os números são promessas do Rei"
 
-# ══════════════════════════════════════════════════════════════════════════════
-# REFERÊNCIAS LORE (SSOT)
-# ══════════════════════════════════════════════════════════════════════════════
+# TRÍADE PEDAGÓGICA (Ordem hierárquica)
+triade:
+  coordenador: Charlotte Mason
+  hierarquia: [CM (veto final), CPA (propositivo), TGTB (referência)]
+  refs: LORE/north_star.yaml#triade
 
-referencias_lore:
-  indice: "LORE/index.yaml"
-  
-  # Propósito narrativo do ano
-  proposito:
-    arquivo: "LORE/north_star.yaml#propositos_por_ano.K_sementes"
-    frase: "Os números são promessas do Rei."
-    
-  # Título do Viajante neste ciclo
-  viajante:
-    arquivo: "LORE/viajante.yaml#herdeiro"
-    titulo: "Herdeiro das Promessas"
-    como_tratar: "Pequeno Herdeiro ou nome da criança"
-    
-  # Tom dos Guardiões neste ciclo
-  tom_guardioes:
-    arquivo: "LORE/evolucao_guardioes.yaml#sementes"
-    tom_geral: "Encantamento paternal"
-    
-  # Artefatos
-  artefatos:
-    aplicavel: false
-    nota: "Em Sementes não há artefatos — só promessas verbais"
-    
-  # Desafios atmosféricos
-  desafios:
-    aplicavel: true
-    quando: "Lições difíceis, erros repetidos"
-    arquivo: "LORE/climas.yaml#desafios_atmosfericos"
+# REFERÊNCIAS SSOT (herda de licao-base.yaml)
+refs: {extends: .bmad/templates/000_global/licao-base.yaml#referencias_globais_ssot}
 
-# ══════════════════════════════════════════════════════════════════════════════
-# PROPORÇÕES CPA (Jerome Bruner)
-# ══════════════════════════════════════════════════════════════════════════════
+# ATMOSFERA (LORE)
+atmosfera:
+  climas: [ensolarado, nublado, ventoso, chuvoso, outonal, primaveril, crepusculo, estrelado]
+  locais: [jardim_central, arvore_silencio, clareira_perguntas, caverna_recomeco, ninho_mirante]
+  virtudes: [curiosidade, persistencia, atencao, paciencia, sabedoria, coragem, gratidao]
+  ref: LORE/climas.yaml
 
+# CPA (Jerome Bruner) — OPÇÃO D APROVADA 14/01/2026
+# Deliberação: logs/2026-01-14_0930_DELIBERACAO_CM_VS_CPA.md
 cpa:
+  filosofia: "CM LIDERA. Concreto NORTE absoluto. 'Se Quiser Voar' convite. Traçar no ar = ENATIVO."
   concreto:
-    minimo: 60
-    maximo: 80
-    descricao: "Manipulativos reais, toque, movimento"
+    minimo: 80
+    maximo: 100
+    desc: "NORTE ABSOLUTO. Manipulativos reais, toque, movimento."
     obrigatorio: true
-    exemplos:
-      - "Sementes, feijões, pedrinhas"
-      - "Dedos, brinquedos"
-      - "Objetos do ambiente"
-    
+    exemplos: [Sementes/feijões/pedrinhas, Dedos/brinquedos, Objetos ambiente]
+    tracar_no_ar: {permitido: true, tipo: ENATIVO, nota: "Traçar ar = concreto. Escrever papel = vetado."}
+    nota_cm: "CM lidera 'Things before Signs'. Bruner concorda: Enativo predomina 0-6."
   pictorico:
-    status: VETADO
-    excecao: "Apenas L000 (introdução) permite desenho do Herdeiro"
-    justificativa: |
-      Charlotte Mason: "Things before Signs"
-      A criança ainda está na fase de conhecer as COISAS reais.
-      Representações pictóricas abstraem cedo demais.
-    
+    status: VETADO_PADRAO
+    excecao: "'Se Quiser Voar' — apenas se criança pedir espontâneo"
+    just: "CM 'Things before Signs'. Pai NÃO oferece pictórico. Criança PEDIR = bônus."
   abstrato:
     maximo: 20
-    tipo: "Mínimo / Reconhecimento"
-    descricao: "Apenas reconhecimento visual do símbolo"
-    exemplos:
-      - "Desenhar número NO AR com o dedo"
-      - "Reconhecer o símbolo, não escrever"
-    proibido:
-      - "Escrever números no papel"
-      - "Fazer contas escritas"
-      - "Memorização de símbolos"
+    tipo: "Reconhecimento visual + traçar ar (enativo)"
+    permitido: [Traçar número ar (ENATIVO), Reconhecer símbolo visualmente, Ouvir nome número]
+    proibido: [Escrever papel, Contas escritas, Memorização forçada]
+  se_quiser_voar:
+    titulo: "Se Quiser Voar"
+    regra: "APENAS se olhos criança pedem MAIS. Pai NÃO sugere."
+    bonus: [Desenhar (se quiser), Traçar areia/mesa, Contar extras]
+    nota_cm: "Não force. Interesse espontâneo = prontidão."
 
-# ══════════════════════════════════════════════════════════════════════════════
 # TEMPO (Charlotte Mason)
-# ══════════════════════════════════════════════════════════════════════════════
-
 tempo:
-  licao:
-    minimo: 10
-    maximo: 20
-    ideal: 15
-    unidade: minutos
-    justificativa: |
-      CM: Hábito da Atenção. Lições curtas preservam a atenção.
-      "Short lessons secure the child's interest."
-    
-  preparo:
-    maximo: 5
-    unidade: minutos
-    justificativa: |
-      Hormozi: Esforço baixo para alta adesão.
-      "Se levar mais que 5 min, a mãe desiste."
+  licao: {min: 10, max: 20, ideal: 15, un: min, just: "CM Hábito Atenção. Lições curtas preservam atenção."}
+  preparo: {max: 5, un: min, just: "Hormozi: Esforço baixo alta adesão. >5min mãe desiste."}
 
-# ══════════════════════════════════════════════════════════════════════════════
 # SCAFFOLDING (Vygotsky)
-# ══════════════════════════════════════════════════════════════════════════════
-
 scaffolding:
   tipo: "Mão-na-mão"
-  descricao: |
-    O Portador FALA JUNTO com a criança.
-    Modela primeiro, depois faz junto, depois deixa tentar.
-    
-  exemplos:
-    - "Vamos contar JUNTOS: um, dois, três."
-    - "Segure minha mão enquanto contamos."
-    - "Olhe como eu faço, agora você."
-    
-  proibido:
-    - "Esperar que a criança descubra sozinha"
-    - "Dar instruções e deixar fazer"
-    - "Productive struggle prolongado"
-    
-  erro_tratamento: |
-    "Mais uma vez. Comigo." (Bernardo)
-    Nunca dizer "errado". Sempre: "Vamos de novo."
+  desc: "Portador FALA JUNTO. Modela → faz junto → deixa tentar."
+  exemplos: ["Vamos contar JUNTOS: um, dois, três", "Segure minha mão contamos", "Olhe como faço, agora você"]
+  proibido: [Esperar descobra sozinha, Dar instruções deixar fazer, Productive struggle prolongado]
+  erro: "'Mais uma vez. Comigo.' (Bernardo). Nunca 'errado'. Sempre 'Vamos de novo.'"
 
-# ══════════════════════════════════════════════════════════════════════════════
 # TOM (C.S. Lewis)
-# ══════════════════════════════════════════════════════════════════════════════
-
 tom:
   principal: "Encantamento mágico"
-  palavra_chave: "Maravilha"
-  descricao: |
-    A criança entra em um mundo de mistério e beleza.
-    O tom é de segredo compartilhado, não de instrução.
-    
-  lewis_check: |
-    "Never be within the child's mental range."
-    NUNCA infantilizar. A criança sente quando é subestimada.
-    
-  proibido:
-    - "Muito bem!" (condescendente)
-    - "Que fofo!" (diminui)
-    - "Agora a tia vai ensinar..." (quebra imersão)
-    - Explicações excessivas (abstrai demais)
-    
-  permitido:
-    - Mistério: "Quer descobrir um segredo?"
-    - Convite: "Vem comigo, pequeno Herdeiro."
-    - Maravilha: "Olha o que o Rei deixou para você..."
+  check_lewis: "Never be within child's mental range. NUNCA infantilizar."
+  proibido: ["Muito bem!", "Que fofo!", "Agora tia ensina...", Explicações excessivas]
+  permitido: ["Quer descobrir segredo?", "Vem comigo Herdeiro", "Olha o que Rei deixou..."]
 
-# ══════════════════════════════════════════════════════════════════════════════
 # DENSIDADE SENSORIAL (Beatrix Potter)
-# ══════════════════════════════════════════════════════════════════════════════
+sensorial:
+  elementos_paragrafo: 1
+  desc: "Em Sementes, UMA coisa sensorial por vez. Criança processa devagar."
+  ordem: [Cheiro (evocativo), Luz/Cor (visual), Temperatura (corporal), Som (relevante)]
+  correto: "O ar cheira a musgo fresco."
+  errado: "O ar cheira musgo enquanto vento frio toca rosto e água corre longe."
 
-densidade_sensorial:
-  elementos_por_paragrafo: 1
-  descricao: |
-    Em Sementes, descrevemos UMA coisa sensorial por vez.
-    A criança processa devagar e profundamente.
-    
-  exemplos:
-    correto: "O ar cheira a musgo fresco."
-    errado: "O ar cheira a musgo fresco enquanto o vento frio toca seu rosto e você ouve água correndo ao longe."
-    
-  ordem_preferida:
-    - "Cheiro (mais evocativo)"
-    - "Luz/Cor (visual simples)"
-    - "Temperatura (corporal)"
-    - "Som (quando relevante)"
-
-# ══════════════════════════════════════════════════════════════════════════════
 # MATERIAIS (Mães Personas)
-# ══════════════════════════════════════════════════════════════════════════════
-
 materiais:
   regra: "Materiais devem estar NA COZINHA da mãe."
-  
   permitidos:
-    - categoria: "Cozinha"
-      exemplos: ["Feijões", "Macarrão", "Colheres", "Pratos"]
-    - categoria: "Jardim"
-      exemplos: ["Pedrinhas", "Folhas", "Gravetos", "Flores"]
-    - categoria: "Casa"
-      exemplos: ["Botões", "Moedas", "Brinquedos", "Meias"]
-    - categoria: "Corpo"
-      exemplos: ["Dedos", "Mãos", "Pés", "Olhos"]
-      
-  evitar:
-    - "Materiais caros de loja de educação"
-    - "Impressões coloridas obrigatórias"
-    - "Kits especiais para comprar"
-    
-  selos_verificar:
-    - "📱 Mobile-Friendly"
-    - "🫘 Materiais Caseiros"
-    - "🗣️ Linguagem Clara"
-    - "⏱️ 5 Minutos de Preparo"
-    - "♿ Instruções Acessíveis"
-    - "💡 Nota de Adaptação"
+    - {cat: Cozinha, ex: [Feijões, Macarrão, Colheres, Pratos]}
+    - {cat: Jardim, ex: [Pedrinhas, Folhas, Gravetos, Flores]}
+    - {cat: Casa, ex: [Botões, Moedas, Brinquedos, Meias]}
+    - {cat: Corpo, ex: [Dedos, Mãos, Pés, Olhos]}
+  evitar: [Materiais caros loja educação, Impressões coloridas obrigatórias, Kits especiais]
+  selos: [📱 Mobile-Friendly, 🫘 Materiais Caseiros, 🗣️ Linguagem Clara, ⏱️ 5min Preparo, ♿ Acessíveis, 💡 Nota Adaptação]
 
-# ══════════════════════════════════════════════════════════════════════════════
 # NARRAÇÃO (Charlotte Mason)
-# ══════════════════════════════════════════════════════════════════════════════
-
 narracao:
   obrigatorio: true
-  metodo: |
-    Ao final da lição, a criança CONTA o que descobriu.
-    Princípio 14: Narração é o método de avaliação.
-    
-  perguntas_tipo:
-    - "O que você descobriu hoje?"
-    - "O que você contaria para [pessoa querida]?"
-    - "Qual foi a parte mais legal?"
-    
-  regras:
-    - "NUNCA interrompa a criança"
-    - "Espere até ela terminar"
-    - "Se não quiser falar: 'Tudo bem, seu coração guardou.'"
-    
-  tempo_espera: |
-    Conte até 10 internamente antes de ajudar.
-    O silêncio é parte do processamento.
+  metodo: "Final lição criança CONTA o que descobriu. CM Princípio 14."
+  perguntas: ["O que descobriu hoje?", "O que contaria para [pessoa]?", "Qual parte mais legal?"]
+  regras: [NUNCA interrompa, Espere terminar, "Se não quiser: 'Tudo bem coração guardou'"]
+  tempo_espera: "Conte até 10 interno. Silêncio = processamento."
 
-# ══════════════════════════════════════════════════════════════════════════════
-# ADAPTAÇÃO BERNARDO
-# ══════════════════════════════════════════════════════════════════════════════
-
+# ADAPTAÇÃO BERNARDO (Inclusão)
 adaptacao_bernardo:
   obrigatorio: true
-  descricao: |
-    Toda lição deve incluir nota de adaptação para crianças
-    com necessidades especiais (motoras, cognitivas, sensoriais).
-    
-  locais_obrigatorios:
-    - "Seção concreto"
-    - "Seção extensão (se houver movimento)"
-    
-  formato: |
-    💡 **Para crianças com realidades diferentes:**
-    - [adaptação 1]
-    - [adaptação 2]
-    - "Bernardo nos ensina que caminhos diferentes também chegam lá."
-    
-  exemplos_adaptacao:
-    - original: "Pegue as sementes"
-      adaptacao: "Se não consegue segurar, aponte"
-    - original: "Pule 3 vezes"
-      adaptacao: "Faça 3 sons (voz, palma, mesa)"
-    - original: "Desenhe"
-      adaptacao: "Você desenha enquanto ela olha"
+  locais: [concreto, extensao]
+  formato: "💡 Para crianças realidades diferentes: [adapt]. Bernardo ensina caminhos diferentes também chegam."
+  exemplos:
+    - {orig: "Pegue sementes", adapt: "Se não segura, aponte"}
+    - {orig: "Pule 3 vezes", adapt: "Faça 3 sons (voz, palma, mesa)"}
+    - {orig: "Desenhe", adapt: "Você desenha enquanto ela olha"}
 
-# ══════════════════════════════════════════════════════════════════════════════
 # GUARDIÕES (Tolkien)
-# ══════════════════════════════════════════════════════════════════════════════
-
 guardioes:
-  regra: |
-    Em Sementes, os Guardiões são apresentados PELA PRIMEIRA VEZ.
-    O tom é de encantamento e descoberta.
-    
-  celeste:
-    frequencia: "Alta (curiosidade é chave em K)"
-    uso: "Lições de exploração, contagem, padrões"
-    
-  bernardo:
-    frequencia: "Alta (persistência e inclusão)"
-    uso: "Lições com erro produtivo, adaptações"
-    
-  melquior:
-    frequencia: "Média (abertura/fechamento)"
-    uso: "Rituais, transições, sabedoria"
-    
-  noe:
-    frequencia: "Baixa-Média (paciência)"
-    uso: "Lições que precisam de espera, respiração"
-    
-  iris:
-    frequencia: "Baixa-Média (atenção a detalhes)"
-    uso: "Lições de observação, beleza, padrões visuais"
+  regra: "Em Sementes, Guardiões apresentados PRIMEIRA VEZ. Tom encantamento."
+  frequencias:
+    - {id: celeste, freq: Alta, uso: "Exploração, contagem, padrões"}
+    - {id: bernardo, freq: Alta, uso: "Erro produtivo, adaptações"}
+    - {id: melquior, freq: Media, uso: "Rituais, transições, sabedoria"}
+    - {id: noe, freq: Baixa-Media, uso: "Espera, respiração"}
+    - {id: iris, freq: Baixa-Media, uso: "Observação, beleza, padrões visuais"}
+  ref: LORE/guardioes.yaml
 
-# ══════════════════════════════════════════════════════════════════════════════
-# CHECKLIST QA SEMENTES
-# ══════════════════════════════════════════════════════════════════════════════
-
-checklist_qa:
-  cm:
-    - "Criança tratada como pessoa capaz?"
-    - "Lição ≤ 20 min?"
-    - "Narração incluída?"
-    - "Ideia Viva presente (não explicada)?"
-    
-  cpa:
-    - "Concreto ≥ 60%?"
-    - "Pictórico VETADO (exceto L000)?"
-    - "Abstrato mínimo (só reconhecimento)?"
-    
-  ux:
-    - "Preparo ≤ 5 min?"
-    - "Materiais caseiros?"
-    - "Mobile-friendly?"
-    - "Linguagem sem jargão?"
-    
-  inclusao:
-    - "Adaptação Bernardo presente?"
-    - "Instruções acessíveis?"
-    
-  narrativa:
-    - "Transição sensorial?"
-    - "Tom indicado?"
-    - "Pausas explícitas?"
-    - "Frase canônica do Guardião?"
+# CHECKLIST QA
+checklist:
+  cm: [Criança pessoa?, Lição ≤20min?, Narração?, Ideia Viva?]
+  cpa: [Concreto ≥80%?, Pictórico VETADO?, Abstrato mínimo?]
+  ux: [Preparo ≤5min?, Materiais caseiros?, Mobile?, Sem jargão?]
+  inclusao: [Adaptação Bernardo?, Instruções acessíveis?]
+  narrativa: [Transição sensorial?, Tom indicado?, Pausas?, Frase canônica Guardião?]

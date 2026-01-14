@@ -1,0 +1,512 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# 🌱 LIÇÃO 001 — A TRINDADE NA PALMA (V5 Premium)
+# ══════════════════════════════════════════════════════════════════════════════
+# Números 1, 2 e 3 — Cada número é uma promessa do Rei
+# Versão: 5.0 (Pipeline YAML → PDF)
+
+licao:
+  metadados:
+    id: MV-S-001
+    titulo: "A Trindade na Palma"
+    fase: Sementes
+    trimestre: 1
+    tipo: "Senso Numérico"
+    guardiao_lider: Celeste
+    guardiao_secundario: Melquior
+    guardioes_apresentados: [Celeste, Melquior]
+    tgtb_ref: "000-L1 - Numbers 1 to 3"
+    status: canonico
+    versao: "5.0"
+    
+  ideia_viva:
+    frase: "Três sementes de carvalho encontradas pela Raposa: uma para cada promessa do Rei."
+    conceito_matematico: "Contagem de 1 a 3 — reconhecimento e correspondência um-a-um"
+    intencao_cm: |
+      Esta lição ensina que "um, dois, três" não são apenas palavras.
+      São PROMESSAS — cada número é uma criatura viva, uma palavra do Rei.
+      Charlotte Mason: "Each number is a living thing, not a mere sign."
+      O trabalho mental acontece quando a criança toca, conta e VIVE os números.
+    
+  atmosfera:
+    clima: ensolarado
+    clima_descricao: |
+      O sol da manhã brilha sobre a Clareira das Perguntas. 
+      O ar cheira a folhas secas e terra aquecida.
+      Uma brisa suave faz as folhas do carvalho sussurrarem segredos.
+    local: clareira_das_perguntas
+    local_descricao: |
+      Uma clareira circular cercada de carvalhos antigos.
+      No centro, um tronco caído serve de banco natural.
+      Sementes de carvalho (bolotas) estão espalhadas pelo chão.
+    virtude: curiosidade
+    artefato: "Três sementes (feijões, bolotas ou pedrinhas)"
+    
+  linkage:
+    elo_anterior:
+      licao_id: "MV-S-000"
+      gancho: |
+        Na lição anterior, você conheceu os cinco Guardiões do Reino.
+        Hoje, Celeste vai te mostrar os primeiros tesouros numéricos!
+    proximo_passo:
+      licao_id: "MV-S-002"
+      gancho: |
+        Na próxima jornada, Bernardo vai precisar de ajuda para
+        organizar pedras na sua Fortaleza. Guarde suas sementes!
+      
+  preparacao:
+    tempo_licao: "15-20 min"
+    tempo_preparo: "≤ 3 min"
+    materiais:
+      - item: "Três sementes, feijões ou pedrinhas"
+        quantidade: 3
+        alternativa: "Botões, tampinhas, brinquedinhos"
+        essencial: true
+      - item: "Tapete do Reino (toalha ou cobertor)"
+        quantidade: 1
+        alternativa: "Qualquer superfície especial"
+        essencial: true
+      - item: "Luz especial (abajur, vela LED, lanterna)"
+        quantidade: 1
+        alternativa: "Luz de janela"
+        essencial: true
+        
+  para_o_portador:
+    dica_de_coracao: |
+      Hoje você vai apresentar os números 1, 2 e 3.
+      Mas não como símbolos mortos — como promessas vivas!
+      Respire. Você não precisa ser perfeito.
+      A magia está no encontro, não na performance.
+    
+    protocolo_impecabilidade: |
+      NÃO EXPLIQUE os números. MOSTRE-OS.
+      A criança TOCA uma semente, depois duas, depois três.
+      Você conta JUNTO, não PARA ela.
+      "Mão-na-mão" é o método de Vygotsky para crianças desta idade.
+      
+    audio_script: |
+      [Para o Pai ouvir/ler antes de chamar o filho:]
+      "Sossegue o coração. Hoje Celeste vai conduzir.
+      Você é apenas o mensageiro. Separe as três sementes
+      e coloque-as no bolso. Quando Celeste pedir,
+      você as entrega como quem entrega um tesouro."
+    
+    o_que_seu_filho_vai_descobrir: |
+      Que os números 1, 2 e 3 são REAIS — você pode tocá-los.
+      Cada número é uma promessa do Rei para a criação.
+      
+    nota_de_graca: |
+      Se seu filho contar errado ou perder a atenção, sorria.
+      A semente foi plantada. No método CM, repetição nunca é falha.
+      Volte amanhã com alegria, não com cobrança.
+       
+  ritual_abertura:
+    instrucao_ambiente: |
+      Sentem-se no Tapete do Reino. Deixe as três sementes
+      escondidas no seu bolso ou atrás de você.
+      Diminua as luzes da sala.
+      
+    transicao_para_o_reino: |
+      Acenda a luz especial. Peça para a criança fechar os olhos.
+      Quando abrir, já estará na Clareira das Perguntas.
+      
+    fala_portador:
+      tom: misterioso
+      script: |
+        [Tom de mistério — voz baixa e animada]
+        
+        "Feche os olhos, pequeno Herdeiro..."
+        
+        "Sente esse cheiro? É cheiro de folhas secas e sol quente."
+        "Ouça... as folhas do carvalho estão sussurrando."
+        
+        [Pausa de 3 segundos]
+        
+        "Quando abrir os olhos, estaremos na Clareira das Perguntas."
+        "Celeste está te esperando lá."
+        
+        "Pode abrir."
+         
+    card_guardiao: "[CARD: CELESTE]"
+    
+  jornada:
+    abertura_sensorial: |
+      🦊 O sol atravessa as folhas dos carvalhos gigantes.
+      O ar está quente e cheira a terra seca.
+      
+      No centro da clareira, uma raposa cor de fogo está sentada.
+      Seus olhos brilham como brasa. O focinho está erguido,
+      farejando algo no ar.
+      
+      Celeste levanta a cabeça e sorri.
+       
+    narrativa_principal:
+      cena_1_celeste_encontra:
+        local: "Clareira das Perguntas"
+        descricao: |
+          [Tom de voz animado e curioso, como quem conta uma descoberta]
+          
+          Celeste:
+          "Herdeiro! Você veio! Eu estava te esperando!"
+          
+          "Sabe o que eu encontrei hoje de manhã?
+          Um tesouro escondido debaixo daquele carvalho!"
+          
+          [A Raposa aponta para o chão com o focinho]
+          
+          "Quer ver? Me ajuda a contar o que eu achei?"
+        card_guardiao: "[CARD: CELESTE]"
+        
+      cena_2_primeira_semente:
+        local: "Clareira das Perguntas"
+        descricao: |
+          [Portador: tire UMA semente do bolso e entregue]
+          
+          Celeste:
+          "Olha! Uma semente. Só UMA."
+          
+          "Sente ela na sua mão. É pesada ou leve?"
+          "Redonda ou pontuda?"
+          
+          [Pausa — deixe a criança sentir]
+          
+          "UM. A primeira promessa do Rei."
+          "O Rei disse 'Um' e surgiu a primeira luz."
+        instrucao_portador: "Entregue UMA semente. Deixe a criança explorar."
+        
+      cena_3_segunda_semente:
+        local: "Clareira das Perguntas"
+        descricao: |
+          [Portador: tire a SEGUNDA semente]
+          
+          Celeste:
+          "Espera... tem mais uma aqui!"
+          
+          "Agora você tem DUAS. Uma e mais uma."
+          
+          [Conte junto com a criança, apontando]
+          "Uma... duas."
+          
+          "DOIS. A segunda promessa do Rei."
+          "O Rei disse 'Dois' e a luz ganhou uma amiga: a sombra."
+        instrucao_portador: "Entregue a segunda. Conte JUNTO: 'uma... duas.'"
+        
+      cena_4_terceira_semente:
+        local: "Clareira das Perguntas"
+        descricao: |
+          [Portador: tire a TERCEIRA semente]
+          
+          Celeste:
+          "E olha só! Mais UMA escondida!"
+          
+          "Agora você tem TRÊS. A família completa!"
+          
+          [Conte junto, tocando cada semente]
+          "Uma... duas... três."
+          
+          "TRÊS. A terceira promessa do Rei."
+          "O Rei disse 'Três' e nasceu a família."
+          
+          "Pai, mãe e filho. Sol, lua e estrela."
+          "Três é sempre uma família."
+        instrucao_portador: "Entregue a terceira. Conte JUNTO tocando cada uma."
+         
+    concreto:
+      descricao: |
+        Celeste:
+        "Agora vamos brincar! Esconde as sementes 
+        atrás das suas costas..."
+        
+        "Agora me mostra UMA."
+        [Espere. Depois:]
+        "Me mostra DUAS."
+        [Espere. Depois:]
+        "Me mostra TRÊS!"
+        
+        "Perfeito! Você é um guardião de tesouros!"
+      card_objeto: "[CARD: SEMENTES]"
+      instrucoes_portador:
+        - passo: 1
+          acao: "Peça para esconder as sementes atrás das costas"
+          fala_sugerida: "'Esconde o tesouro! Celeste vai pedir...'"
+        - passo: 2
+          acao: "Peça 'me mostra UMA'"
+          fala_sugerida: "'Celeste quer ver só UMA semente.'"
+        - passo: 3
+          acao: "Peça 'me mostra DUAS'"
+          fala_sugerida: "'Agora Celeste quer ver DUAS!'"
+        - passo: 4
+          acao: "Peça 'me mostra TRÊS'"
+          fala_sugerida: "'E agora... TODAS AS TRÊS!'"
+      tempo_minimo: "80%+ da lição (NORTE ABSOLUTO)"
+      nota_cm: |
+        OPÇÃO D APROVADA: Concreto é NORTE ABSOLUTO (80-100%).
+        A criança TOCA, MOVE, MANIPULA. Se errar, conte junto.
+        "Mais uma vez. Comigo." (método Bernardo)
+        Traçar no ar = ENATIVO (conta como concreto).
+        
+      adaptacao_bernardo: |
+        💡 **Para crianças com realidades diferentes:**
+        - Se não consegue segurar, coloque as sementes na frente dela
+        - Se não consegue apontar, VOCÊ mostra e ela confirma com os olhos
+        - Se tem dificuldade visual, deixe ela sentir com as duas mãos
+        - "Bernardo nos ensina que caminhos diferentes também chegam lá."
+         
+    pictorico:
+      vetado: true
+      motivo: |
+        Em Sementes, o pictórico é vetado (exceto L000).
+        Charlotte Mason: "Things before Signs" — Coisas antes de signos.
+        A criança ainda está conhecendo os números como COISAS reais.
+        
+    abstrato:
+      descricao: |
+        Celeste:
+        "Quer ver como o número 3 parece quando a gente TRAÇA?"
+        
+        [TRACE um 3 no ar com o dedo — ENATIVO, não abstrato]
+        
+        "Olha! Parece duas orelhinhas de coelho!"
+        "Traça junto comigo no ar..."
+        
+        [Tracem juntos o formato do 3 no ar — movimento corporal]
+      instrucoes_portador:
+        - acao: "Desenhe o número 3 no ar com o dedo"
+          fala_sugerida: "'Olha, dois arcos... parecem orelhinhas!'"
+        - acao: "Convide a criança a fazer junto"
+          fala_sugerida: "'Faz comigo! No ar...'"
+      nota_cm: |
+        Abstrato em Sementes = reconhecimento visual apenas.
+        NÃO peça para escrever no papel.
+        O símbolo é "apresentado como amigo", não como tarefa.
+         
+    extensao:
+      titulo: "A Dança das Três Sementes (Via do Corpo)"
+      descricao: |
+        Só continue se os olhos da criança pedirem "MAIS!".
+        Se parecer satisfeita, pule para a narração.
+      sugestoes:
+        - titulo: "Pula UMA vez"
+          acao: "Pule uma vez juntos dizendo 'UM!'"
+        - titulo: "Pula DUAS vezes"
+          acao: "Pulem duas vezes dizendo 'UM! DOIS!'"
+        - titulo: "Pula TRÊS vezes"
+          acao: "Pulem três vezes dizendo 'UM! DOIS! TRÊS!'"
+      
+      adaptacao_bernardo: |
+        💡 **Para crianças com realidades diferentes:**
+        - Se não pode pular, bata palmas (1, 2, 3)
+        - Se não pode bater palmas, balance a cabeça
+        - Se não pode se mover, faça sons com a boca
+        - O NÚMERO de repetições é a ideia — o TIPO de movimento pode variar.
+       
+  narracao:
+    instrucao_portador: |
+      Guarde as sementes. Olhe nos olhos da criança.
+      Dê tempo. O silêncio é parte do trabalho mental.
+    pergunta_principal: |
+      Celeste pergunta:
+      "Herdeiro, o que você descobriu hoje na Clareira?"
+      "O que você contaria para o Melquior sobre os tesouros?"
+      
+      [Pausa — respeite solenemente o tempo da criança]
+    perguntas_do_coracao:
+      - "Qual número você mais gostou? O um, o dois ou o três?"
+      - "Se você pudesse dar uma semente para alguém, quem seria?"
+      - "Você lembra quantas sementes a gente encontrou?"
+    nota_cm: |
+      Narração é o método de Charlotte Mason para fixação.
+      A criança processa internamente e depois externaliza.
+      NUNCA interrompa. Espere. Conte até 10 internamente se precisar.
+      Se ela não quiser falar, diga: "Tudo bem. Seu coração guardou."
+       
+  ritual_fechamento:
+    fala_guardiao:
+      tom: grato
+      script: |
+        Celeste:
+        [A Raposa inclina a cabeça em agradecimento]
+        
+        "Herdeiro, você cuidou bem dos tesouros hoje!"
+        
+        "Guarde UMA semente no seu bolso."
+        "Amanhã, Bernardo vai precisar de ajuda na Forja."
+        "Ele está construindo uma muralha e precisa de pedras organizadas!"
+        
+        "Até a próxima aventura, pequeno contador de tesouros!"
+        
+    fio_de_ouro: |
+      A criança guarda UMA das sementes.
+      Ela será usada na próxima lição (L002 — Bernardo e as Pedras).
+      Diga: "Esta semente é sua. Cuide dela até a próxima jornada."
+      
+    transicao_de_volta:
+      instrucao: |
+        Apaguem a luz especial juntos.
+        Aumentem a luz da sala de volta ao normal.
+      fala_portador: |
+        "O Reino adormece, mas o tesouro continua no seu bolso."
+        "Um, dois, três — promessas do Rei."
+        
+        "Até a próxima jornada."
+         
+  catedra_dos_pais:
+    metodo_cpa: |
+      **Concreto (80%+):** NORTE ABSOLUTO. Sementes reais na mão,
+      manipulação física, contagem tátil. A criança TOCOU os números.
+      
+      **Traçar no ar:** Conta como ENATIVO (movimento corporal),
+      não como abstrato. O corpo sente a forma.
+      
+      **Pictórico (0%):** Vetado em Sementes. "Se Quiser Voar" = bônus opcional.
+      
+      **Abstrato (≤20%):** Reconhecimento visual apenas.
+      Nenhuma escrita no papel.
+      
+    principio_cm: |
+      > "A criança deve conhecer as COISAS antes dos SIGNOS."
+      > — Charlotte Mason, adaptado de Pestalozzi
+      
+      Hoje seu filho não aprendeu "o número 3". Ele CONHECEU o três.
+      Sentiu seu peso, sua forma, sua presença. O símbolo veio depois,
+      como um nome dado a um amigo.
+      
+    reflexao_espiritual: |
+      "No princípio era o Verbo..." e Deus CONTOU a criação.
+      Um, dois, três — como quem conta promessas.
+      Quando seu filho conta, ele participa do ritmo da Criação.
+      Os números não são ferramentas — são linguagem do Criador.
+      
+    nota_de_graca: |
+      Se seu filho misturou "dois" e "três", não houve perda.
+      A correspondência um-a-um leva tempo para amadurecer.
+      O importante é que ele BRINCOU com os números.
+      Volte amanhã com alegria. As sementes estão plantadas.
+       
+  sugestoes:
+    - guardiao: Celeste
+      emoji: "🦊"
+      dica: |
+        "A criança aprende mais com mistério do que com explicação.
+        Não diga 'agora vamos aprender o número dois'.
+        Diga 'olha o que Celeste encontrou!'"
+      sugestao: |
+        Esconda as sementes em lugares diferentes da casa.
+        "Celeste escondeu um tesouro! Quantos você achou?"
+        
+    - guardiao: Noé
+      emoji: "🦉"
+      dica: |
+        "Se a criança estiver agitada, não force a contagem.
+        Deixe ela segurar as sementes em silêncio primeiro.
+        Noé sussurra: 'O número não vai fugir.'"
+      sugestao: |
+        Use um triângulo ou sino antes de começar.
+        O som cria uma "porta sonora" para a calma.
+        
+    - guardiao: Bernardo
+      emoji: "🐻"
+      dica: |
+        "Se a criança errar, nunca diga 'errado'.
+        Diga: 'Mais uma vez. Comigo.'
+        Bernardo nos ensina que o erro é polimento."
+      sugestao: |
+        Se ela contar errado, segure a mão dela e conte junto.
+        Mão-na-mão é o método de Sementes.
+        
+    - guardiao: Melquior
+      emoji: "🦁"
+      dica: |
+        "Você não está ensinando matemática.
+        Está plantando uma semente de maravilhamento.
+        O fruto vem depois. Confie no processo."
+      sugestao: |
+        Use sua voz como instrumento: animada para Celeste,
+        calma para Noé, firme para Bernardo.
+       
+  diario_portador:
+    descricao: |
+      Este espaço é para VOCÊ, Portador.
+      Anote após aplicar a lição.
+    campos:
+      - pergunta: "Como meu filho reagiu hoje?"
+        espaco: "_________________________________________________"
+      - pergunta: "Ele conseguiu contar até 3 sozinho?"
+        espaco: "_________________________________________________"
+      - pergunta: "O que posso ajustar na próxima?"
+        espaco: "_________________________________________________"
+      - pergunta: "Algo surpreendente?"
+        espaco: "_________________________________________________"
+        
+  auditoria_qa:
+    verificacao_cm:
+      - check: "Criança tratada como pessoa?"
+        status: true
+      - check: "Ideia Viva presente e encantadora?"
+        status: true
+      - check: "Narração incluída?"
+        status: true
+      - check: "Lição ≤ 20 min?"
+        status: true
+      - check: "Hábito da Atenção estimulado?"
+        status: true
+    verificacao_cpa:
+      - check: "Concreto ≥ 60%?"
+        status: true
+      - check: "Pictórico vetado?"
+        status: true
+      - check: "Abstrato mínimo?"
+        status: true
+    verificacao_narrativa:
+      - check: "Frase canônica do guardião?"
+        status: true
+      - check: "Tom Lewis (dignidade)?"
+        status: true
+      - check: "Consistência Tolkien?"
+        status: true
+      - check: "Cores Potter (naturais)?"
+        status: true
+    verificacao_inclusao:
+      - check: "Adaptação Bernardo presente?"
+        status: true
+      - check: "Instruções acessíveis?"
+        status: true
+    verificacao_template:
+      - check: "Todas seções obrigatórias?"
+        status: true
+      - check: "Linkage L000 → L002?"
+        status: true
+      - check: "Atmosfera única e sensorial?"
+        status: true
+    verificacao_triade:
+      - check: "CM (Nível 1): Narração presente?"
+        status: true
+      - check: "CM (Nível 1): Lição ≤ 20 min?"
+        status: true
+      - check: "CPA (Nível 2): Concreto ≥ 60%?"
+        status: true
+      - check: "CPA (Nível 2): Pictórico VETADO?"
+        status: true
+      - check: "TGTB (Nível 3): Ref 000-L1 válida?"
+        status: true
+      - check: "VR-003: Sem over_explanation?"
+        status: true
+
+# ══════════════════════════════════════════════════════════════════════════════
+# LORE APRENDIDO DESTA LIÇÃO
+# ══════════════════════════════════════════════════════════════════════════════
+
+lore_extraido:
+  conceito_numero_como_promessa: |
+    "Cada número é uma promessa do Rei."
+    1 = primeira luz
+    2 = luz e sombra (par)
+    3 = família completa
+    
+  frase_canonica_celeste: |
+    "Quer ver o que eu encontrei?"
+    "Sente o cheiro de aventura?"
+    
+  metodo_sementes_contagem: |
+    Mão-na-mão: Portador conta JUNTO, não PARA.
+    Erro: "Mais uma vez. Comigo." (Bernardo)
+    Silêncio: "O número não vai fugir." (Noé)
