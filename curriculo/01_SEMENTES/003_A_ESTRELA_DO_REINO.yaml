@@ -1,0 +1,112 @@
+# LIÇÃO 003 — A ESTRELA DO REINO (Números 4 e 5)
+# id: MV-S-003
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-003
+titulo: "A Estrela do Reino"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Íris
+guardiao_secundario: Bernardo
+tgtb_ref: "000-L3 - Numbers 4 to 5"
+status: final
+
+ideia_viva:
+  frase: "A Pequena Pardal avista do alto uma flor roxa de cinco pontas."
+  conceito: "Números 4 e 5. Contagem intuitiva (subitizing) e sequencial."
+  intencao_cm: "Atenção ao detalhe. Ver a geometria sagrada na natureza."
+
+atmosfera:
+  clima: "primaveril"
+  clima_desc: "Brisa leve, cheiro de lavanda. O sol pinta o chão de luz."
+  local: "ninho_mirante"
+  local_desc: "O ponto mais alto do jardim. Dá para ver tudo pequeno lá embaixo."
+  virtude: "atencao"
+  artefato: "Uma flor de 5 pétalas (real, tecido ou papel) e pedrinhas."
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-002", gancho: "Bernardo construiu o muro forte. Mas Íris viu algo nascendo perto da pedra..."}
+  proximo: {licao_id: "MV-S-004", gancho: "Tudo tem sua hora de nascer. Noé sabe a hora certa."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min"
+  materiais:
+    - {item: "Flor com 5 pétalas (desenho ou real)", qtd: 1, alt: "Estrela do mar ou estrela de papel", essencial: true}
+    - {item: "5 pedrinhas ou sementes da L001", qtd: 5, alt: null, essencial: true}
+    - {item: "Quadro de Dez (opcional)", qtd: 1, alt: null, essencial: false}
+    - {item: "Card: ÍRIS", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "Íris nos ensina a parar e olhar. Não tenha pressa de contar 'um, dois...'. Deixe a criança admirar a beleza do 5 primeiro."
+  filho_descobre: "Que o número 5 é uma 'estrela'. Que está na mão e na flor."
+  nota_graca: "Se não tiver flor, use a própria mão da criança. É a estrela mais perfeita."
+
+ritual_abertura:
+  instrucao_ambiente: "Sente-se perto de uma janela se possível. Traga a flor escondida."
+  transicao_reino: "Feche os olhos. Sinta o vento no rosto. Estamos subindo... alto, muito alto."
+  fala_portador: {tom: "suave e sussurrado", script: "Estamos no Ninho Mirante. Tudo parece pequeno aqui embaixo."}
+  card_guardiao: "CARD: ÍRIS (Pardal)"
+  fala_guardiao: {tom: "doce e rápido", script: "Psiu... olhe bem. A beleza está no detalhe. Você viu o que nasceu perto da pedra?"}
+
+jornada:
+  abertura_sensorial: "Mostre a Flor (ou Estrela). 'Olha essa cor... olha o formato. Parece uma estrela que caiu do céu.'"
+  
+  concreto:
+    desc: "Contando pétalas com Íris."
+    card_objeto: "FLOR DE 5 PÉTALAS"
+    passos:
+      - {n: 1, acao: "Peça para a criança tocar uma pétala.", fala: "Íris pousou aqui. Uma."}
+      - {n: 2, acao: "Toque as outras contando.", fala: "Duas, três, QUATRO... e CINCO."}
+      - {n: 3, acao: "Mostre a mão aberta ao lado da flor.", fala: "Olha sua mão! Coloque em cima da flor. Encaixa?"}
+      - {n: 4, acao: "Conte os dedos.", fala: "Um, dois, três, quatro, CINCO. Você tem uma estrela na mão!"}
+    tempo: "80%+ (Observação e Toque)"
+    adaptacao_bernardo: "Se a criança tiver dificuldade de contar dedos, ponha uma pedrinha em cima de cada dedo desenhado no papel."
+    
+  pictorico: {status: VETADO, motivo: "Sementes = Concreto."}
+  
+  abstrato:
+    desc: "Traçando o 4 e o 5 no ar."
+    card: "CARD: NÚMEROS 4 e 5"
+    passos:
+      - {acao: "Trace o 4 no ar (cadeirinha).", fala: "O quatro parece uma cadeira de ponta-cabeça. Ou a vela de um barco."}
+      - {acao: "Trace o 5 no ar (barrigudo).", fala: "O cinco tem um chapéu e uma barriga bem cheia de sementes!"}
+    nota: "Enativo. Movimento amplo do braço."
+    
+  extensao:
+    titulo: "Caça ao 4"
+    desc: "Íris desafia: Onde tem 4 coisas?"
+    sugestoes: ["As patas do Bernardo (fale 'quatro patas' e mostre o card do urso)", "As rodas de um carrinho", "Quatro pedrinhas numa fila"]
+
+narracao:
+  instrucao: "Guarde a flor. Olhe para as mãos."
+  pergunta_principal: "O que a Íris mostrou pra gente hoje?"
+  perguntas_coracao: ["Quantas pontas tem a estrela da terra?", "Onde mais você tem cinco pontas?", "A Íris é grande ou pequena?"]
+  nota_cm: "Narração detalhista. Peça para ele descrever a flor se lembrar."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "encantado", script: "Você tem olhos de águia, pequeno Herdeiro. Viu o que ninguém viu."}
+  fio_ouro: "O Sol está se pondo... As sombras vão crescer. Noé vem aí para guardar o Tempo."
+  transicao_volta: "Bata 'asas' (braços) devagar descendo do Ninho. Aterrisse no tapete."
+
+catedra_pais:
+  metodo_cpa: "Concreto via Natureza. A matemática não é invenção humana, é descoberta na criação (flores, mãos, patas)."
+  principio_cm: "Atenção (Hábito). Ensinar a criança a OLHAR para um objeto até 'ver' de verdade."
+  reflexao_espiritual: "Por que Deus fez a mão com 5 dedos e a flor com 5 pétalas? Ele ama rimas visuais."
+  nota_graca: "Se a criança quiser arrancar as pétalas... bem, é uma forma de subtração! Sorria."
+
+sugestoes:
+  - {guardiao: Íris, emoji: "🐦", dica: "Fale baixo. Para ouvir Íris, precisamos de silêncio.", sugestao: "Use uma lupa se tiver. Crianças amam lupas."}
+  - {guardiao: Bernardo, emoji: "🐻", dica: "Patas de cadeira ou mesa são ótimos exemplos de 4.", sugestao: "Conte as pernas da cadeira da cozinha."}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["A criança percebeu a relação Mão-Flor?", "Conseguiu contar até 5 sem pular?", "Teve paciência de olhar?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]

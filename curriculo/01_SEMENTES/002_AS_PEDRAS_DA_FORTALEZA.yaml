@@ -1,0 +1,110 @@
+# LIÇÃO 002 — AS PEDRAS DA FORTALEZA (Ten Frames)
+# id: MV-S-002
+# versao: 5.1 (Lean)
+# status: Produção
+
+id: MV-S-002
+titulo: "As Pedras da Fortaleza"
+fase: Sementes
+trimestre: 1
+guardiao_lider: Bernardo
+guardiao_secundario: Melquior
+tgtb_ref: "000-L2 - Ten Frames"
+status: final
+
+ideia_viva:
+  frase: "O Urso Bernardo precisa organizar as pedras pesadas em fileiras perfeitas para construir seu muro."
+  conceito: "Introdução ao Quadro de Dez (Ten Frame) — Estrutura de 5 e 10."
+  intencao_cm: "Ordem e Hábito. As coisas têm um lugar certo para serem fortes."
+
+atmosfera:
+  clima: "nublado"
+  clima_desc: "Um dia fresco e cinzento, perfeito para o trabalho pesado. O ar cheira a pedra molhada."
+  local: "caverna_recomeco"
+  local_desc: "A entrada da oficina de Bernardo. Pedras grandes e pequenas por todo lado. Som de martelo ao longe."
+  virtude: "persistencia"
+  artefato: "Pedras lisas (seixos) e um Quadro de Dez (desenhado ou impresso)"
+
+linkage:
+  elo_anterior: {licao_id: "MV-S-001", gancho: "Trouxe a semente que a Raposa te deu? Bernardo precisa de aprendizes."}
+  proximo: {licao_id: "MV-S-003", gancho: "A Muralha está crescendo. Mas alguém pequeno está observando lá de cima..."}
+
+preparacao:
+  tempo_licao: "15-20 min"
+  tempo_preparo: "5 min"
+  materiais:
+    - {item: "10 pedrinhas (ou botões/feijões grandes)", qtd: 10, alt: "Bolinhas de massinha", essencial: true}
+    - {item: "Quadro de Dez (Ten Frame)", qtd: 1, alt: "Desenhe um retângulo com 10 espaços (2x5) no papel ou chão", essencial: true}
+    - {item: "Card: BERNARDO", qtd: 1, alt: null, essencial: true}
+
+para_o_portador:
+  dica_coracao: "Bernardo é o guardião do erro. Se seu filho errar, não corrija rápido. Diga: 'Vamos tentar de novo. A pedra escorregou'."
+  filho_descobre: "Que os números cabem em 'casinhas'. O 5 enche uma fileira. O 10 enche tudo."
+  nota_graca: "Não se preocupe com termos técnicos. Chame de 'Caminhão do Bernardo' ou 'Muro'."
+
+ritual_abertura:
+  instrucao_ambiente: "Coloque o Quadro de Dez no tapete. Espalhe as pedras em volta, 'bagunçadas'."
+  transicao_reino: "Fechem os olhos. Ouçam... TOC, TOC, TOC. Alguém está trabalhando."
+  fala_portador: {tom: "firme e animado", script: "Estamos na frente da Caverna. Olha quem vem lá... mancando, mas sorrindo."}
+  card_guardiao: "CARD: BERNARDO (Urso)"
+  fala_guardiao: {tom: "caloroso e rouco", script: "Bom dia, Construtor! A tempestade derrubou meu muro. Preciso de mãos fortes para ajudar. Você tem mãos fortes?"}
+
+jornada:
+  abertura_sensorial: "Pegue uma pedra. Sente como é fria e pesada? Bernardo gosta do peso das coisas."
+  
+  concreto:
+    desc: "Ajudando Bernardo a carregar o 'Traneó' (Quadro de Dez)."
+    card_objeto: "QUADRO DE DEZ"
+    passos:
+      - {n: 1, acao: "Mostre o Quadro vazio.", fala: "Bernardo diz: 'Este é meu molde. Só cabem 5 pedras em cima e 5 embaixo. Vamos encher?'"}
+      - {n: 2, acao: "Peça para a criança colocar 1 pedra.", fala: "Uma pedra firme. (Coloque no primeiro espaço)."}
+      - {n: 3, acao: "Coloque mais até chegar a 3.", fala: "Uma, duas, três... igual às sementes da Celeste!"}
+      - {n: 4, acao: "Encha a fileira de cima (5).", fala: "Quatro... CINCO! Parou! A fileira de cima está cheia. O muro está na metade."}
+    tempo: "80%+ (Manipulação)"
+    adaptacao_bernardo: "Se a criança tiver dificuldade motora, use pedras maiores ou imãs que 'grudam' no lugar."
+    
+  pictorico: {status: VETADO, motivo: "Sementes = Concreto."}
+  
+  abstrato:
+    desc: "Reconhecimento visual do 5."
+    card: "CARD: NÚMERO 5"
+    passos:
+      - {acao: "Olhem para o quadro cheio em cima.", fala: "Não precisa contar. Se a linha de cima está cheia, Bernardo sabe que tem CINCO."}
+    nota: "Subitizing (reconhecimento instantâneo) começa aqui."
+    
+  extensao:
+    titulo: "O Desafio do Urso"
+    desc: "Bernardo tira pedras e pede para completar."
+    sugestoes: ["Deixe 3 pedras. Pergunte: 'Quantas faltam para encher a linha de cima?'", "Esvazie tudo e diga: 'Tempestade! Vamos construir rápido!'"]
+
+narracao:
+  instrucao: "Limpe as pedras. Respire."
+  pergunta_principal: "Como a gente ajudou o Bernardo hoje?"
+  perguntas_coracao: ["Foi fácil ou difícil colocar as pedras?", "O que acontece quando a linha de cima enche?", "Bernardo ficou feliz?"]
+  nota_cm: "A narração fixa a ordem. 'Primeiro fizemos isso, depois aquilo'."
+
+ritual_fechamento:
+  fala_guardiao: {tom: "orgulhoso", script: "Belo trabalho. Mãos sujas, coração limpo. Descanse agora, Construtor."}
+  fio_ouro: "Lá em cima, alguém pequeno viu nosso trabalho... Íris vem nos visitar amanhã."
+  transicao_volta: "Dê um 'toca aqui' de urso (pata grande/mão aberta). Apague a luz."
+
+catedra_pais:
+  metodo_cpa: "O Quadro de Dez (Ten Frame) é a ferramenta visual mais importante de Singapura. Ele ancora o 5 e o 10 visualmente."
+  principio_cm: "Hábito da Ordem. Matemática não é caos; é estrutura que traz paz."
+  reflexao_espiritual: "Deus é um construtor de fundamentos. Pedra sobre pedra."
+  nota_graca: "Tudo bem se as pedras saírem do lugar. A brincadeira é arrumar."
+
+sugestoes:
+  - {guardiao: Bernardo, emoji: "🐻", dica: "Fale devagar. Bernardo não tem pressa.", sugestao: "Use pedras reais do jardim se puder."}
+  - {guardiao: Melquior, emoji: "🦁", dica: "Elogie o ESFORÇO, não a inteligência.", sugestao: "'Vi como você se esforçou para alinhar essa pedra!'"}
+
+diario_portador:
+  desc: "Espaço para VOCÊ."
+  campos: ["A criança entendeu que a linha de cima tem 5?", "Manipulou bem as pedras?", "Gostou do Bernardo?"]
+
+auditoria_qa:
+  cm: [true, true, true, true]
+  cpa: [true, true, true]
+  narrativa: [true, true, true, true]
+  template: [true, true, true]
+  triade: [true, true, true]
