@@ -68,7 +68,7 @@ Quando a matemática emerge da aventura, ela se torna **experiência vivida** �
 | 🐻 **Bernardo** (Urso) | Persistência | *"Mais uma vez. Comigo."* |
 | 🦊 **Celeste** (Raposa) | Curiosidade | *"Sente esse cheiro? É aventura."* |
 | 🦉 **Noé** (Coruja) | Paciência | *"Respire. O número espera por você."* |
-| 🦋 **Íris** (Borboleta) | Atenção | *"Olhe bem. A beleza está no detalhe."* |
+| 🐦 **Íris** (Pardal) | Atenção | *"Olhe bem. A beleza está no detalhe."* |
 
 Cada Guardião aparece no **momento certo**, com a **virtude que a lição precisa**. Eles crescem com seu filho — do Jardim ao Ensino Médio.
 
@@ -207,6 +207,16 @@ Se você chegou até aqui, **você já é um de nós**.
 ---
 
 **Feito com 💛 para famílias que amam aprender juntas**
+
+---
+
+### 📚 Quer Aprofundar?
+
+Temos artigos que explicam em detalhes a metodologia, respondem dúvidas frequentes e compartilham histórias de famílias:
+
+🔗 **Blog:** [Em construção]
+
+---
 
 📧 **Contato:** rfbr21@gmail.com  
 💻 **Desenvolvedores:** [README_DEV.md](README_DEV.md)
