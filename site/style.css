@@ -175,3 +175,38 @@ h1 { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; marg
     .sidebar { display: none; }
     .main-content { margin-left: 0; padding: 2rem; }
 }
+
+/* LESSON SCRIPT STYLES */
+.script-block {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #F9FAFB;
+    border-radius: 0.5rem;
+    border-left: 3px solid #E5E7EB;
+}
+
+.script-role {
+    color: var(--primary);
+    font-weight: 700;
+    margin-right: 0.25rem;
+}
+
+.script-tone {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-tertiary);
+    font-size: 0.9em;
+}
+
+.script-text {
+    color: var(--text-secondary);
+}
+
+.generic-dict {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    background: #F3F4F6;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-family: monospace;
+}

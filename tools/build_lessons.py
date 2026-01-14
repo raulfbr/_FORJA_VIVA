@@ -199,12 +199,30 @@ def format_content(content_dict):
             
             if isinstance(section, dict):
                 for k, v in section.items():
+                    key_clean = k.replace('_', ' ').title()
+                    
                     if isinstance(v, list):
-                        html_parts.append("<ul>")
+                        html_parts.append(f"<p><strong>{key_clean}:</strong></p><ul>")
                         for item in v: html_parts.append(f"<li>{item}</li>")
                         html_parts.append("</ul>")
+                    
+                    elif isinstance(v, dict):
+                        # Tratamento especial para objetos de Script (Fala, Instrução)
+                        tom = v.get('tom', '')
+                        script = v.get('script', '') or v.get('fala', '') or v.get('instrucao', '')
+                        
+                        if 'fala' in k or 'guardiao' in k or 'portador' in k:
+                            # Dialogues
+                            tom_html = f'<span class="script-tone">({tom})</span>' if tom else ''
+                            html_parts.append(f'<div class="script-block"><strong class="script-role">{key_clean} {tom_html}:</strong> <span class="script-text">"{script}"</span></div>')
+                        else:
+                            # Generic Dict (Instruction/Transition)
+                            parts = [f"<strong>{sub_k.title()}:</strong> {sub_v}" for sub_k, sub_v in v.items()]
+                            html_parts.append(f"<p class='generic-dict'>{'; '.join(parts)}</p>")
+                            
                     else:
-                         html_parts.append(f"<p><strong>{k.replace('_', ' ').title()}:</strong> {v}</p>")
+                         # Simple Key-Value
+                         html_parts.append(f"<p><strong>{key_clean}:</strong> {v}</p>")
             elif isinstance(section, str):
                 html_parts.append(simple_markdown_to_html(section))
     

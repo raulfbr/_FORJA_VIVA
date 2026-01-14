@@ -1,0 +1,17 @@
+# Template para Artigos do Blog Forja Viva
+# Local: blog/YYYY-MM-DD_slug-do-artigo.md
+
+titulo: "Título do Artigo"
+autor: "Nome do Autor"  # Raul, Marina, ou um dos Guardiões (se narrativo)
+data: 2026-01-XX
+tags: [CPA, Charlotte Mason, Narrativa, Pedagogia]
+resumo: "Um resumo curto de 2-3 linhas que aparecerá no card do blog."
+imagem_capa: "/assets/img/blog/capa-exemplo.jpg" # Opcional
+
+---
+
+# Subtítulo 1
+Seu texto aqui em Markdown.
+
+## Subtítulo 2
+Mais texto...
